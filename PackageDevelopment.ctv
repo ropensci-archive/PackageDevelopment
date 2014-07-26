@@ -9,13 +9,11 @@
   <info>
     <p>
       This Task View focuses on useful tools for R Packages
-      Development.
+      Development, grouped by topics.
     </p> 
     <p> 
-      The packages in this view can be roughly structured into
-      the following topics. If you think that some packages/tools
-      are missing from the list, please contact the  
-      <a href="mailto:lbraglia@gmail.com">maintainer</a>.
+      If you think that some packages/tools are missing from the
+      list, please contact the <a href="mailto:lbraglia@gmail.com">maintainer</a>.
     </p> 
     
     <p><strong>Creation</strong></p>
@@ -48,7 +46,8 @@
   </packagelist>
   
   <links>
-    
+    <a href="http://www.rstudio.com">RStudio: an IDE for R development</a>
+    <a href="http://https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a> 
   </links>
 
 
