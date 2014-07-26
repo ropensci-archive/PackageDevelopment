@@ -1,0 +1,55 @@
+<!-- -*- mode: XML -*- -->
+<CRANTaskView>
+
+  <name>PackageDevelopment</name>
+  <topic>Package Development</topic>
+  <maintainer email="lbraglia@gmail.com">Luca Braglia</maintainer>
+  <version>2014-07-26</version>
+
+  <info>
+    <p>
+      This Task View focuses on useful tools for R Packages
+      Development.
+    </p> 
+    <p> 
+      The packages in this view can be roughly structured into
+      the following topics. If you think that some packages/tools
+      are missing from the list, please contact the  
+      <a href="mailto:lbraglia@gmail.com">maintainer</a>.
+    </p> 
+    
+    <p><strong>Creation</strong></p>
+    
+    <p><strong>Foreign Languages Interfaces</strong></p>
+    
+    <p><strong>Documentation</strong></p>
+    
+    <p><strong>Profiling</strong></p>
+    
+    <p><strong>Unit Test</strong></p>
+    
+    <p><strong>Spell Checking</strong></p>
+    
+    <p><strong>Automation</strong></p>
+
+  </info>
+
+  <packagelist>
+
+    <pkg>RUnit</pkg>
+    <pkg>Rcpp</pkg>
+    <pkg>devtools</pkg>
+    <pkg>pkgKitten</pkg>
+    <pkg>profr</pkg>
+    <pkg>proftools</pkg>
+    <pkg>roxygen2</pkg>
+    <pkg>testthat</pkg>
+   
+  </packagelist>
+  
+  <links>
+    
+  </links>
+
+
+</CRANTaskView>
