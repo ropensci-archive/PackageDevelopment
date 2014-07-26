@@ -1,8 +1,8 @@
-PackageDevelopment Task View
-============================
+`PackageDevelopment` Task View
+==============================
 
-This R Task View focuses on useful tools for R Packages
-Development, grouped by topics.
+This [Task View](http://cran.r-project.org/web/views/) focuses on
+useful tools for R Packages Development, grouped by topics.
 
 You are welcome to:
 
