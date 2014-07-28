@@ -57,14 +57,14 @@ Tools and services
 
 ### CRAN packages:
 
--   [devtools](../packages/devtools/index.html)
--   [pkgKitten](../packages/pkgKitten/index.html)
--   [profr](../packages/profr/index.html)
--   [proftools](../packages/proftools/index.html)
--   [Rcpp](../packages/Rcpp/index.html)
--   [roxygen2](../packages/roxygen2/index.html)
--   [RUnit](../packages/RUnit/index.html)
--   [testthat](../packages/testthat/index.html)
+-   [devtools](http://cran.r-project.org/web/packages/devtools/index.html)
+-   [pkgKitten](http://cran.r-project.org/web/packages/pkgKitten/index.html)
+-   [profr](http://cran.r-project.org/web/packages/profr/index.html)
+-   [proftools](http://cran.r-project.org/web/packages/proftools/index.html)
+-   [Rcpp](http://cran.r-project.org/web/packages/Rcpp/index.html)
+-   [roxygen2](http://cran.r-project.org/web/packages/roxygen2/index.html)
+-   [RUnit](http://cran.r-project.org/web/packages/RUnit/index.html)
+-   [testthat](http://cran.r-project.org/web/packages/testthat/index.html)
 
 ### Related links:
 
