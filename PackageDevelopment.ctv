@@ -13,22 +13,65 @@
     </p> 
     <p> 
       If you think that some packages/tools are missing from the
-      list, please contact the <a href="mailto:lbraglia@gmail.com">maintainer</a>.
+      list, please contact the <a
+      href="mailto:lbraglia@gmail.com">maintainer</a>.
     </p> 
+
+    <!-- ==================================================== -->
+    <h3>
+      Creation
+    </h3>
     
-    <p><strong>Creation</strong></p>
-    
+    <p><strong>Creating R packages</strong></p>
+
+    <!-- ==================================================== -->
+    <h3>
+      Source code
+    </h3>
+
     <p><strong>Foreign Languages Interfaces</strong></p>
-    
-    <p><strong>Documentation</strong></p>
-    
+
+    <p><strong>Debugging</strong></p>
+
+    <p><strong>Code Analysis</strong></p>
+        
     <p><strong>Profiling</strong></p>
+
+    <p><strong>Benchmarking</strong></p>
     
-    <p><strong>Unit Test</strong></p>
-    
+    <p><strong>Unit Testing</strong></p>
+
+    <!-- ==================================================== -->
+    <h3>
+      Documentation
+    </h3>
+
+    <p><strong>Writing Package Documentation (functions, data
+    sets, classes and methods, packages)</strong></p>
+
+    <p><strong>Writing Vignetes</strong></p>
+
     <p><strong>Spell Checking</strong></p>
+
+
+    <!-- ==================================================== -->
+    <h3>
+      Tools and services
+    </h3>
+
+    <p><strong>Editors (supporting package development)</strong></p>
+
+    <p><strong>IDEs (supporting package development)</strong></p>
+
+    <p><strong>Makefiles</strong></p>
+
+    <p><strong>Revision control (most common in the R community)</strong></p>
+
+    <p><strong>Hosting services (most common in the R community)</strong></p>
+
+
+    <!-- ==================================================== -->
     
-    <p><strong>Automation</strong></p>
 
   </info>
 
@@ -48,8 +91,8 @@
   <links>
     <a href="http://www.rstudio.com">RStudio: an IDE for R development</a>
     <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a>
-    <a href="http://adv-r.had.co.nz">Advanced R by Hadley Wickham
-    <a href="http://rstudio.github.io/packrat>packrat package dependency management 
+    <a href="http://adv-r.had.co.nz">Advanced R by Hadley Wickham</a>
+    <a href="http://rstudio.github.io/packrat">packrat package  dependency management</a> 
   </links>
 
 
