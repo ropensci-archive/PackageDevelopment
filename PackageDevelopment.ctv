@@ -18,16 +18,16 @@
     </p> 
 
     <!-- ==================================================== -->
-    <h3>
+    <h2>
       Creation
-    </h3>
+    </h2>
     
     <p><strong>Creating R packages</strong></p>
 
     <!-- ==================================================== -->
-    <h3>
+    <h2>
       Source code
-    </h3>
+    </h2>
 
     <p><strong>Foreign Languages Interfaces</strong></p>
 
@@ -42,9 +42,9 @@
     <p><strong>Unit Testing</strong></p>
 
     <!-- ==================================================== -->
-    <h3>
+    <h2>
       Documentation
-    </h3>
+    </h2>
 
     <p><strong>Writing Package Documentation (functions, data
     sets, classes and methods, packages)</strong></p>
@@ -55,9 +55,9 @@
 
 
     <!-- ==================================================== -->
-    <h3>
+    <h2>
       Tools and services
-    </h3>
+    </h2>
 
     <p><strong>Editors (supporting package development)</strong></p>
 
@@ -92,7 +92,11 @@
     <a href="http://www.rstudio.com">RStudio: an IDE for R development</a>
     <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a>
     <a href="http://adv-r.had.co.nz">Advanced R by Hadley Wickham</a>
-    <a href="http://rstudio.github.io/packrat">packrat package  dependency management</a> 
+    <!--Packrat has to be tested for package development? ideas
+	here https://github.com/rstudio/packrat/issues/31--> 
+    <!-- <a href="http://rstudio.github.io/packrat">packrat package -->
+    <!-- dependency management</a>  -->
+
   </links>
 
 
