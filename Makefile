@@ -5,13 +5,14 @@ HTML_SKIP := \
 
 # --------------------------------------------------------------------------------------
 
-all: html check link README clean
+all: check html link README clean
+
+
+check:
+	Rscript -e "library(ctv); (a <- check_ctv_packages('PackageDevelopment.ctv')); if (length(unlist(a)) != 0) stop('Missing Packages; look the report above')"
 
 html:
 	Rscript -e "library(ctv); ctv2html(read.ctv('PackageDevelopment.ctv'))"
-
-check:
-	Rscript -e "library(ctv); check_ctv_packages('PackageDevelopment.ctv')"
 
 link:
 	mv PackageDevelopment.html tmp.html
