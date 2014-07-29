@@ -23,6 +23,11 @@
     </h2>
     
     <p><strong>Creating R packages</strong></p>
+    <!-- 
+	 utils::package.skeleton, 
+	 pkgKitten,
+	 Rcpp::Rcpp.package.skeleton 
+    -->
 
     <!-- ==================================================== -->
     <h2>
@@ -30,16 +35,56 @@
     </h2>
 
     <p><strong>Foreign Languages Interfaces</strong></p>
+    <!-- 
+	 base R support for that,
+	 inline, 
+	 Rcpp , 
+	 Rcpp11, 
+	 rJava
+
+	 Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of
+	 rjava implies java tools.
+    -->
+
 
     <p><strong>Debugging</strong></p>
+    <!-- 
+	 base::debug 
+	 utils::recover
+	 and friends
+    -->
+
 
     <p><strong>Code Analysis</strong></p>
-        
+    <!-- 
+	 codetools
+    -->
+
+
     <p><strong>Profiling</strong></p>
+    <!-- 
+	 utils::Rprof, 
+	 aprof 
+	 profr 
+	 proftools
+    -->
+
 
     <p><strong>Benchmarking</strong></p>
-    
+    <!-- 
+	 base::system.time
+	 microbenchmarking
+	 rbenchmark
+    -->
+
+
     <p><strong>Unit Testing</strong></p>
+    <!-- 
+	 RUnit 
+	 svUnit 
+	 testthat 
+    -->
+
 
     <!-- ==================================================== -->
     <h2>
@@ -48,10 +93,22 @@
 
     <p><strong>Writing Package Documentation (functions, data
     sets, classes and methods, packages)</strong></p>
+    <!-- 
+	 roxygen2
+    -->
 
-    <p><strong>Writing Vignetes</strong></p>
 
+    <p><strong>Writing Vignettes</strong></p>
+    <!-- 
+	 Sweave
+	 knitr
+    -->
+
+    
     <p><strong>Spell Checking</strong></p>
+    <!-- 
+	 tools::aspell_package_* functions 
+    -->
 
 
     <!-- ==================================================== -->
@@ -59,16 +116,35 @@
       Tools and services
     </h2>
 
+
     <p><strong>Editors (supporting package development)</strong></p>
 
+
     <p><strong>IDEs (supporting package development)</strong></p>
+    <!-- 
+	 http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment
+    -->
+
 
     <p><strong>Makefiles</strong></p>
+    <!-- <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a> -->
+
 
     <p><strong>Revision control (most common in the R community)</strong></p>
+    <!-- 
+	 subversion 
+	 git 
+	 http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
+    -->
 
     <p><strong>Hosting services (most common in the R community)</strong></p>
+    <!-- 
+	 r-forge
+	 github
+	 http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities 
 
+http://en.wikipedia.org/wiki/Continuous_integration#Software
+    -->
 
     <!-- ==================================================== -->
     
