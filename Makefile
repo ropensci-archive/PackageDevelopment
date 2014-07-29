@@ -26,7 +26,7 @@ clean:
 aspell:
 	cat PackageDevelopment.ctv | aspell list --mode=html ${HTML_SKIP} --master=en_US --extra-dicts=./DICT | sort -f | less
 
-aspell-make-dict:
+aspell-dict:
 	aspell --lang=en create master ./DICT < wordlist
 
 view:
