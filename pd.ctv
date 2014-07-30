@@ -1,0 +1,171 @@
+<!-- -*- mode: XML -*- -->
+<CRANTaskView>
+
+  <name>PackageDevelopment</name>
+  <topic>Package Development</topic>
+  <maintainer email="lbraglia@gmail.com">Luca Braglia</maintainer>
+  <version>2014-07-26</version>
+
+  <info>
+    <p>
+      This Task View focuses on useful tools for R Packages
+      Development, grouped by topics.
+    </p> 
+    <p> 
+      If you think that some packages/tools are missing from the
+      list, please contact the <a
+      href="mailto:lbraglia@gmail.com">maintainer</a>.
+    </p> 
+
+    <!-- ==================================================== -->
+    <section>Creation</section>
+    
+    <p><task>Creating R packages</task></p>
+    <!-- 
+	 utils::package.skeleton, 
+	 pkgKitten,
+	 Rcpp::Rcpp.package.skeleton 
+    -->
+
+    <!-- ==================================================== -->
+    <section>Source code</section>
+
+    <p><task>Foreign Languages Interfaces</task></p>
+    <!-- 
+	 base R support for that,
+	 inline, 
+	 Rcpp , 
+	 Rcpp11, 
+	 rJava
+
+	 Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of
+	 rjava implies java tools.
+    -->
+
+
+    <p><task>Debugging</task></p>
+    <!-- 
+	 base::debug 
+	 utils::recover
+	 and friends
+    -->
+
+
+    <p><task>Code Analysis</task></p>
+    <!-- 
+	 codetools
+    -->
+
+
+    <p><task>Profiling</task></p>
+    <!-- 
+	 utils::Rprof, 
+	 aprof 
+	 profr 
+	 proftools
+    -->
+
+
+    <p><task>Benchmarking</task></p>
+    <!-- 
+	 base::system.time
+	 microbenchmarking
+	 rbenchmark
+    -->
+
+
+    <p><task>Unit Testing</task></p>
+    <!-- 
+	 RUnit 
+	 svUnit 
+	 testthat 
+    -->
+
+
+    <!-- ==================================================== -->
+    <section>Documentation</section>
+
+    <p><task>Writing Package Documentation (functions, data
+    sets, classes and methods, packages)</task></p>
+    <!-- 
+	 roxygen2
+    -->
+
+
+    <p><task>Writing Vignettes</task></p>
+    <!-- 
+	 Sweave
+	 knitr
+    -->
+
+    
+    <p><task>Spell Checking</task></p>
+    <!-- 
+	 tools::aspell_package_* functions 
+    -->
+
+
+    <!-- ==================================================== -->
+    <section>Tools and services</section>
+
+
+    <p><task>Editors (supporting package development)</task></p>
+
+
+    <p><task>IDEs (supporting package development)</task></p>
+    <!-- 
+	 http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment
+    -->
+
+
+    <p><task>Makefiles</task></p>
+    <!-- <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a> -->
+
+
+    <p><task>Revision control (most common in the R community)</task></p>
+    <!-- 
+	 subversion 
+	 git 
+	 http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
+    -->
+
+    <p><task>Hosting services (most common in the R community)</task></p>
+    <!-- 
+	 r-forge
+	 github
+	 http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities 
+
+http://en.wikipedia.org/wiki/Continuous_integration#Software
+    -->
+
+    <!-- ==================================================== -->
+    
+
+  </info>
+
+  <packagelist>
+
+    <pkg>RUnit</pkg>
+    <pkg>Rcpp</pkg>
+    <pkg>devtools</pkg>
+    <pkg>pkgKitten</pkg>
+    <pkg>profr</pkg>
+    <pkg>proftools</pkg>
+    <pkg>roxygen2</pkg>
+    <pkg>testthat</pkg>
+   
+  </packagelist>
+  
+  <links>
+    <a href="http://www.rstudio.com">RStudio: an IDE for R development</a>
+    <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a>
+    <a href="http://adv-r.had.co.nz">Advanced R by Hadley Wickham</a>
+    <!--Packrat has to be tested for package development? ideas
+	here https://github.com/rstudio/packrat/issues/31--> 
+    <!-- <a href="http://rstudio.github.io/packrat">packrat package -->
+    <!-- dependency management</a>  -->
+
+  </links>
+
+
+</CRANTaskView>

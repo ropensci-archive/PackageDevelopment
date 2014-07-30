@@ -1,3 +1,11 @@
+# Sed preprocessing
+SECTION := h2
+TASK := h3
+SED_SECTION :="s@<section>\(.*\)</section>@<${SECTION}>\1</${SECTION}>@g" 
+SED_TASK := "s@<task>\(.*\)</task>@<${TASK}>\1</${TASK}>@g" 
+SED_GH := "s@<gh>\(.*\)/\(.*\)</gh>@<a href='http://github.com/\1/\2'>\2</a>@g" 
+SED_PREPROC :=  sed ${SED_SECTION} | sed ${SED_TASK} | sed ${SED_GH} 
+# Aspell skipping
 HTML_SKIP := \
 	 --add-html-skip=name --add-html-skip=maintainer --add-html-skip=pkg \
 	 --add-html-skip=view --add-html-skip=bioc --add-html-skip=ohat \
@@ -5,11 +13,13 @@ HTML_SKIP := \
 
 
 # -------------------------------------------------------------------------------------
-# main
+# Main
 # -------------------------------------------------------------------------------------
 
-all: check html cran-links README clean
+all: sed-preproc check html cran-links README clean
 
+sed-preproc:
+	cat pd.ctv | ${SED_PREPROC} > PackageDevelopment.ctv
 
 check:
 	Rscript -e "library(ctv); (a <- check_ctv_packages('PackageDevelopment.ctv')); if (length(unlist(a)) != 0) stop('Missing Packages; look the report above')"
@@ -46,4 +56,3 @@ view:
 
 list-ctv:
 	Rscript -e "library(ctv); ctv.dir <- system.file('ctv', package = 'ctv'); file.path(ctv.dir, list.files(path = ctv.dir, pattern = '.+')); "
-
