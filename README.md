@@ -15,45 +15,45 @@ contact the [maintainer](mailto:lbraglia@gmail.com).
 Creation
 --------
 
-**Creating R packages**
+### Creating R packages
 
 Source code
 -----------
 
-**Foreign Languages Interfaces**
+### Foreign Languages Interfaces
 
-**Debugging**
+### Debugging
 
-**Code Analysis**
+### Code Analysis
 
-**Profiling**
+### Profiling
 
-**Benchmarking**
+### Benchmarking
 
-**Unit Testing**
+### Unit Testing
 
 Documentation
 -------------
 
-**Writing Package Documentation (functions, data sets, classes and
-methods, packages)**
+Writing Package Documentation (functions, data sets, classes and
+methods, packages)
 
-**Writing Vignetes**
+### Writing Vignettes
 
-**Spell Checking**
+### Spell Checking
 
 Tools and services
 ------------------
 
-**Editors (supporting package development)**
+### Editors (supporting package development)
 
-**IDEs (supporting package development)**
+### IDEs (supporting package development)
 
-**Makefiles**
+### Makefiles
 
-**Revision control (most common in the R community)**
+### Revision control (most common in the R community)
 
-**Hosting services (most common in the R community)**
+### Hosting services (most common in the R community)
 
 ### CRAN packages:
 

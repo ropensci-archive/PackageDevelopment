@@ -18,11 +18,9 @@
     </p> 
 
     <!-- ==================================================== -->
-    <h2>
-      Creation
-    </h2>
+    <h2>Creation</h2>
     
-    <p><strong>Creating R packages</strong></p>
+    <p><h3>Creating R packages</h3></p>
     <!-- 
 	 utils::package.skeleton, 
 	 pkgKitten,
@@ -30,11 +28,9 @@
     -->
 
     <!-- ==================================================== -->
-    <h2>
-      Source code
-    </h2>
+    <h2>Source code</h2>
 
-    <p><strong>Foreign Languages Interfaces</strong></p>
+    <p><h3>Foreign Languages Interfaces</h3></p>
     <!-- 
 	 base R support for that,
 	 inline, 
@@ -47,7 +43,7 @@
     -->
 
 
-    <p><strong>Debugging</strong></p>
+    <p><h3>Debugging</h3></p>
     <!-- 
 	 base::debug 
 	 utils::recover
@@ -55,13 +51,13 @@
     -->
 
 
-    <p><strong>Code Analysis</strong></p>
+    <p><h3>Code Analysis</h3></p>
     <!-- 
 	 codetools
     -->
 
 
-    <p><strong>Profiling</strong></p>
+    <p><h3>Profiling</h3></p>
     <!-- 
 	 utils::Rprof, 
 	 aprof 
@@ -70,7 +66,7 @@
     -->
 
 
-    <p><strong>Benchmarking</strong></p>
+    <p><h3>Benchmarking</h3></p>
     <!-- 
 	 base::system.time
 	 microbenchmarking
@@ -78,7 +74,7 @@
     -->
 
 
-    <p><strong>Unit Testing</strong></p>
+    <p><h3>Unit Testing</h3></p>
     <!-- 
 	 RUnit 
 	 svUnit 
@@ -87,57 +83,53 @@
 
 
     <!-- ==================================================== -->
-    <h2>
-      Documentation
-    </h2>
+    <h2>Documentation</h2>
 
-    <p><strong>Writing Package Documentation (functions, data
-    sets, classes and methods, packages)</strong></p>
+    <p><task>Writing Package Documentation (functions, data
+    sets, classes and methods, packages)</task></p>
     <!-- 
 	 roxygen2
     -->
 
 
-    <p><strong>Writing Vignettes</strong></p>
+    <p><h3>Writing Vignettes</h3></p>
     <!-- 
 	 Sweave
 	 knitr
     -->
 
     
-    <p><strong>Spell Checking</strong></p>
+    <p><h3>Spell Checking</h3></p>
     <!-- 
 	 tools::aspell_package_* functions 
     -->
 
 
     <!-- ==================================================== -->
-    <h2>
-      Tools and services
-    </h2>
+    <h2>Tools and services</h2>
 
 
-    <p><strong>Editors (supporting package development)</strong></p>
+    <p><h3>Editors (supporting package development)</h3></p>
 
 
-    <p><strong>IDEs (supporting package development)</strong></p>
+    <p><h3>IDEs (supporting package development)</h3></p>
     <!-- 
 	 http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment
     -->
 
 
-    <p><strong>Makefiles</strong></p>
+    <p><h3>Makefiles</h3></p>
     <!-- <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a> -->
 
 
-    <p><strong>Revision control (most common in the R community)</strong></p>
+    <p><h3>Revision control (most common in the R community)</h3></p>
     <!-- 
 	 subversion 
 	 git 
 	 http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
     -->
 
-    <p><strong>Hosting services (most common in the R community)</strong></p>
+    <p><h3>Hosting services (most common in the R community)</h3></p>
     <!-- 
 	 r-forge
 	 github
