@@ -50,7 +50,7 @@ Tools and services
 
 ### Makefiles
 
-### Revision control
+### Revision control softwares
 
 ### Hosting services
 
