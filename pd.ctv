@@ -85,9 +85,9 @@
     <!-- ==================================================== -->
     <section>Documentation</section>
 
-    <p><task>Writing Package Documentation (functions, data
-    sets, classes and methods, packages)</task></p>
+    <p><task>Writing Package Documentation</task></p>
     <!-- 
+	 (functions, data sets, classes and methods, packages)
 	 roxygen2
     -->
 
