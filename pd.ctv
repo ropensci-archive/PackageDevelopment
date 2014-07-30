@@ -109,11 +109,12 @@
     <section>Tools and services</section>
 
 
-    <p><task>Editors (supporting package development)</task></p>
+    <p><task>Editors</task></p>
+    <!--  (supporting package development) -->
 
-
-    <p><task>IDEs (supporting package development)</task></p>
+    <p><task>IDEs</task></p>
     <!-- 
+	 (supporting package development)
 	 http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment
     -->
 
@@ -122,15 +123,17 @@
     <!-- <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a> -->
 
 
-    <p><task>Revision control (most common in the R community)</task></p>
+    <p><task>Revision control</task></p>
     <!-- 
+	 (most common in the R community)
 	 subversion 
 	 git 
 	 http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
     -->
 
-    <p><task>Hosting services (most common in the R community)</task></p>
+    <p><task>Hosting services</task></p>
     <!-- 
+	 (most common in the R community)
 	 r-forge
 	 github
 	 http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities 
@@ -157,9 +160,9 @@ http://en.wikipedia.org/wiki/Continuous_integration#Software
   </packagelist>
   
   <links>
-    <a href="http://www.rstudio.com">RStudio: an IDE for R development</a>
-    <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a>
-    <a href="http://adv-r.had.co.nz">Advanced R by Hadley Wickham</a>
+    <a href="http://adv-r.had.co.nz">[Book] "Advanced R" by Hadley Wickham</a>
+    <a href="http://www.rstudio.com">[IDE] RStudio</a>
+    <a href="https://github.com/ComputationalProteomicsUnit/maker">[Makefile] maker</a>
     <!--Packrat has to be tested for package development? ideas
 	here https://github.com/rstudio/packrat/issues/31--> 
     <!-- <a href="http://rstudio.github.io/packrat">packrat package -->

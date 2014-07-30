@@ -35,8 +35,7 @@ Source code
 Documentation
 -------------
 
-Writing Package Documentation (functions, data sets, classes and
-methods, packages)
+### Writing Package Documentation
 
 ### Writing Vignettes
 
@@ -45,15 +44,15 @@ methods, packages)
 Tools and services
 ------------------
 
-### Editors (supporting package development)
+### Editors
 
-### IDEs (supporting package development)
+### IDEs
 
 ### Makefiles
 
-### Revision control (most common in the R community)
+### Revision control
 
-### Hosting services (most common in the R community)
+### Hosting services
 
 ### CRAN packages:
 
@@ -68,8 +67,8 @@ Tools and services
 
 ### Related links:
 
--   [RStudio: an IDE for R development](http://www.rstudio.com)
--   [maker: a Makefile for R
-    development](https://github.com/ComputationalProteomicsUnit/maker)
--   [Advanced R by Hadley Wickham](http://adv-r.had.co.nz)
+-   [[Book] "Advanced R" by Hadley Wickham](http://adv-r.had.co.nz)
+-   [[IDE] RStudio](http://www.rstudio.com)
+-   [[Makefile]
+    maker](https://github.com/ComputationalProteomicsUnit/maker)
 
