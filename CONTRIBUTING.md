@@ -44,7 +44,7 @@ look at `ctv::check_ctv_packages` report and fix missing packages.
 ### Utils
 After a successful `make`, two other steps may be useful:
 * spell checking
-* link checking
+* checking links
 
 #### Spell checking
 A check, via `aspell`, is done with:
@@ -81,7 +81,7 @@ Furthermore, since `pd.ctv` is processed by `sed` to compose
 * tag task names with `<task>...</task>`
 * if you link a GitHub (only, otherwise use CRAN's) repository of a
 package, ad *if* `names(package) == names(githubRepo)` you can use the `gh`
-tag, eg `<gh>hadley/devtools</gh>
+tag, eg `<gh>hadley/devtools</gh>`
 
 
 ## Thanks
