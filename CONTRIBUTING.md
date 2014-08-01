@@ -13,7 +13,7 @@ You need:
 ```R
 install.packages("ctv", dep = TRUE)
 ```
-* an internet connection (for `ctv::check_ctv_packages`, since it retrieves
+* an Internet connection (for `ctv::check_ctv_packages`, since it retrieves
   `PACKAGES` file from CRAN)
 * [`pandoc`](http://johnmacfarlane.net/pandoc/)
 
@@ -23,9 +23,10 @@ Optionally you may want to add [`aspell`](http://www.aspell.net) and
 ## Steps
 You need to: 
 
-1. edit `pd.ctv` (more info below). Do **not** edit `PackageDevelopment.ctv` (or your changes
-   will be removed on next `make`);
-2. type `make`.
+1. edit `pd.ctv` (*more info* below). Do **not** edit
+   `PackageDevelopment.ctv` (or your changes will be removed on next
+   `make`); 
+2. `make`
 
 **If everything works**, last lines should be like:
 ```bash
