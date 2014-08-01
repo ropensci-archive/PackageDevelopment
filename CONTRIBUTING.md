@@ -10,9 +10,9 @@ You are welcome to:
 
 You need:
 * `R` with `ctv` package installed
-```R
-install.packages("ctv", dep = TRUE)
-```
+  ```R
+  install.packages("ctv", dep = TRUE)
+  ```
 * an Internet connection (for `ctv::check_ctv_packages`, since it retrieves
   `PACKAGES` file from CRAN)
 * [`pandoc`](http://johnmacfarlane.net/pandoc/)
@@ -40,7 +40,7 @@ Then you can push back up to your account and send a pull request.
 look at `ctv::check_ctv_packages` report and fix missing packages.
 
 ### Utils
-After a successful `make`, two other tools may be useful:
+After a successful `make`, two other steps may be useful:
 * spell checking
 * link checking
 
@@ -68,6 +68,18 @@ That's it. 14 links in 13 URLs checked. 0 warnings found. 0 errors found.
 ... is quite assuring.
 
 ### Editing `pd.ctv`
+First, look at:
+```R
+vignette("ctv-howto")
+```
+
+Furthermore, since `pd.ctv` is processed by `sed` to compose
+`PackageDevelopment.ctv`:
+* tag section names with `<section>...</section>`
+* tag task names with `<task>...</task>`
+* if you link a GitHub (only, otherwise use CRAN's) repository of a
+package, ad *if* `names(package) == names(githubRepo)` you can use the `gh`
+tag, eg `<gh>hadley/devtools</gh>
 
 
 ## Thanks
