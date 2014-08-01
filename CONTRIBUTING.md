@@ -1,5 +1,4 @@
-<!--- -*- mode: markdown-*- -->
-# Package Development "Task View" - How to contribute
+# How to contribute
 
 You are welcome to:
 - fork and send a pull request, if you use GitHub;
@@ -24,8 +23,9 @@ Optionally you may want to add [`aspell`](http://www.aspell.net) and
 ## Steps
 You need to: 
 
-1. edit `pd.ctv`. Do **not** edit `PackageDevelopment.ctv`
-2. type `make`
+1. edit `pd.ctv` (more info below). Do **not** edit `PackageDevelopment.ctv` (or your changes
+   will be removed on next `make`);
+2. type `make`.
 
 **If everything works**, last lines should be like:
 ```bash
@@ -59,6 +59,12 @@ A check, via `linkchecker`, is done with:
 ```bash
 make check-links
 ```
+and an ending message like ...
+```
+That's it. 14 links in 13 URLs checked. 0 warnings found. 0 errors found.
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+```
+... is quite assuring.
 
 ### Editing `pd.ctv`
 
