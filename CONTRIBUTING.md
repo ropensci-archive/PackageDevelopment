@@ -79,9 +79,9 @@ Furthermore, since `pd.ctv` is processed by `sed` to compose
 `PackageDevelopment.ctv`:
 * tag section names with `<section>...</section>`
 * tag task names with `<task>...</task>`
-* if you link a GitHub (only, otherwise use CRAN's) repository of a
-package, ad *if* `names(package) == names(githubRepo)` you can use the `gh`
-tag in this way (eg.) `<gh>hadley/devtools</gh>`
+<!-- * if you link a GitHub (only, otherwise use CRAN's) repository of a -->
+<!-- package, ad *if* `names(package) == names(githubRepo)` you could use the `gh` -->
+<!-- tag in this way (eg.) `<gh>hadley/devtools</gh>` -->
 
 
 ## Thanks
@@ -90,7 +90,7 @@ tag in this way (eg.) `<gh>hadley/devtools</gh>`
 * [WebTechnologies](http://cran.r-project.org/web/views/WebTechnologies.html)
 CRAN Task View group, for useful ideas on
 [repo](http://github.com/ropensci/webservices) setup
-* [`r-devel`](http://stat.ethz.ch/mailman/listinfo/r-devel) mailing list
-  reader, for useful suggestions: especially Cristophe Dutang, Darren
+* [`r-devel`](http://stat.ethz.ch/mailman/listinfo/r-devel) mailing list,
+  for useful suggestions: especially Cristophe Dutang, Darren 
   Norris, Gabor Grothendieck, John Maindonald, Spencer Graves, Tobias
   Verbeke
