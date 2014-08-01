@@ -10,9 +10,11 @@ You are welcome to:
 
 You need:
 * `R` with `ctv` package installed
+
   ```R
   install.packages("ctv", dep = TRUE)
   ```
+
 * an Internet connection (for `ctv::check_ctv_packages`, since it retrieves
   `PACKAGES` file from CRAN)
 * [`pandoc`](http://johnmacfarlane.net/pandoc/)
