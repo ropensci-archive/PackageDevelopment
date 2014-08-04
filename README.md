@@ -11,8 +11,7 @@ grouped by topics.
 
 If you think that some packages/tools are missing from the list, please
 contact the [maintainer](mailto:lbraglia@gmail.com) or look
-[here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md)
-on how to contribute.
+[here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md).
 
 First steps
 -----------
@@ -26,10 +25,10 @@ procedures can be confusing). If a package adressing the same
 functionality already exist, you may consider contributing at it instead
 of starting a new one.
 
--   `RSiteSearch` allows to search for keywords/phrases in help pages
-    (all the CRAN packages except those for Windows only and some from
-    Bioconductor), vignettes or task views, using the search engine at
-    <http://search.r-project.org>. A convenient wrapper around
+-   `utils::RSiteSearch` allows to search for keywords/phrases in help
+    pages (all the CRAN packages except those for Windows only and some
+    from Bioconductor), vignettes or task views, using the search engine
+    at <http://search.r-project.org>. A convenient wrapper around
     `RSiteSearch` that adds hits ranking is `findFn` function, from the
     [sos](http://cran.r-project.org/web/packages/sos/index.html)
     package.

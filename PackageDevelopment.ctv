@@ -4,7 +4,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="lbraglia@gmail.com">Luca Braglia</maintainer>
-  <version>2014-07-26</version>
+  <version>2014-08-04</version>
 
   <info>
     <p>
@@ -13,8 +13,7 @@
     </p>
     <p> If you think that some packages/tools are missing from the list,
       please contact the <a href="mailto:lbraglia@gmail.com">maintainer</a>
-      or look <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">here</a> on how to
-      contribute.
+      or look <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">here</a>.
     </p>
 
     <!-- TODO: ... to view/test some of them -->
@@ -37,7 +36,7 @@
     instead of starting a new one.
     
     <ul>
-      <li> <code>RSiteSearch</code> allows to search for keywords/phrases
+      <li> <code>utils::RSiteSearch</code> allows to search for keywords/phrases
 	in help pages (all the CRAN packages except those for Windows only
 	and some from Bioconductor), vignettes or task views, using the
 	search engine
