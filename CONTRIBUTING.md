@@ -42,7 +42,11 @@ Then you can push back up to your account and send a pull request.
 look at `ctv::check_ctv_packages` report and fix missing packages.
 
 ### Utils
-After a successful `make`, two other steps may be useful:
+After a successful `make`, you can view the html generated with:
+```
+make view
+```
+Furthermore, two other steps may be useful:
 * spell checking
 * checking links
 

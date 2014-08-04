@@ -14,10 +14,17 @@ contact the [maintainer](mailto:lbraglia@gmail.com) or look
 [here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md)
 on how to contribute.
 
-Creation
---------
+Start
+-----
 
 ### Searching for already existing packages
+
+Before starting a new package it's worth searching for already available
+packages, both from a developer's standpoint ("do not reinvent the
+wheel") and from a user's one (many packages implementing same/similar
+procedures can be confusing). If a package adressing the same
+functionality already exist, you may consider contributing at it instead
+of starting a new one.
 
 ### Creating R packages
 

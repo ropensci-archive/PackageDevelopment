@@ -18,10 +18,16 @@
     </p>
 
     <!-- ==================================================== -->
-    <h2>Creation</h2>
+    <h2>Start</h2>
 
     <p><h3>Searching for already existing packages</h3></p>
     
+    Before starting a new package it's worth searching for already
+    available packages, both from a developer's standpoint ("do not
+    reinvent the wheel") and from a user's one (many packages implementing
+    same/similar procedures can be confusing). If a package adressing the
+    same functionality already exist, you may consider contributing at it
+    instead of starting a new one.
     
     <p><h3>Creating R packages</h3></p> <!-- utils::package.skeleton,
     pkgKitten, Rcpp::Rcpp.package.skeleton -->
