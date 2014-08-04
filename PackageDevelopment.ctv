@@ -18,7 +18,7 @@
     </p>
 
     <!-- ==================================================== -->
-    <h2>Start</h2>
+    <h2>First steps</h2>
 
     <p><h3>Searching for already existing packages</h3></p>
     
@@ -29,18 +29,30 @@
     same functionality already exist, you may consider contributing at it
     instead of starting a new one.
     
-    <p><h3>Creating R packages</h3></p> <!-- utils::package.skeleton,
+    <!-- 
+    search: test some of them TODO
+	
+	sos package
+	RStackExchange package
+	svTools package
+	helpr package
+	https://github.com/saurfang/roxyPackage
+	https://github.com/Dasonk/packageAnalyzeR
+    -->
+
+    <p><h3>Creating R packages</h3></p> 
+
+    <!-- utils::package.skeleton,
     pkgKitten, Rcpp::Rcpp.package.skeleton -->
-    <pkg>pkgKitten</pkg>
+    
 
     <!-- ==================================================== -->
     <h2>Source code</h2>
 
-    <p><h3>Foreign Languages Interfaces</h3></p> <!-- base R support
-    for that, Rcpp11,
+    <p><h3>Foreign Languages Interfaces</h3></p> 
 
-	 Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of
-	 rjava implies java tools.  -->
+    <!-- base R support for that, Rcpp11, Use of Rcpp/Rcpp11 implies the
+	 use of C++ tools too and use of rjava implies java tools.  -->
 
     <ul>
       <li>
@@ -59,18 +71,17 @@
     </ul>
 
 
+    <p><h3>Debugging</h3></p> 
 
-    <p><h3>Debugging</h3></p> <!-- base::debug utils::recover and
-    friends -->
+    <!-- base::debug utils::recover and friends -->
 
 
-    <p><h3>Code Analysis</h3></p> <!-- codetools -->
+    <p><h3>Code Analysis</h3></p>
     <ul>
       <li>
 	The <pkg>codetools</pkg> package.
       </li>
     </ul>
-      
 
 
     <p><h3>Profiling</h3></p>
@@ -113,26 +124,32 @@
     <!-- ==================================================== -->
     <h2>Documentation</h2>
 
-    <p><h3>Writing Package Documentation</h3></p> <!-- (functions, data
-    sets, classes and methods, packages) roxygen2 -->
-    <pkg>roxygen2</pkg>
+    <p><h3>Writing Package Documentation</h3></p>
 
+    <!-- (functions, data sets, classes and methods, packages) roxygen2 -->
 
-    <p><h3>Writing Vignettes</h3></p> <!-- Sweave knitr -->
+    <p><h3>Writing Vignettes</h3></p> 
 
-    
-    <p><h3>Spell Checking</h3></p> <!-- tools::aspell_package_*
-    functions -->
+    <!-- Sweave knitr -->
+   
+    <p><h3>Spell Checking</h3></p> 
+
+    <!-- tools::aspell_package_* functions -->
 
 
     <!-- ==================================================== -->
     <h2>Tools and services</h2>
 
 
-    <p><h3>Editors</h3></p> <!-- (supporting package development) -->
+    <p><h3>Editors</h3></p> 
 
-    <p><h3>IDEs</h3></p> <!-- (supporting package development)
-    http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment
+    <!-- (supporting package development) -->
+
+
+    <p><h3>IDEs</h3></p> 
+
+    <!-- (supporting package development)
+    http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment 
     -->
 
 
@@ -161,6 +178,7 @@
       </li>
     </ul>
 
+
     <p><h3>Building services</h3></p>
 
     <ul>
@@ -185,13 +203,11 @@
     <pkg>codetools</pkg> 
     <pkg>inline</pkg> 
     <pkg>microbenchmark</pkg> 
-    <pkg>pkgKitten</pkg> 
     <pkg>profr</pkg> 
     <pkg>proftools</pkg> 
     <pkg>rbenchmark</pkg> 
     <pkg>Rcpp</pkg> 
     <pkg>rJava</pkg> 
-    <pkg>roxygen2</pkg> 
     <pkg>RUnit</pkg> 
     <pkg>svUnit</pkg> 
     <pkg>testthat</pkg> 

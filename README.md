@@ -14,8 +14,8 @@ contact the [maintainer](mailto:lbraglia@gmail.com) or look
 [here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md)
 on how to contribute.
 
-Start
------
+First steps
+-----------
 
 ### Searching for already existing packages
 
@@ -27,8 +27,6 @@ functionality already exist, you may consider contributing at it instead
 of starting a new one.
 
 ### Creating R packages
-
-[pkgKitten](http://cran.r-project.org/web/packages/pkgKitten/index.html)
 
 Source code
 -----------
@@ -85,8 +83,6 @@ Documentation
 
 ### Writing Package Documentation
 
-[roxygen2](http://cran.r-project.org/web/packages/roxygen2/index.html)
-
 ### Writing Vignettes
 
 ### Spell Checking
@@ -131,13 +127,11 @@ community are:
 -   [codetools](http://cran.r-project.org/web/packages/codetools/index.html)
 -   [inline](http://cran.r-project.org/web/packages/inline/index.html)
 -   [microbenchmark](http://cran.r-project.org/web/packages/microbenchmark/index.html)
--   [pkgKitten](http://cran.r-project.org/web/packages/pkgKitten/index.html)
 -   [profr](http://cran.r-project.org/web/packages/profr/index.html)
 -   [proftools](http://cran.r-project.org/web/packages/proftools/index.html)
 -   [rbenchmark](http://cran.r-project.org/web/packages/rbenchmark/index.html)
 -   [Rcpp](http://cran.r-project.org/web/packages/Rcpp/index.html)
 -   [rJava](http://cran.r-project.org/web/packages/rJava/index.html)
--   [roxygen2](http://cran.r-project.org/web/packages/roxygen2/index.html)
 -   [RUnit](http://cran.r-project.org/web/packages/RUnit/index.html)
 -   [svUnit](http://cran.r-project.org/web/packages/svUnit/index.html)
 -   [testthat](http://cran.r-project.org/web/packages/testthat/index.html)
