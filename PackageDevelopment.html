@@ -1,8 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>CRAN Task View: Package Development</title>
-  <link rel=stylesheet type="text/css" href="../CRAN_web.css" />
+  <link rel="stylesheet" type="text/css" href="../CRAN_web.css" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="citation_title" content="CRAN Task View: Package Development" />
+  <meta name="citation_author" content="Luca Braglia" />
+  <meta name="citation_publication_date" content="2014-07-26" />
+  <meta name="citation_public_url" content="http://CRAN.R-project.org/view=PackageDevelopment" />
+  <meta name="DC.title" content="CRAN Task View: Package Development" />
+  <meta name="DC.creator" content="Luca Braglia" />
+  <meta name="DC.issued" content="2014-07-26" />
+  <meta name="DC.identifier" content="http://CRAN.R-project.org/view=PackageDevelopment" />
 </head>
 
 <body>
@@ -33,6 +42,7 @@
           Creating R packages
         </h3>
       </p>
+<a href="http://cran.r-project.org/web/packages/pkgKitten/index.html">pkgKitten</a>
       <h2>
         Source code
       </h2>
@@ -41,6 +51,30 @@
           Foreign Languages Interfaces
         </h3>
       </p>
+      <ul>
+        <li>
+          The
+<a href="http://cran.r-project.org/web/packages/inline/index.html">inline</a>
+          package eases adding code in C, C++ or
+	Fortran to R. It takes care of the compilation, linking and loading
+	of embeded code segments that are stored as R strings.
+        </li>
+        <li>
+          The
+<a href="http://cran.r-project.org/web/packages/Rcpp/index.html">Rcpp</a>
+          package offers a number of C++ clases that
+	makes transferring R objects to C++ functions (and back) easier.
+        </li>
+        <li>
+          The
+<a href="http://cran.r-project.org/web/packages/rJava/index.html">rJava</a>
+          package by Urbanek provides a low-level
+	interface to Java similar to the
+<tt>.Call()</tt>
+          interface for C
+	and C++.
+        </li>
+      </ul>
       <p>
         <h3>
           Debugging
@@ -56,16 +90,38 @@
           Profiling
         </h3>
       </p>
+      <ul>
+        <li>
+          The
+<a href="http://cran.r-project.org/web/packages/profr/index.html">profr</a>
+          package by Wickham can visualize output from
+	the
+<tt>Rprof</tt>
+          interface for profiling.
+        </li>
+        <li>
+          The
+<a href="http://cran.r-project.org/web/packages/proftools/index.html">proftools</a>
+          package by Tierney, and the
+<a href="http://cran.r-project.org/web/packages/aprof/index.html">aprof</a>
+          package by Visser, can also be used to analyse
+      profiling output.
+        </li>
+      </ul>
       <p>
         <h3>
           Benchmarking
         </h3>
       </p>
+      <ul>
+      </ul>
       <p>
         <h3>
           Unit Testing
         </h3>
       </p>
+<a href="http://cran.r-project.org/web/packages/RUnit/index.html">RUnit</a>
+<a href="http://cran.r-project.org/web/packages/testthat/index.html">testthat</a>
       <h2>
         Documentation
       </h2>
@@ -74,6 +130,7 @@
           Writing Package Documentation
         </h3>
       </p>
+<a href="http://cran.r-project.org/web/packages/roxygen2/index.html">roxygen2</a>
       <p>
         <h3>
           Writing Vignettes
@@ -116,11 +173,13 @@
 
   <h3>CRAN packages:</h3>
   <ul>
-    <li><a href="http://cran.r-project.org/web/packages/devtools/index.html">devtools</a></li>
+    <li><a href="http://cran.r-project.org/web/packages/aprof/index.html">aprof</a></li>
+    <li><a href="http://cran.r-project.org/web/packages/inline/index.html">inline</a></li>
     <li><a href="http://cran.r-project.org/web/packages/pkgKitten/index.html">pkgKitten</a></li>
     <li><a href="http://cran.r-project.org/web/packages/profr/index.html">profr</a></li>
     <li><a href="http://cran.r-project.org/web/packages/proftools/index.html">proftools</a></li>
     <li><a href="http://cran.r-project.org/web/packages/Rcpp/index.html">Rcpp</a></li>
+    <li><a href="http://cran.r-project.org/web/packages/rJava/index.html">rJava</a></li>
     <li><a href="http://cran.r-project.org/web/packages/roxygen2/index.html">roxygen2</a></li>
     <li><a href="http://cran.r-project.org/web/packages/RUnit/index.html">RUnit</a></li>
     <li><a href="http://cran.r-project.org/web/packages/testthat/index.html">testthat</a></li>
@@ -129,7 +188,7 @@
   <h3>Related links:</h3>
   <ul>
     <li><a href="http://adv-r.had.co.nz">
-  [Book] "Advanced R" by Hadley Wickham
+  [Book] &quot;Advanced R&quot; by Hadley Wickham
 </a></li>
     <li><a href="http://www.rstudio.com">
   [IDE] RStudio

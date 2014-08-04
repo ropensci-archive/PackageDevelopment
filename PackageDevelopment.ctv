@@ -26,6 +26,7 @@
 	 pkgKitten,
 	 Rcpp::Rcpp.package.skeleton 
     -->
+    <pkg>pkgKitten</pkg>
 
     <!-- ==================================================== -->
     <h2>Source code</h2>
@@ -41,6 +42,24 @@
 	 Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of
 	 rjava implies java tools.
     -->
+
+    <ul>
+      <li>
+	The <pkg>inline</pkg> package eases adding code in C, C++ or
+	Fortran to R. It takes care of the compilation, linking and loading
+	of embeded code segments that are stored as R strings.
+      </li>
+      <li>
+	The <pkg>Rcpp</pkg> package offers a number of C++ clases that
+	makes transferring R objects to C++ functions (and back) easier.
+      </li>
+      <li>
+	The <pkg>rJava</pkg> package by Urbanek provides a low-level
+	interface to Java similar to the <code>.Call()</code> interface for C
+	and C++.
+      </li>
+    </ul>
+
 
 
     <p><h3>Debugging</h3></p>
@@ -65,6 +84,16 @@
 	 proftools
     -->
 
+    <ul>
+      <li>The <pkg>profr</pkg> package by Wickham can visualize output from
+	the <code>Rprof</code> interface for profiling.
+      </li>
+      <li>The <pkg>proftools</pkg> package by Tierney, and the
+      <pkg>aprof</pkg> package by Visser, can also be used to analyse
+      profiling output. 
+      </li>
+    </ul>
+
 
     <p><h3>Benchmarking</h3></p>
     <!-- 
@@ -72,6 +101,8 @@
 	 microbenchmarking
 	 rbenchmark
     -->
+    <ul>
+    </ul>
 
 
     <p><h3>Unit Testing</h3></p>
@@ -80,6 +111,8 @@
 	 svUnit 
 	 testthat 
     -->
+    <pkg>RUnit</pkg>
+    <pkg>testthat</pkg>
 
 
     <!-- ==================================================== -->
@@ -90,6 +123,7 @@
 	 (functions, data sets, classes and methods, packages)
 	 roxygen2
     -->
+    <pkg>roxygen2</pkg>
 
 
     <p><h3>Writing Vignettes</h3></p>
@@ -147,14 +181,15 @@ http://en.wikipedia.org/wiki/Continuous_integration#Software
   </info>
 
   <packagelist>
-
-    <pkg>RUnit</pkg>
-    <pkg>Rcpp</pkg>
-    <pkg>devtools</pkg>
+    <pkg>aprof</pkg>
+    <pkg>inline</pkg>
     <pkg>pkgKitten</pkg>
     <pkg>profr</pkg>
     <pkg>proftools</pkg>
+    <pkg>Rcpp</pkg>
+    <pkg>rJava</pkg>
     <pkg>roxygen2</pkg>
+    <pkg>RUnit</pkg>
     <pkg>testthat</pkg>
    
   </packagelist>

@@ -26,6 +26,7 @@
 	 pkgKitten,
 	 Rcpp::Rcpp.package.skeleton 
     -->
+    <pkg>pkgKitten</pkg>
 
     <!-- ==================================================== -->
     <section>Source code</section>
@@ -33,14 +34,28 @@
     <p><task>Foreign Languages Interfaces</task></p>
     <!-- 
 	 base R support for that,
-	 inline, 
-	 Rcpp , 
 	 Rcpp11, 
-	 rJava
 
 	 Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of
 	 rjava implies java tools.
     -->
+
+    <ul>
+      <li>
+	The <pkg>inline</pkg> package eases adding code in C, C++ or
+	Fortran to R. It takes care of the compilation, linking and loading
+	of embeded code segments that are stored as R strings.
+      </li>
+      <li>
+	The <pkg>Rcpp</pkg> package offers a number of C++ clases that
+	makes transferring R objects to C++ functions (and back) easier.
+      </li>
+      <li>
+	The <pkg>rJava</pkg> package provides a low-level interface to Java
+	similar to the <code>.Call()</code> interface for C and C++.
+      </li>
+    </ul>
+
 
 
     <p><task>Debugging</task></p>
@@ -55,31 +70,40 @@
     <!-- 
 	 codetools
     -->
+    <ul>
+      <li>
+	The <pkg>codetools</pkg> package.
+      </li>
+    </ul>
+      
 
 
     <p><task>Profiling</task></p>
-    <!-- 
-	 utils::Rprof, 
-	 aprof 
-	 profr 
-	 proftools
-    -->
+    <ul>
+      <li>Profiling data is provided by <code>utils::Rprof</code> and can
+      be summarised by <code>utils::summaryRprof </code>
+      <li>The <pkg>profr</pkg> package can visualize output from
+      the <code>Rprof</code> interface for profiling.
+      </li>
+      <li>The <pkg>proftools</pkg> package and the <pkg>aprof</pkg> package
+      can also be used to analyse profiling output.
+      </li>
+    </ul>
 
 
     <p><task>Benchmarking</task></p>
-    <!-- 
-	 base::system.time
-	 microbenchmarking
-	 rbenchmark
-    -->
+    <ul>
+      <li> <code>base::system.time<code> is a minimal timing utility </li>
+      <li> <pkg>microbenchmarking</pkg>  </li>
+      <li> <pkg>rbenchmark</pkg>  </li>
+      
+    </ul>
 
 
     <p><task>Unit Testing</task></p>
-    <!-- 
-	 RUnit 
-	 svUnit 
-	 testthat 
-    -->
+    <pkg>RUnit</pkg>
+    <pkg>svUnit</pkg>
+    <pkg>testthat</pkg>
 
 
     <!-- ==================================================== -->
@@ -90,6 +114,7 @@
 	 (functions, data sets, classes and methods, packages)
 	 roxygen2
     -->
+    <pkg>roxygen2</pkg>
 
 
     <p><task>Writing Vignettes</task></p>
@@ -147,15 +172,9 @@ http://en.wikipedia.org/wiki/Continuous_integration#Software
   </info>
 
   <packagelist>
-
-    <pkg>RUnit</pkg>
-    <pkg>Rcpp</pkg>
-    <pkg>devtools</pkg>
-    <pkg>pkgKitten</pkg>
-    <pkg>profr</pkg>
-    <pkg>proftools</pkg>
-    <pkg>roxygen2</pkg>
-    <pkg>testthat</pkg>
+    {{#pkgs}}
+    <pkg>{{package}}</pkg>
+    {{/pkgs}}
    
   </packagelist>
   

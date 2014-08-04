@@ -3,8 +3,8 @@ SECTION := h2
 TASK := h3
 SED_SECTION :="s@<section>\(.*\)</section>@<${SECTION}>\1</${SECTION}>@g" 
 SED_TASK := "s@<task>\(.*\)</task>@<${TASK}>\1</${TASK}>@g" 
-SED_GH := "s@<gh>\(.*\)/\(.*\)</gh>@<a href='http://github.com/\1/\2'>\2</a>@g" 
-SED_PREPROC :=  sed ${SED_SECTION} | sed ${SED_TASK} | sed ${SED_GH} 
+# SED_GH := "s@<gh>\(.*\)/\(.*\)</gh>@<a href='http://github.com/\1/\2'>\2</a>@g" 
+SED_PREPROC :=  sed ${SED_SECTION} | sed ${SED_TASK} #| sed ${SED_GH} 
 # Aspell skipping
 HTML_SKIP := \
 	 --add-html-skip=name --add-html-skip=maintainer --add-html-skip=pkg \
@@ -16,10 +16,13 @@ HTML_SKIP := \
 # Main
 # -------------------------------------------------------------------------------------
 
-all: sed-preproc check html cran-links README clean
+all: sed-preproc whisker-packagelist check html cran-links README clean
 
 sed-preproc:
-	cat pd.ctv | ${SED_PREPROC} > PackageDevelopment.ctv
+	cat pd.ctv | ${SED_PREPROC} > pd2.ctv
+
+whisker-packagelist:
+	Rscript --vanilla -e 'source("whiskerit.R")'
 
 check:
 	Rscript -e "library(ctv); (a <- check_ctv_packages('PackageDevelopment.ctv')); if (length(unlist(a)) != 0) stop('Missing Packages; look the report above')"
@@ -35,7 +38,7 @@ README:
 	pandoc PackageDevelopment.html -o README.md
 
 clean:
-	rm -rf tmp.html
+	rm -rf tmp.html pd2.ctv
 
 
 # -------------------------------------------------------------------------------------

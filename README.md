@@ -17,10 +17,24 @@ Creation
 
 ### Creating R packages
 
+[pkgKitten](http://cran.r-project.org/web/packages/pkgKitten/index.html)
+
 Source code
 -----------
 
 ### Foreign Languages Interfaces
+
+-   The
+    [inline](http://cran.r-project.org/web/packages/inline/index.html)
+    package eases adding code in C, C++ or Fortran to R. It takes care
+    of the compilation, linking and loading of embeded code segments
+    that are stored as R strings.
+-   The [Rcpp](http://cran.r-project.org/web/packages/Rcpp/index.html)
+    package offers a number of C++ clases that makes transferring R
+    objects to C++ functions (and back) easier.
+-   The [rJava](http://cran.r-project.org/web/packages/rJava/index.html)
+    package by Urbanek provides a low-level interface to Java similar to
+    the `.Call()` interface for C and C++.
 
 ### Debugging
 
@@ -28,14 +42,28 @@ Source code
 
 ### Profiling
 
+-   The [profr](http://cran.r-project.org/web/packages/profr/index.html)
+    package by Wickham can visualize output from the `Rprof` interface
+    for profiling.
+-   The
+    [proftools](http://cran.r-project.org/web/packages/proftools/index.html)
+    package by Tierney, and the
+    [aprof](http://cran.r-project.org/web/packages/aprof/index.html)
+    package by Visser, can also be used to analyse profiling output.
+
 ### Benchmarking
 
 ### Unit Testing
+
+[RUnit](http://cran.r-project.org/web/packages/RUnit/index.html)
+[testthat](http://cran.r-project.org/web/packages/testthat/index.html)
 
 Documentation
 -------------
 
 ### Writing Package Documentation
+
+[roxygen2](http://cran.r-project.org/web/packages/roxygen2/index.html)
 
 ### Writing Vignettes
 
@@ -56,11 +84,13 @@ Tools and services
 
 ### CRAN packages:
 
--   [devtools](http://cran.r-project.org/web/packages/devtools/index.html)
+-   [aprof](http://cran.r-project.org/web/packages/aprof/index.html)
+-   [inline](http://cran.r-project.org/web/packages/inline/index.html)
 -   [pkgKitten](http://cran.r-project.org/web/packages/pkgKitten/index.html)
 -   [profr](http://cran.r-project.org/web/packages/profr/index.html)
 -   [proftools](http://cran.r-project.org/web/packages/proftools/index.html)
 -   [Rcpp](http://cran.r-project.org/web/packages/Rcpp/index.html)
+-   [rJava](http://cran.r-project.org/web/packages/rJava/index.html)
 -   [roxygen2](http://cran.r-project.org/web/packages/roxygen2/index.html)
 -   [RUnit](http://cran.r-project.org/web/packages/RUnit/index.html)
 -   [testthat](http://cran.r-project.org/web/packages/testthat/index.html)
