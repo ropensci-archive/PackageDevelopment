@@ -10,7 +10,7 @@ SED_PREPROC :=  sed ${SED_SECTION} | sed ${SED_TASK} #| sed ${SED_GH}
 HTML_SKIP := \
 	 --add-html-skip=name --add-html-skip=maintainer --add-html-skip=pkg \
 	 --add-html-skip=view --add-html-skip=bioc --add-html-skip=ohat \
-	 --add-html-skip=rforge --add-html-skip=gcode
+	 --add-html-skip=rforge --add-html-skip=gcode --add-html-skip=code
 
 # -------------------------------------------------------------------------------------
 # Main

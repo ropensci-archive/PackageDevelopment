@@ -30,10 +30,10 @@ Source code
 -   The
     [inline](http://cran.r-project.org/web/packages/inline/index.html)
     package eases adding code in C, C++ or Fortran to R. It takes care
-    of the compilation, linking and loading of embeded code segments
+    of the compilation, linking and loading of embedded code segments
     that are stored as R strings.
 -   The [Rcpp](http://cran.r-project.org/web/packages/Rcpp/index.html)
-    package offers a number of C++ clases that makes transferring R
+    package offers a number of C++ classes that makes transferring R
     objects to C++ functions (and back) easier.
 -   The [rJava](http://cran.r-project.org/web/packages/rJava/index.html)
     package provides a low-level interface to Java similar to the
@@ -49,7 +49,7 @@ Source code
 
 ### Profiling
 
--   Profiling data is provided by `utils::Rprof` and can be summarised
+-   Profiling data is provided by `utils::Rprof` and can be summarized
     by `utils::summaryRprof`
 -   The [profr](http://cran.r-project.org/web/packages/profr/index.html)
     package can visualize output from the `Rprof` interface for
@@ -58,7 +58,7 @@ Source code
     [proftools](http://cran.r-project.org/web/packages/proftools/index.html)
     package and the
     [aprof](http://cran.r-project.org/web/packages/aprof/index.html)
-    package can also be used to analyse profiling output.
+    package can also be used to analyze profiling output.
 
 ### Benchmarking
 

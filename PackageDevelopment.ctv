@@ -40,10 +40,10 @@
       <li>
 	The <pkg>inline</pkg> package eases adding code in C, C++ or
 	Fortran to R. It takes care of the compilation, linking and loading
-	of embeded code segments that are stored as R strings.
+	of embedded code segments that are stored as R strings.
       </li>
       <li>
-	The <pkg>Rcpp</pkg> package offers a number of C++ clases that
+	The <pkg>Rcpp</pkg> package offers a number of C++ classes that
 	makes transferring R objects to C++ functions (and back) easier.
       </li>
       <li>
@@ -71,7 +71,7 @@
     <ul>
       <li>
 	Profiling data is provided by <code>utils::Rprof</code> and can be
-	summarised by <code>utils::summaryRprof</code>
+	summarized by <code>utils::summaryRprof</code>
       </li>
       <li>
 	The <pkg>profr</pkg> package can visualize output from
@@ -79,7 +79,7 @@
       </li>
       <li>
 	The <pkg>proftools</pkg> package and the <pkg>aprof</pkg> package
-	can also be used to analyse profiling output.
+	can also be used to analyze profiling output.
       </li>
     </ul>
 
