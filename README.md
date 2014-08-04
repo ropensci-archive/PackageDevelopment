@@ -11,7 +11,8 @@ grouped by topics.
 
 If you think that some packages/tools are missing from the list, please
 contact the [maintainer](mailto:lbraglia@gmail.com) or look
-[here](mailto:lbraglia@gmail.com) on how to contribute.
+[here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md)
+on how to contribute.
 
 Creation
 --------
