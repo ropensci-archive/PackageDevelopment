@@ -108,6 +108,12 @@ Tools and services
 
 ### Makefiles
 
+[GNU Make](http://www.gnu.org/software/make/) utility that automatically
+builds executable programs and libraries from source code by reading
+files called makefiles. It can be used to manage R package as well.
+[maker](http://github.com/ComputationalProteomicsUnit/maker) is a
+Makefile completely devoted to R package development.
+
 ### Hosting services
 
 Many [hosting
@@ -151,8 +157,11 @@ community are:
 
 ### Related links:
 
+-   [[Manual] "Writing R Extension" by R-core
+    team](http://cran.r-project.org/doc/manuals/R-exts.html)
+-   [[Tutorial] "Creating R Packages: A Tutorial" by Friedrich
+    Leisch](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
+-   [[Book] "Software for Data Analysis" by John
+    Chambers](http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-0-387-75935-7)
 -   [[Book] "Advanced R" by Hadley Wickham](http://adv-r.had.co.nz)
--   [[IDE] RStudio](http://www.rstudio.com)
--   [[Makefile]
-    maker](http://github.com/ComputationalProteomicsUnit/maker)
 
