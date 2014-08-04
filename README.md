@@ -109,6 +109,14 @@ community are:
 
 ### Building services
 
+-   [WinBuilder](http://win-builder.r-project.org/) is a service
+    intended for useRs who do not have Windows available, for checking
+    and building Windows binary packages. The package sources (after an
+    `R CMD check`) can be uploaded via html form or passive ftp in
+    binary mode; after checking/building a mail will be sent to the
+    `Maintainer` with links to the package zip file and logs for
+    download/inspection.
+
 ### CRAN packages:
 
 -   [aprof](http://cran.r-project.org/web/packages/aprof/index.html)
