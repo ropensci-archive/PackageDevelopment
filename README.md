@@ -10,10 +10,13 @@ This Task View focuses on useful tools for R Packages Development,
 grouped by topics.
 
 If you think that some packages/tools are missing from the list, please
-contact the [maintainer](mailto:lbraglia@gmail.com).
+contact the [maintainer](mailto:lbraglia@gmail.com) or look
+[here](mailto:lbraglia@gmail.com) on how to contribute.
 
 Creation
 --------
+
+### Searching for already existing packages
 
 ### Creating R packages
 
@@ -89,9 +92,22 @@ Tools and services
 
 ### Makefiles
 
-### Revision control software
-
 ### Hosting services
+
+Many [hosting
+services](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities)
+are available for package development. The most common in the R
+community are:
+
+-   [R-forge](http://r-forge.r-project.org/), based on
+    [subversion](http://subversion.apache.org/).
+-   [GitHub](http://github.com/), based on [git](http://git-scm.com/).
+    It can handle [continuous
+    integration](http://en.wikipedia.org/wiki/Continuous_integration)
+    for R packages with [Travis CI](http://travis-ci.org/): more info on
+    that [here](http://github.com/craigcitro/r-travis).
+
+### Building services
 
 ### CRAN packages:
 
@@ -115,5 +131,5 @@ Tools and services
 -   [[Book] "Advanced R" by Hadley Wickham](http://adv-r.had.co.nz)
 -   [[IDE] RStudio](http://www.rstudio.com)
 -   [[Makefile]
-    maker](https://github.com/ComputationalProteomicsUnit/maker)
+    maker](http://github.com/ComputationalProteomicsUnit/maker)
 

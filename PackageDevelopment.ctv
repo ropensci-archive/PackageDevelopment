@@ -1,4 +1,4 @@
-<!-- -*- mode: XML -*- -->
+<!-- -*- mode: HTML -*- -->
 <CRANTaskView>
 
   <name>PackageDevelopment</name>
@@ -8,37 +8,33 @@
 
   <info>
     <p>
-      This Task View focuses on useful tools for R Packages
-      Development, grouped by topics.
-    </p> 
-    <p> 
-      If you think that some packages/tools are missing from the
-      list, please contact the <a
-      href="mailto:lbraglia@gmail.com">maintainer</a>.
-    </p> 
+      This Task View focuses on useful tools for R Packages Development,
+      grouped by topics.
+    </p>
+    <p> If you think that some packages/tools are missing from the list,
+      please contact the <a href="mailto:lbraglia@gmail.com">maintainer</a>
+      or look <a href="mailto:lbraglia@gmail.com">here</a> on how to
+      contribute.
+    </p>
 
     <!-- ==================================================== -->
     <h2>Creation</h2>
+
+    <p><h3>Searching for already existing packages</h3></p>
     
-    <p><h3>Creating R packages</h3></p>
-    <!-- 
-	 utils::package.skeleton, 
-	 pkgKitten,
-	 Rcpp::Rcpp.package.skeleton 
-    -->
+    
+    <p><h3>Creating R packages</h3></p> <!-- utils::package.skeleton,
+    pkgKitten, Rcpp::Rcpp.package.skeleton -->
     <pkg>pkgKitten</pkg>
 
     <!-- ==================================================== -->
     <h2>Source code</h2>
 
-    <p><h3>Foreign Languages Interfaces</h3></p>
-    <!-- 
-	 base R support for that,
-	 Rcpp11, 
+    <p><h3>Foreign Languages Interfaces</h3></p> <!-- base R support
+    for that, Rcpp11,
 
 	 Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of
-	 rjava implies java tools.
-    -->
+	 rjava implies java tools.  -->
 
     <ul>
       <li>
@@ -58,18 +54,11 @@
 
 
 
-    <p><h3>Debugging</h3></p>
-    <!-- 
-	 base::debug 
-	 utils::recover
-	 and friends
-    -->
+    <p><h3>Debugging</h3></p> <!-- base::debug utils::recover and
+    friends -->
 
 
-    <p><h3>Code Analysis</h3></p>
-    <!-- 
-	 codetools
-    -->
+    <p><h3>Code Analysis</h3></p> <!-- codetools -->
     <ul>
       <li>
 	The <pkg>codetools</pkg> package.
@@ -81,8 +70,8 @@
     <p><h3>Profiling</h3></p>
     <ul>
       <li>
-	Profiling data is provided by <code>utils::Rprof</code> and can
-	be summarised by <code>utils::summaryRprof</code>
+	Profiling data is provided by <code>utils::Rprof</code> and can be
+	summarised by <code>utils::summaryRprof</code>
       </li>
       <li>
 	The <pkg>profr</pkg> package can visualize output from
@@ -97,14 +86,14 @@
 
     <p><h3>Benchmarking</h3></p>
     <ul>
-      <li> 
+      <li>
 	<code>base::system.time</code> is a basic timing utility
       </li>
-      <li> 
-	<pkg>microbenchmark</pkg>  
+      <li>
+	<pkg>microbenchmark</pkg>
       </li>
-      <li> 
-	<pkg>rbenchmark</pkg>  
+      <li>
+	<pkg>rbenchmark</pkg>
       </li>
     </ul>
 
@@ -118,94 +107,96 @@
     <!-- ==================================================== -->
     <h2>Documentation</h2>
 
-    <p><h3>Writing Package Documentation</h3></p>
-    <!-- 
-	 (functions, data sets, classes and methods, packages)
-	 roxygen2
-    -->
+    <p><h3>Writing Package Documentation</h3></p> <!-- (functions, data
+    sets, classes and methods, packages) roxygen2 -->
     <pkg>roxygen2</pkg>
 
 
-    <p><h3>Writing Vignettes</h3></p>
-    <!-- 
-	 Sweave
-	 knitr
-    -->
+    <p><h3>Writing Vignettes</h3></p> <!-- Sweave knitr -->
 
     
-    <p><h3>Spell Checking</h3></p>
-    <!-- 
-	 tools::aspell_package_* functions 
-    -->
+    <p><h3>Spell Checking</h3></p> <!-- tools::aspell_package_*
+    functions -->
 
 
     <!-- ==================================================== -->
     <h2>Tools and services</h2>
 
 
-    <p><h3>Editors</h3></p>
-    <!--  (supporting package development) -->
+    <p><h3>Editors</h3></p> <!-- (supporting package development) -->
 
-    <p><h3>IDEs</h3></p>
-    <!-- 
-	 (supporting package development)
-	 http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment
+    <p><h3>IDEs</h3></p> <!-- (supporting package development)
+    http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment
     -->
 
 
     <p><h3>Makefiles</h3></p>
-    <!-- <a href="https://github.com/ComputationalProteomicsUnit/maker">maker: a Makefile for R development</a> -->
+    <!-- <a href="http://github.com/ComputationalProteomicsUnit/maker">maker:
+    a Makefile for R development</a> -->
 
-
-    <p><h3>Revision control software</h3></p>
-    <!-- 
-	 (most common in the R community)
-	 subversion 
-	 git 
-	 http://en.wikipedia.org/wiki/Comparison_of_revision_control_software
-    -->
 
     <p><h3>Hosting services</h3></p>
-    <!-- 
-	 (most common in the R community)
-	 r-forge
-	 github
-	 http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities 
 
-http://en.wikipedia.org/wiki/Continuous_integration#Software
-    -->
+    Many <a href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">hosting
+    services</a> are available for package development. The most common in
+    the R community are:
+    <ul>
+      <li>
+	<a href="http://r-forge.r-project.org/">R-forge</a>, based on
+	<a href="http://subversion.apache.org/">subversion</a>.
+      </li>
+      <li>
+	<a href="http://github.com/">GitHub</a>, based
+	on <a href="http://git-scm.com/">git</a>. It can
+	handle <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous
+	integration</a> for R packages
+	with <a href="http://travis-ci.org/">Travis CI</a>: more info on
+	that <a href="http://github.com/craigcitro/r-travis">here</a>.
+      </li>
+    </ul>
 
+    <p><h3>Building services</h3></p>
+    <ul>
+      <a href="http://win-builder.r-project.org/">WinBuilder</a> is a
+      service intended for useRs who do not have Windows available, for
+      checking and building Windows binary packages. The package sources
+      (after an <code>R CMD check</code>) can be uploaded via html form or
+      passive ftp in binary mode; after checking/building a mail will be
+      sent to the  <code>Maintainer</code> with links to the package zip
+      file and logs for  download/inspection.
+    </ul>
     <!-- ==================================================== -->
     
 
   </info>
 
   <packagelist>
-    <pkg>aprof</pkg>
-    <pkg>codetools</pkg>
-    <pkg>inline</pkg>
-    <pkg>microbenchmark</pkg>
-    <pkg>pkgKitten</pkg>
-    <pkg>profr</pkg>
-    <pkg>proftools</pkg>
-    <pkg>rbenchmark</pkg>
-    <pkg>Rcpp</pkg>
-    <pkg>rJava</pkg>
-    <pkg>roxygen2</pkg>
-    <pkg>RUnit</pkg>
-    <pkg>svUnit</pkg>
-    <pkg>testthat</pkg>
+    <pkg>aprof</pkg> 
+    <pkg>codetools</pkg> 
+    <pkg>inline</pkg> 
+    <pkg>microbenchmark</pkg> 
+    <pkg>pkgKitten</pkg> 
+    <pkg>profr</pkg> 
+    <pkg>proftools</pkg> 
+    <pkg>rbenchmark</pkg> 
+    <pkg>Rcpp</pkg> 
+    <pkg>rJava</pkg> 
+    <pkg>roxygen2</pkg> 
+    <pkg>RUnit</pkg> 
+    <pkg>svUnit</pkg> 
+    <pkg>testthat</pkg> 
    
   </packagelist>
   
   <links>
-    <a href="http://adv-r.had.co.nz">[Book] "Advanced R" by Hadley Wickham</a>
+    <a href="http://adv-r.had.co.nz">[Book] "Advanced R" by Hadley
+    Wickham</a>
     <a href="http://www.rstudio.com">[IDE] RStudio</a>
-    <a href="https://github.com/ComputationalProteomicsUnit/maker">[Makefile] maker</a>
-    <!--Packrat has to be tested for package development? ideas
-	here https://github.com/rstudio/packrat/issues/31--> 
+    <a href="http://github.com/ComputationalProteomicsUnit/maker">[Makefile]
+    maker</a> <!--Packrat has to be tested for package development? ideas
+    here https://github.com/rstudio/packrat/issues/31-->
     <!-- <a href="http://rstudio.github.io/packrat">packrat package -->
-    <!-- dependency management</a>  -->
+    <!-- dependency management</a> -->
 
   </links>
 
