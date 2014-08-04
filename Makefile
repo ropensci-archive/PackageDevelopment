@@ -5,12 +5,12 @@ SED_SECTION :="s@<section>\(.*\)</section>@<${SECTION}>\1</${SECTION}>@g"
 SED_TASK := "s@<task>\(.*\)</task>@<${TASK}>\1</${TASK}>@g" 
 # SED_GH := "s@<gh>\(.*\)/\(.*\)</gh>@<a href='http://github.com/\1/\2'>\2</a>@g" 
 SED_PREPROC :=  sed ${SED_SECTION} | sed ${SED_TASK} #| sed ${SED_GH} 
+
 # Aspell skipping
 HTML_SKIP := \
 	 --add-html-skip=name --add-html-skip=maintainer --add-html-skip=pkg \
 	 --add-html-skip=view --add-html-skip=bioc --add-html-skip=ohat \
 	 --add-html-skip=rforge --add-html-skip=gcode
-
 
 # -------------------------------------------------------------------------------------
 # Main
@@ -39,7 +39,6 @@ README:
 
 clean:
 	rm -rf tmp.html pd2.ctv
-
 
 # -------------------------------------------------------------------------------------
 # Utils
