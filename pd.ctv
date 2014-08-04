@@ -52,7 +52,7 @@
       </li>
       <li>
 	The <pkg>rJava</pkg> package provides a low-level interface to Java
-	similar to the <code>.Call()</code> interface for C and C++.
+	similar to the <code>.Call</code> interface for C and C++.
       </li>
     </ul>
 
@@ -80,23 +80,32 @@
 
     <p><task>Profiling</task></p>
     <ul>
-      <li>Profiling data is provided by <code>utils::Rprof</code> and can
-      be summarised by <code>utils::summaryRprof </code>
-      <li>The <pkg>profr</pkg> package can visualize output from
-      the <code>Rprof</code> interface for profiling.
+      <li>
+	Profiling data is provided by <code>utils::Rprof</code> and can
+	be summarised by <code>utils::summaryRprof</code>
       </li>
-      <li>The <pkg>proftools</pkg> package and the <pkg>aprof</pkg> package
-      can also be used to analyse profiling output.
+      <li>
+	The <pkg>profr</pkg> package can visualize output from
+	the <code>Rprof</code> interface for profiling.
+      </li>
+      <li>
+	The <pkg>proftools</pkg> package and the <pkg>aprof</pkg> package
+	can also be used to analyse profiling output.
       </li>
     </ul>
 
 
     <p><task>Benchmarking</task></p>
     <ul>
-      <li> <code>base::system.time<code> is a minimal timing utility </li>
-      <li> <pkg>microbenchmarking</pkg>  </li>
-      <li> <pkg>rbenchmark</pkg>  </li>
-      
+      <li> 
+	<code>base::system.time</code> is a basic timing utility
+      </li>
+      <li> 
+	<pkg>microbenchmark</pkg>  
+      </li>
+      <li> 
+	<pkg>rbenchmark</pkg>  
+      </li>
     </ul>
 
 

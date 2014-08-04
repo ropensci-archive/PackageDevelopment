@@ -34,10 +34,7 @@
     <p><h3>Foreign Languages Interfaces</h3></p>
     <!-- 
 	 base R support for that,
-	 inline, 
-	 Rcpp , 
 	 Rcpp11, 
-	 rJava
 
 	 Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of
 	 rjava implies java tools.
@@ -54,9 +51,8 @@
 	makes transferring R objects to C++ functions (and back) easier.
       </li>
       <li>
-	The <pkg>rJava</pkg> package by Urbanek provides a low-level
-	interface to Java similar to the <code>.Call()</code> interface for C
-	and C++.
+	The <pkg>rJava</pkg> package provides a low-level interface to Java
+	similar to the <code>.Call</code> interface for C and C++.
       </li>
     </ul>
 
@@ -74,44 +70,48 @@
     <!-- 
 	 codetools
     -->
+    <ul>
+      <li>
+	The <pkg>codetools</pkg> package.
+      </li>
+    </ul>
+      
 
 
     <p><h3>Profiling</h3></p>
-    <!-- 
-	 utils::Rprof, 
-	 aprof 
-	 profr 
-	 proftools
-    -->
-
     <ul>
-      <li>The <pkg>profr</pkg> package by Wickham can visualize output from
+      <li>
+	Profiling data is provided by <code>utils::Rprof</code> and can
+	be summarised by <code>utils::summaryRprof</code>
+      </li>
+      <li>
+	The <pkg>profr</pkg> package can visualize output from
 	the <code>Rprof</code> interface for profiling.
       </li>
-      <li>The <pkg>proftools</pkg> package by Tierney, and the
-      <pkg>aprof</pkg> package by Visser, can also be used to analyse
-      profiling output. 
+      <li>
+	The <pkg>proftools</pkg> package and the <pkg>aprof</pkg> package
+	can also be used to analyse profiling output.
       </li>
     </ul>
 
 
     <p><h3>Benchmarking</h3></p>
-    <!-- 
-	 base::system.time
-	 microbenchmarking
-	 rbenchmark
-    -->
     <ul>
+      <li> 
+	<code>base::system.time</code> is a basic timing utility
+      </li>
+      <li> 
+	<pkg>microbenchmark</pkg>  
+      </li>
+      <li> 
+	<pkg>rbenchmark</pkg>  
+      </li>
     </ul>
 
 
     <p><h3>Unit Testing</h3></p>
-    <!-- 
-	 RUnit 
-	 svUnit 
-	 testthat 
-    -->
     <pkg>RUnit</pkg>
+    <pkg>svUnit</pkg>
     <pkg>testthat</pkg>
 
 
@@ -182,14 +182,18 @@ http://en.wikipedia.org/wiki/Continuous_integration#Software
 
   <packagelist>
     <pkg>aprof</pkg>
+    <pkg>codetools</pkg>
     <pkg>inline</pkg>
+    <pkg>microbenchmark</pkg>
     <pkg>pkgKitten</pkg>
     <pkg>profr</pkg>
     <pkg>proftools</pkg>
+    <pkg>rbenchmark</pkg>
     <pkg>Rcpp</pkg>
     <pkg>rJava</pkg>
     <pkg>roxygen2</pkg>
     <pkg>RUnit</pkg>
+    <pkg>svUnit</pkg>
     <pkg>testthat</pkg>
    
   </packagelist>

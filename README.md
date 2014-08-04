@@ -33,29 +33,40 @@ Source code
     package offers a number of C++ clases that makes transferring R
     objects to C++ functions (and back) easier.
 -   The [rJava](http://cran.r-project.org/web/packages/rJava/index.html)
-    package by Urbanek provides a low-level interface to Java similar to
-    the `.Call()` interface for C and C++.
+    package provides a low-level interface to Java similar to the
+    `.Call` interface for C and C++.
 
 ### Debugging
 
 ### Code Analysis
 
+-   The
+    [codetools](http://cran.r-project.org/web/packages/codetools/index.html)
+    package.
+
 ### Profiling
 
+-   Profiling data is provided by `utils::Rprof` and can be summarised
+    by `utils::summaryRprof`
 -   The [profr](http://cran.r-project.org/web/packages/profr/index.html)
-    package by Wickham can visualize output from the `Rprof` interface
-    for profiling.
+    package can visualize output from the `Rprof` interface for
+    profiling.
 -   The
     [proftools](http://cran.r-project.org/web/packages/proftools/index.html)
-    package by Tierney, and the
+    package and the
     [aprof](http://cran.r-project.org/web/packages/aprof/index.html)
-    package by Visser, can also be used to analyse profiling output.
+    package can also be used to analyse profiling output.
 
 ### Benchmarking
+
+-   `base::system.time` is a basic timing utility
+-   [microbenchmark](http://cran.r-project.org/web/packages/microbenchmark/index.html)
+-   [rbenchmark](http://cran.r-project.org/web/packages/rbenchmark/index.html)
 
 ### Unit Testing
 
 [RUnit](http://cran.r-project.org/web/packages/RUnit/index.html)
+[svUnit](http://cran.r-project.org/web/packages/svUnit/index.html)
 [testthat](http://cran.r-project.org/web/packages/testthat/index.html)
 
 Documentation
@@ -85,14 +96,18 @@ Tools and services
 ### CRAN packages:
 
 -   [aprof](http://cran.r-project.org/web/packages/aprof/index.html)
+-   [codetools](http://cran.r-project.org/web/packages/codetools/index.html)
 -   [inline](http://cran.r-project.org/web/packages/inline/index.html)
+-   [microbenchmark](http://cran.r-project.org/web/packages/microbenchmark/index.html)
 -   [pkgKitten](http://cran.r-project.org/web/packages/pkgKitten/index.html)
 -   [profr](http://cran.r-project.org/web/packages/profr/index.html)
 -   [proftools](http://cran.r-project.org/web/packages/proftools/index.html)
+-   [rbenchmark](http://cran.r-project.org/web/packages/rbenchmark/index.html)
 -   [Rcpp](http://cran.r-project.org/web/packages/Rcpp/index.html)
 -   [rJava](http://cran.r-project.org/web/packages/rJava/index.html)
 -   [roxygen2](http://cran.r-project.org/web/packages/roxygen2/index.html)
 -   [RUnit](http://cran.r-project.org/web/packages/RUnit/index.html)
+-   [svUnit](http://cran.r-project.org/web/packages/svUnit/index.html)
 -   [testthat](http://cran.r-project.org/web/packages/testthat/index.html)
 
 ### Related links:
