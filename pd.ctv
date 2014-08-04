@@ -17,6 +17,13 @@
       contribute.
     </p>
 
+    <!-- TODO: ... to view/test some of them -->
+    <!-- devtools (of course) -->
+    <!-- pkgcreator -->
+    <!-- svTools -->
+    <!-- https://github.com/saurfang/roxyPackage -->
+    <!-- compiler package -->
+
     <!-- ==================================================== -->
     <section>First steps</section>
 
@@ -29,16 +36,23 @@
     same functionality already exist, you may consider contributing at it
     instead of starting a new one.
     
-    <!-- 
-    search: test some of them TODO
-	
-	sos package
-	RStackExchange package
-	svTools package
-	helpr package
-	https://github.com/saurfang/roxyPackage
-	https://github.com/Dasonk/packageAnalyzeR
-    -->
+    <ul>
+      <li> <code>RSiteSearch</code> allows to search for keywords/phrases
+	in help pages (all the CRAN packages except those for Windows only
+	and some from Bioconductor), vignettes or task views, using the
+	search engine
+	at <a href="http://search.r-project.org">http://search.r-project.org</a>.
+	A convenient wrapper around <code>RSiteSearch</code>
+	that adds hits ranking is <code>findFn</code> function, from
+	the <pkg>sos</pkg> package.</li>
+      <li> <a href="http://rseek.org/">RSeek</a> allows to search for
+	keywords/phrases in books, task views, support lists,
+	function/packages, blogs etc.</li>
+      <li> <a href="http://rdocumentation.org/">Rdocumentation</a> allows
+	to search for keywords/phrases in help pages for all CRAN and some
+	Bioconductor/Github packages. </li>
+    </ul>
+
 
     <p><task>Creating R packages</task></p> 
 
@@ -82,6 +96,8 @@
 	The <pkg>codetools</pkg> package.
       </li>
     </ul>
+
+    <!-- https://github.com/Dasonk/packageAnalyzeR  maybe in the future  -->
 
 
     <p><task>Profiling</task></p>

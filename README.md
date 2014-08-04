@@ -26,6 +26,19 @@ procedures can be confusing). If a package adressing the same
 functionality already exist, you may consider contributing at it instead
 of starting a new one.
 
+-   `RSiteSearch` allows to search for keywords/phrases in help pages
+    (all the CRAN packages except those for Windows only and some from
+    Bioconductor), vignettes or task views, using the search engine at
+    <http://search.r-project.org>. A convenient wrapper around
+    `RSiteSearch` that adds hits ranking is `findFn` function, from the
+    [sos](http://cran.r-project.org/web/packages/sos/index.html)
+    package.
+-   [RSeek](http://rseek.org/) allows to search for keywords/phrases in
+    books, task views, support lists, function/packages, blogs etc.
+-   [Rdocumentation](http://rdocumentation.org/) allows to search for
+    keywords/phrases in help pages for all CRAN and some
+    Bioconductor/Github packages.
+
 ### Creating R packages
 
 Source code
@@ -133,6 +146,7 @@ community are:
 -   [Rcpp](http://cran.r-project.org/web/packages/Rcpp/index.html)
 -   [rJava](http://cran.r-project.org/web/packages/rJava/index.html)
 -   [RUnit](http://cran.r-project.org/web/packages/RUnit/index.html)
+-   [sos](http://cran.r-project.org/web/packages/sos/index.html)
 -   [svUnit](http://cran.r-project.org/web/packages/svUnit/index.html)
 -   [testthat](http://cran.r-project.org/web/packages/testthat/index.html)
 
