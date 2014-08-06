@@ -37,7 +37,10 @@
       Maindonald, Spencer Graves, Tobias Verbeke and the R-core team.
     </p>
 
-    <!-- TODO: ... to view/test some of them -->
+    <!-- TODO: -->
+    <!-- Go through the R Extensions manual and add all tools listed. -->
+
+    <!-- PACKAGES: -->
     <!-- pkgcreator -->
     <!-- svTools -->
     <!-- https://github.com/saurfang/roxyPackage -->
