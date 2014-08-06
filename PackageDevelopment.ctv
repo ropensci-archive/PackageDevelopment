@@ -26,8 +26,10 @@
     file of each package to check it.  -->
     <p> If you think that some packages/tools are missing from the list,
       feel free to <a href="mailto:lbraglia@gmail.com">e-mail</a> me or
-      look <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">here</a>. Many
-      thanks to: Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor
+      look <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">here</a>. 
+    </p>
+    <p>
+      Many thanks to: Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor
       Grothendieck, Gregory Jefferis, John Maindonald, Spencer Graves,
       Tobias Verbeke and the R-core team.
     </p>
