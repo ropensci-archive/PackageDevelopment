@@ -6,16 +6,27 @@ CRAN Task View: Package Development
   Luca Braglia                         lbraglia at gmail.com
   ------------------------------------ ------------------------------------
 
-This Task View focuses on useful tools for R Packages Development,
-grouped by topics.
+Packages provide a mechanism for loading optional code, data and
+documentation as needed. At the very minimum only a text editor and an R
+installation are needed for package creation. Nonetheless many useful
+tools and R packages themselves have been provided to ease or improve
+package development. This Task View focuses on these tools/R packages,
+grouped by topics as follows: The section headings are mainly meant as
+quick starting points rather than a suggestion for package development
+steps.
 
 Main reference for Packages Development is ["Writing R
 Extension"](http://cran.rstudio.com/doc/manuals/R-exts.html) manual. For
-further documentation and tutorial see the links section below.
+further documentation and tutorial see the "Related links" section
+below.
 
-If you think that some packages/tools are missing from the list, please
-contact the [maintainer](mailto:lbraglia@gmail.com) or look
+If you think that some packages/tools are missing from the list, feel
+free to e-mail the [maintainer](mailto:lbraglia@gmail.com) or look
 [here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md).
+
+The maintainer gratefully acknowledges Cristophe Dutang, Darren Norris,
+Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John
+Maindonald, Spencer Graves, Tobias Verbeke and the R-core team.
 
 First steps
 -----------
