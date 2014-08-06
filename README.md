@@ -23,7 +23,6 @@ below.
 If you think that some packages/tools are missing from the list, feel
 free to e-mail the [maintainer](mailto:lbraglia@gmail.com) or look
 [here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md).
-
 The maintainer gratefully acknowledges Cristophe Dutang, Darren Norris,
 Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John
 Maindonald, Spencer Graves, Tobias Verbeke and the R-core team.
