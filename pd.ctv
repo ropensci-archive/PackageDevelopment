@@ -227,7 +227,8 @@
 	<a href="http://subversion.apache.org/">subversion</a>.
       </li>
       <li>
-	<a href="http://github.com/">GitHub</a>, based
+	<a href="http://github.com/">GitHub</a>, <a href="http://help.github.com/articles/support-for-subversion-clients">mainly</a>
+	based 
 	on <a href="http://git-scm.com/">git</a>. It can
 	handle <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous
 	integration</a> for R packages

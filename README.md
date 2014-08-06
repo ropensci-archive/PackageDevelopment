@@ -149,8 +149,9 @@ community are:
 
 -   [R-forge](http://r-forge.r-project.org/), based on
     [subversion](http://subversion.apache.org/).
--   [GitHub](http://github.com/), based on [git](http://git-scm.com/).
-    It can handle [continuous
+-   [GitHub](http://github.com/),
+    [mainly](http://help.github.com/articles/support-for-subversion-clients)
+    based on [git](http://git-scm.com/). It can handle [continuous
     integration](http://en.wikipedia.org/wiki/Continuous_integration)
     for R packages with [Travis CI](http://travis-ci.org/): more info on
     that [here](http://github.com/craigcitro/r-travis).
