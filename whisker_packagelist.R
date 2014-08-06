@@ -1,5 +1,3 @@
-if(!require("stringr")) install.packages("stringr", repos = "http://cran.rstudio.com")
-if(!require("whisker")) install.packages("whisker", repos = "http://cran.rstudio.com")
 library("stringr"); library("whisker")
 
 ## package list

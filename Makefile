@@ -29,7 +29,7 @@ sed-preproc:
 	cat pd.ctv | ${SED_PREPROC} > tmp.ctv
 
 whisker-packagelist:
-	Rscript --vanilla -e 'source("whiskerit.R")'
+	Rscript --vanilla -e 'source("whisker_packagelist.R")'
 
 check:
 	Rscript -e "library(ctv); (a <- check_ctv_packages('PackageDevelopment.ctv')); if (length(unlist(a)) != 0) stop('Missing Packages; look the report above')"

@@ -12,7 +12,7 @@ You need:
 * `R` with `ctv` package installed
 
   ```R
-  install.packages("ctv", dep = TRUE)
+  install.packages(c("ctv","whisker","stringr"), dep = TRUE)
   ```
 
 * an Internet connection (for `ctv::check_ctv_packages`, since it retrieves
@@ -34,7 +34,7 @@ You need to:
 ```bash
 ...
 pandoc PackageDevelopment.html -o README.md
-rm -rf tmp.html
+rm -rf tmp*
 ```
 Then you can push back up to your account and send a pull request.
 
