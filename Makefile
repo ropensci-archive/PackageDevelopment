@@ -1,10 +1,17 @@
 # Sed preprocessing
 SECTION := h2
 TASK := h3
-SED_SECTION :="s@<section>\(.*\)</section>@<${SECTION}>\1</${SECTION}>@g" 
-SED_TASK := "s@<task>\(.*\)</task>@<${TASK}>\1</${TASK}>@g" 
+SED_SECTION_S :="s@<section>@<${SECTION}>@g"
+SED_SECTION_E :="s@</section>@</${SECTION}>@g"
+SED_TASK_S :="s@<task>@<${TASK}>@g"
+SED_TASK_E :="s@</task>@</${TASK}>@g"
 # SED_GH := "s@<gh>\(.*\)/\(.*\)</gh>@<a href='http://github.com/\1/\2'>\2</a>@g" 
-SED_PREPROC :=  sed ${SED_SECTION} | sed ${SED_TASK} #| sed ${SED_GH} 
+SED_PREPROC :=  sed ${SED_SECTION_S} | sed ${SED_SECTION_E} | sed ${SED_TASK_S} | sed ${SED_TASK_E} 
+
+# Sed postprocessing
+SED_ABS_LINKS := "s@../packages/@http://cran.r-project.org/web/packages/@g"
+SED_CRAN := "s@cran.r-project.org@cran.rstudio.com@g"
+SED_POSTPROC := sed ${SED_ABS_LINKS} | sed ${SED_CRAN}
 
 # Aspell skipping
 HTML_SKIP := \
@@ -19,7 +26,7 @@ HTML_SKIP := \
 all: sed-preproc whisker-packagelist check html cran-links README clean
 
 sed-preproc:
-	cat pd.ctv | ${SED_PREPROC} > pd2.ctv
+	cat pd.ctv | ${SED_PREPROC} > tmp.ctv
 
 whisker-packagelist:
 	Rscript --vanilla -e 'source("whiskerit.R")'
@@ -32,13 +39,13 @@ html:
 
 cran-links:
 	mv PackageDevelopment.html tmp.html
-	sed 's@../packages/@http://cran.r-project.org/web/packages/@g' tmp.html > PackageDevelopment.html
+	cat tmp.html | ${SED_POSTPROC} > PackageDevelopment.html
 
 README: 
 	pandoc PackageDevelopment.html -o README.md
 
 clean:
-	rm -rf tmp.html pd2.ctv
+	rm -rf tmp*
 
 # -------------------------------------------------------------------------------------
 # Utils
@@ -48,10 +55,13 @@ check-links:
 	linkchecker --verbose --check-html --ignore-url=\.\./CRAN_web.css --check-extern PackageDevelopment.html
 
 aspell:
-	cat PackageDevelopment.ctv | aspell list --mode=html ${HTML_SKIP} --master=en_US --extra-dicts=./DICT | sort -f | less
+	cat PackageDevelopment.ctv | aspell list --mode=html ${HTML_SKIP} --master=en_US --extra-dicts=./DICT | sort | less
 
 aspell-dict:
+	cp wordlist tmpwordlist
+	cat tmpwordlist | sort > wordlist
 	aspell --lang=en create master ./DICT < wordlist
+	make clean
 
 view:
 	x-www-browser PackageDevelopment.html

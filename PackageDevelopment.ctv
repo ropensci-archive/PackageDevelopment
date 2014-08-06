@@ -12,12 +12,13 @@
       grouped by topics.
     </p>
     <p>
-      Main reference for R Packages Development
+      Main reference for Packages Development
       is <a href="http://cran.r-project.org/doc/manuals/R-exts.html">
-	"Writing R Extension"</a> manual. For further documentation and
+      "Writing R Extension"</a> manual. For further documentation and
       tutorial see the links section below.
     </p>
-    <p> If you think that some packages/tools are missing from the list,
+    <p> 
+      If you think that some packages/tools are missing from the list,
       please contact the <a href="mailto:lbraglia@gmail.com">maintainer</a>
       or look <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">here</a>.
     </p>
@@ -32,6 +33,7 @@
     <!-- dependency management</a> -->
 
     <!-- ==================================================== -->
+
     <h2>First steps</h2>
 
     <p><h3>Searching for already existing packages</h3></p>
@@ -39,7 +41,7 @@
     Before starting a new package it's worth searching for already
     available packages, both from a developer's standpoint ("do not
     reinvent the wheel") and from a user's one (many packages implementing
-    same/similar procedures can be confusing). If a package adressing the
+    same/similar procedures can be confusing). If a package addressing the
     same functionality already exist, you may consider contributing at it
     instead of starting a new one.
     
@@ -57,7 +59,7 @@
 	function/packages, blogs etc.</li>
       <li> <a href="http://rdocumentation.org/">Rdocumentation</a> allows
 	to search for keywords/phrases in help pages for all CRAN and some
-	Bioconductor/Github packages. </li>
+	Bioconductor/GitHub packages. </li>
     </ul>
 
 
@@ -86,14 +88,13 @@
       </li>
       <li>
 	<code>Rcpp.package.skeleton</code> from the <pkg>Rcpp</pkg> package
-	adds to <code>package.skeleton</code> the C++ via Rcpp handling, by
-	modifying eg. <code>DESCRIPTION</code> and <code>NAMESPACE</code>
-	accordingly, creating examples if needed and allowing the user to
-	specify (with a character vector of paths) which C++ files to include
-	in <code>src</code> directory . Finally the user can decide
-	main <code>DESCRIPTION</code> entries.
+	adds to <code>package.skeleton</code> the C++ via <code>Rcpp</code>
+	handling, by modifying eg. <code>DESCRIPTION</code>
+	and <code>NAMESPACE</code> accordingly, creating examples if needed
+	and allowing the user to specify (with a character vector of paths)
+	which C++ files to include in <code>src</code> directory . Finally
+	the user can decide main <code>DESCRIPTION</code> entries.
       </li>
-
     </ul>
     
 
@@ -209,8 +210,9 @@
     <p><h3>Makefiles</h3></p>
     <a href="http://www.gnu.org/software/make/">GNU Make</a> utility that
     automatically builds executable programs and libraries from source code
-    by reading files called makefiles. It can be used to manage R package
-    as well; <a href="http://github.com/ComputationalProteomicsUnit/maker">
+    by reading files called <code>Makefile</code>. It can be used to manage
+    R package as
+    well; <a href="http://github.com/ComputationalProteomicsUnit/maker">
     maker</a> is a Makefile completely devoted to R package development.
 
 
