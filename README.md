@@ -9,6 +9,10 @@ CRAN Task View: Package Development
 This Task View focuses on useful tools for R Packages Development,
 grouped by topics.
 
+Main reference for R Packages Development is ["Writing R
+Extension"](http://cran.r-project.org/doc/manuals/R-exts.html) manual.
+For further documentation and tutorial see the links section below.
+
 If you think that some packages/tools are missing from the list, please
 contact the [maintainer](mailto:lbraglia@gmail.com) or look
 [here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md).
@@ -38,7 +42,31 @@ of starting a new one.
     keywords/phrases in help pages for all CRAN and some
     Bioconductor/Github packages.
 
-### Creating R packages
+### Initializing an R packages
+
+-   `utils::package.skeleton` automates some of the setup for a new
+    source package. It creates directories, saves functions, data, and R
+    code files provided to appropriate places, and creates skeleton help
+    files and a `Read-and-delete-me` file describing further steps in
+    packaging
+-   `kitten` from the
+    [pkgKitten](http://cran.r-project.org/web/packages/pkgKitten/index.html)
+    package allows to specify the main `DESCRIPTION` entries and doesn't
+    create source code and data files from global environment objects or
+    sourced files. It's used to initialize a simple package that passes
+    `R CMD check` cleanly.
+-   `create` from the
+    [devtools](http://cran.r-project.org/web/packages/devtools/index.html)
+    package is similar to `package.skeleton` except it allows to specify
+    `DESCRIPTION` entries and doesn't create source code and data files
+    from global environment objects or sourced files.
+-   `Rcpp.package.skeleton` from the
+    [Rcpp](http://cran.r-project.org/web/packages/Rcpp/index.html)
+    package adds to `package.skeleton` the C++ via Rcpp handling, by
+    modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating
+    examples if needed and allowing the user to specify (with a
+    character vector of paths) which C++ files to include in `src`
+    directory . Finally the user can decide main `DESCRIPTION` entries.
 
 Source code
 -----------
@@ -110,7 +138,7 @@ Tools and services
 
 [GNU Make](http://www.gnu.org/software/make/) utility that automatically
 builds executable programs and libraries from source code by reading
-files called makefiles. It can be used to manage R package as well.
+files called makefiles. It can be used to manage R package as well;
 [maker](http://github.com/ComputationalProteomicsUnit/maker) is a
 Makefile completely devoted to R package development.
 
@@ -143,8 +171,10 @@ community are:
 
 -   [aprof](http://cran.r-project.org/web/packages/aprof/index.html)
 -   [codetools](http://cran.r-project.org/web/packages/codetools/index.html)
+-   [devtools](http://cran.r-project.org/web/packages/devtools/index.html)
 -   [inline](http://cran.r-project.org/web/packages/inline/index.html)
 -   [microbenchmark](http://cran.r-project.org/web/packages/microbenchmark/index.html)
+-   [pkgKitten](http://cran.r-project.org/web/packages/pkgKitten/index.html)
 -   [profr](http://cran.r-project.org/web/packages/profr/index.html)
 -   [proftools](http://cran.r-project.org/web/packages/proftools/index.html)
 -   [rbenchmark](http://cran.r-project.org/web/packages/rbenchmark/index.html)

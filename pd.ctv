@@ -11,13 +11,18 @@
       This Task View focuses on useful tools for R Packages Development,
       grouped by topics.
     </p>
+    <p>
+      Main reference for R Packages Development
+      is <a href="http://cran.r-project.org/doc/manuals/R-exts.html">
+	"Writing R Extension"</a> manual. For further documentation and
+      tutorial see the links section below.
+    </p>
     <p> If you think that some packages/tools are missing from the list,
       please contact the <a href="mailto:lbraglia@gmail.com">maintainer</a>
       or look <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">here</a>.
     </p>
 
     <!-- TODO: ... to view/test some of them -->
-    <!-- devtools (of course) -->
     <!-- pkgcreator -->
     <!-- svTools -->
     <!-- https://github.com/saurfang/roxyPackage -->
@@ -56,10 +61,40 @@
     </ul>
 
 
-    <p><task>Creating R packages</task></p> 
+    <p><task>Initializing an R packages</task></p>
+    <ul>
+      <li>
+	<code>utils::package.skeleton</code> automates some of the setup
+	for a new source package. It creates directories, saves functions,
+	data, and R code files provided to appropriate places, and creates
+	skeleton help files and a <code>Read-and-delete-me</code> file
+	describing further steps in packaging
+      </li>
+      <li>
+	<code>kitten</code> from the <pkg>pkgKitten</pkg> package allows to
+	specify the main <code>DESCRIPTION</code> entries and doesn't create
+	source code and data files from global environment objects or
+	sourced files. It's used to initialize a simple package that passes
+	<code>R CMD check</code> cleanly.
+      </li>
+      <li>
+	<code>create</code> from the <pkg>devtools</pkg> package is similar
+	to <code>package.skeleton</code> except it allows to specify
+	<code>DESCRIPTION</code> entries and doesn't create
+	source code and data files from global environment objects or
+	sourced files.
+      </li>
+      <li>
+	<code>Rcpp.package.skeleton</code> from the <pkg>Rcpp</pkg> package
+	adds to <code>package.skeleton</code> the C++ via Rcpp handling, by
+	modifying eg. <code>DESCRIPTION</code> and <code>NAMESPACE</code>
+	accordingly, creating examples if needed and allowing the user to
+	specify (with a character vector of paths) which C++ files to include
+	in <code>src</code> directory . Finally the user can decide
+	main <code>DESCRIPTION</code> entries.
+      </li>
 
-    <!-- utils::package.skeleton,
-    pkgKitten, Rcpp::Rcpp.package.skeleton -->
+    </ul>
     
 
     <!-- ==================================================== -->
@@ -175,7 +210,7 @@
     <a href="http://www.gnu.org/software/make/">GNU Make</a> utility that
     automatically builds executable programs and libraries from source code
     by reading files called makefiles. It can be used to manage R package
-    as well.  <a href="http://github.com/ComputationalProteomicsUnit/maker">
+    as well; <a href="http://github.com/ComputationalProteomicsUnit/maker">
     maker</a> is a Makefile completely devoted to R package development.
 
 
@@ -229,7 +264,7 @@
 
   <links>
     <a href="http://cran.r-project.org/doc/manuals/R-exts.html">[Manual]
-    "Writing R Extension" by R-core team </a>
+   "Writing R Extension" by R-core team </a>
     <a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">[Tutorial]
     "Creating R Packages: A Tutorial" by Friedrich Leisch </a>
     <a href="http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-0-387-75935-7">[Book]

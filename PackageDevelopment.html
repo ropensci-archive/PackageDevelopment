@@ -28,6 +28,15 @@
       grouped by topics.
       </p>
       <p>
+        Main reference for R Packages Development
+      is
+        <a href="http://cran.r-project.org/doc/manuals/R-exts.html">
+          &quot;Writing R Extension&quot;
+        </a>
+        manual. For further documentation and
+      tutorial see the links section below.
+      </p>
+      <p>
         If you think that some packages/tools are missing from the list,
       please contact the
         <a href="mailto:lbraglia@gmail.com">
@@ -91,9 +100,68 @@
       </ul>
       <p>
         <h3>
-          Creating R packages
+          Initializing an R packages
         </h3>
       </p>
+      <ul>
+        <li>
+<tt>utils::package.skeleton</tt>
+          automates some of the setup
+	for a new source package. It creates directories, saves functions,
+	data, and R code files provided to appropriate places, and creates
+	skeleton help files and a
+<tt>Read-and-delete-me</tt>
+          file
+	describing further steps in packaging
+        </li>
+        <li>
+<tt>kitten</tt>
+          from the
+<a href="http://cran.r-project.org/web/packages/pkgKitten/index.html">pkgKitten</a>
+          package allows to
+	specify the main
+<tt>DESCRIPTION</tt>
+          entries and doesn't create
+	source code and data files from global environment objects or
+	sourced files. It's used to initialize a simple package that passes
+<tt>R CMD check</tt>
+          cleanly.
+        </li>
+        <li>
+<tt>create</tt>
+          from the
+<a href="http://cran.r-project.org/web/packages/devtools/index.html">devtools</a>
+          package is similar
+	to
+<tt>package.skeleton</tt>
+          except it allows to specify
+<tt>DESCRIPTION</tt>
+          entries and doesn't create
+	source code and data files from global environment objects or
+	sourced files.
+        </li>
+        <li>
+<tt>Rcpp.package.skeleton</tt>
+          from the
+<a href="http://cran.r-project.org/web/packages/Rcpp/index.html">Rcpp</a>
+          package
+	adds to
+<tt>package.skeleton</tt>
+          the C++ via Rcpp handling, by
+	modifying eg.
+<tt>DESCRIPTION</tt>
+          and
+<tt>NAMESPACE</tt>
+          accordingly, creating examples if needed and allowing the user to
+	specify (with a character vector of paths) which C++ files to include
+	in
+<tt>src</tt>
+          directory . Finally the user can decide
+	main
+<tt>DESCRIPTION</tt>
+          entries.
+        </li>
+      </ul>
       <h2>
         Source code
       </h2>
@@ -239,7 +307,7 @@
       utility that
     automatically builds executable programs and libraries from source code
     by reading files called makefiles. It can be used to manage R package
-    as well.
+    as well;
       <a href="http://github.com/ComputationalProteomicsUnit/maker">
         maker
       </a>
@@ -317,8 +385,10 @@
   <ul>
     <li><a href="http://cran.r-project.org/web/packages/aprof/index.html">aprof</a></li>
     <li><a href="http://cran.r-project.org/web/packages/codetools/index.html">codetools</a></li>
+    <li><a href="http://cran.r-project.org/web/packages/devtools/index.html">devtools</a></li>
     <li><a href="http://cran.r-project.org/web/packages/inline/index.html">inline</a></li>
     <li><a href="http://cran.r-project.org/web/packages/microbenchmark/index.html">microbenchmark</a></li>
+    <li><a href="http://cran.r-project.org/web/packages/pkgKitten/index.html">pkgKitten</a></li>
     <li><a href="http://cran.r-project.org/web/packages/profr/index.html">profr</a></li>
     <li><a href="http://cran.r-project.org/web/packages/proftools/index.html">proftools</a></li>
     <li><a href="http://cran.r-project.org/web/packages/rbenchmark/index.html">rbenchmark</a></li>
@@ -334,7 +404,7 @@
   <ul>
     <li><a href="http://cran.r-project.org/doc/manuals/R-exts.html">
   [Manual]
-    &quot;Writing R Extension&quot; by R-core team
+   &quot;Writing R Extension&quot; by R-core team
 </a></li>
     <li><a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">
   [Tutorial]
