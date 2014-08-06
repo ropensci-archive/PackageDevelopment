@@ -19,11 +19,11 @@ further documentation and tutorial see the "Related links" section
 below.
 
 If you think that some packages/tools are missing from the list, feel
-free to e-mail the [maintainer](mailto:lbraglia@gmail.com) or look
+free to [e-mail](mailto:lbraglia@gmail.com) me or look
 [here](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md).
-The maintainer gratefully acknowledges Cristophe Dutang, Darren Norris,
-Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John
-Maindonald, Spencer Graves, Tobias Verbeke and the R-core team.
+Many thanks to: Cristophe Dutang, Darren Norris, Dirk Eddelbuettel,
+Gabor Grothendieck, Gregory Jefferis, John Maindonald, Spencer Graves,
+Tobias Verbeke and the R-core team.
 
 First steps
 -----------
@@ -142,11 +142,11 @@ Tools and services
 
 ### Makefiles
 
-[GNU Make](http://www.gnu.org/software/make/) utility that automatically
-builds executable programs and libraries from source code by reading
-files called `Makefile`. It can be used to manage R package as well;
-[maker](http://github.com/ComputationalProteomicsUnit/maker) is a
-Makefile completely devoted to R package development.
+[GNU Make](http://www.gnu.org/software/make/) is a tool that
+automatically builds executable programs and libraries from source code
+by reading files called `Makefile`. It can be used to manage R package
+as well; [maker](http://github.com/ComputationalProteomicsUnit/maker) is
+a `Makefile` completely devoted to R package development.
 
 ### Hosting services
 
