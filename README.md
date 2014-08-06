@@ -11,9 +11,7 @@ documentation as needed. At the very minimum only a text editor and an R
 installation are needed for package creation. Nonetheless many useful
 tools and R packages themselves have been provided to ease or improve
 package development. This Task View focuses on these tools/R packages,
-grouped by topics as follows: The section headings are mainly meant as
-quick starting points rather than a suggestion for package development
-steps.
+grouped by topics.
 
 Main reference for Packages Development is ["Writing R
 Extension"](http://cran.rstudio.com/doc/manuals/R-exts.html) manual. For
