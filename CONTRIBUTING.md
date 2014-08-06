@@ -91,11 +91,6 @@ Furthermore, since `pd.ctv` is processed by `sed` to compose
 
 ## Thanks
 
-* [Contributors](http://github.com/lbraglia/PackageDevelopmentTaskView/graphs/contributors)
 * [WebTechnologies](http://cran.r-project.org/web/views/WebTechnologies.html)
-CRAN Task View group, for useful ideas on
-[repo](http://github.com/ropensci/webservices) setup
-* [`r-devel`](http://stat.ethz.ch/mailman/listinfo/r-devel) mailing list,
-  for useful suggestions: especially Cristophe Dutang, Darren 
-  Norris, Gabor Grothendieck, John Maindonald, Spencer Graves, Tobias
-  Verbeke
+  CRAN Task View group, for some very useful ideas on
+  [repo](http://github.com/ropensci/webservices) setup
