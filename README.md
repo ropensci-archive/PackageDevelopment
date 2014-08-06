@@ -153,12 +153,11 @@ files called `Makefile`. It can be used to manage R package as well;
 
 Many [hosting
 services](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities)
-are available for package development. The most common in the R
-community:
+are available. The most common in the R community are:
 
--   [R-forge](http://r-forge.r-project.org/) is based on
+-   [R-Forge](http://r-forge.r-project.org/), based on
     [subversion](http://subversion.apache.org/).
--   [GitHub](http://github.com/) is
+-   [GitHub](http://github.com/),
     [mainly](http://help.github.com/articles/support-for-subversion-clients)
     based on [git](http://git-scm.com/). It can handle [continuous
     integration](http://en.wikipedia.org/wiki/Continuous_integration)
