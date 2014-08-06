@@ -243,7 +243,7 @@
     <ul>
       <li>
 	<a href="http://win-builder.r-project.org/">WinBuilder</a> is a
-	service intended for useRs who do not have Windows available, for
+	service intended for useRs who do not have Windows available for
 	checking and building Windows binary packages. The package sources
 	(after an <code>R CMD check</code>) can be uploaded via html form or
 	passive ftp in binary mode; after checking/building a mail will be
