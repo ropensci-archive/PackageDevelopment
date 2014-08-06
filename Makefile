@@ -8,7 +8,7 @@ SED_TASK_E :="s@</task>@</${TASK}>@g"
 # SED_GH := "s@<gh>\(.*\)/\(.*\)</gh>@<a href='http://github.com/\1/\2'>\2</a>@g" 
 SED_PREPROC :=  sed ${SED_SECTION_S} | sed ${SED_SECTION_E} | sed ${SED_TASK_S} | sed ${SED_TASK_E} 
 
-# Sed postprocessing
+# Sed postprocessing for GitHub repo
 SED_ABS_LINKS := "s@../packages/@http://cran.r-project.org/web/packages/@g"
 SED_CRAN := "s@cran.r-project.org@cran.rstudio.com@g"
 SED_POSTPROC := sed ${SED_ABS_LINKS} | sed ${SED_CRAN}
@@ -37,6 +37,7 @@ check:
 html:
 	Rscript -e "library(ctv); ctv2html(read.ctv('PackageDevelopment.ctv'))"
 
+# this is only for GitHub repo README.md
 cran-links:
 	mv PackageDevelopment.html tmp.html
 	cat tmp.html | ${SED_POSTPROC} > PackageDevelopment.html
