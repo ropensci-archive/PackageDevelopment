@@ -145,11 +145,11 @@ Makefile completely devoted to R package development.
 Many [hosting
 services](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities)
 are available for package development. The most common in the R
-community are:
+community:
 
--   [R-forge](http://r-forge.r-project.org/), based on
+-   [R-forge](http://r-forge.r-project.org/) is based on
     [subversion](http://subversion.apache.org/).
--   [GitHub](http://github.com/),
+-   [GitHub](http://github.com/) is
     [mainly](http://help.github.com/articles/support-for-subversion-clients)
     based on [git](http://git-scm.com/). It can handle [continuous
     integration](http://en.wikipedia.org/wiki/Continuous_integration)

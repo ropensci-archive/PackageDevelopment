@@ -220,16 +220,16 @@
 
     Many <a href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">hosting
     services</a> are available for package development. The most common in
-    the R community are:
+    the R community:
     <ul>
       <li>
-	<a href="http://r-forge.r-project.org/">R-forge</a>, based on
+	<a href="http://r-forge.r-project.org/">R-forge</a> is based on
 	<a href="http://subversion.apache.org/">subversion</a>.
       </li>
       <li>
-	<a href="http://github.com/">GitHub</a>, <a href="http://help.github.com/articles/support-for-subversion-clients">mainly</a>
-	based 
-	on <a href="http://git-scm.com/">git</a>. It can
+	<a href="http://github.com/">GitHub</a>
+	is <a href="http://help.github.com/articles/support-for-subversion-clients">mainly</a>
+	based on <a href="http://git-scm.com/">git</a>. It can
 	handle <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous
 	integration</a> for R packages
 	with <a href="http://travis-ci.org/">Travis CI</a>: more info on
