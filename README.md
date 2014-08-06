@@ -143,11 +143,11 @@ Tools and services
 
 ### Makefiles
 
-[GNU Make](http://www.gnu.org/software/make/) is a tool that
-automatically builds executable programs and libraries from source code
-by reading files called `Makefile`. It can be used to manage R package
-as well; [maker](http://github.com/ComputationalProteomicsUnit/maker) is
-a `Makefile` completely devoted to R package development.
+[GNU Make](http://www.gnu.org/software/make/) is a tool that tipically
+builds executable programs and libraries from source code by reading
+files called `Makefile`. It can be used to manage R package as well;
+[maker](http://github.com/ComputationalProteomicsUnit/maker) is a
+`Makefile` completely devoted to R package development.
 
 ### Hosting services
 
