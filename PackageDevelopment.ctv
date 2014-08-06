@@ -61,7 +61,7 @@
     </ul>
 
 
-    <p><h3>Initializing an R packages</h3></p>
+    <p><h3>Initializing an R package</h3></p>
     <ul>
       <li>
 	<code>utils::package.skeleton</code> automates some of the setup

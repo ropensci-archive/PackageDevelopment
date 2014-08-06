@@ -42,7 +42,7 @@ of starting a new one.
     keywords/phrases in help pages for all CRAN and some
     Bioconductor/Github packages.
 
-### Initializing an R packages
+### Initializing an R package
 
 -   `utils::package.skeleton` automates some of the setup for a new
     source package. It creates directories, saves functions, data, and R

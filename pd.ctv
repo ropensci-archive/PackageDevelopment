@@ -61,7 +61,7 @@
     </ul>
 
 
-    <p><task>Initializing an R packages</task></p>
+    <p><task>Initializing an R package</task></p>
     <ul>
       <li>
 	<code>utils::package.skeleton</code> automates some of the setup
