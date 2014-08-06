@@ -42,7 +42,7 @@
     available packages, both from a developer's standpoint ("do not
     reinvent the wheel") and from a user's one (many packages implementing
     same/similar procedures can be confusing). If a package addressing the
-    same functionality already exist, you may consider contributing at it
+    same functionality already exists, you may consider contributing at it
     instead of starting a new one.
     
     <ul>

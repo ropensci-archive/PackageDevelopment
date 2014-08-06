@@ -26,8 +26,8 @@ Before starting a new package it's worth searching for already available
 packages, both from a developer's standpoint ("do not reinvent the
 wheel") and from a user's one (many packages implementing same/similar
 procedures can be confusing). If a package addressing the same
-functionality already exist, you may consider contributing at it instead
-of starting a new one.
+functionality already exists, you may consider contributing at it
+instead of starting a new one.
 
 -   `utils::RSiteSearch` allows to search for keywords/phrases in help
     pages (all the CRAN packages except those for Windows only and some
