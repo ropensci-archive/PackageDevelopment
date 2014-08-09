@@ -201,4 +201,5 @@ are available. The most common in the R community are:
 -   [[Book] "Software for Data Analysis" by John
     Chambers](http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-0-387-75935-7)
 -   [[Book] "Advanced R" by Hadley Wickham](http://adv-r.had.co.nz)
+-   [[Book] "R packages" by Hadley Wickham](http://r-pkgs.had.co.nz/)
 
