@@ -43,7 +43,7 @@ cran-links:
 	cat tmp.html | ${SED_POSTPROC} > PackageDevelopment.html
 
 README: 
-	pandoc PackageDevelopment.html -o README.md
+	pandoc -f html -t markdown_github PackageDevelopment.html -o README.md
 
 clean:
 	rm -rf tmp*
