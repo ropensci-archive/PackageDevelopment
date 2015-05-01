@@ -41,7 +41,15 @@
     <ul>
     <li><code>substitute()</code> provides the most straightforward interface to non-standard evaluation of function arguments.</li>
     <li><pkg>lazyeval</pkg> (<a href="https://github.com/hadley/lazyeval">Github</a>) aims to help developers design packages with parallel function implementations that follow both standard and non-standard evaluation.</li>
-    <li>An increasingly popular form of non-standard evaluation involves chained expressions or &quot;pipelines&quot;. <pkg>magrittr</pkg> provides the <code>%&gt;%</code> chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. <pkg>pipeR</pkg> offers a larger set of pipe operators.</li>
+    <li>An increasingly popular form of non-standard evaluation involves chained expressions or &quot;pipelines&quot;. <pkg>magrittr</pkg> provides the <code>%&gt;%</code> chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. <pkg>pipeR</pkg> offers a larger set of pipe operators. <pkg>assertr</pkg> provides a testing framework for pipelines.</li>
+    </ul>
+    <p><strong>Dependency Management</strong></p>
+    <p>Packages that have dependencies on other packages need to be vigilant of changes to the functionality, behaviour, or API of those packages.</p>
+    <ul>
+    <li><pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">Github</a>) provides facilities for creating local package repositories to manage and check dependencies.</li>
+    <li><pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates.</li>
+    <li><pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">Github</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.</li>
+    <li>Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> (<a href="https://github.com/smbache/import">Github</a>) can import numerous objects from a namespace and assign arbitrary names. <a href="https://github.com/klmr/modules">modules</a> (not on CRAN) provides functionality for importing alternative non-package code from Python-like &quot;modules&quot;.</li>
     </ul>
     <h3 id="source-code">Source Code</h3>
     <p><strong>Foreign Languages Interfaces</strong></p>
@@ -54,15 +62,17 @@
     </ul>
     <p>Writing packages that involve compiled code requires a developer toolchain. If developing on Windows, this requires <a href="http://cran.r-project.org/bin/windows/Rtools/">Rtools</a>, which is updated with each R minor release.</p>
     <p><strong>Debugging</strong></p>
-    <p><strong>Code Analysis</strong></p>
+    <p><strong>Code Analysis and Formatting</strong></p>
     <ul>
-    <li>The <pkg>codetools</pkg> package.</li>
+    <li><pkg>codetools</pkg> provides a number of low-level functions for identifying possible problems with source code.</li>
+    <li><pkg>lint</pkg> and <pkg>lintr</pkg> provide tools for checking source code compliance with a style guide.</li>
+    <li><pkg>formatR</pkg> can be used to neatly format source code.</li>
     </ul>
     <p><strong>Profiling</strong></p>
     <ul>
     <li>Profiling data is provided by <code>utils::Rprof</code> and can be summarized by <code>utils::summaryRprof</code></li>
     <li><pkg>profr</pkg> can visualize output from the <code>Rprof</code> interface for profiling.</li>
-    <li><pkg>proftools</pkg> and <pkg>aprof</pkg> can also be used to analyze profiling output.</li>
+    <li><pkg>proftools</pkg> and <pkg>aprof</pkg> can also be used to analyse profiling output.</li>
     </ul>
     <p><strong>Benchmarking</strong></p>
     <ul>
@@ -72,7 +82,7 @@
     </ul>
     <p><strong>Unit Testing</strong></p>
     <ul>
-    <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>.</li>
+    <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>assertthat</pkg>, and <pkg>assertive</pkg>.</li>
     </ul>
     <p><strong>Internationalization and Localization</strong></p>
     <ul>
@@ -83,7 +93,11 @@
     <ul>
     <li>For simple interactive interfaces, <code>readline()</code> can be used to create a simple prompt, while <code>utils::menu()</code>, <code>utils::select.list()</code> can provide graphical and console-based selection of items from a list, and <code>utils::txtProgressBar()</code> provides a simple text progress bar.</li>
     <li><code>tcltk</code> is an R base package that provides a large set of tools for creating interfaces uses tcl/tk (most functions are thin wrappers around corresponding tcl and tk functions), though the documentation is sparse. <pkg>tcltk2</pkg> provides additional widgets and functionality. <pkg>qtbase</pkg> provides bindings for Qt. <ohat>RGtk</ohat> (not on CRAN) provides bindings for Gtk and gnome. <pkg>gWidgets2</pkg> offers a language-independent API for building graphical user interfaces in Gtk, Qt, or tcl/tk.</li>
-    <li><pkg>Shiny</pkg> provides a browser-based infrastructure for creating dashboards and interfaces for R functionality.</li>
+    <li><pkg>shiny</pkg> provides a browser-based infrastructure for creating dashboards and interfaces for R functionality. <pkg>htmlwidgets</pkg> is a shiny enhancement that provides a framework for creating HTML widgets.</li>
+    </ul>
+    <p><strong>Command Line Argument Parsing</strong></p>
+    <ul>
+    <li>Several packages provide functionality for parsing command line arguments: <pkg>argparse</pkg>, <pkg>argparser</pkg>, <pkg>commandr</pkg>, <pkg>docopt</pkg>, and <pkg>GetoptLong</pkg>.</li>
     </ul>
     <h3 id="documentation">Documentation</h3>
     <p><strong>Writing Package Documentation</strong></p>
@@ -98,6 +112,9 @@
     <pre><code>%\VignetteEngine{knitr::knitr}
     %\VignetteIndexEntry{}</code></pre>
     <p><strong>Spell Checking</strong></p>
+    <ul>
+    <li><code>utils</code> provides multiple functions for spell-checking portions of packages, including .Rd files (<code>utils::aspell_package_Rd_files</code>) and vignettes (<code>utils::aspell_package_vignettes</code>) via the general purpose <code>aspell</code> function, which requires a system spell checking library, such as http://aspell.net, http://hunspell.sourceforge.net/, or http://lasr.cs.ucla.edu/geoff/ispell.html.</li>
+    </ul>
     <h3 id="data-in-packages">Data in Packages</h3>
     <h3 id="tools-and-services">Tools and Services</h3>
     <p><strong>Text Editors and IDEs</strong></p>
@@ -113,20 +130,38 @@
     <li>Github supports <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> for R packages. <a href="http://travis-ci.org/">Travis CI</a> is a popular continuous integration tools that supports Linux and OS X build environments and has native R support. Use of other CI services may require additional code and examples are available from <a href="http://github.com/craigcitro/r-travis">r-travis</a> and <a href="https://github.com/metacran/r-builder">r-builder</a>.</li>
     <li><a href="http://win-builder.r-project.org/">WinBuilder</a> is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an <code>R CMD check</code>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the <code>Maintainer</code> with links to the package zip file and logs for download/inspection. <a href="http://www.appveyor.com/">Appveyor</a> is a continuous integration service that offers a Windows build environment.</li>
     <li>Some packages, especially some that are no longer under active development, remain hosted on <a href="https://code.google.com/">Google Code</a>. This service is closed to new projects, however, and will shut down in January 2016.</li>
+    <li><pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server.</li>
     </ul>
   </info>
   <packagelist>
     <pkg priority="core">devtools</pkg>
     <pkg>aoos</pkg>
     <pkg>aprof</pkg>
+    <pkg>argparse</pkg>
+    <pkg>argparser</pkg>
+    <pkg>assertive</pkg>
+    <pkg>assertr</pkg>
+    <pkg>assertthat</pkg>
+    <pkg>checkpoint</pkg>
     <pkg>codetools</pkg>
+    <pkg>commandr</pkg>
+    <pkg>docopt</pkg>
+    <pkg>drat</pkg>
+    <pkg>formatR</pkg>
+    <pkg>GetoptLong</pkg>
     <pkg>gWidgets2</pkg>
+    <pkg>htmlwidgets</pkg>
+    <pkg>import</pkg>
     <pkg>inline</pkg>
     <pkg>js</pkg>
     <pkg>knitr</pkg>
     <pkg>lazyeval</pkg>
+    <pkg>lint</pkg>
+    <pkg>lintr</pkg>
     <pkg>magrittr</pkg>
     <pkg>microbenchmark</pkg>
+    <pkg>packrat</pkg>
+    <pkg>pacman</pkg>
     <pkg>pipeR</pkg>
     <pkg>pkgKitten</pkg>
     <pkg>profr</pkg>
@@ -145,7 +180,7 @@
     <pkg>rPython</pkg>
     <pkg>rstudioapi</pkg>
     <pkg>RUnit</pkg>
-    <pkg>Shiny</pkg>
+    <pkg>shiny</pkg>
     <pkg>sos</pkg>
     <pkg>svUnit</pkg>
     <pkg>tcltk2</pkg>

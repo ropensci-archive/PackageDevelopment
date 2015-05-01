@@ -45,7 +45,16 @@ Another feature of R is the ability to rely on both standard and non-standard ev
 
 -   `substitute()` provides the most straightforward interface to non-standard evaluation of function arguments.
 -   [lazyeval](http://cran.rstudio.com/web/packages/lazyeval/index.html) ( [Github](https://github.com/hadley/lazyeval)) aims to help developers design packages with parallel function implementations that follow both standard and non-standard evaluation.
--   An increasingly popular form of non-standard evaluation involves chained expressions or "pipelines". [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html) provides the `%>%` chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html) offers a larger set of pipe operators.
+-   An increasingly popular form of non-standard evaluation involves chained expressions or "pipelines". [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html) provides the `%>%` chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html) offers a larger set of pipe operators. [assertr](http://cran.rstudio.com/web/packages/assertr/index.html) provides a testing framework for pipelines.
+
+**Dependency Management**
+
+Packages that have dependencies on other packages need to be vigilant of changes to the functionality, behaviour, or API of those packages.
+
+-   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html) ( [Github](https://github.com/rstudio/packrat)) provides facilities for creating local package repositories to manage and check dependencies.
+-   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html) relies on the Revolution Analytics MRAN repository to access packages from specified dates.
+-   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html) ( [Github](https://github.com/trinker/pacman)) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
+-   Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). [import](http://cran.rstudio.com/web/packages/import/index.html) ( [Github](https://github.com/smbache/import)) can import numerous objects from a namespace and assign arbitrary names. [modules](https://github.com/klmr/modules) (not on CRAN) provides functionality for importing alternative non-package code from Python-like "modules".
 
 ### Source Code
 
@@ -61,15 +70,17 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Debugging**
 
-**Code Analysis**
+**Code Analysis and Formatting**
 
--   The [codetools](http://cran.rstudio.com/web/packages/codetools/index.html) package.
+-   [codetools](http://cran.rstudio.com/web/packages/codetools/index.html) provides a number of low-level functions for identifying possible problems with source code.
+-   [lint](http://cran.rstudio.com/web/packages/lint/index.html) and [lintr](http://cran.rstudio.com/web/packages/lintr/index.html) provide tools for checking source code compliance with a style guide.
+-   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html) can be used to neatly format source code.
 
 **Profiling**
 
 -   Profiling data is provided by `utils::Rprof` and can be summarized by `utils::summaryRprof`
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html) can visualize output from the `Rprof` interface for profiling.
--   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html) and [aprof](http://cran.rstudio.com/web/packages/aprof/index.html) can also be used to analyze profiling output.
+-   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html) and [aprof](http://cran.rstudio.com/web/packages/aprof/index.html) can also be used to analyse profiling output.
 
 **Benchmarking**
 
@@ -79,7 +90,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Unit Testing**
 
--   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), and [testthat](http://cran.rstudio.com/web/packages/testthat/index.html).
+-   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), and [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html), and [assertive](http://cran.rstudio.com/web/packages/assertive/index.html).
 
 **Internationalization and Localization**
 
@@ -90,7 +101,11 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 -   For simple interactive interfaces, `readline()` can be used to create a simple prompt, while `utils::menu()`, `utils::select.list()` can provide graphical and console-based selection of items from a list, and `utils::txtProgressBar()` provides a simple text progress bar.
 -   `tcltk` is an R base package that provides a large set of tools for creating interfaces uses tcl/tk (most functions are thin wrappers around corresponding tcl and tk functions), though the documentation is sparse. [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html) provides additional widgets and functionality. [qtbase](http://cran.rstudio.com/web/packages/qtbase/index.html) provides bindings for Qt. [<span class="Ohat">RGtk</span>](http://www.Omegahat.org/RGtk/) (not on CRAN) provides bindings for Gtk and gnome. [gWidgets2](http://cran.rstudio.com/web/packages/gWidgets2/index.html) offers a language-independent API for building graphical user interfaces in Gtk, Qt, or tcl/tk.
--   [Shiny](http://cran.rstudio.com/web/packages/Shiny/index.html) provides a browser-based infrastructure for creating dashboards and interfaces for R functionality.
+-   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html) provides a browser-based infrastructure for creating dashboards and interfaces for R functionality. [htmlwidgets](http://cran.rstudio.com/web/packages/htmlwidgets/index.html) is a shiny enhancement that provides a framework for creating HTML widgets.
+
+**Command Line Argument Parsing**
+
+-   Several packages provide functionality for parsing command line arguments: [argparse](http://cran.rstudio.com/web/packages/argparse/index.html), [argparser](http://cran.rstudio.com/web/packages/argparser/index.html), [commandr](http://cran.rstudio.com/web/packages/commandr/index.html), [docopt](http://cran.rstudio.com/web/packages/docopt/index.html), and [GetoptLong](http://cran.rstudio.com/web/packages/GetoptLong/index.html).
 
 ### Documentation
 
@@ -111,6 +126,8 @@ Package vignettes provides additional documentation of package functionality tha
           
 
 **Spell Checking**
+
+-   `utils` provides multiple functions for spell-checking portions of packages, including .Rd files ( `utils::aspell_package_Rd_files`) and vignettes ( `utils::aspell_package_vignettes`) via the general purpose `aspell` function, which requires a system spell checking library, such as http://aspell.net, http://hunspell.sourceforge.net/, or http://lasr.cs.ucla.edu/geoff/ispell.html.
 
 ### Data in Packages
 
@@ -135,20 +152,38 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   Github supports [continuous integration](http://en.wikipedia.org/wiki/Continuous_integration) for R packages. [Travis CI](http://travis-ci.org/) is a popular continuous integration tools that supports Linux and OS X build environments and has native R support. Use of other CI services may require additional code and examples are available from [r-travis](http://github.com/craigcitro/r-travis) and [r-builder](https://github.com/metacran/r-builder).
 -   [WinBuilder](http://win-builder.r-project.org/) is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an `R CMD check`) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the `Maintainer` with links to the package zip file and logs for download/inspection. [Appveyor](http://www.appveyor.com/) is a continuous integration service that offers a Windows build environment.
 -   Some packages, especially some that are no longer under active development, remain hosted on [Google Code](https://code.google.com/). This service is closed to new projects, however, and will shut down in January 2016.
+-   [drat](http://cran.rstudio.com/web/packages/drat/index.html) can be used to distribute pre-built packages via Github or another server.
 
 ### CRAN packages:
 
 -   [aoos](http://cran.rstudio.com/web/packages/aoos/index.html)
 -   [aprof](http://cran.rstudio.com/web/packages/aprof/index.html)
+-   [argparse](http://cran.rstudio.com/web/packages/argparse/index.html)
+-   [argparser](http://cran.rstudio.com/web/packages/argparser/index.html)
+-   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html)
+-   [assertr](http://cran.rstudio.com/web/packages/assertr/index.html)
+-   [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html)
+-   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html)
 -   [codetools](http://cran.rstudio.com/web/packages/codetools/index.html)
+-   [commandr](http://cran.rstudio.com/web/packages/commandr/index.html)
 -   [devtools](http://cran.rstudio.com/web/packages/devtools/index.html) (core)
+-   [docopt](http://cran.rstudio.com/web/packages/docopt/index.html)
+-   [drat](http://cran.rstudio.com/web/packages/drat/index.html)
+-   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html)
+-   [GetoptLong](http://cran.rstudio.com/web/packages/GetoptLong/index.html)
 -   [gWidgets2](http://cran.rstudio.com/web/packages/gWidgets2/index.html)
+-   [htmlwidgets](http://cran.rstudio.com/web/packages/htmlwidgets/index.html)
+-   [import](http://cran.rstudio.com/web/packages/import/index.html)
 -   [inline](http://cran.rstudio.com/web/packages/inline/index.html)
 -   [js](http://cran.rstudio.com/web/packages/js/index.html)
 -   [knitr](http://cran.rstudio.com/web/packages/knitr/index.html)
 -   [lazyeval](http://cran.rstudio.com/web/packages/lazyeval/index.html)
+-   [lint](http://cran.rstudio.com/web/packages/lint/index.html)
+-   [lintr](http://cran.rstudio.com/web/packages/lintr/index.html)
 -   [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html)
 -   [microbenchmark](http://cran.rstudio.com/web/packages/microbenchmark/index.html)
+-   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html)
+-   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)
 -   [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html)
 -   [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html)
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html)
@@ -167,7 +202,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html)
 -   [rstudioapi](http://cran.rstudio.com/web/packages/rstudioapi/index.html)
 -   [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html)
--   [Shiny](http://cran.rstudio.com/web/packages/Shiny/index.html)
+-   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html)
 -   [sos](http://cran.rstudio.com/web/packages/sos/index.html)
 -   [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html)
 -   [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html)
