@@ -24,37 +24,48 @@
 
     <div>
       <p>
-        Packages provide a mechanism for loading optional code, data and documentation as needed.  At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
+        Packages provide a mechanism for loading optional code, data, and documentation as needed.  At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
       </p>
       <p>
-        Main reference for Packages Development is
+        The main reference for packages development is the
         <a href="http://cran.r-project.org/doc/manuals/R-exts.html">
           &quot;Writing R Extension&quot;
         </a>
-        manual. For further documentation and tutorial see the &quot;Related links&quot; section below.
+        manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.
       </p>
       <p>
-        If you think that some packages/tools are missing from the list, feel free to
+        If you think that some packages or tools are missing from the list, feel free to
         <a href="mailto:lbraglia@gmail.com">
           e-mail
         </a>
-        me or look
+        me or contribute directly to the Task View by submitting a pull request on
         <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">
-          here
+          GitHub
         </a>.
       </p>
       <p>
-        Many thanks to: Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke and the R-core team.
+        Many thanks to Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.
       </p>
       <h3>
         First steps
       </h3>
       <p>
         <strong>
-          Searching for already existing packages
+          Searching for Existing Packages
         </strong>
       </p>
-      Before starting a new package it's worth searching for already available packages, both from a developer's standpoint (&quot;do not reinvent the wheel&quot;) and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one.
+      Before starting a new package it's worth searching for already available packages, both from a developer's standpoint (&quot;do not reinvent the wheel&quot;) and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one. If you're looking to create a package, but want idea for what sorts of packages are in demand, the
+      <a href="https://ropensci.org/">
+        rOpenSci
+      </a>
+      maintains
+      <a href="https://github.com/ropensci/wishlist">
+        a wishlist for science-related packages
+      </a>
+      and
+      <a href="https://github.com/ropensci/webservices/wiki/ToDo">
+        a TODO list of web services and data APIs in need of packaging
+      </a>.
       <ul>
         <li>
 <tt>utils::RSiteSearch</tt>
@@ -81,6 +92,16 @@
           </a>
           allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.
         </li>
+        <li>
+          <a href="http://crantastic.org/">
+            Crantastic!
+          </a>
+          maintains an up-to-date and tagged directory of packages on CRAN. The
+          <a href="http://mran.revolutionanalytics.com/">
+            Managed R Archive Network
+          </a>
+          from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.
+        </li>
       </ul>
       <p>
         <strong>
@@ -96,9 +117,9 @@
         </li>
         <li>
 <tt>kitten</tt>
-          from the
+          from
 <a href="../packages/pkgKitten/index.html">pkgKitten</a>
-          package allows to specify the main
+          allows one to specify the main
 <tt>DESCRIPTION</tt>
           entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes
 <tt>R CMD check</tt>
@@ -106,9 +127,9 @@
         </li>
         <li>
 <tt>create</tt>
-          from the
+          from
 <a href="../packages/devtools/index.html">devtools</a>
-          package is similar to
+          is similar to
 <tt>package.skeleton</tt>
           except it allows to specify
 <tt>DESCRIPTION</tt>
@@ -116,9 +137,9 @@
         </li>
         <li>
 <tt>Rcpp.package.skeleton</tt>
-          from the
+          from
 <a href="../packages/Rcpp/index.html">Rcpp</a>
-          package adds to
+          adds to
 <tt>package.skeleton</tt>
           the C++ via
 <tt>Rcpp</tt>
@@ -134,7 +155,7 @@
         </li>
       </ul>
       <h3>
-        Source code
+        Source Code
       </h3>
       <p>
         <strong>
@@ -238,9 +259,40 @@
         </strong>
       </p>
       <p>
+        Package documentation is written in a TeX-like format as .Rd files that are stored in the
+<tt>man</tt>
+        subdirectory of a package. These files are compiled to plain text, HTML, or PDF by R as needed.
+      </p>
+      <ul>
+        <li>
+          One can write .Rd files directly. A popular alternative is to rely on
+<a href="../packages/roxygen2/index.html">roxygen2</a>, which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by
+<tt>roxygen2::roxygenise()</tt>
+          and underlies
+<tt>devtools::document()</tt>. roxygen2 eliminates the need to learn
+          <em>
+            some
+          </em>
+          of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling
+<tt>R CMD build</tt>).
+        </li>
+        <li>
+<a href="../packages/Rd2roxygen/index.html">Rd2roxygen</a>
+          can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow.
+        </li>
+      </ul>
+      <p>
         <strong>
           Writing Vignettes
         </strong>
+      </p>
+      <p>
+        Package vignettes provides additional documentation of package functionality that is not tied to a specific function (as in an .Rd file). Historically, vignettes were used to explain the statistical or computational approach taken by a package in an article-like format that would be rendered as a PDF document using Sweave. Since R 3.0.0, non-Sweave vignette engines have also been supported, including
+<a href="../packages/knitr/index.html">knitr</a>, which can produce Sweave-like PDF vignettes but can also support HTML vignettes that are written in R-flavored markdown. To use a non-Sweave vignette engine, the vignette needs to start with a code block indicating the package and function to be used:
+      </p>
+      <p>
+<tt>%\VignetteEngine{knitr::knitr}
+    %\VignetteIndexEntry{}</tt>
       </p>
       <p>
         <strong>
@@ -248,7 +300,7 @@
         </strong>
       </p>
       <h3>
-        Tools and services
+        Tools and Services
       </h3>
       <p>
         <strong>
@@ -257,9 +309,19 @@
       </p>
       <p>
         <strong>
-          IDEs
+          Integrated Development Environments
         </strong>
       </p>
+      By far the most popular
+      <a href="http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment">
+        integrated development environment (IDE)
+      </a>
+      for R is
+      <a href="http://www.rstudio.com/">
+        RStudio
+      </a>, which is an open-source product available with both commercial and AGPL licensing. It can be run both locally and on a remote server.
+<a href="../packages/rstudioapi/index.html">rstudioapi</a>
+      facilitates interaction from RStudio from within R.
       <p>
         <strong>
           Makefiles
@@ -278,19 +340,24 @@
       completely devoted to R package development.
       <p>
         <strong>
-          Hosting services
+          Version Control
+        </strong>
+      </p>
+      <p>
+        <strong>
+          Hosting and Package Building Services
         </strong>
       </p>
       Many
       <a href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">
         hosting services
       </a>
-      are available. The most common in the R community are:
+      are available. Use of different hosts depends largely on what type of version control software is used to maintain a package. The most common sites are:
       <ul>
         <li>
           <a href="http://r-forge.r-project.org/">
             R-Forge
-          </a>, based on
+          </a>, which relies on on
           <a href="http://subversion.apache.org/">
             subversion
           </a>.
@@ -302,28 +369,32 @@
           <a href="http://help.github.com/articles/support-for-subversion-clients">
             mainly
           </a>
-          based on
+          which supports both Git and Mercurial
           <a href="http://git-scm.com/">
             git
-          </a>. It can handle
+          </a>. It supports
           <a href="http://en.wikipedia.org/wiki/Continuous_integration">
             continuous integration
           </a>
-          for R packages with
+          for R packages.
           <a href="http://travis-ci.org/">
             Travis CI
-          </a>: more info on that
+          </a>
+          is a popular continuous integration tools that supports Linux and OS X build environments and has native R support. Use of other CI services may require additional code and examples are available from
           <a href="http://github.com/craigcitro/r-travis">
-            here
+            r-travis
+          </a>
+          and
+          <a href="https://github.com/metacran/r-builder">
+            r-builder
           </a>.
         </li>
-      </ul>
-      <p>
-        <strong>
-          Building services
-        </strong>
-      </p>
-      <ul>
+        <li>
+          Some packages, especially some that are no longer under active development, remain hosted on
+          <a href="https://code.google.com/">
+            Google Code
+          </a>. This service is closed to new projects, however, and will shut down in January 2016.
+        </li>
         <li>
           <a href="http://win-builder.r-project.org/">
             WinBuilder
@@ -332,6 +403,10 @@
 <tt>R CMD check</tt>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the
 <tt>Maintainer</tt>
           with links to the package zip file and logs for  download/inspection.
+          <a href="http://www.appveyor.com/">
+            Appveyor
+          </a>
+          is a continuous integration service that offers a Windows build environment.
         </li>
       </ul>
     </div>
@@ -342,13 +417,17 @@
     <li><a href="../packages/codetools/index.html">codetools</a></li>
     <li><a href="../packages/devtools/index.html">devtools</a> (core)</li>
     <li><a href="../packages/inline/index.html">inline</a></li>
+    <li><a href="../packages/knitr/index.html">knitr</a></li>
     <li><a href="../packages/microbenchmark/index.html">microbenchmark</a></li>
     <li><a href="../packages/pkgKitten/index.html">pkgKitten</a></li>
     <li><a href="../packages/profr/index.html">profr</a></li>
     <li><a href="../packages/proftools/index.html">proftools</a></li>
     <li><a href="../packages/rbenchmark/index.html">rbenchmark</a></li>
     <li><a href="../packages/Rcpp/index.html">Rcpp</a></li>
+    <li><a href="../packages/Rd2roxygen/index.html">Rd2roxygen</a></li>
     <li><a href="../packages/rJava/index.html">rJava</a></li>
+    <li><a href="../packages/roxygen2/index.html">roxygen2</a></li>
+    <li><a href="../packages/rstudioapi/index.html">rstudioapi</a></li>
     <li><a href="../packages/RUnit/index.html">RUnit</a></li>
     <li><a href="../packages/sos/index.html">sos</a></li>
     <li><a href="../packages/svUnit/index.html">svUnit</a></li>
