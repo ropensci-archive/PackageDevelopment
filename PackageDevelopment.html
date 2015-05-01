@@ -5,157 +5,120 @@
   <link rel="stylesheet" type="text/css" href="../CRAN_web.css" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <meta name="citation_title" content="CRAN Task View: Package Development" />
-  <meta name="citation_author" content="Luca Braglia" />
-  <meta name="citation_publication_date" content="2014-08-04" />
+  <meta name="citation_author" content="Thomas J. Leeper" />
+  <meta name="citation_publication_date" content="2015-05-01" />
   <meta name="citation_public_url" content="http://CRAN.R-project.org/view=PackageDevelopment" />
   <meta name="DC.title" content="CRAN Task View: Package Development" />
-  <meta name="DC.creator" content="Luca Braglia" />
-  <meta name="DC.issued" content="2014-08-04" />
+  <meta name="DC.creator" content="Thomas J. Leeper" />
+  <meta name="DC.issued" content="2015-05-01" />
   <meta name="DC.identifier" content="http://CRAN.R-project.org/view=PackageDevelopment" />
 </head>
 
 <body>
   <h2>CRAN Task View: Package Development</h2>
   <table summary="PackageDevelopment task view information">
-    <tr><td valign="top"><b>Maintainer:</b></td><td>Luca Braglia</td></tr>
-    <tr><td valign="top"><b>Contact:</b></td><td>&#x6c;&#x62;&#x72;&#x61;&#x67;&#x6c;&#x69;&#x61;&#x20;&#x61;&#x74;&#x20;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</td></tr>
-    <tr><td valign="top"><b>Version:</b></td><td>2014-08-04</td></tr>
+    <tr><td valign="top"><b>Maintainer:</b></td><td>Thomas J. Leeper</td></tr>
+    <tr><td valign="top"><b>Contact:</b></td><td>&#x74;&#x68;&#x6f;&#x73;&#x6a;&#x6c;&#x65;&#x65;&#x70;&#x65;&#x72;&#x20;&#x61;&#x74;&#x20;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</td></tr>
+    <tr><td valign="top"><b>Version:</b></td><td>2015-05-01</td></tr>
   </table>
 
     <div>
       <p>
-        Packages provide a mechanism for loading optional code, data and
-      documentation as needed.  At the very minimum only a text editor and
-      an R installation are needed for package creation. Nonetheless many
-      useful tools and R packages themselves have been provided to ease or
-      improve package development. This Task View focuses on these tools/R
-      packages, grouped by topics.
+        Packages provide a mechanism for loading optional code, data and documentation as needed.  At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
       </p>
       <p>
-        Main reference for Packages Development
-      is
-        <a href="http://cran.rstudio.com/doc/manuals/R-exts.html">
+        Main reference for Packages Development is
+        <a href="http://cran.r-project.org/doc/manuals/R-exts.html">
           &quot;Writing R Extension&quot;
         </a>
-        manual. For further documentation and
-      tutorial see the &quot;Related links&quot; section below.
+        manual. For further documentation and tutorial see the &quot;Related links&quot; section below.
       </p>
       <p>
-        If you think that some packages/tools are missing from the list,
-      feel free to
+        If you think that some packages/tools are missing from the list, feel free to
         <a href="mailto:lbraglia@gmail.com">
           e-mail
         </a>
-        me or
-      look
+        me or look
         <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">
           here
         </a>.
       </p>
       <p>
-        Many thanks to: Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor
-      Grothendieck, Gregory Jefferis, John Maindonald, Spencer Graves,
-      Tobias Verbeke and the R-core team.
+        Many thanks to: Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke and the R-core team.
       </p>
-      <h2>
+      <h3>
         First steps
-      </h2>
+      </h3>
       <p>
-        <h3>
+        <strong>
           Searching for already existing packages
-        </h3>
+        </strong>
       </p>
-      Before starting a new package it's worth searching for already
-    available packages, both from a developer's standpoint (&quot;do not
-    reinvent the wheel&quot;) and from a user's one (many packages implementing
-    same/similar procedures can be confusing). If a package addressing the
-    same functionality already exists, you may consider contributing at it
-    instead of starting a new one.
+      Before starting a new package it's worth searching for already available packages, both from a developer's standpoint (&quot;do not reinvent the wheel&quot;) and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one.
       <ul>
         <li>
 <tt>utils::RSiteSearch</tt>
-          allows to search for keywords/phrases
-	in help pages (all the CRAN packages except those for Windows only
-	and some from Bioconductor), vignettes or task views, using the
-	search engine
-	at
+          allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at
           <a href="http://search.r-project.org">
             http://search.r-project.org
-          </a>.
-	A convenient wrapper around
+          </a>. A convenient wrapper around
 <tt>RSiteSearch</tt>
           that adds hits ranking is
 <tt>findFn</tt>
-          function, from
-	the
-<a href="http://cran.rstudio.com/web/packages/sos/index.html">sos</a>
+          function, from the
+<a href="../packages/sos/index.html">sos</a>
           package.
         </li>
         <li>
           <a href="http://rseek.org/">
             RSeek
           </a>
-          allows to search for
-	keywords/phrases in books, task views, support lists,
-	function/packages, blogs etc.
+          allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.
         </li>
         <li>
           <a href="http://rdocumentation.org/">
             Rdocumentation
           </a>
-          allows
-	to search for keywords/phrases in help pages for all CRAN and some
-	Bioconductor/GitHub packages.
+          allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.
         </li>
       </ul>
       <p>
-        <h3>
+        <strong>
           Initializing an R package
-        </h3>
+        </strong>
       </p>
       <ul>
         <li>
 <tt>utils::package.skeleton</tt>
-          automates some of the setup
-	for a new source package. It creates directories, saves functions,
-	data, and R code files provided to appropriate places, and creates
-	skeleton help files and a
+          automates some of the setup for a new source package. It creates directories, saves functions, data, and R code files provided to appropriate places, and creates skeleton help files and a
 <tt>Read-and-delete-me</tt>
-          file
-	describing further steps in packaging
+          file describing further steps in packaging
         </li>
         <li>
 <tt>kitten</tt>
           from the
-<a href="http://cran.rstudio.com/web/packages/pkgKitten/index.html">pkgKitten</a>
-          package allows to
-	specify the main
+<a href="../packages/pkgKitten/index.html">pkgKitten</a>
+          package allows to specify the main
 <tt>DESCRIPTION</tt>
-          entries and doesn't create
-	source code and data files from global environment objects or
-	sourced files. It's used to initialize a simple package that passes
+          entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes
 <tt>R CMD check</tt>
           cleanly.
         </li>
         <li>
 <tt>create</tt>
           from the
-<a href="http://cran.rstudio.com/web/packages/devtools/index.html">devtools</a>
-          package is similar
-	to
+<a href="../packages/devtools/index.html">devtools</a>
+          package is similar to
 <tt>package.skeleton</tt>
           except it allows to specify
 <tt>DESCRIPTION</tt>
-          entries and doesn't create
-	source code and data files from global environment objects or
-	sourced files.
+          entries and doesn't create source code and data files from global environment objects or sourced files.
         </li>
         <li>
 <tt>Rcpp.package.skeleton</tt>
           from the
-<a href="http://cran.rstudio.com/web/packages/Rcpp/index.html">Rcpp</a>
-          package
-	adds to
+<a href="../packages/Rcpp/index.html">Rcpp</a>
+          package adds to
 <tt>package.skeleton</tt>
           the C++ via
 <tt>Rcpp</tt>
@@ -163,98 +126,88 @@
 <tt>DESCRIPTION</tt>
           and
 <tt>NAMESPACE</tt>
-          accordingly, creating examples if needed
-	and allowing the user to specify (with a character vector of paths)
-	which C++ files to include in
+          accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in
 <tt>src</tt>
-          directory . Finally
-	the user can decide main
+          directory . Finally the user can decide main
 <tt>DESCRIPTION</tt>
           entries.
         </li>
       </ul>
-      <h2>
+      <h3>
         Source code
-      </h2>
+      </h3>
       <p>
-        <h3>
+        <strong>
           Foreign Languages Interfaces
-        </h3>
+        </strong>
       </p>
       <ul>
         <li>
           The
-<a href="http://cran.rstudio.com/web/packages/inline/index.html">inline</a>
-          package eases adding code in C, C++ or
-	Fortran to R. It takes care of the compilation, linking and loading
-	of embedded code segments that are stored as R strings.
+<a href="../packages/inline/index.html">inline</a>
+          package eases adding code in C, C++ or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
         </li>
         <li>
           The
-<a href="http://cran.rstudio.com/web/packages/Rcpp/index.html">Rcpp</a>
-          package offers a number of C++ classes that
-	makes transferring R objects to C++ functions (and back) easier.
+<a href="../packages/Rcpp/index.html">Rcpp</a>
+          package offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
         </li>
         <li>
           The
-<a href="http://cran.rstudio.com/web/packages/rJava/index.html">rJava</a>
-          package provides a low-level interface to Java
-	similar to the
+<a href="../packages/rJava/index.html">rJava</a>
+          package provides a low-level interface to Java similar to the
 <tt>.Call</tt>
           interface for C and C++.
         </li>
       </ul>
       <p>
-        <h3>
+        <strong>
           Debugging
-        </h3>
+        </strong>
       </p>
       <p>
-        <h3>
+        <strong>
           Code Analysis
-        </h3>
+        </strong>
       </p>
       <ul>
         <li>
           The
-<a href="http://cran.rstudio.com/web/packages/codetools/index.html">codetools</a>
+<a href="../packages/codetools/index.html">codetools</a>
           package.
         </li>
       </ul>
       <p>
-        <h3>
+        <strong>
           Profiling
-        </h3>
+        </strong>
       </p>
       <ul>
         <li>
           Profiling data is provided by
 <tt>utils::Rprof</tt>
-          and can be
-	summarized by
+          and can be summarized by
 <tt>utils::summaryRprof</tt>
         </li>
         <li>
           The
-<a href="http://cran.rstudio.com/web/packages/profr/index.html">profr</a>
-          package can visualize output from
-	the
+<a href="../packages/profr/index.html">profr</a>
+          package can visualize output from the
 <tt>Rprof</tt>
           interface for profiling.
         </li>
         <li>
           The
-<a href="http://cran.rstudio.com/web/packages/proftools/index.html">proftools</a>
+<a href="../packages/proftools/index.html">proftools</a>
           package and the
-<a href="http://cran.rstudio.com/web/packages/aprof/index.html">aprof</a>
-          package
-	can also be used to analyze profiling output.
+<a href="../packages/aprof/index.html">aprof</a>
+          package can also be used to analyze profiling output.
         </li>
       </ul>
       <p>
-        <h3>
+        <strong>
           Benchmarking
-        </h3>
+        </strong>
       </p>
       <ul>
         <li>
@@ -262,81 +215,75 @@
           is a basic timing utility
         </li>
         <li>
-<a href="http://cran.rstudio.com/web/packages/microbenchmark/index.html">microbenchmark</a>
+<a href="../packages/microbenchmark/index.html">microbenchmark</a>
         </li>
         <li>
-<a href="http://cran.rstudio.com/web/packages/rbenchmark/index.html">rbenchmark</a>
+<a href="../packages/rbenchmark/index.html">rbenchmark</a>
         </li>
       </ul>
       <p>
-        <h3>
+        <strong>
           Unit Testing
-        </h3>
+        </strong>
       </p>
-<a href="http://cran.rstudio.com/web/packages/RUnit/index.html">RUnit</a>
-<a href="http://cran.rstudio.com/web/packages/svUnit/index.html">svUnit</a>
-<a href="http://cran.rstudio.com/web/packages/testthat/index.html">testthat</a>
-      <h2>
+<a href="../packages/RUnit/index.html">RUnit</a>
+<a href="../packages/svUnit/index.html">svUnit</a>
+<a href="../packages/testthat/index.html">testthat</a>
+      <h3>
         Documentation
-      </h2>
+      </h3>
       <p>
-        <h3>
+        <strong>
           Writing Package Documentation
-        </h3>
+        </strong>
       </p>
       <p>
-        <h3>
+        <strong>
           Writing Vignettes
-        </h3>
+        </strong>
       </p>
       <p>
-        <h3>
+        <strong>
           Spell Checking
-        </h3>
+        </strong>
       </p>
-      <h2>
+      <h3>
         Tools and services
-      </h2>
+      </h3>
       <p>
-        <h3>
+        <strong>
           Editors
-        </h3>
+        </strong>
       </p>
       <p>
-        <h3>
+        <strong>
           IDEs
-        </h3>
+        </strong>
       </p>
       <p>
-        <h3>
+        <strong>
           Makefiles
-        </h3>
+        </strong>
       </p>
       <a href="http://www.gnu.org/software/make/">
         GNU Make
       </a>
-      is a tool that
-    tipically builds executable programs and libraries from source code
-    by reading files called
-<tt>Makefile</tt>. It can be used to manage
-    R package as
-    well;
+      is a tool that tipically builds executable programs and libraries from source code by reading files called
+<tt>Makefile</tt>. It can be used to manage R package as well;
       <a href="http://github.com/ComputationalProteomicsUnit/maker">
         maker
       </a>
       is a
 <tt>Makefile</tt>
-      completely devoted to R package
-    development.
+      completely devoted to R package development.
       <p>
-        <h3>
+        <strong>
           Hosting services
-        </h3>
+        </strong>
       </p>
       Many
       <a href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">
-        hosting
-    services
+        hosting services
       </a>
       are available. The most common in the R community are:
       <ul>
@@ -358,72 +305,62 @@
           based on
           <a href="http://git-scm.com/">
             git
-          </a>. It can
-	handle
+          </a>. It can handle
           <a href="http://en.wikipedia.org/wiki/Continuous_integration">
-            continuous
-	integration
+            continuous integration
           </a>
-          for R packages
-	with
+          for R packages with
           <a href="http://travis-ci.org/">
             Travis CI
-          </a>: more info on
-	that
+          </a>: more info on that
           <a href="http://github.com/craigcitro/r-travis">
             here
           </a>.
         </li>
       </ul>
       <p>
-        <h3>
+        <strong>
           Building services
-        </h3>
+        </strong>
       </p>
       <ul>
         <li>
           <a href="http://win-builder.r-project.org/">
             WinBuilder
           </a>
-          is a
-	service intended for useRs who do not have Windows available for
-	checking and building Windows binary packages. The package sources
-	(after an
-<tt>R CMD check</tt>) can be uploaded via html form or
-	passive ftp in binary mode; after checking/building a mail will be
-	sent to the
+          is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an
+<tt>R CMD check</tt>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the
 <tt>Maintainer</tt>
-          with links to the package zip
-	file and logs for  download/inspection.
+          with links to the package zip file and logs for  download/inspection.
         </li>
       </ul>
     </div>
 
   <h3>CRAN packages:</h3>
   <ul>
-    <li><a href="http://cran.rstudio.com/web/packages/aprof/index.html">aprof</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/codetools/index.html">codetools</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/devtools/index.html">devtools</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/inline/index.html">inline</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/microbenchmark/index.html">microbenchmark</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/pkgKitten/index.html">pkgKitten</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/profr/index.html">profr</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/proftools/index.html">proftools</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/rbenchmark/index.html">rbenchmark</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/Rcpp/index.html">Rcpp</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/rJava/index.html">rJava</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/RUnit/index.html">RUnit</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/sos/index.html">sos</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/svUnit/index.html">svUnit</a></li>
-    <li><a href="http://cran.rstudio.com/web/packages/testthat/index.html">testthat</a></li>
+    <li><a href="../packages/aprof/index.html">aprof</a></li>
+    <li><a href="../packages/codetools/index.html">codetools</a></li>
+    <li><a href="../packages/devtools/index.html">devtools</a> (core)</li>
+    <li><a href="../packages/inline/index.html">inline</a></li>
+    <li><a href="../packages/microbenchmark/index.html">microbenchmark</a></li>
+    <li><a href="../packages/pkgKitten/index.html">pkgKitten</a></li>
+    <li><a href="../packages/profr/index.html">profr</a></li>
+    <li><a href="../packages/proftools/index.html">proftools</a></li>
+    <li><a href="../packages/rbenchmark/index.html">rbenchmark</a></li>
+    <li><a href="../packages/Rcpp/index.html">Rcpp</a></li>
+    <li><a href="../packages/rJava/index.html">rJava</a></li>
+    <li><a href="../packages/RUnit/index.html">RUnit</a></li>
+    <li><a href="../packages/sos/index.html">sos</a></li>
+    <li><a href="../packages/svUnit/index.html">svUnit</a></li>
+    <li><a href="../packages/testthat/index.html">testthat</a></li>
   </ul>
 
   <h3>Related links:</h3>
   <ul>
-    <li><a href="http://cran.rstudio.com/doc/manuals/R-exts.html">
+    <li><a href="http://cran.r-project.org/doc/manuals/R-exts.html">
   [Manual] &quot;Writing R Extension&quot; by R-core team
 </a></li>
-    <li><a href="http://cran.rstudio.com/doc/contrib/Leisch-CreatingPackages.pdf">
+    <li><a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">
   [Tutorial] &quot;Creating R Packages: A Tutorial&quot; by Friedrich Leisch
 </a></li>
     <li><a href="http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-0-387-75935-7">

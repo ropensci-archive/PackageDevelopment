@@ -1,96 +1,37 @@
-# How to contribute
+Thanks for your contribution!
 
-You are welcome to:
-- fork and send a pull request, if you use GitHub;
-- submit suggestions and bug-reports
-[here](http://github.com/lbraglia/PackageDevelopmentTaskView/issues);
-- send an e-mail to: lbraglia@gmail.com.
+## Edit the task view:
 
-## Tools
+### Requirements:
 
-You need:
-* `R` with `ctv` package installed
+* R (to create the `.html` from the `.ctv` file) [Installation](http://cran.r-project.org/)
+* `pandoc`: [Installation](http://johnmacfarlane.net/pandoc/installing.html)
 
-  ```R
-  install.packages(c("ctv","whisker","stringr"), dep = TRUE)
-  ```
+If you don't want to or can't install these things, then just edit the `pkgs.ctv` file, and submit a pull request.
 
-* an Internet connection (for `ctv::check_ctv_packages`, since it retrieves
-  `PACKAGES` file from CRAN)
-* [`pandoc`](http://johnmacfarlane.net/pandoc/)
+### Steps
 
-Optionally you may want to add [`aspell`](http://www.aspell.net) and
-[`linkchecker`](http://wummel.github.io/linkchecker). 
+1. Fork this repo
+2. Edit the [pkgs.ctv](https://github.com/leeper/PackageDevelopment/blob/master/pkgs.ctv) file. If the package you are adding is on CRAN, add a new `<li>` element with your package name within a `<pkg>` tag. If it's not on CRAN, put it within an `<a>` tag, and include a link to the repo with `href`.
+3. On the command line type `make` and press enter, which creates the `PackageDevelopment.html` and `README.md` files.
+4. Check to make sure the `.ctv` file is correct. In the console output from `make`, you should get:
 
-## Steps
-You need to: 
+    ```coffee
+    $`Packages in <info> but not in <packagelist>`
+    character(0)
 
-1. edit `pd.ctv` (*more info* below). Do **not** edit
-   `PackageDevelopment.ctv` (or your changes will be removed on next
-   `make`); 
-2. `make`
+    $`Packages in <packagelist> but not in <info>`
+    character(0)
 
-**If everything works**, last lines should be like:
-```bash
-...
-pandoc PackageDevelopment.html -o README.md
-rm -rf tmp*
-```
-Then you can push back up to your account and send a pull request.
+    $`Packages in <packagelist> but not in repos`
+    character(0)
+    ```
 
-**If not**, aside problems with Internet connection, you have to
-look at `ctv::check_ctv_packages` report and fix missing packages.
+    If you don't, follow the error messages to fix. If you can't figure out how to fix, just send the PR anyway, and the maintainer will fix.
 
-### Utils
-After a successful `make`, you can view the html generated with:
-```
-make view
-```
-Furthermore, two other steps may be useful:
-* spell checking
-* checking links
+    If you changed anything in the `pkgs.ctv` file, repeat step 3 to remake files. If everything was fine, proceed.
+5. Push back up to your account, then send a pull request to `leeper/PackageDevelopment`
 
-#### Spell checking
-A check, via `aspell`, is done with:
-```bash
-make aspell
-```
-You may want to add words to the local dictionary used; after editing
-`wordlist` file, type:
-```bash
-make aspell-dict
-```
+## Submit an issue
 
-#### Checking links
-A check, via `linkchecker`, is done with:
-```bash
-make check-links
-```
-and an ending message like ...
-```
-That's it. 14 links in 13 URLs checked. 0 warnings found. 0 errors found.
-                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-```
-... is quite assuring.
-
-### Editing `pd.ctv`
-First, look at:
-```R
-vignette("ctv-howto")
-```
-
-Furthermore, since `pd.ctv` is processed by `sed` to compose
-`PackageDevelopment.ctv`:
-* tag section names with `<section>...</section>`
-* tag task names with `<task>...</task>`
-
-<!--- * if you link a GitHub (only, otherwise use CRAN's) repository of a -->
-<!--- package, ad *if* `names(package) == names(githubRepo)` you could use the `gh` -->
-<!--- tag in this way (eg.) `<gh>hadley/devtools</gh>` -->
-
-
-## Thanks
-
-* [WebTechnologies](http://cran.r-project.org/web/views/WebTechnologies.html)
-  CRAN Task View group, for some very useful ideas on
-  [repo](http://github.com/ropensci/webservices) setup
+If you just want to submit an issue, then go to the [issues page](https://github.com/leeper/PackageDevelopment/issues?state=open) and do that.

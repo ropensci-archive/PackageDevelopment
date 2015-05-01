@@ -1,42 +1,26 @@
-<!-- -*- mode: HTML -*- -->
 <CRANTaskView>
-
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
-  <maintainer email="lbraglia@gmail.com">Luca Braglia</maintainer>
-  <version>2014-08-04</version>
-
+  <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
+  <version>2015-05-01</version>
   <info>
     <p>
-      Packages provide a mechanism for loading optional code, data and
-      documentation as needed.  At the very minimum only a text editor and
-      an R installation are needed for package creation. Nonetheless many
-      useful tools and R packages themselves have been provided to ease or
-      improve package development. This Task View focuses on these tools/R
-      packages, grouped by topics.
+      Packages provide a mechanism for loading optional code, data and documentation as needed.  At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
     </p>
     <p>
-      Main reference for Packages Development
-      is <a href="http://cran.r-project.org/doc/manuals/R-exts.html">
-      "Writing R Extension"</a> manual. For further documentation and
-      tutorial see the "Related links" section below.
+      Main reference for Packages Development is <a href="http://cran.r-project.org/doc/manuals/R-exts.html"> "Writing R Extension"</a> manual. For further documentation and tutorial see the "Related links" section below.
     </p>
-    <!-- [??] Some packages listed in this CRAN Task View could not be
-    distributed under a FOSS license. Please have a look at the DESCRIPTION
-    file of each package to check it.  -->
-    <p> If you think that some packages/tools are missing from the list,
-      feel free to <a href="mailto:lbraglia@gmail.com">e-mail</a> me or
-      look <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">here</a>. 
+    <!-- [??] Some packages listed in this CRAN Task View could not be distributed under a FOSS license. Please have a look at the DESCRIPTION file of each package to check it.  -->
+    <p>
+      If you think that some packages/tools are missing from the list, feel free to <a href="mailto:lbraglia@gmail.com">e-mail</a> me or look <a href="http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md">here</a>. 
     </p>
     <p>
-      Many thanks to: Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor
-      Grothendieck, Gregory Jefferis, John Maindonald, Spencer Graves,
-      Tobias Verbeke and the R-core team.
+      Many thanks to: Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke and the R-core team.
     </p>
-
+    
     <!-- TODO: -->
     <!-- Go through the R Extensions manual and add all tools listed. -->
-
+    
     <!-- PACKAGES: -->
     <!-- pkgcreator -->
     <!-- svTools -->
@@ -45,252 +29,189 @@
     here https://github.com/rstudio/packrat/issues/31-->
     <!-- <a href="http://rstudio.github.io/packrat">packrat package -->
     <!-- dependency management</a> -->
-
+    
     <!-- ==================================================== -->
-
-    <h2>First steps</h2>
-
-    <p><h3>Searching for already existing packages</h3></p>
     
-    Before starting a new package it's worth searching for already
-    available packages, both from a developer's standpoint ("do not
-    reinvent the wheel") and from a user's one (many packages implementing
-    same/similar procedures can be confusing). If a package addressing the
-    same functionality already exists, you may consider contributing at it
-    instead of starting a new one.
+    <h3>First steps</h3>
+    
+    <p><strong>Searching for already existing packages</strong></p>
+    
+    Before starting a new package it's worth searching for already available packages, both from a developer's standpoint ("do not reinvent the wheel") and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one.
     
     <ul>
-      <li> <code>utils::RSiteSearch</code> allows to search for keywords/phrases
-	in help pages (all the CRAN packages except those for Windows only
-	and some from Bioconductor), vignettes or task views, using the
-	search engine
-	at <a href="http://search.r-project.org">http://search.r-project.org</a>.
-	A convenient wrapper around <code>RSiteSearch</code>
-	that adds hits ranking is <code>findFn</code> function, from
-	the <pkg>sos</pkg> package.</li>
-      <li> <a href="http://rseek.org/">RSeek</a> allows to search for
-	keywords/phrases in books, task views, support lists,
-	function/packages, blogs etc.</li>
-      <li> <a href="http://rdocumentation.org/">Rdocumentation</a> allows
-	to search for keywords/phrases in help pages for all CRAN and some
-	Bioconductor/GitHub packages. </li>
-    </ul>
-
-
-    <p><h3>Initializing an R package</h3></p>
-    <ul>
-      <li>
-	<code>utils::package.skeleton</code> automates some of the setup
-	for a new source package. It creates directories, saves functions,
-	data, and R code files provided to appropriate places, and creates
-	skeleton help files and a <code>Read-and-delete-me</code> file
-	describing further steps in packaging
+      <li> 
+        <code>utils::RSiteSearch</code> allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <a href="http://search.r-project.org">http://search.r-project.org</a>. A convenient wrapper around <code>RSiteSearch</code> that adds hits ranking is <code>findFn</code> function, from the <pkg>sos</pkg> package.
       </li>
       <li>
-	<code>kitten</code> from the <pkg>pkgKitten</pkg> package allows to
-	specify the main <code>DESCRIPTION</code> entries and doesn't create
-	source code and data files from global environment objects or
-	sourced files. It's used to initialize a simple package that passes
-	<code>R CMD check</code> cleanly.
-      </li>
+        <a href="http://rseek.org/">RSeek</a> allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.</li>
       <li>
-	<code>create</code> from the <pkg>devtools</pkg> package is similar
-	to <code>package.skeleton</code> except it allows to specify
-	<code>DESCRIPTION</code> entries and doesn't create
-	source code and data files from global environment objects or
-	sourced files.
-      </li>
-      <li>
-	<code>Rcpp.package.skeleton</code> from the <pkg>Rcpp</pkg> package
-	adds to <code>package.skeleton</code> the C++ via <code>Rcpp</code>
-	handling, by modifying eg. <code>DESCRIPTION</code>
-	and <code>NAMESPACE</code> accordingly, creating examples if needed
-	and allowing the user to specify (with a character vector of paths)
-	which C++ files to include in <code>src</code> directory . Finally
-	the user can decide main <code>DESCRIPTION</code> entries.
+        <a href="http://rdocumentation.org/">Rdocumentation</a> allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.
       </li>
     </ul>
     
-
+    
+    <p><strong>Initializing an R package</strong></p>
+    <ul>
+      <li>
+         <code>utils::package.skeleton</code> automates some of the setup for a new source package. It creates directories, saves functions, data, and R code files provided to appropriate places, and creates skeleton help files and a <code>Read-and-delete-me</code> file describing further steps in packaging
+      </li>
+      <li>
+        <code>kitten</code> from the <pkg>pkgKitten</pkg> package allows to specify the main <code>DESCRIPTION</code> entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes <code>R CMD check</code> cleanly.
+      </li>
+      <li>
+        <code>create</code> from the <pkg>devtools</pkg> package is similar to <code>package.skeleton</code> except it allows to specify <code>DESCRIPTION</code> entries and doesn't create source code and data files from global environment objects or sourced files.
+      </li>
+      <li>
+        <code>Rcpp.package.skeleton</code> from the <pkg>Rcpp</pkg> package adds to <code>package.skeleton</code> the C++ via <code>Rcpp</code> handling, by modifying eg. <code>DESCRIPTION</code> and <code>NAMESPACE</code> accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in <code>src</code> directory . Finally the user can decide main <code>DESCRIPTION</code> entries.
+      </li>
+    </ul>
+    
+    
     <!-- ==================================================== -->
-    <h2>Source code</h2>
-
-    <p><h3>Foreign Languages Interfaces</h3></p> 
-
-    <!-- base R support for that, Rcpp11, Use of Rcpp/Rcpp11 implies the
-	 use of C++ tools too and use of rjava implies java tools.  -->
-
+    <h3>Source code</h3>
+    
+    <p><strong>Foreign Languages Interfaces</strong></p> 
+    
+    <!-- base R support for that, Rcpp11, Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of rjava implies java tools.  -->
+    
     <ul>
       <li>
-	The <pkg>inline</pkg> package eases adding code in C, C++ or
-	Fortran to R. It takes care of the compilation, linking and loading
-	of embedded code segments that are stored as R strings.
+        The <pkg>inline</pkg> package eases adding code in C, C++ or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
       </li>
       <li>
-	The <pkg>Rcpp</pkg> package offers a number of C++ classes that
-	makes transferring R objects to C++ functions (and back) easier.
+        The <pkg>Rcpp</pkg> package offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
       </li>
       <li>
-	The <pkg>rJava</pkg> package provides a low-level interface to Java
-	similar to the <code>.Call</code> interface for C and C++.
+        The <pkg>rJava</pkg> package provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++.
       </li>
     </ul>
-
-
-    <p><h3>Debugging</h3></p> 
-
+    
+    
+    <p><strong>Debugging</strong></p> 
+    
     <!-- base::debug utils::recover and friends -->
-
-
-    <p><h3>Code Analysis</h3></p>
+    
+    
+    <p><strong>Code Analysis</strong></p>
     <ul>
       <li>
-	The <pkg>codetools</pkg> package.
+         The <pkg>codetools</pkg> package.
       </li>
     </ul>
-
+    
     <!-- https://github.com/Dasonk/packageAnalyzeR  maybe in the future  -->
-
-
-    <p><h3>Profiling</h3></p>
+    
+    
+    <p><strong>Profiling</strong></p>
     <ul>
       <li>
-	Profiling data is provided by <code>utils::Rprof</code> and can be
-	summarized by <code>utils::summaryRprof</code>
+         Profiling data is provided by <code>utils::Rprof</code> and can be summarized by <code>utils::summaryRprof</code>
       </li>
       <li>
-	The <pkg>profr</pkg> package can visualize output from
-	the <code>Rprof</code> interface for profiling.
+        The <pkg>profr</pkg> package can visualize output from the <code>Rprof</code> interface for profiling.
       </li>
       <li>
-	The <pkg>proftools</pkg> package and the <pkg>aprof</pkg> package
-	can also be used to analyze profiling output.
+        The <pkg>proftools</pkg> package and the <pkg>aprof</pkg> package can also be used to analyze profiling output.
       </li>
     </ul>
-
-
-    <p><h3>Benchmarking</h3></p>
+    
+    
+    <p><strong>Benchmarking</strong></p>
     <ul>
       <li>
-	<code>base::system.time</code> is a basic timing utility
+        <code>base::system.time</code> is a basic timing utility
       </li>
       <li>
-	<pkg>microbenchmark</pkg>
+        <pkg>microbenchmark</pkg>
       </li>
       <li>
-	<pkg>rbenchmark</pkg>
+        <pkg>rbenchmark</pkg>
       </li>
     </ul>
-
-
-    <p><h3>Unit Testing</h3></p>
+    
+    
+    <p><strong>Unit Testing</strong></p>
     <pkg>RUnit</pkg>
     <pkg>svUnit</pkg>
     <pkg>testthat</pkg>
-
-
+    
+    
     <!-- ==================================================== -->
-    <h2>Documentation</h2>
-
-    <p><h3>Writing Package Documentation</h3></p>
-
+    <h3>Documentation</h3>
+    
+    <p><strong>Writing Package Documentation</strong></p>
+    
     <!-- (functions, data sets, classes and methods, packages) roxygen2 -->
-
-    <p><h3>Writing Vignettes</h3></p> 
-
+    
+    <p><strong>Writing Vignettes</strong></p> 
+    
     <!-- Sweave knitr -->
-   
-    <p><h3>Spell Checking</h3></p> 
-
+    
+    <p><strong>Spell Checking</strong></p> 
+    
     <!-- tools::aspell_package_* functions -->
-
-
+    
+    
     <!-- ==================================================== -->
-    <h2>Tools and services</h2>
-
-
-    <p><h3>Editors</h3></p> 
-
+    <h3>Tools and services</h3>
+    
+    
+    <p><strong>Editors</strong></p> 
+    
     <!-- (supporting package development) -->
-
-
-    <p><h3>IDEs</h3></p> 
-
+    
+    
+    <p><strong>IDEs</strong></p> 
+    
     <!-- (supporting package development)
     http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment 
     -->
-
-
-    <p><h3>Makefiles</h3></p>
-    <a href="http://www.gnu.org/software/make/">GNU Make</a> is a tool that
-    tipically builds executable programs and libraries from source code
-    by reading files called <code>Makefile</code>. It can be used to manage
-    R package as
-    well; <a href="http://github.com/ComputationalProteomicsUnit/maker">
-    maker</a> is a <code>Makefile</code> completely devoted to R package
-    development. 
-
-
-    <p><h3>Hosting services</h3></p>
-
-    Many <a href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">hosting
-    services</a> are available. The most common in the R community are:
-    <ul>
-      <li>
-	<a href="http://r-forge.r-project.org/">R-Forge</a>, based on
-	<a href="http://subversion.apache.org/">subversion</a>.
-      </li>
-      <li>
-	<a href="http://github.com/">GitHub</a>,
-	<a href="http://help.github.com/articles/support-for-subversion-clients">mainly</a>
-	based on <a href="http://git-scm.com/">git</a>. It can
-	handle <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous
-	integration</a> for R packages
-	with <a href="http://travis-ci.org/">Travis CI</a>: more info on
-	that <a href="http://github.com/craigcitro/r-travis">here</a>.
-      </li>
-    </ul>
-
-
-    <p><h3>Building services</h3></p>
-
-    <ul>
-      <li>
-	<a href="http://win-builder.r-project.org/">WinBuilder</a> is a
-	service intended for useRs who do not have Windows available for
-	checking and building Windows binary packages. The package sources
-	(after an <code>R CMD check</code>) can be uploaded via html form or
-	passive ftp in binary mode; after checking/building a mail will be
-	sent to the  <code>Maintainer</code> with links to the package zip
-	file and logs for  download/inspection.
-      </li>
-    </ul>
-
-    <!-- ==================================================== -->
     
-
+    
+    <p><strong>Makefiles</strong></p>
+    <a href="http://www.gnu.org/software/make/">GNU Make</a> is a tool that tipically builds executable programs and libraries from source code by reading files called <code>Makefile</code>. It can be used to manage R package as well; <a href="http://github.com/ComputationalProteomicsUnit/maker"> maker</a> is a <code>Makefile</code> completely devoted to R package development. 
+    
+    
+    <p><strong>Hosting services</strong></p>
+    
+    Many <a href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">hosting services</a> are available. The most common in the R community are:
+    <ul>
+      <li>
+        <a href="http://r-forge.r-project.org/">R-Forge</a>, based on
+        <a href="http://subversion.apache.org/">subversion</a>.
+      </li>
+      <li>
+        <a href="http://github.com/">GitHub</a>,
+        <a href="http://help.github.com/articles/support-for-subversion-clients">mainly</a> based on <a href="http://git-scm.com/">git</a>. It can handle <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> for R packages with <a href="http://travis-ci.org/">Travis CI</a>: more info on that <a href="http://github.com/craigcitro/r-travis">here</a>.
+      </li>
+    </ul>
+    
+    
+    <p><strong>Building services</strong></p>
+    
+    <ul>
+      <li>
+        <a href="http://win-builder.r-project.org/">WinBuilder</a> is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an <code>R CMD check</code>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the  <code>Maintainer</code> with links to the package zip file and logs for  download/inspection.
+      </li>
+    </ul>
   </info>
-
-
   <packagelist>
-    <pkg>aprof</pkg> 
-    <pkg>codetools</pkg> 
-    <pkg>devtools</pkg> 
-    <pkg>inline</pkg> 
-    <pkg>microbenchmark</pkg> 
-    <pkg>pkgKitten</pkg> 
-    <pkg>profr</pkg> 
-    <pkg>proftools</pkg> 
-    <pkg>rbenchmark</pkg> 
-    <pkg>Rcpp</pkg> 
-    <pkg>rJava</pkg> 
-    <pkg>RUnit</pkg> 
-    <pkg>sos</pkg> 
-    <pkg>svUnit</pkg> 
-    <pkg>testthat</pkg> 
+    <pkg priority="core">devtools</pkg>
+    <pkg>aprof</pkg>
+    <pkg>codetools</pkg>
+    <pkg>inline</pkg>
+    <pkg>microbenchmark</pkg>
+    <pkg>pkgKitten</pkg>
+    <pkg>profr</pkg>
+    <pkg>proftools</pkg>
+    <pkg>rbenchmark</pkg>
+    <pkg>Rcpp</pkg>
+    <pkg>rJava</pkg>
+    <pkg>RUnit</pkg>
+    <pkg>sos</pkg>
+    <pkg>svUnit</pkg>
+    <pkg>testthat</pkg>
   </packagelist>
-  
-
   <links>
     <a href="http://cran.r-project.org/doc/manuals/R-exts.html">[Manual] "Writing R Extension" by R-core team </a>
     <a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">[Tutorial] "Creating R Packages: A Tutorial" by Friedrich Leisch </a>
@@ -298,6 +219,4 @@
     <a href="http://adv-r.had.co.nz">[Book] "Advanced R" by Hadley Wickham</a>
     <a href="http://r-pkgs.had.co.nz/">[Book] "R packages" by Hadley  Wickham</a>
   </links>
-
-
 </CRANTaskView>
