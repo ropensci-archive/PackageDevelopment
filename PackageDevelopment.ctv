@@ -67,15 +67,50 @@
     </ul>
     
     
+    <p><strong>Programming Paradigms</strong></p>
+    
+    R is first a functional programming language, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages. 
+    
+    <ul>
+      <li>
+        The built-in S3 classes involve wherein a generic function (e.g., <code>summary</code>) employs a distinct method for an object of a given class (i.e., it is possible to implement class-specific methods for a given generic function). If a package implements new object classes, it is common to implement methods for commonly used generics such as <code>print</code>, <code>summary</code>, etc. These methods must be registered in the package's NAMESPACE file. <pkg>R.methodsS3</pkg> aims to simplify the creation of S3 generic functions and S3 methods.
+      </li>
+      <li>
+        S4 is a more formalized form of object orientation that is available through <pkg>methods</pkg>. S4 classes have formal definitions and can dispatch methods based on multiple arguments (not just the first argument, as in S3). S4 is notable for its use of the <code>@</code> symbol to extract slots from S4 objects. John Chambers's <a href="http://developer.r-project.org/howMethodsWork.pdf">"How S4 Methods Work"</a> tutorial may serve as a useful introduction.
+      </li>
+      <li>
+        Reference classes were introduced in R2.12.0 and are also part of <pkg>methods</pkg>. They offer a distinct paradigm from S3 and S4 due to the fact that reference class objects are mutable and that methods belong to objects, not generic functions.
+      </li>
+      <li>
+        <pkg>aoos</pkg> and <pkg>R.oo</pkg> are other packages facilitating object-oriented programming. <pkg>R6</pkg> (<a href="https://github.com/wch/R6">Github</a>) provides an alternative to reference classes without a dependency on <pkg>methods</pkg>.
+      </li>
+    </ul>
+    
+    Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like <code>library</code> and <code>subset</code> and can also be used in packages.
+    
+    <ul>
+      <li>
+        <code>substitute()</code> provides the most straightforward interface to non-standard evaluation of function arguments.
+      </li>
+      <li>
+        <pkg>lazyeval</pkg> (<a href="https://github.com/hadley/lazyeval">Github</a>) aims to help developers design packages with parallel function implementations that follow both standard and non-standard evaluation.
+      </li>
+      <li>
+        An increasingly popular form of non-standard evaluation involves chained expressions or "pipelines". <pkg>magrittr</pkg> provides the <code>%>%</code> chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. <pkg>pipeR</pkg> a larger set of pipe operators.
+      </li>
+    </ul>
+    
+    
+    
     <h3>Source Code</h3>
     
     <p><strong>Foreign Languages Interfaces</strong></p> 
     
-    <!-- base R support for that, Rcpp11, Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of rjava implies java tools.  -->
-    
     <ul>
+      <!-- base R support for that, Rcpp11, Use of Rcpp/Rcpp11 implies the use of C++ tools too and use of rjava implies java tools.  -->
+      
       <li>
-        The <pkg>inline</pkg> package eases adding code in C, C++ or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
+        The <pkg>inline</pkg> package eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
       </li>
       <li>
         The <pkg>Rcpp</pkg> package offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
@@ -83,7 +118,15 @@
       <li>
         The <pkg>rJava</pkg> package provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++.
       </li>
+      <li>
+        <pkg>rPython</pkg> and <pkg>rJython</pkg> provide interfaces to python.
+      </li>
+      <li>
+        <pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.
+      </li>
     </ul>
+    
+    Writing packages that involve compiled code requires a developer toolchain. If developing on Windows, this requires <a href="http://cran.r-project.org/bin/windows/Rtools/">Rtools</a>, which is updated with each R minor release.
     
     
     <p><strong>Debugging</strong></p> 
@@ -114,7 +157,6 @@
       </li>
     </ul>
     
-    
     <p><strong>Benchmarking</strong></p>
     <ul>
       <li>
@@ -135,6 +177,33 @@
     <pkg>testthat</pkg>
     
     
+    <p><strong>Internationalization and Localization</strong></p>
+    <ul>
+      <li>
+        There is no standard mechanism for translation of package documentation into languages other than English. To create non-English documentation requires manual creation of supplemental .Rd files or package vignettes. Packages supplying non-English documentation should include a <code>Language</code> field in the DESCRIPTION file.
+      </li>
+      <li>
+        R provides useful features for the localization of diagnostic messages, warnings, and errors from functions at both the C and R levels based on GNU <code>gettext</code>. <a href="http://developer.r-project.org/Translations30.html">"Translating R Messages"</a> describes the process of creating and installing message translations.
+      </li>
+    </ul>
+    
+    
+    <p><strong>Creating Graphical Interfaces</strong></p>
+    
+    <ul>
+      <li>
+        For simple interactive interfaces, <code>readline()</code> can be used to create a simple prompt, while <code>utils::menu()</code>,  <code>utils::select.list()</code> can provide graphical and console-based selection of items from a list, and <code>utils::txtProgressBar()</code> provides a simple text progress bar.
+      </li>
+      <li>
+        The <code>tcltk</code> is an R base package that provides a large set of tools for creating interfaces uses tcl/tk (most functions are thin wrappers around corresponding tcl and tk functions), though the documentation is sparse. <pkg>tcltk2</pkg> provides additional widgets and functionality. <pkg>qtbase</pkg> provides bindings for Qt. <ohat>RGtk</ohat> (not on CRAN) provides bindings for Gtk and gnome. <pkg>gWidgets2</pkg> offers a language-independent API for building graphical user interfaces in Gtk, Qt, or tcl/tk.
+      </li>
+      <li>
+        <pkg>Shiny</pkg> provides a browser-based infrastructure for creating dashboards and interfaces for R functionality.
+      </li>
+    </ul>
+    
+    
+    
     <h3>Documentation</h3>
     
     <p><strong>Writing Package Documentation</strong></p>
@@ -145,10 +214,13 @@
     
     <ul>
       <li>
-      One can write .Rd files directly. A popular alternative is to rely on <pkg>roxygen2</pkg>, which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by <code>roxygen2::roxygenise()</code> and underlies <code>devtools::document()</code>. roxygen2 eliminates the need to learn <em>some</em> of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling <code>R CMD build</code>).
+        One can write .Rd files directly. A popular alternative is to rely on <pkg>roxygen2</pkg>, which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by <code>roxygen2::roxygenise()</code> and underlies <code>devtools::document()</code>. roxygen2 eliminates the need to learn <em>some</em> of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling <code>R CMD build</code>).
       </li>
       <li>
-      <pkg>Rd2roxygen</pkg> can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow.
+        <pkg>Rd2roxygen</pkg> can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow.
+      </li>
+      <li>
+        <code>tools::parse_Rd()</code> can be used to manipulate the contents of an .Rd file. <code>tools::checkRd()</code> is useful for validating an .Rd file. Duncan Murdoch's <a href="https://developer.r-project.org/parseRd.pdf">"Parsing Rd files"</a> tutorial is a useful reference for advanced use of R documentation. <pkg>Rdpack</pkg> provides additional tools for manipulating documentation files.
       </li>
     </ul>
     
@@ -159,10 +231,8 @@
     <p>Package vignettes provides additional documentation of package functionality that is not tied to a specific function (as in an .Rd file). Historically, vignettes were used to explain the statistical or computational approach taken by a package in an article-like format that would be rendered as a PDF document using Sweave. Since R 3.0.0, non-Sweave vignette engines have also been supported, including <pkg>knitr</pkg>, which can produce Sweave-like PDF vignettes but can also support HTML vignettes that are written in R-flavored markdown. To use a non-Sweave vignette engine, the vignette needs to start with a code block indicating the package and function to be used:</p>
     
     <p>
-    <code>
-    %\VignetteEngine{knitr::knitr}
-    %\VignetteIndexEntry{}
-    </code>
+    <code>%\VignetteEngine{knitr::knitr}</code><br/>
+    <code>%\VignetteIndexEntry{}</code>
     </p>
     
     <p><strong>Spell Checking</strong></p> 
@@ -170,15 +240,16 @@
     <!-- tools::aspell_package_* functions -->
     
     
+    
+    <h3>Data in Packages</h3>
+    
+    
+    
     <h3>Tools and Services</h3>
     
-    
-    <p><strong>Editors</strong></p> 
+    <p><strong>Text Editors and IDEs</strong></p> 
     
     <!-- (supporting package development) -->
-    
-    
-    <p><strong>Integrated Development Environments</strong></p> 
     
     By far the most popular <a href="http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment">integrated development environment (IDE)</a> for R is <a href="http://www.rstudio.com/">RStudio</a>, which is an open-source product available with both commercial and AGPL licensing. It can be run both locally and on a remote server. <pkg>rstudioapi</pkg> facilitates interaction from RStudio from within R.
     
@@ -199,36 +270,56 @@
         <a href="http://r-forge.r-project.org/">R-Forge</a>, which relies on on <a href="http://subversion.apache.org/">subversion</a>.
       </li>
       <li>
-        <a href="http://github.com/">GitHub</a>, <a href="http://help.github.com/articles/support-for-subversion-clients">mainly</a> which supports both Git and Mercurial <a href="http://git-scm.com/">git</a>. It supports <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> for R packages. <a href="http://travis-ci.org/">Travis CI</a> is a popular continuous integration tools that supports Linux and OS X build environments and has native R support. Use of other CI services may require additional code and examples are available from <a href="http://github.com/craigcitro/r-travis">r-travis</a> and <a href="https://github.com/metacran/r-builder">r-builder</a>.
+        <a href="http://github.com/">GitHub</a>, <a href="http://help.github.com/articles/support-for-subversion-clients">mainly</a> which supports both Git and Mercurial <a href="http://git-scm.com/">git</a>. Packages hosted on Github can be installed directly using <code>devtools::install_github()</code>.
       </li>
       <li>
-        Some packages, especially some that are no longer under active development, remain hosted on <a href="https://code.google.com/">Google Code</a>. This service is closed to new projects, however, and will shut down in January 2016.
+        Github supports <a href="http://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> for R packages. <a href="http://travis-ci.org/">Travis CI</a> is a popular continuous integration tools that supports Linux and OS X build environments and has native R support. Use of other CI services may require additional code and examples are available from <a href="http://github.com/craigcitro/r-travis">r-travis</a> and <a href="https://github.com/metacran/r-builder">r-builder</a>.
       </li>
       <li>
         <a href="http://win-builder.r-project.org/">WinBuilder</a> is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an <code>R CMD check</code>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the  <code>Maintainer</code> with links to the package zip file and logs for  download/inspection. <a href="http://www.appveyor.com/">Appveyor</a> is a continuous integration service that offers a Windows build environment.
+      </li>
+      <li>
+        Some packages, especially some that are no longer under active development, remain hosted on <a href="https://code.google.com/">Google Code</a>. This service is closed to new projects, however, and will shut down in January 2016.
       </li>
     </ul>
   </info>
   <packagelist>
     <pkg priority="core">devtools</pkg>
+    <pkg>aoos</pkg>
     <pkg>aprof</pkg>
     <pkg>codetools</pkg>
+    <pkg>gWidgets2</pkg>
     <pkg>inline</pkg>
+    <pkg>js</pkg>
     <pkg>knitr</pkg>
+    <pkg>lazyeval</pkg>
+    <pkg>magrittr</pkg>
+    <pkg>methods</pkg>
     <pkg>microbenchmark</pkg>
+    <pkg>pipeR</pkg>
     <pkg>pkgKitten</pkg>
     <pkg>profr</pkg>
     <pkg>proftools</pkg>
+    <pkg>qtbase</pkg>
+    <pkg>R.methodsS3</pkg>
+    <pkg>R.oo</pkg>
+    <pkg>R6</pkg>
     <pkg>rbenchmark</pkg>
     <pkg>Rcpp</pkg>
     <pkg>Rd2roxygen</pkg>
+    <pkg>Rdpack</pkg>
     <pkg>rJava</pkg>
+    <pkg>rJython</pkg>
     <pkg>roxygen2</pkg>
+    <pkg>rPython</pkg>
     <pkg>rstudioapi</pkg>
     <pkg>RUnit</pkg>
+    <pkg>Shiny</pkg>
     <pkg>sos</pkg>
     <pkg>svUnit</pkg>
+    <pkg>tcltk2</pkg>
     <pkg>testthat</pkg>
+    <pkg>V8</pkg>
   </packagelist>
   <links>
     <a href="http://cran.r-project.org/doc/manuals/R-exts.html">[Manual] "Writing R Extension" by R-core team </a>
