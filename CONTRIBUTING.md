@@ -12,8 +12,8 @@ If you don't want to or can't install these things, then just edit the `pkgs.ctv
 ### Steps
 
 1. Fork this repo
-2. Edit the [pkgs.ctv](https://github.com/leeper/PackageDevelopment/blob/master/pkgs.ctv) file. If the package you are adding is on CRAN, add a new `<li>` element with your package name within a `<pkg>` tag. If it's not on CRAN, put it within an `<a>` tag, and include a link to the repo with `href`.
-3. On the command line type `make` and press enter, which creates the `PackageDevelopment.html` and `README.md` files.
+2. Edit the [pkgs.md](https://github.com/leeper/PackageDevelopment/blob/master/pkgs.md) file. If the package you are adding is on CRAN, add a the package name within `<pkg></pkg>` tags (use `<ohat></ohat>` for OmegaHat packages and `<bioc></bioc>` for Bioconductor packages). If it's not on CRAN, put it within `<a></a>` tags (e.g., `<a href="https://github.com/leeper/meme">meme</a> (not on CRAN)`.
+3. On the command line type `make` and press enter, which creates the `PackageDevelopment.ctv`, `PackageDevelopment.html`, and `README.md` files.
 4. Check to make sure the `.ctv` file is correct. In the console output from `make`, you should get:
 
     ```coffee

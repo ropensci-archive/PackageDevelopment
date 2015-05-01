@@ -1,5 +1,5 @@
 if(!require("stringr")) install.packages("stringr", repos="http://cran.rstudio.com")
-template <- readLines("pkgs.ctv")
+template <- readLines("PackageDevelopment.ctv")
 pattern <- "pkg>[A-Za-z0-9]+|pkg>[A-Za-z0-9]+\\.[A-Za-z0-9]+|pkg>[A-Za-z0-9]+\\.[A-Za-z0-9]+\\.[A-Za-z0-9]+"
 out <- paste0(template, collapse = " ")
 pkgs <- stringr::str_extract_all(out, pattern)[[1]]
