@@ -7,7 +7,7 @@ Thanks for your contribution!
 * R (to create the `.html` from the `.ctv` file) [Installation](http://cran.r-project.org/)
 * `pandoc`: [Installation](http://johnmacfarlane.net/pandoc/installing.html)
 
-If you don't want to or can't install these things, then just edit the `pkgs.ctv` file, and submit a pull request.
+If you don't want to or can't install these things, then just edit the `pkgs.md` file, and submit a pull request.
 
 ### Steps
 
