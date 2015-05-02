@@ -4,7 +4,7 @@ pattern <- "pkg>[A-Za-z0-9]+|pkg>[A-Za-z0-9]+\\.[A-Za-z0-9]+|pkg>[A-Za-z0-9]+\\.
 out <- paste0(template, collapse = " ")
 pkgs <- stringr::str_extract_all(out, pattern)[[1]]
 pkgs <- unique(gsub("^pkg>", "", pkgs))
-pkgs <- pkgs[ !pkgs %in% c("devtools", "knitr", "royxgen2") ] # remove priority packages
+pkgs <- pkgs[ !pkgs %in% c("devtools", "knitr", "roxygen2") ] # remove priority packages
 pkgs <- sort(pkgs)
 pkgs <- as.list(pkgs)
 pkgs <- lapply(pkgs, function(x) list(package=x))
