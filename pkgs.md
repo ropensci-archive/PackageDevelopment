@@ -2,29 +2,30 @@ Packages provide a mechanism for loading optional code, data, and documentation 
 
 The main reference for packages development is the ["Writing R Extension"](http://cran.r-project.org/doc/manuals/R-exts.html) manual. For further documentation and tutorials, see the "Related links" section below.
 
-If you think that some packages or tools are missing from the list, feel free to [e-mail](mailto:lbraglia@gmail.com) me or contribute directly to the Task View by submitting a pull request on [GitHub](http://github.com/lbraglia/PackageDevelopmentTaskView/blob/master/CONTRIBUTING.md).
+If you think that some packages or tools are missing from the list, feel free to [e-mail](mailto:thosjleeper@gmail.com) me or contribute directly to the Task View by submitting a pull request on [GitHub](http://github.com/leeper/PackageDevelopment/blob/master/CONTRIBUTING.md).
 
-Many thanks to Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.
+Many thanks to Christopher Gandrud, Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.
 
 ### First steps
 
 **Searching for Existing Packages**
 
-Before starting a new package it's worth searching for already available packages, both from a developer's standpoint ("do not reinvent the wheel") and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one. If you're looking to create a package, but want idea for what sorts of packages are in demand, the [rOpenSci](https://ropensci.org/) maintains [a wishlist for science-related packages](https://github.com/ropensci/wishlist) and [a TODO list of web services and data APIs in need of packaging](https://github.com/ropensci/webservices/wiki/ToDo).
+Before starting a new package it's worth searching for already available packages, both from a developer's standpoint ("do not reinvent the wheel") and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one.
 
--   `utils::RSiteSearch` allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <http://search.r-project.org>. A convenient wrapper around `RSiteSearch` that adds hits ranking is `findFn` function, from <pkg>sos</pkg>.
+-   `utils::RSiteSearch()` allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <http://search.r-project.org>. A convenient wrapper around `RSiteSearch` that adds hits ranking is `findFn()` function, from <pkg>sos</pkg>.
 -   [RSeek](http://rseek.org/) allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.
 -   [Rdocumentation](http://rdocumentation.org/) allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.
 -   [Crantastic!](http://crantastic.org/) maintains an up-to-date and tagged directory of packages on CRAN. The [Managed R Archive Network](http://mran.revolutionanalytics.com/) from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.
 -   [http://cran.github.io](http://cran.github.io/w/r/rdevel/) is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.
 -   [CRANberries](http://dirk.eddelbuettel.com/cranberries/) provides a feed of new, updated, and removed packages for CRAN.
+-   If you're looking to create a package, but want ideas for what sorts of packages are in demand, the [rOpenSci](https://ropensci.org/) maintains [a wishlist for science-related packages](https://github.com/ropensci/wishlist) and [a TODO list of web services and data APIs in need of packaging](https://github.com/ropensci/webservices/wiki/ToDo).
 
 **Initializing an R package**
 
--   `utils::package.skeleton` automates some of the setup for a new source package. It creates directories, saves functions, data, and R code files provided to appropriate places, and creates skeleton help files and a `Read-and-delete-me` file describing further steps in packaging
--   `kitten` from <pkg>pkgKitten</pkg> allows one to specify the main `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes `R CMD check` cleanly.
--   `create` from <pkg>devtools</pkg> is similar to `package.skeleton` except it allows to specify `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files.
--   `Rcpp.package.skeleton` from <pkg>Rcpp</pkg> adds to `package.skeleton` the C++ via `Rcpp` handling, by modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in `src` directory . Finally the user can decide main `DESCRIPTION` entries.
+-   `utils::package.skeleton()` automates some of the setup for a new source package. It creates directories, saves functions, data, and R code files provided to appropriate places, and creates skeleton help files and a `Read-and-delete-me` file describing further steps in packaging
+-   `kitten()` from <pkg>pkgKitten</pkg> allows one to specify the main `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes `R CMD check` cleanly.
+-   `create()` from <pkg>devtools</pkg> is similar to `package.skeleton` except it allows to specify `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files.
+-   `Rcpp.package.skeleton()` from <pkg>Rcpp</pkg> adds to `package.skeleton` the C++ via `Rcpp` handling, by modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in `src` directory . Finally the user can decide main `DESCRIPTION` entries.
 
 **Programming Paradigms**
 
@@ -76,15 +77,14 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Profiling**
 
--   Profiling data is provided by `utils::Rprof` and can be summarized by `utils::summaryRprof`
+-   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`
 -   <pkg>profr</pkg> can visualize output from the `Rprof` interface for profiling.
 -   <pkg>proftools</pkg> and <pkg>aprof</pkg> can also be used to analyse profiling output.
 
 **Benchmarking**
 
--   `base::system.time` is a basic timing utility
--   <pkg>microbenchmark</pkg>
--   <pkg>rbenchmark</pkg>
+-   `base::system.time()` is a basic timing utility that calculates times based on one iteration of an expression.
+-   <pkg>microbenchmark</pkg> and <pkg>rbenchmark</pkg> provide timings based on multiple iterations of an expression and potentially provide more reliable timings than `system.time()`
 
 **Unit Testing**
 
@@ -151,7 +151,7 @@ Package vignettes provides additional documentation of package functionality tha
 **Version Control**
 
 -   R itself is maintained under version control using [Subversion](https://subversion.apache.org/).
--   Many packages are maintained using [git](http://git-scm.com/), particularly those hosted on [GitHub](http://github.com/).
+-   Many packages are maintained using [git](http://git-scm.com/), particularly those hosted on [GitHub](http://github.com/). <pkg>git2r</pkg> ([Github](https://github.com/ropensci/git2r)) provides bindings to [libgit](http://libgit2.github.com/) for programmatic use of git within R.
 
 **Hosting and Package Building Services**
 
@@ -161,6 +161,6 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [GitHub](http://github.com/), [mainly](http://help.github.com/articles/support-for-subversion-clients) which supports both Git and Mercurial [git](http://git-scm.com/). Packages hosted on Github can be installed directly using `devtools::install_github()`.
 -   Github supports [continuous integration](http://en.wikipedia.org/wiki/Continuous_integration) for R packages. [Travis CI](http://travis-ci.org/) is a popular continuous integration tools that supports Linux and OS X build environments and has native R support. Use of other CI services may require additional code and examples are available from [r-travis](http://github.com/craigcitro/r-travis) and [r-builder](https://github.com/metacran/r-builder).
 -   [WinBuilder](http://win-builder.r-project.org/) is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an `R CMD check`) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the `Maintainer` with links to the package zip file and logs for download/inspection. [Appveyor](http://www.appveyor.com/) is a continuous integration service that offers a Windows build environment.
+-   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/).
 -   Some packages, especially some that are no longer under active development, remain hosted on [Google Code](https://code.google.com/). This service is closed to new projects, however, and will shut down in January 2016.
 -   <pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server.
-
