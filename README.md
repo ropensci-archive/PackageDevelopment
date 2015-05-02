@@ -24,6 +24,8 @@ Before starting a new package it's worth searching for already available package
 -   [RSeek](http://rseek.org/) allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.
 -   [Rdocumentation](http://rdocumentation.org/) allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.
 -   [Crantastic!](http://crantastic.org/) maintains an up-to-date and tagged directory of packages on CRAN. The [Managed R Archive Network](http://mran.revolutionanalytics.com/) from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.
+-   [http://cran.github.io](http://cran.github.io/w/r/rdevel/) is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.
+-   [CRANberries](http://dirk.eddelbuettel.com/cranberries/) provides a feed of new, updated, and removed packages for CRAN.
 
 **Initializing an R package**
 
@@ -147,7 +149,7 @@ Package vignettes provides additional documentation of package functionality tha
 
 **Makefiles**
 
--   [GNU Make](http://www.gnu.org/software/make/) is a tool that typically builds executable programs and libraries from source code by reading files called `Makefile`. It can be used to manage R package as well; [maker](http://github.com/ComputationalProteomicsUnit/maker) is a `Makefile` completely devoted to R package development.
+-   [GNU Make](http://www.gnu.org/software/make/) is a tool that typically builds executable programs and libraries from source code by reading files called `Makefile`. It can be used to manage R package as well; [maker](http://github.com/ComputationalProteomicsUnit/maker) is a `Makefile` completely devoted to R package development based on [makeR](https://github.com/tudo-r/makeR).
 -   [remake](https://github.com/richfitz/remake) (not on CRAN) provides a yaml-based, Makefile-like format that can be used in Make-like workflows from within R.
 
 **Version Control**
@@ -230,6 +232,8 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 
 -   [[Manual] "Writing R Extension" by R-core team](http://cran.r-project.org/doc/manuals/R-exts.html)
 -   [[Tutorial] "Creating R Packages: A Tutorial" by Friedrich Leisch](http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf)
+-   [CRAN Repository Policy](http://cran.r-project.org/whttp://cran.rstudio.com/web/packages/policies.html)
+-   , which addresses rules for hosting packages on CRAN Dirk Eddelbuettel's [crp repository on Github](https://github.com/eddelbuettel/crp) provides a feed of CRAN policy updates.
 -   [[Book] "Software for Data Analysis" by John Chambers](http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-0-387-75935-7)
 -   [[Book] "Advanced R" by Hadley Wickham](http://adv-r.had.co.nz)
 -   [[Book] "R packages" by Hadley Wickham](http://r-pkgs.had.co.nz/)

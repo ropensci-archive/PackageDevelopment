@@ -26,6 +26,8 @@ c(paste0('<CRANTaskView>
   '  <links>',
   '    <a href="http://cran.r-project.org/doc/manuals/R-exts.html">[Manual] "Writing R Extension" by R-core team </a>',
   '    <a href="http://cran.r-project.org/doc/contrib/Leisch-CreatingPackages.pdf">[Tutorial] "Creating R Packages: A Tutorial" by Friedrich Leisch </a>',
+  '    <a href="http://cran.r-project.org/web/packages/policies.html">CRAN Repository Policy</a>, which addresses rules for hosting packages on CRAN', 
+  '    Dirk Eddelbuettel\'s [crp repository on Github](https://github.com/eddelbuettel/crp) provides a feed of CRAN policy updates.',
   '    <a href="http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-0-387-75935-7">[Book] "Software for Data Analysis" by John Chambers</a>',
   '    <a href="http://adv-r.had.co.nz">[Book] "Advanced R" by Hadley Wickham</a>',
   '    <a href="http://r-pkgs.had.co.nz/">[Book] "R packages" by Hadley  Wickham</a>',
