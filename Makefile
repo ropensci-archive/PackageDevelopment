@@ -1,4 +1,4 @@
-all: buildxml checkctv ctv2html readme
+all: buildxml ctv2html readme
 
 buildxml:
 	pandoc -w html -o PackageDevelopment.ctv pkgs.md
@@ -11,10 +11,9 @@ ctv2html:
 	Rscript --vanilla -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com/"))); if(!require("ctv")) install.packages("ctv");  ctv::ctv2html("PackageDevelopment.ctv", file = "PackageDevelopment.html")'
 
 readme:
-	sed 's|^<a href=\"\\([a-zA-Z]*\\)\\.html|<a href=\"http://cran.rstudio.com/web/views/\\1.html\"|' PackageDevelopment.html > temp.html
-	pandoc -w markdown_github -o temp.md temp.html
+	pandoc -w markdown_github -o temp.md PackageDevelopment.html
 	sed 's|../packages/|http://cran.rstudio.com/web/packages/|g' temp.md > README.md
-	rm temp.md temp.html
+	rm temp.md
 
 md2html:
-	pandoc -r markdown_github -o README.html README.md
+	pandoc -o README.html README.md
