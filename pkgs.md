@@ -56,14 +56,15 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   <pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
 -   <pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
 -   <pkg>rJava</pkg> package provides a low-level interface to Java similar to the `.Call` interface for C and C++.
--   <pkg>rPython</pkg> and <pkg>rJython</pkg> provide interfaces to python.
+-   <pkg>rPython</pkg>, <pkg>rJython</pkg>, and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
+-   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
 -   <pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.
 
 Writing packages that involve compiled code requires a developer toolchain. If developing on Windows, this requires [Rtools](http://cran.r-project.org/bin/windows/Rtools/), which is updated with each R minor release.
 
 **Debugging**
 
-
+-   <pkg>log4r</pkg> ([Github](https://github.com/johnmyleswhite/log4r)) and <pkg>logging</pkg> provide logging functionality in the style of [log4j](http://en.wikipedia.org/wiki/Log4j).
 
 **Code Analysis and Formatting**
 
@@ -112,6 +113,7 @@ compiled to plain text, HTML, or PDF by R as needed.
 
 -   One can write .Rd files directly. A popular alternative is to rely on <pkg>roxygen2</pkg>, which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by `roxygen2::roxygenise()` and underlies `devtools::document()`. roxygen2 eliminates the need to learn *some* of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling `R CMD build`).
 -   <pkg>Rd2roxygen</pkg> can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow.
+-   <pkg>inlinedocs</pkg> and <pkg>documair</pkg> provide further alternative documentation schemes based on source code commenting.
 -   `tools::parse_Rd()` can be used to manipulate the contents of an .Rd file. `tools::checkRd()` is useful for validating an .Rd file. Duncan Murdoch's ["Parsing Rd files"](https://developer.r-project.org/parseRd.pdf) tutorial is a useful reference for advanced use of R documentation. <pkg>Rdpack</pkg> provides additional tools for manipulating documentation files.
 
 **Writing Vignettes**
@@ -129,19 +131,25 @@ Package vignettes provides additional documentation of package functionality tha
 
 ### Data in Packages
 
-
+-   <pkg>lazyData</pkg> offers the ability to use data contained within packages that have not been configured using LazyData.
 
 ### Tools and Services
 
 **Text Editors and IDEs**
 
-By far the most popular [integrated development environment (IDE)](http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment) for R is [RStudio](http://www.rstudio.com/), which is an open-source product available with both commercial and AGPL licensing. It can be run both locally and on a remote server. <pkg>rstudioapi</pkg> facilitates interaction from RStudio from within R.
+-   By far the most popular [integrated development environment (IDE)](http://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment) for R is [RStudio](http://www.rstudio.com/), which is an open-source product available with both commercial and AGPL licensing. It can be run both locally and on a remote server. <pkg>rstudioapi</pkg> facilitates interaction from RStudio from within R.
+-   [StatET](http://www.walware.de/goto/statet) is an R plug-in for the Eclipse IDE.
+-   [Emacs Speaks Statistics (ESS)](http://ess.r-project.org/) is a feature-rich add-on package for editors like Emacs or XEmacs.
 
 **Makefiles**
 
-[GNU Make](http://www.gnu.org/software/make/) is a tool that typically builds executable programs and libraries from source code by reading files called `Makefile`. It can be used to manage R package as well; [maker](http://github.com/ComputationalProteomicsUnit/maker) is a `Makefile` completely devoted to R package development.
+-   [GNU Make](http://www.gnu.org/software/make/) is a tool that typically builds executable programs and libraries from source code by reading files called `Makefile`. It can be used to manage R package as well; [maker](http://github.com/ComputationalProteomicsUnit/maker) is a `Makefile` completely devoted to R package development.
+-   [remake](https://github.com/richfitz/remake) (not on CRAN) provides a yaml-based, Makefile-like format that can be used in Make-like workflows from within R.
 
 **Version Control**
+
+-   R itself is maintained under version control using [Subversion](https://subversion.apache.org/).
+-   Many packages are maintained using [git](http://git-scm.com/), particularly those hosted on [GitHub](http://github.com/).
 
 **Hosting and Package Building Services**
 
