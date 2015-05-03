@@ -1,7 +1,9 @@
 CRAN Task View: Package Development
 -----------------------------------
 
-|                 |                          |
+*Do not edit this README by hand. See [CONTRIBUTING.md](CONTRIBUTING.md).*
+
+|||
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
