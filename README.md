@@ -1,6 +1,7 @@
 CRAN Task View: Package Development
 -----------------------------------
 
+|                 |                          |
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
