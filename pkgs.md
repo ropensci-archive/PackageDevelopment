@@ -88,7 +88,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Unit Testing**
 
--   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>assertthat</pkg>, and <pkg>assertive</pkg>.
+-   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>assertthat</pkg>, and <pkg>assertive</pkg>. <pkg>covr</pkg> offers a set of utilities for monitoring how well tests cover a package's source code.
 
 **Internationalization and Localization**
 
