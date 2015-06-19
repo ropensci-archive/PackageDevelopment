@@ -26,6 +26,7 @@ Before starting a new package it's worth searching for already available package
 -   `kitten()` from <pkg>pkgKitten</pkg> allows one to specify the main `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes `R CMD check` cleanly.
 -   `create()` from <pkg>devtools</pkg> is similar to `package.skeleton` except it allows to specify `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files.
 -   `Rcpp.package.skeleton()` from <pkg>Rcpp</pkg> adds to `package.skeleton` the C++ via `Rcpp` handling, by modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in `src` directory . Finally the user can decide main `DESCRIPTION` entries.
+-   <pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph.
 
 **Programming Paradigms**
 
@@ -58,7 +59,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 
 -   <pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
 -   <pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
--   <pkg>rJava</pkg> package provides a low-level interface to Java similar to the `.Call` interface for C and C++.
+-   <pkg>rJava</pkg> package provides a low-level interface to Java similar to the `.Call` interface for C and C++. <a href="http://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.
 -   <pkg>rPython</pkg>, <pkg>rJython</pkg>, and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
 -   <pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.
@@ -88,7 +89,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Unit Testing**
 
--   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>assertthat</pkg>, and <pkg>assertive</pkg>.
+-   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, <pkg>assertthat</pkg>, and <pkg>assertive</pkg>. <pkg>covr</pkg> offers a set of utilities for monitoring how well tests cover a package's source code.
 
 **Internationalization and Localization**
 
@@ -100,6 +101,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   For simple interactive interfaces, `readline()` can be used to create a simple prompt, while `utils::menu()`, `utils::select.list()` can provide graphical and console-based selection of items from a list, and `utils::txtProgressBar()` provides a simple text progress bar.
 -   `tcltk` is an R base package that provides a large set of tools for creating interfaces uses tcl/tk (most functions are thin wrappers around corresponding tcl and tk functions), though the documentation is sparse. <pkg>tcltk2</pkg> provides additional widgets and functionality. <pkg>qtbase</pkg> provides bindings for Qt. <ohat>RGtk</ohat> (not on CRAN) provides bindings for Gtk and gnome. <pkg>gWidgets2</pkg> offers a language-independent API for building graphical user interfaces in Gtk, Qt, or tcl/tk.
 -   <pkg>shiny</pkg> provides a browser-based infrastructure for creating dashboards and interfaces for R functionality. <pkg>htmlwidgets</pkg> is a shiny enhancement that provides a framework for creating HTML widgets.
+-   <pkg>progress</pkg> ([Github](https://github.com/gaborcsardi/progress)) offers progress bars for the terminal, including a C++ API.
 
 **Command Line Argument Parsing**
 
@@ -157,10 +159,10 @@ Package vignettes provides additional documentation of package functionality tha
 
 Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) are available. Use of different hosts depends largely on what type of version control software is used to maintain a package. The most common sites are:
 
--   [R-Forge](http://r-forge.r-project.org/), which relies on [Subversion](http://subversion.apache.org/).
--   [GitHub](http://github.com/), [mainly](http://help.github.com/articles/support-for-subversion-clients) which supports both Git and Mercurial [git](http://git-scm.com/). Packages hosted on Github can be installed directly using `devtools::install_github()`.
+-   [R-Forge](http://r-forge.r-project.org/), which relies on [Subversion](http://subversion.apache.org/). [Rforge.net](https://rforge.net/) is another popular Subversion-based system.
+-   [GitHub](http://github.com/), [mainly](http://help.github.com/articles/support-for-subversion-clients) which supports both Git and Mercurial [git](http://git-scm.com/). Packages hosted on Github can be installed directly using `devtools::install_github()`. [Bitbucket](https://bitbucket.org/) is an alternative host that provides no-cost private repositories and [GitLab](https://gitlab.com/) is an open source alternative. 
 -   Github supports [continuous integration](http://en.wikipedia.org/wiki/Continuous_integration) for R packages. [Travis CI](http://travis-ci.org/) is a popular continuous integration tools that supports Linux and OS X build environments and has native R support. Use of other CI services may require additional code and examples are available from [r-travis](http://github.com/craigcitro/r-travis) and [r-builder](https://github.com/metacran/r-builder).
 -   [WinBuilder](http://win-builder.r-project.org/) is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an `R CMD check`) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the `Maintainer` with links to the package zip file and logs for download/inspection. [Appveyor](http://www.appveyor.com/) is a continuous integration service that offers a Windows build environment.
--   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/).
+-   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/). <a href="https://github.com/wch/harbor">harbor</a> can be used to control docker containers on remote and local hosts and <a href="https://github.com/traitecoevo/dockertest">dockertest</a> provides facilities for running tests on docker.
 -   Some packages, especially some that are no longer under active development, remain hosted on [Google Code](https://code.google.com/). This service is closed to new projects, however, and will shut down in January 2016.
 -   <pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server.
