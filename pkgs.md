@@ -153,7 +153,7 @@ Package vignettes provides additional documentation of package functionality tha
 **Version Control**
 
 -   R itself is maintained under version control using [Subversion](https://subversion.apache.org/).
--   Many packages are maintained using [git](http://git-scm.com/), particularly those hosted on [GitHub](http://github.com/). <pkg>git2r</pkg> ([Github](https://github.com/ropensci/git2r)) provides bindings to [libgit](http://libgit2.github.com/) for programmatic use of git within R.
+-   Many packages are maintained using [git](http://git-scm.com/), particularly those hosted on [GitHub](http://github.com/). <pkg>git2r</pkg> ([Github](https://github.com/ropensci/git2r)) provides bindings to [libgit2](http://libgit2.github.com/) for programmatic use of git within R.
 
 **Hosting and Package Building Services**
 
