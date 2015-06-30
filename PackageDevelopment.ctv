@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2015-06-18</version>
+  <version>2015-06-30</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -34,12 +34,14 @@
     <li><pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph.</li>
     </ul>
     <p><strong>Programming Paradigms</strong></p>
-    <p>R is first a functional programming language, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.</p>
+    <p>R is foremost a functional programming language with dynamic typing, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.</p>
     <ul>
     <li>The built-in S3 classes involve wherein a generic function (e.g., <code>summary</code>) employs a distinct method for an object of a given class (i.e., it is possible to implement class-specific methods for a given generic function). If a package implements new object classes, it is common to implement methods for commonly used generics such as <code>print</code>, <code>summary</code>, etc. These methods must be registered in the package's NAMESPACE file. <pkg>R.methodsS3</pkg> aims to simplify the creation of S3 generic functions and S3 methods.</li>
     <li>S4 is a more formalized form of object orientation that is available through <code>methods</code>. S4 classes have formal definitions and can dispatch methods based on multiple arguments (not just the first argument, as in S3). S4 is notable for its use of the <code>@</code> symbol to extract slots from S4 objects. John Chambers's <a href="http://developer.r-project.org/howMethodsWork.pdf">&quot;How S4 Methods Work&quot;</a> tutorial may serve as a useful introduction.</li>
     <li>Reference classes were introduced in R2.12.0 and are also part of <code>methods</code>. They offer a distinct paradigm from S3 and S4 due to the fact that reference class objects are mutable and that methods belong to objects, not generic functions.</li>
     <li><pkg>aoos</pkg> and <pkg>R.oo</pkg> are other packages facilitating object-oriented programming. <pkg>R6</pkg> (<a href="https://github.com/wch/R6">Github</a>) provides an alternative to reference classes without a dependency on <code>methods</code>.</li>
+    <li><pkg>rtype</pkg> provides a strong type system.</li>
+    <li><pkg>lambda.r</pkg> and <a href="https://github.com/hoxo-m/lambdaR">lambdaR</a> (not on CRAN) provide an interface for creating lambda (anonymous) functions.</li>
     </ul>
     <p>Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like <code>library</code> and <code>subset</code> and can also be used in packages.</p>
     <ul>
@@ -69,12 +71,14 @@
     <p><strong>Debugging</strong></p>
     <ul>
     <li><pkg>log4r</pkg> (<a href="https://github.com/johnmyleswhite/log4r">Github</a>) and <pkg>logging</pkg> provide logging functionality in the style of <a href="http://en.wikipedia.org/wiki/Log4j">log4j</a>.</li>
+    <li>The <a href="https://github.com/kalibera/rchk">rchk</a> tool provides tools for identifying memory-protection bugs in C code, including base R and packages.</li>
     </ul>
     <p><strong>Code Analysis and Formatting</strong></p>
     <ul>
     <li><pkg>codetools</pkg> provides a number of low-level functions for identifying possible problems with source code.</li>
     <li><pkg>lint</pkg> and <pkg>lintr</pkg> provide tools for checking source code compliance with a style guide.</li>
     <li><pkg>formatR</pkg> can be used to neatly format source code.</li>
+    <li><pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.</li>
     </ul>
     <p><strong>Profiling</strong></p>
     <ul>
@@ -89,7 +93,8 @@
     </ul>
     <p><strong>Unit Testing</strong></p>
     <ul>
-    <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, <pkg>assertthat</pkg>, and <pkg>assertive</pkg>. <pkg>covr</pkg> offers a set of utilities for monitoring how well tests cover a package's source code.</li>
+    <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, <pkg>assertthat</pkg>, and <pkg>assertive</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
+    <li><pkg>covr</pkg> offers a set of utilities for monitoring how well tests cover a package's source code.</li>
     </ul>
     <p><strong>Internationalization and Localization</strong></p>
     <ul>
@@ -99,7 +104,8 @@
     <p><strong>Creating Graphical Interfaces</strong></p>
     <ul>
     <li>For simple interactive interfaces, <code>readline()</code> can be used to create a simple prompt, while <code>utils::menu()</code>, <code>utils::select.list()</code> can provide graphical and console-based selection of items from a list, and <code>utils::txtProgressBar()</code> provides a simple text progress bar.</li>
-    <li><code>tcltk</code> is an R base package that provides a large set of tools for creating interfaces uses tcl/tk (most functions are thin wrappers around corresponding tcl and tk functions), though the documentation is sparse. <pkg>tcltk2</pkg> provides additional widgets and functionality. <pkg>qtbase</pkg> provides bindings for Qt. <ohat>RGtk</ohat> (not on CRAN) provides bindings for Gtk and gnome. <pkg>gWidgets2</pkg> offers a language-independent API for building graphical user interfaces in Gtk, Qt, or tcl/tk.</li>
+    <li><code>tcltk</code> is an R base package that provides a large set of tools for creating interfaces uses Tcl/tk (most functions are thin wrappers around corresponding Tcl and tk functions), though the documentation is sparse. <pkg>tcltk2</pkg> provides additional widgets and functionality. <pkg>qtbase</pkg> provides bindings for Qt. <ohat>RGtk</ohat> (not on CRAN) provides bindings for Gtk and gnome. <pkg>gWidgets2</pkg> offers a language-independent API for building graphical user interfaces in Gtk, Qt, or Tcl/tk.</li>
+    <li><pkg>fgui</pkg> can create a Tcl/tk interface for any arbitrary function.</li>
     <li><pkg>shiny</pkg> provides a browser-based infrastructure for creating dashboards and interfaces for R functionality. <pkg>htmlwidgets</pkg> is a shiny enhancement that provides a framework for creating HTML widgets.</li>
     <li><pkg>progress</pkg> (<a href="https://github.com/gaborcsardi/progress">Github</a>) offers progress bars for the terminal, including a C++ API.</li>
     </ul>
@@ -143,7 +149,7 @@
     <p><strong>Version Control</strong></p>
     <ul>
     <li>R itself is maintained under version control using <a href="https://subversion.apache.org/">Subversion</a>.</li>
-    <li>Many packages are maintained using <a href="http://git-scm.com/">git</a>, particularly those hosted on <a href="http://github.com/">GitHub</a>. <pkg>git2r</pkg> (<a href="https://github.com/ropensci/git2r">Github</a>) provides bindings to <a href="http://libgit2.github.com/">libgit</a> for programmatic use of git within R.</li>
+    <li>Many packages are maintained using <a href="http://git-scm.com/">git</a>, particularly those hosted on <a href="http://github.com/">GitHub</a>. <pkg>git2r</pkg> (<a href="https://github.com/ropensci/git2r">Github</a>) provides bindings to <a href="http://libgit2.github.com/">libgit2</a> for programmatic use of git within R.</li>
     </ul>
     <p><strong>Hosting and Package Building Services</strong></p>
     <p>Many <a href="http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">hosting services</a> are available. Use of different hosts depends largely on what type of version control software is used to maintain a package. The most common sites are:</p>
@@ -175,7 +181,9 @@
     <pkg>docopt</pkg>
     <pkg>documair</pkg>
     <pkg>drat</pkg>
+    <pkg>fgui</pkg>
     <pkg>formatR</pkg>
+    <pkg>FuncMap</pkg>
     <pkg>GetoptLong</pkg>
     <pkg>git2r</pkg>
     <pkg>gWidgets2</pkg>
@@ -184,6 +192,7 @@
     <pkg>inline</pkg>
     <pkg>inlinedocs</pkg>
     <pkg>js</pkg>
+    <pkg>lambda</pkg>
     <pkg>lazyData</pkg>
     <pkg>lazyeval</pkg>
     <pkg>lint</pkg>
@@ -212,7 +221,9 @@
     <pkg>rPython</pkg>
     <pkg>rscala</pkg>
     <pkg>rstudioapi</pkg>
+    <pkg>rtype</pkg>
     <pkg>RUnit</pkg>
+    <pkg>runittotestthat</pkg>
     <pkg>shiny</pkg>
     <pkg>sos</pkg>
     <pkg>svUnit</pkg>

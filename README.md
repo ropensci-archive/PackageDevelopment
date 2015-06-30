@@ -7,14 +7,15 @@ CRAN Task View: Package Development
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
-| **Version:**    | 2015-05-02               |
+| **Version:**    | 2015-06-30               |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
 
 The main reference for packages development is the ["Writing R Extension"](http://cran.r-project.org/doc/manuals/R-exts.html) manual. For further documentation and tutorials, see the "Related links" section below.
 
 If you think that some packages or tools are missing from the list, feel free to
-e-mail (thosjleeper at gmail dot com) me or contribute directly to the Task View by submitting a pull request on [GitHub](http://github.com/leeper/PackageDevelopment/blob/master/CONTRIBUTING.md).
+e-mail (thosjleeper at gmail dot com)
+me or contribute directly to the Task View by submitting a pull request on [GitHub](http://github.com/leeper/PackageDevelopment/blob/master/CONTRIBUTING.md).
 Many thanks to Christopher Gandrud, Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.
 
 ### First steps
@@ -37,15 +38,18 @@ Before starting a new package it's worth searching for already available package
 -   `kitten()` from [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html) allows one to specify the main `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes `R CMD check` cleanly.
 -   `create()` from [devtools](http://cran.rstudio.com/web/packages/devtools/index.html) is similar to `package.skeleton` except it allows to specify `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files.
 -   `Rcpp.package.skeleton()` from [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) adds to `package.skeleton` the C++ via `Rcpp` handling, by modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in `src` directory . Finally the user can decide main `DESCRIPTION` entries.
+-   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html) provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph.
 
 **Programming Paradigms**
 
-R is first a functional programming language, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.
+R is foremost a functional programming language with dynamic typing, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.
 
 -   The built-in S3 classes involve wherein a generic function (e.g., `summary`) employs a distinct method for an object of a given class (i.e., it is possible to implement class-specific methods for a given generic function). If a package implements new object classes, it is common to implement methods for commonly used generics such as `print`, `summary`, etc. These methods must be registered in the package's NAMESPACE file. [R.methodsS3](http://cran.rstudio.com/web/packages/R.methodsS3/index.html) aims to simplify the creation of S3 generic functions and S3 methods.
 -   S4 is a more formalized form of object orientation that is available through `methods`. S4 classes have formal definitions and can dispatch methods based on multiple arguments (not just the first argument, as in S3). S4 is notable for its use of the `@` symbol to extract slots from S4 objects. John Chambers's ["How S4 Methods Work"](http://developer.r-project.org/howMethodsWork.pdf) tutorial may serve as a useful introduction.
 -   Reference classes were introduced in R2.12.0 and are also part of `methods`. They offer a distinct paradigm from S3 and S4 due to the fact that reference class objects are mutable and that methods belong to objects, not generic functions.
 -   [aoos](http://cran.rstudio.com/web/packages/aoos/index.html) and [R.oo](http://cran.rstudio.com/web/packages/R.oo/index.html) are other packages facilitating object-oriented programming. [R6](http://cran.rstudio.com/web/packages/R6/index.html) ( [Github](https://github.com/wch/R6)) provides an alternative to reference classes without a dependency on `methods`.
+-   [rtype](http://cran.rstudio.com/web/packages/rtype/index.html) provides a strong type system.
+-   [lambda.r](http://cran.rstudio.com/web/packages/lambda.r/index.html) and [lambdaR](https://github.com/hoxo-m/lambdaR) (not on CRAN) provide an interface for creating lambda (anonymous) functions.
 
 Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like `library` and `subset` and can also be used in packages.
 
@@ -68,7 +72,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 
 -   [inline](http://cran.rstudio.com/web/packages/inline/index.html) eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
 -   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
--   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html) package provides a low-level interface to Java similar to the `.Call` interface for C and C++.
+-   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html) package provides a low-level interface to Java similar to the `.Call` interface for C and C++. [jvmr](http://dahl.byu.edu/software/jvmr/) (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while [rscala](http://cran.rstudio.com/web/packages/rscala/index.html) is designed specifically for Scala.
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html) offers an embedded Javascript engine, useful for building packages around Javascript libraries. [js](http://cran.rstudio.com/web/packages/js/index.html) provides additional tools for working with Javascript code.
@@ -78,12 +82,14 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Debugging**
 
 -   [log4r](http://cran.rstudio.com/web/packages/log4r/index.html) ( [Github](https://github.com/johnmyleswhite/log4r)) and [logging](http://cran.rstudio.com/web/packages/logging/index.html) provide logging functionality in the style of [log4j](http://en.wikipedia.org/wiki/Log4j).
+-   The [rchk](https://github.com/kalibera/rchk) tool provides tools for identifying memory-protection bugs in C code, including base R and packages.
 
 **Code Analysis and Formatting**
 
 -   [codetools](http://cran.rstudio.com/web/packages/codetools/index.html) provides a number of low-level functions for identifying possible problems with source code.
 -   [lint](http://cran.rstudio.com/web/packages/lint/index.html) and [lintr](http://cran.rstudio.com/web/packages/lintr/index.html) provide tools for checking source code compliance with a style guide.
 -   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html) can be used to neatly format source code.
+-   [FuncMap](http://cran.rstudio.com/web/packages/FuncMap/index.html) provides a graphical representation of function calls used in a package.
 
 **Profiling**
 
@@ -98,7 +104,8 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Unit Testing**
 
--   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), and [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html), and [assertive](http://cran.rstudio.com/web/packages/assertive/index.html).
+-   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), and [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html), [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html), and [assertive](http://cran.rstudio.com/web/packages/assertive/index.html). [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html) provides utilities for converting exiting RUnit tests to testthat tests.
+-   [covr](http://cran.rstudio.com/web/packages/covr/index.html) offers a set of utilities for monitoring how well tests cover a package's source code.
 
 **Internationalization and Localization**
 
@@ -108,8 +115,10 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Creating Graphical Interfaces**
 
 -   For simple interactive interfaces, `readline()` can be used to create a simple prompt, while `utils::menu()`, `utils::select.list()` can provide graphical and console-based selection of items from a list, and `utils::txtProgressBar()` provides a simple text progress bar.
--   `tcltk` is an R base package that provides a large set of tools for creating interfaces uses tcl/tk (most functions are thin wrappers around corresponding tcl and tk functions), though the documentation is sparse. [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html) provides additional widgets and functionality. [qtbase](http://cran.rstudio.com/web/packages/qtbase/index.html) provides bindings for Qt. [<span class="Ohat">RGtk</span>](http://www.Omegahat.org/RGtk/) (not on CRAN) provides bindings for Gtk and gnome. [gWidgets2](http://cran.rstudio.com/web/packages/gWidgets2/index.html) offers a language-independent API for building graphical user interfaces in Gtk, Qt, or tcl/tk.
+-   `tcltk` is an R base package that provides a large set of tools for creating interfaces uses Tcl/tk (most functions are thin wrappers around corresponding Tcl and tk functions), though the documentation is sparse. [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html) provides additional widgets and functionality. [qtbase](http://cran.rstudio.com/web/packages/qtbase/index.html) provides bindings for Qt. [<span class="Ohat">RGtk</span>](http://www.Omegahat.org/RGtk/) (not on CRAN) provides bindings for Gtk and gnome. [gWidgets2](http://cran.rstudio.com/web/packages/gWidgets2/index.html) offers a language-independent API for building graphical user interfaces in Gtk, Qt, or Tcl/tk.
+-   [fgui](http://cran.rstudio.com/web/packages/fgui/index.html) can create a Tcl/tk interface for any arbitrary function.
 -   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html) provides a browser-based infrastructure for creating dashboards and interfaces for R functionality. [htmlwidgets](http://cran.rstudio.com/web/packages/htmlwidgets/index.html) is a shiny enhancement that provides a framework for creating HTML widgets.
+-   [progress](http://cran.rstudio.com/web/packages/progress/index.html) ( [Github](https://github.com/gaborcsardi/progress)) offers progress bars for the terminal, including a C++ API.
 
 **Command Line Argument Parsing**
 
@@ -158,17 +167,17 @@ Package vignettes provides additional documentation of package functionality tha
 **Version Control**
 
 -   R itself is maintained under version control using [Subversion](https://subversion.apache.org/).
--   Many packages are maintained using [git](http://git-scm.com/), particularly those hosted on [GitHub](http://github.com/). [git2r](http://cran.rstudio.com/web/packages/git2r/index.html) ( [Github](https://github.com/ropensci/git2r)) provides bindings to [libgit](http://libgit2.github.com/) for programmatic use of git within R.
+-   Many packages are maintained using [git](http://git-scm.com/), particularly those hosted on [GitHub](http://github.com/). [git2r](http://cran.rstudio.com/web/packages/git2r/index.html) ( [Github](https://github.com/ropensci/git2r)) provides bindings to [libgit2](http://libgit2.github.com/) for programmatic use of git within R.
 
 **Hosting and Package Building Services**
 
 Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) are available. Use of different hosts depends largely on what type of version control software is used to maintain a package. The most common sites are:
 
--   [R-Forge](http://r-forge.r-project.org/), which relies on [Subversion](http://subversion.apache.org/).
--   [GitHub](http://github.com/), [mainly](http://help.github.com/articles/support-for-subversion-clients) which supports both Git and Mercurial [git](http://git-scm.com/). Packages hosted on Github can be installed directly using `devtools::install_github()`.
+-   [R-Forge](http://r-forge.r-project.org/), which relies on [Subversion](http://subversion.apache.org/). [Rforge.net](https://rforge.net/) is another popular Subversion-based system.
+-   [GitHub](http://github.com/), [mainly](http://help.github.com/articles/support-for-subversion-clients) which supports both Git and Mercurial [git](http://git-scm.com/). Packages hosted on Github can be installed directly using `devtools::install_github()`. [Bitbucket](https://bitbucket.org/) is an alternative host that provides no-cost private repositories and [GitLab](https://gitlab.com/) is an open source alternative.
 -   Github supports [continuous integration](http://en.wikipedia.org/wiki/Continuous_integration) for R packages. [Travis CI](http://travis-ci.org/) is a popular continuous integration tools that supports Linux and OS X build environments and has native R support. Use of other CI services may require additional code and examples are available from [r-travis](http://github.com/craigcitro/r-travis) and [r-builder](https://github.com/metacran/r-builder).
 -   [WinBuilder](http://win-builder.r-project.org/) is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an `R CMD check`) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the `Maintainer` with links to the package zip file and logs for download/inspection. [Appveyor](http://www.appveyor.com/) is a continuous integration service that offers a Windows build environment.
--   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/).
+-   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/). [harbor](https://github.com/wch/harbor) can be used to control docker containers on remote and local hosts and [dockertest](https://github.com/traitecoevo/dockertest) provides facilities for running tests on docker.
 -   Some packages, especially some that are no longer under active development, remain hosted on [Google Code](https://code.google.com/). This service is closed to new projects, however, and will shut down in January 2016.
 -   [drat](http://cran.rstudio.com/web/packages/drat/index.html) can be used to distribute pre-built packages via Github or another server.
 
@@ -184,11 +193,14 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html)
 -   [codetools](http://cran.rstudio.com/web/packages/codetools/index.html)
 -   [commandr](http://cran.rstudio.com/web/packages/commandr/index.html)
+-   [covr](http://cran.rstudio.com/web/packages/covr/index.html)
 -   [devtools](http://cran.rstudio.com/web/packages/devtools/index.html) (core)
 -   [docopt](http://cran.rstudio.com/web/packages/docopt/index.html)
 -   [documair](http://cran.rstudio.com/web/packages/documair/index.html)
 -   [drat](http://cran.rstudio.com/web/packages/drat/index.html)
+-   [fgui](http://cran.rstudio.com/web/packages/fgui/index.html)
 -   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html)
+-   [FuncMap](http://cran.rstudio.com/web/packages/FuncMap/index.html)
 -   [GetoptLong](http://cran.rstudio.com/web/packages/GetoptLong/index.html)
 -   [git2r](http://cran.rstudio.com/web/packages/git2r/index.html)
 -   [gWidgets2](http://cran.rstudio.com/web/packages/gWidgets2/index.html)
@@ -198,6 +210,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [inlinedocs](http://cran.rstudio.com/web/packages/inlinedocs/index.html)
 -   [js](http://cran.rstudio.com/web/packages/js/index.html)
 -   [knitr](http://cran.rstudio.com/web/packages/knitr/index.html) (core)
+-   [lambda](http://cran.rstudio.com/web/packages/lambda/index.html)
 -   [lazyData](http://cran.rstudio.com/web/packages/lazyData/index.html)
 -   [lazyeval](http://cran.rstudio.com/web/packages/lazyeval/index.html)
 -   [lint](http://cran.rstudio.com/web/packages/lint/index.html)
@@ -206,15 +219,16 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [logging](http://cran.rstudio.com/web/packages/logging/index.html)
 -   [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html)
 -   [microbenchmark](http://cran.rstudio.com/web/packages/microbenchmark/index.html)
+-   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html)
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html)
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)
 -   [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html)
 -   [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html)
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html)
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html)
+-   [progress](http://cran.rstudio.com/web/packages/progress/index.html)
 -   [qtbase](http://cran.rstudio.com/web/packages/qtbase/index.html)
--   [R.methodsS3](http://cran.rstudio.com/web/packages/R.methodsS3/index.html)
--   [R.oo](http://cran.rstudio.com/web/packages/R.oo/index.html)
+-   [R](http://cran.rstudio.com/web/packages/R/index.html)
 -   [R6](http://cran.rstudio.com/web/packages/R6/index.html)
 -   [rbenchmark](http://cran.rstudio.com/web/packages/rbenchmark/index.html)
 -   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html)
@@ -223,15 +237,18 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html)
 -   [rJython](http://cran.rstudio.com/web/packages/rJython/index.html)
 -   [roxygen2](http://cran.rstudio.com/web/packages/roxygen2/index.html) (core)
--   [roxygen2](http://cran.rstudio.com/web/packages/roxygen2/index.html)
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html)
+-   [rscala](http://cran.rstudio.com/web/packages/rscala/index.html)
 -   [rstudioapi](http://cran.rstudio.com/web/packages/rstudioapi/index.html)
+-   [rtype](http://cran.rstudio.com/web/packages/rtype/index.html)
 -   [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html)
+-   [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html)
 -   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html)
 -   [sos](http://cran.rstudio.com/web/packages/sos/index.html)
 -   [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html)
 -   [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html)
 -   [testthat](http://cran.rstudio.com/web/packages/testthat/index.html)
+-   [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html)
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html)
 
 ### Related links:
