@@ -37,6 +37,7 @@ R is foremost a functional programming language with dynamic typing, but has thr
 -   Reference classes were introduced in R2.12.0 and are also part of `methods`. They offer a distinct paradigm from S3 and S4 due to the fact that reference class objects are mutable and that methods belong to objects, not generic functions.
 -   <pkg>aoos</pkg> and <pkg>R.oo</pkg> are other packages facilitating object-oriented programming. <pkg>R6</pkg> ([Github](https://github.com/wch/R6)) provides an alternative to reference classes without a dependency on `methods`.
 -   <pkg>rtype</pkg> provides a strong type system.
+-   <pkg>lambda.r</pkg> and <a href="https://github.com/hoxo-m/lambdaR">lambdaR</a> (not on CRAN) provide an interface for creating lambda (anonymous) functions.
 
 Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like `library` and `subset` and can also be used in packages.
 
