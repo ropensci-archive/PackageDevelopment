@@ -69,6 +69,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Debugging**
 
 -   <pkg>log4r</pkg> ([Github](https://github.com/johnmyleswhite/log4r)) and <pkg>logging</pkg> provide logging functionality in the style of [log4j](http://en.wikipedia.org/wiki/Log4j).
+-   The <a href="https://github.com/kalibera/rchk">rchk</a> tool provides tools for identifying memory-protection bugs in C code, including base R and packages.
 
 **Code Analysis and Formatting**
 
