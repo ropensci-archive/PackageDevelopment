@@ -30,12 +30,13 @@ Before starting a new package it's worth searching for already available package
 
 **Programming Paradigms**
 
-R is first a functional programming language, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.
+R is foremost a functional programming language with dynamic typing, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.
 
 -   The built-in S3 classes involve wherein a generic function (e.g., `summary`) employs a distinct method for an object of a given class (i.e., it is possible to implement class-specific methods for a given generic function). If a package implements new object classes, it is common to implement methods for commonly used generics such as `print`, `summary`, etc. These methods must be registered in the package's NAMESPACE file. <pkg>R.methodsS3</pkg> aims to simplify the creation of S3 generic functions and S3 methods.
 -   S4 is a more formalized form of object orientation that is available through `methods`. S4 classes have formal definitions and can dispatch methods based on multiple arguments (not just the first argument, as in S3). S4 is notable for its use of the `@` symbol to extract slots from S4 objects. John Chambers's ["How S4 Methods Work"](http://developer.r-project.org/howMethodsWork.pdf) tutorial may serve as a useful introduction.
 -   Reference classes were introduced in R2.12.0 and are also part of `methods`. They offer a distinct paradigm from S3 and S4 due to the fact that reference class objects are mutable and that methods belong to objects, not generic functions.
 -   <pkg>aoos</pkg> and <pkg>R.oo</pkg> are other packages facilitating object-oriented programming. <pkg>R6</pkg> ([Github](https://github.com/wch/R6)) provides an alternative to reference classes without a dependency on `methods`.
+-   <pkg>rtype</pkg> provides a strong type system.
 
 Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like `library` and `subset` and can also be used in packages.
 
