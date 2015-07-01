@@ -7,7 +7,7 @@ CRAN Task View: Package Development
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
-| **Version:**    | 2015-06-30               |
+| **Version:**    | 2015-07-01               |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
 
@@ -55,7 +55,7 @@ Another feature of R is the ability to rely on both standard and non-standard ev
 
 -   `substitute()` provides the most straightforward interface to non-standard evaluation of function arguments.
 -   [lazyeval](http://cran.rstudio.com/web/packages/lazyeval/index.html) ( [Github](https://github.com/hadley/lazyeval)) aims to help developers design packages with parallel function implementations that follow both standard and non-standard evaluation.
--   An increasingly popular form of non-standard evaluation involves chained expressions or "pipelines". [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html) provides the `%>%` chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html) offers a larger set of pipe operators. [assertr](http://cran.rstudio.com/web/packages/assertr/index.html) provides a testing framework for pipelines.
+-   An increasingly popular form of non-standard evaluation involves chained expressions or "pipelines". [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html) provides the `%>%` chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html) offers a larger set of pipe operators. [assertr](http://cran.rstudio.com/web/packages/assertr/index.html) and [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html) provide (fairly similar) testing frameworks for pipelines.
 
 **Dependency Management**
 
@@ -198,6 +198,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [docopt](http://cran.rstudio.com/web/packages/docopt/index.html)
 -   [documair](http://cran.rstudio.com/web/packages/documair/index.html)
 -   [drat](http://cran.rstudio.com/web/packages/drat/index.html)
+-   [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html)
 -   [fgui](http://cran.rstudio.com/web/packages/fgui/index.html)
 -   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html)
 -   [FuncMap](http://cran.rstudio.com/web/packages/FuncMap/index.html)

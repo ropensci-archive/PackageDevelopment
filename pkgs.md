@@ -43,7 +43,7 @@ Another feature of R is the ability to rely on both standard and non-standard ev
 
 -   `substitute()` provides the most straightforward interface to non-standard evaluation of function arguments.
 -   <pkg>lazyeval</pkg> ([Github](https://github.com/hadley/lazyeval)) aims to help developers design packages with parallel function implementations that follow both standard and non-standard evaluation.
--   An increasingly popular form of non-standard evaluation involves chained expressions or "pipelines". <pkg>magrittr</pkg> provides the `%>%` chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. <pkg>pipeR</pkg> offers a larger set of pipe operators. <pkg>assertr</pkg> provides a testing framework for pipelines.
+-   An increasingly popular form of non-standard evaluation involves chained expressions or "pipelines". <pkg>magrittr</pkg> provides the `%>%` chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. <pkg>pipeR</pkg> offers a larger set of pipe operators. <pkg>assertr</pkg> and <pkg>ensurer</pkg> provide (fairly similar) testing frameworks for pipelines.
 
 **Dependency Management**
 
