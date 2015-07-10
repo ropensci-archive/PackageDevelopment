@@ -94,7 +94,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Unit Testing**
 
--   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, and <pkg>testthatsomemore</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.
+-   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.
 -   <pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
 -   <pkg>covr</pkg> and <a href="https://github.com/MangoTheCat/testCoverage">testCoverage</a> (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](http://codecov.io) or [Coveralls](http://coveralls.io) that provide web interfaces for assessing code coverage.
 
