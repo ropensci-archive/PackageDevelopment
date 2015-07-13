@@ -7,7 +7,7 @@ CRAN Task View: Package Development
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
-| **Version:**    | 2015-07-01               |
+| **Version:**    | 2015-07-13               |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
 
@@ -74,7 +74,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [inline](http://cran.rstudio.com/web/packages/inline/index.html) eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
 -   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html) package provides a low-level interface to Java similar to the `.Call` interface for C and C++. [jvmr](http://dahl.byu.edu/software/jvmr/) (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while [rscala](http://cran.rstudio.com/web/packages/rscala/index.html) is designed specifically for Scala.
--   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
+-   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html) offers an embedded Javascript engine, useful for building packages around Javascript libraries. [js](http://cran.rstudio.com/web/packages/js/index.html) provides additional tools for working with Javascript code.
 
@@ -97,6 +97,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html) can visualize output from the `Rprof` interface for profiling.
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html) and [aprof](http://cran.rstudio.com/web/packages/aprof/index.html) can also be used to analyse profiling output.
+-   [lineprof](https://github.com/hadley/lineprof) (not on CRAN) provides a visualization tool for examining profiling results.
 
 **Benchmarking**
 
@@ -105,8 +106,9 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Unit Testing**
 
--   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), and [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html), [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html), and [assertive](http://cran.rstudio.com/web/packages/assertive/index.html). [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html) provides utilities for converting exiting RUnit tests to testthat tests.
--   [covr](http://cran.rstudio.com/web/packages/covr/index.html) offers a set of utilities for monitoring how well tests cover a package's source code.
+-   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), and [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html), and [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html). [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html) provides utilities for converting exiting RUnit tests to testthat tests.
+-   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html), [assertr](http://cran.rstudio.com/web/packages/assertr/index.html), [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html), and [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html) provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
+-   [covr](http://cran.rstudio.com/web/packages/covr/index.html) and [testCoverage](https://github.com/MangoTheCat/testCoverage) (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](http://codecov.io) or [Coveralls](http://coveralls.io) that provide web interfaces for assessing code coverage.
 
 **Internationalization and Localization**
 
@@ -226,9 +228,11 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)
 -   [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html)
 -   [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html)
+-   [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html)
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html)
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html)
 -   [progress](http://cran.rstudio.com/web/packages/progress/index.html)
+-   [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html)
 -   [qtbase](http://cran.rstudio.com/web/packages/qtbase/index.html)
 -   [R](http://cran.rstudio.com/web/packages/R/index.html)
 -   [R6](http://cran.rstudio.com/web/packages/R6/index.html)

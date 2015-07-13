@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2015-07-01</version>
+  <version>2015-07-13</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -64,7 +64,7 @@
     <li><pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.</li>
     <li><pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.</li>
     <li><pkg>rJava</pkg> package provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++. <a href="http://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.</li>
-    <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, and <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN) provide interfaces to python.</li>
+    <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, and <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN) provide interfaces to python.</li>
     <li><a href="https://github.com/armgong/RJulia">RJulia</a> (not on CRAN) provides an interface with Julia.</li>
     <li><pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.</li>
     </ul>
@@ -86,6 +86,7 @@
     <li>Profiling data is provided by <code>utils::Rprof()</code> and can be summarized by <code>utils::summaryRprof()</code></li>
     <li><pkg>profr</pkg> can visualize output from the <code>Rprof</code> interface for profiling.</li>
     <li><pkg>proftools</pkg> and <pkg>aprof</pkg> can also be used to analyse profiling output.</li>
+    <li><a href="https://github.com/hadley/lineprof">lineprof</a> (not on CRAN) provides a visualization tool for examining profiling results.</li>
     </ul>
     <p><strong>Benchmarking</strong></p>
     <ul>
@@ -94,8 +95,9 @@
     </ul>
     <p><strong>Unit Testing</strong></p>
     <ul>
-    <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, <pkg>assertthat</pkg>, and <pkg>assertive</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
-    <li><pkg>covr</pkg> offers a set of utilities for monitoring how well tests cover a package's source code.</li>
+    <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
+    <li><pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.</li>
+    <li><pkg>covr</pkg> and <a href="https://github.com/MangoTheCat/testCoverage">testCoverage</a> (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as <a href="http://codecov.io">Codecov</a> or <a href="http://coveralls.io">Coveralls</a> that provide web interfaces for assessing code coverage.</li>
     </ul>
     <p><strong>Internationalization and Localization</strong></p>
     <ul>
@@ -208,9 +210,11 @@
     <pkg>pacman</pkg>
     <pkg>pipeR</pkg>
     <pkg>pkgKitten</pkg>
+    <pkg>pkgmaker</pkg>
     <pkg>profr</pkg>
     <pkg>proftools</pkg>
     <pkg>progress</pkg>
+    <pkg>PythonInR</pkg>
     <pkg>qtbase</pkg>
     <pkg>R</pkg>
     <pkg>R6</pkg>
