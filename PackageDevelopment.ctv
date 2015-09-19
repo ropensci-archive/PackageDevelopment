@@ -199,7 +199,7 @@
     <pkg>inline</pkg>
     <pkg>inlinedocs</pkg>
     <pkg>js</pkg>
-    <pkg>lambda</pkg>
+    <pkg>lambda.r</pkg>
     <pkg>lazyData</pkg>
     <pkg>lazyeval</pkg>
     <pkg>lint</pkg>
@@ -219,7 +219,8 @@
     <pkg>progress</pkg>
     <pkg>PythonInR</pkg>
     <pkg>qtbase</pkg>
-    <pkg>R</pkg>
+    <pkg>R.methodsS3</pkg>
+    <pkg>R.oo</pkg>
     <pkg>R6</pkg>
     <pkg>rbenchmark</pkg>
     <pkg>Rcpp</pkg>
