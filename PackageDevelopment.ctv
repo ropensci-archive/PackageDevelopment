@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2015-07-13</version>
+  <version>2015-09-19</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -42,7 +42,9 @@
     <li>Reference classes were introduced in R2.12.0 and are also part of <code>methods</code>. They offer a distinct paradigm from S3 and S4 due to the fact that reference class objects are mutable and that methods belong to objects, not generic functions.</li>
     <li><pkg>aoos</pkg> and <pkg>R.oo</pkg> are other packages facilitating object-oriented programming. <pkg>R6</pkg> (<a href="https://github.com/wch/R6">Github</a>) provides an alternative to reference classes without a dependency on <code>methods</code>.</li>
     <li><pkg>rtype</pkg> provides a strong type system.</li>
+    <li><a href="https://github.com/gaborcsardi/argufy">argufy</a> (Not on CRAN), provides a syntax for creating functions with strictly typed arguments, among other possible checks.</li>
     <li><pkg>lambda.r</pkg> and <a href="https://github.com/hoxo-m/lambdaR">lambdaR</a> (not on CRAN) provide an interface for creating lambda (anonymous) functions.</li>
+    <li><pkg>functools</pkg> (<a href="https://github.com/paulhendricks/functools">GitHub</a>) provides higher-order functions (Map, Reduce, etc.) common in funcitonal programming.</li>
     </ul>
     <p>Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like <code>library</code> and <code>subset</code> and can also be used in packages.</p>
     <ul>
@@ -95,7 +97,7 @@
     </ul>
     <p><strong>Unit Testing</strong></p>
     <ul>
-    <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, and <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
+    <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, <a href="https://github.com/yihui/testit">testit</a> (Not on CRAN), <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
     <li><pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.</li>
     <li><pkg>covr</pkg> and <a href="https://github.com/MangoTheCat/testCoverage">testCoverage</a> (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as <a href="http://codecov.io">Codecov</a> or <a href="http://coveralls.io">Coveralls</a> that provide web interfaces for assessing code coverage.</li>
     </ul>
@@ -188,6 +190,7 @@
     <pkg>fgui</pkg>
     <pkg>formatR</pkg>
     <pkg>FuncMap</pkg>
+    <pkg>functools</pkg>
     <pkg>GetoptLong</pkg>
     <pkg>git2r</pkg>
     <pkg>gWidgets2</pkg>
