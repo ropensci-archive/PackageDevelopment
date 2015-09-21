@@ -30,7 +30,7 @@ If you don't want to or can't install these things, then just edit the `pkgs.md`
     If you don't, follow the error messages to fix. If you can't figure out how to fix, just send the PR anyway, and the maintainer will fix.
 
     If you changed anything in the `pkgs.md` file, repeat step 3 to remake files. If everything was fine, proceed.
-5. Push back up to your account, then send a pull request to `leeper/PackageDevelopment`
+5. Push back up to your account, then send a pull request to `ropensci/PackageDevelopment`
 
 ## Submit an issue
 
