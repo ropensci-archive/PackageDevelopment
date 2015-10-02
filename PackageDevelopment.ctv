@@ -43,7 +43,7 @@
     <li><pkg>aoos</pkg> and <pkg>R.oo</pkg> are other packages facilitating object-oriented programming. <pkg>R6</pkg> (<a href="https://github.com/wch/R6">Github</a>) provides an alternative to reference classes without a dependency on <code>methods</code>.</li>
     <li><pkg>rtype</pkg> provides a strong type system.</li>
     <li><a href="https://github.com/gaborcsardi/argufy">argufy</a> (Not on CRAN), provides a syntax for creating functions with strictly typed arguments, among other possible checks.</li>
-    <li><pkg>lambda.r</pkg> and <a href="https://github.com/hoxo-m/lambdaR">lambdaR</a> (not on CRAN) provide an interface for creating lambda (anonymous) functions.</li>
+    <li><pkg>lambda.r</pkg>, <a href="https://github.com/hoxo-m/lambdaR">lambdaR</a> (not on CRAN), and <pkg>purrr</pkg> provide interfaces for creating lambda (anonymous) functions.</li>
     <li><pkg>functools</pkg> (<a href="https://github.com/paulhendricks/functools">GitHub</a>) provides higher-order functions (Map, Reduce, etc.) common in funcitonal programming.</li>
     </ul>
     <p>Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like <code>library</code> and <code>subset</code> and can also be used in packages.</p>
@@ -98,7 +98,7 @@
     <p><strong>Unit Testing</strong></p>
     <ul>
     <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, <a href="https://github.com/yihui/testit">testit</a> (Not on CRAN), <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
-    <li><pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.</li>
+    <li><pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>checkmate</pkg> <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.</li>
     <li><pkg>covr</pkg> and <a href="https://github.com/MangoTheCat/testCoverage">testCoverage</a> (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as <a href="http://codecov.io">Codecov</a> or <a href="http://coveralls.io">Coveralls</a> that provide web interfaces for assessing code coverage.</li>
     <li><pkg>withr</pkg> (<a href="http://github.com/jimhester/withr">GitHub</a>) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.</li>
     </ul>
@@ -185,6 +185,7 @@
     <pkg>assertive</pkg>
     <pkg>assertr</pkg>
     <pkg>assertthat</pkg>
+    <pkg>checkmate</pkg>
     <pkg>checkpoint</pkg>
     <pkg>codetools</pkg>
     <pkg>commandr</pkg>
@@ -225,6 +226,7 @@
     <pkg>profr</pkg>
     <pkg>proftools</pkg>
     <pkg>progress</pkg>
+    <pkg>purrr</pkg>
     <pkg>PythonInR</pkg>
     <pkg>qtbase</pkg>
     <pkg>R.methodsS3</pkg>

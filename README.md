@@ -50,7 +50,7 @@ R is foremost a functional programming language with dynamic typing, but has thr
 -   [aoos](http://cran.rstudio.com/web/packages/aoos/index.html) and [R.oo](http://cran.rstudio.com/web/packages/R.oo/index.html) are other packages facilitating object-oriented programming. [R6](http://cran.rstudio.com/web/packages/R6/index.html) ([Github](https://github.com/wch/R6)) provides an alternative to reference classes without a dependency on `methods`.
 -   [rtype](http://cran.rstudio.com/web/packages/rtype/index.html) provides a strong type system.
 -   [argufy](https://github.com/gaborcsardi/argufy) (Not on CRAN), provides a syntax for creating functions with strictly typed arguments, among other possible checks.
--   [lambda.r](http://cran.rstudio.com/web/packages/lambda.r/index.html) and [lambdaR](https://github.com/hoxo-m/lambdaR) (not on CRAN) provide an interface for creating lambda (anonymous) functions.
+-   [lambda.r](http://cran.rstudio.com/web/packages/lambda.r/index.html), [lambdaR](https://github.com/hoxo-m/lambdaR) (not on CRAN), and [purrr](http://cran.rstudio.com/web/packages/purrr/index.html) provide interfaces for creating lambda (anonymous) functions.
 -   [functools](http://cran.rstudio.com/web/packages/functools/index.html) ([GitHub](https://github.com/paulhendricks/functools)) provides higher-order functions (Map, Reduce, etc.) common in funcitonal programming.
 
 Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like `library` and `subset` and can also be used in packages.
@@ -108,7 +108,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Unit Testing**
 
 -   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), [testit](https://github.com/yihui/testit) (Not on CRAN), [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html), and [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html). [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html) provides utilities for converting exiting RUnit tests to testthat tests.
--   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html), [assertr](http://cran.rstudio.com/web/packages/assertr/index.html), [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html), and [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html) provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
+-   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html), [assertr](http://cran.rstudio.com/web/packages/assertr/index.html), [checkmate](http://cran.rstudio.com/web/packages/checkmate/index.html) [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html), and [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html) provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
 -   [covr](http://cran.rstudio.com/web/packages/covr/index.html) and [testCoverage](https://github.com/MangoTheCat/testCoverage) (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](http://codecov.io) or [Coveralls](http://coveralls.io) that provide web interfaces for assessing code coverage.
 -   [withr](http://cran.rstudio.com/web/packages/withr/index.html) ([GitHub](http://github.com/jimhester/withr)) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.
 
@@ -200,6 +200,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html)
 -   [assertr](http://cran.rstudio.com/web/packages/assertr/index.html)
 -   [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html)
+-   [checkmate](http://cran.rstudio.com/web/packages/checkmate/index.html)
 -   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html)
 -   [codetools](http://cran.rstudio.com/web/packages/codetools/index.html)
 -   [commandr](http://cran.rstudio.com/web/packages/commandr/index.html)
@@ -242,6 +243,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html)
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html)
 -   [progress](http://cran.rstudio.com/web/packages/progress/index.html)
+-   [purrr](http://cran.rstudio.com/web/packages/purrr/index.html)
 -   [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html)
 -   [qtbase](http://cran.rstudio.com/web/packages/qtbase/index.html)
 -   [R.methodsS3](http://cran.rstudio.com/web/packages/R.methodsS3/index.html)

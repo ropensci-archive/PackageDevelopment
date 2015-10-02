@@ -39,7 +39,7 @@ R is foremost a functional programming language with dynamic typing, but has thr
 -   <pkg>aoos</pkg> and <pkg>R.oo</pkg> are other packages facilitating object-oriented programming. <pkg>R6</pkg> ([Github](https://github.com/wch/R6)) provides an alternative to reference classes without a dependency on `methods`.
 -   <pkg>rtype</pkg> provides a strong type system. 
 -   [argufy](https://github.com/gaborcsardi/argufy) (Not on CRAN), provides a syntax for creating functions with strictly typed arguments, among other possible checks.
--   <pkg>lambda.r</pkg> and <a href="https://github.com/hoxo-m/lambdaR">lambdaR</a> (not on CRAN) provide an interface for creating lambda (anonymous) functions.
+-   <pkg>lambda.r</pkg>, [lambdaR](https://github.com/hoxo-m/lambdaR) (not on CRAN), and <pkg>purrr</pkg> provide interfaces for creating lambda (anonymous) functions.
 -   <pkg>functools</pkg> ([GitHub](https://github.com/paulhendricks/functools)) provides higher-order functions (Map, Reduce, etc.) common in funcitonal programming.
 
 Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like `library` and `subset` and can also be used in packages.
@@ -98,7 +98,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Unit Testing**
 
 -   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, [testit](https://github.com/yihui/testit) (Not on CRAN), <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.
--   <pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
+-   <pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>checkmate</pkg> <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
 -   <pkg>covr</pkg> and <a href="https://github.com/MangoTheCat/testCoverage">testCoverage</a> (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](http://codecov.io) or [Coveralls](http://coveralls.io) that provide web interfaces for assessing code coverage.
 -   <pkg>withr</pkg> ([GitHub](http://github.com/jimhester/withr)) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.
 
