@@ -110,6 +110,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), [testit](https://github.com/yihui/testit) (Not on CRAN), [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html), and [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html). [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html) provides utilities for converting exiting RUnit tests to testthat tests.
 -   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html), [assertr](http://cran.rstudio.com/web/packages/assertr/index.html), [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html), and [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html) provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
 -   [covr](http://cran.rstudio.com/web/packages/covr/index.html) and [testCoverage](https://github.com/MangoTheCat/testCoverage) (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](http://codecov.io) or [Coveralls](http://coveralls.io) that provide web interfaces for assessing code coverage.
+-   [withr](http://cran.rstudio.com/web/packages/withr/index.html) ([GitHub](http://github.com/jimhester/withr)) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.
 
 **Internationalization and Localization**
 
@@ -266,6 +267,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [testthat](http://cran.rstudio.com/web/packages/testthat/index.html)
 -   [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html)
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html)
+-   [withr](http://cran.rstudio.com/web/packages/withr/index.html)
 
 ### Related links:
 
