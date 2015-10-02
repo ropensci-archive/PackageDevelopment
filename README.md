@@ -188,6 +188,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/). [harbor](https://github.com/wch/harbor) can be used to control docker containers on remote and local hosts and [dockertest](https://github.com/traitecoevo/dockertest) provides facilities for running tests on docker.
 -   Some packages, especially some that are no longer under active development, remain hosted on [Google Code](https://code.google.com/). This service is closed to new projects, however, and will shut down in January 2016.
 -   [drat](http://cran.rstudio.com/web/packages/drat/index.html) can be used to distribute pre-built packages via Github or another server.
+-   CRAN does not provide package download statistics, but the RStudio CRAN mirror does. [packagetrackr](http://cran.rstudio.com/web/packages/packagetrackr/index.html) ([Source](http://gitlab.points-of-interest.cc/points-of-interest/packagetrackr)) facilitates downloading and analyzing those logs.
 
 ### CRAN packages:
 
@@ -230,6 +231,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html)
 -   [microbenchmark](http://cran.rstudio.com/web/packages/microbenchmark/index.html)
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html)
+-   [packagetrackr](http://cran.rstudio.com/web/packages/packagetrackr/index.html)
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html)
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)
 -   [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html)

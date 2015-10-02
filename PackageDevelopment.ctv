@@ -170,6 +170,7 @@
     <li><a href="https://github.com/rocker-org/rocker">Rocker</a> provides containers for use with <a href="https://www.docker.com/">Docker</a>. <a href="https://github.com/wch/harbor">harbor</a> can be used to control docker containers on remote and local hosts and <a href="https://github.com/traitecoevo/dockertest">dockertest</a> provides facilities for running tests on docker.</li>
     <li>Some packages, especially some that are no longer under active development, remain hosted on <a href="https://code.google.com/">Google Code</a>. This service is closed to new projects, however, and will shut down in January 2016.</li>
     <li><pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server.</li>
+    <li>CRAN does not provide package download statistics, but the RStudio CRAN mirror does. <pkg>packagetrackr</pkg> (<a href="http://gitlab.points-of-interest.cc/points-of-interest/packagetrackr">Source</a>) facilitates downloading and analyzing those logs.</li>
     </ul>
   </info>
   <packagelist>
@@ -213,6 +214,7 @@
     <pkg>magrittr</pkg>
     <pkg>microbenchmark</pkg>
     <pkg>mvbutils</pkg>
+    <pkg>packagetrackr</pkg>
     <pkg>packrat</pkg>
     <pkg>pacman</pkg>
     <pkg>pipeR</pkg>
