@@ -118,6 +118,10 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 -   Several packages provide functionality for parsing command line arguments: <pkg>argparse</pkg>, <pkg>argparser</pkg>, <pkg>commandr</pkg>, <pkg>docopt</pkg>, and <pkg>GetoptLong</pkg>.
 
+**Using Options in Packages**
+
+-   <pkg>pkgconfig</pkg> ([GitHu](https://github.com/gaborcsardi/pkgconfig)) allows developers to set package-specific options, which will not affect options set or used by other packages.
+
 ### Documentation
 
 **Writing Package Documentation**

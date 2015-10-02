@@ -7,7 +7,7 @@ CRAN Task View: Package Development
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
-| **Version:**    | 2015-09-19               |
+| **Version:**    | 2015-10-02               |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
 
@@ -128,6 +128,10 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 -   Several packages provide functionality for parsing command line arguments: [argparse](http://cran.rstudio.com/web/packages/argparse/index.html), [argparser](http://cran.rstudio.com/web/packages/argparser/index.html), [commandr](http://cran.rstudio.com/web/packages/commandr/index.html), [docopt](http://cran.rstudio.com/web/packages/docopt/index.html), and [GetoptLong](http://cran.rstudio.com/web/packages/GetoptLong/index.html).
 
+**Using Options in Packages**
+
+-   [pkgconfig](http://cran.rstudio.com/web/packages/pkgconfig/index.html) ([GitHu](https://github.com/gaborcsardi/pkgconfig)) allows developers to set package-specific options, which will not affect options set or used by other packages.
+
 ### Documentation
 
 **Writing Package Documentation**
@@ -229,6 +233,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html)
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)
 -   [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html)
+-   [pkgconfig](http://cran.rstudio.com/web/packages/pkgconfig/index.html)
 -   [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html)
 -   [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html)
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html)
