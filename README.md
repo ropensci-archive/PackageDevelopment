@@ -131,7 +131,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Command Line Argument Parsing**
 
--   Several packages provide functionality for parsing command line arguments: [argparse](http://cran.rstudio.com/web/packages/argparse/index.html), [argparser](http://cran.rstudio.com/web/packages/argparser/index.html), [commandr](http://cran.rstudio.com/web/packages/commandr/index.html), [docopt](http://cran.rstudio.com/web/packages/docopt/index.html), and [GetoptLong](http://cran.rstudio.com/web/packages/GetoptLong/index.html).
+-   Several packages provide functionality for parsing command line arguments: [argparse](http://cran.rstudio.com/web/packages/argparse/index.html), [argparser](http://cran.rstudio.com/web/packages/argparser/index.html), [commandr](http://cran.rstudio.com/web/packages/commandr/index.html), [docopt](http://cran.rstudio.com/web/packages/docopt/index.html), [GetoptLong](http://cran.rstudio.com/web/packages/GetoptLong/index.html), and [optigrab](http://cran.rstudio.com/web/packages/optigrab/index.html).
 
 **Using Options in Packages**
 
@@ -237,6 +237,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html)
 -   [microbenchmark](http://cran.rstudio.com/web/packages/microbenchmark/index.html)
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html)
+-   [optigrab](http://cran.rstudio.com/web/packages/optigrab/index.html)
 -   [packagetrackr](http://cran.rstudio.com/web/packages/packagetrackr/index.html)
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html)
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)

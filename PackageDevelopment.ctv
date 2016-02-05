@@ -120,7 +120,7 @@
     </ul>
     <p><strong>Command Line Argument Parsing</strong></p>
     <ul>
-    <li>Several packages provide functionality for parsing command line arguments: <pkg>argparse</pkg>, <pkg>argparser</pkg>, <pkg>commandr</pkg>, <pkg>docopt</pkg>, and <pkg>GetoptLong</pkg>.</li>
+    <li>Several packages provide functionality for parsing command line arguments: <pkg>argparse</pkg>, <pkg>argparser</pkg>, <pkg>commandr</pkg>, <pkg>docopt</pkg>, <pkg>GetoptLong</pkg>, and <pkg>optigrab</pkg>.</li>
     </ul>
     <p><strong>Using Options in Packages</strong></p>
     <ul>
@@ -219,6 +219,7 @@
     <pkg>magrittr</pkg>
     <pkg>microbenchmark</pkg>
     <pkg>mvbutils</pkg>
+    <pkg>optigrab</pkg>
     <pkg>packagetrackr</pkg>
     <pkg>packrat</pkg>
     <pkg>pacman</pkg>

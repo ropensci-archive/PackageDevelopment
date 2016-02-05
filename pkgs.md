@@ -120,7 +120,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Command Line Argument Parsing**
 
--   Several packages provide functionality for parsing command line arguments: <pkg>argparse</pkg>, <pkg>argparser</pkg>, <pkg>commandr</pkg>, <pkg>docopt</pkg>, and <pkg>GetoptLong</pkg>.
+-   Several packages provide functionality for parsing command line arguments: <pkg>argparse</pkg>, <pkg>argparser</pkg>, <pkg>commandr</pkg>, <pkg>docopt</pkg>, <pkg>GetoptLong</pkg>, and <pkg>optigrab</pkg>.
 
 **Using Options in Packages**
 
