@@ -83,6 +83,8 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata.
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html) offers an embedded Javascript engine, useful for building packages around Javascript libraries. [js](http://cran.rstudio.com/web/packages/js/index.html) provides additional tools for working with Javascript code.
 
+The [knitr](http://cran.rstudio.com/web/packages/knitr/index.html) package, which supplies [various foreign language engines](http://yihui.name/knitr/demo/engines/), can also be used to generate documents that call python, awk, ruby, haskell, bash, perl, dot, tikz, sas, coffeescript, and polyglot.
+
 Writing packages that involve compiled code requires a developer toolchain. If developing on Windows, this requires [Rtools](http://cran.r-project.org/bin/windows/Rtools/), which is updated with each R minor release.
 
 **Debugging**
