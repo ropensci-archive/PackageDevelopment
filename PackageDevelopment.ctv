@@ -89,6 +89,7 @@
     <li>Profiling data is provided by <code>utils::Rprof()</code> and can be summarized by <code>utils::summaryRprof()</code></li>
     <li><pkg>profr</pkg> can visualize output from the <code>Rprof</code> interface for profiling.</li>
     <li><pkg>proftools</pkg> and <pkg>aprof</pkg> can also be used to analyse profiling output.</li>
+    <li><a href="https://github.com/rstudio/profvis">profvis</a> (not on CRAN) provides an interactive, graphical interface for examining profile results.</li>
     <li><a href="https://github.com/hadley/lineprof">lineprof</a> (not on CRAN) provides a visualization tool for examining profiling results.</li>
     </ul>
     <p><strong>Benchmarking</strong></p>

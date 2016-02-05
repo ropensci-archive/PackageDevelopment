@@ -100,6 +100,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html) can visualize output from the `Rprof` interface for profiling.
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html) and [aprof](http://cran.rstudio.com/web/packages/aprof/index.html) can also be used to analyse profiling output.
+-   [profvis](https://github.com/rstudio/profvis) (not on CRAN) provides an interactive, graphical interface for examining profile results.
 -   [lineprof](https://github.com/hadley/lineprof) (not on CRAN) provides a visualization tool for examining profiling results.
 
 **Benchmarking**
