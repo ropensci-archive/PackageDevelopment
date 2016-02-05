@@ -64,6 +64,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 
 -   <pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
 -   <pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
+-   <pkg>rGroovy</pkg> integrates with the [Groovy scripting language](http://groovy.codehaus.org/).
 -   <pkg>rJava</pkg> package provides a low-level interface to Java similar to the `.Call` interface for C and C++. <a href="http://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.
 -   <pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
