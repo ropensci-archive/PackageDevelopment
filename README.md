@@ -77,6 +77,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
 -   [rGroovy](http://cran.rstudio.com/web/packages/rGroovy/index.html) integrates with the [Groovy scripting language](http://groovy.codehaus.org/).
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html) package provides a low-level interface to Java similar to the `.Call` interface for C and C++. [jvmr](http://dahl.byu.edu/software/jvmr/) (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while [rscala](http://cran.rstudio.com/web/packages/rscala/index.html) is designed specifically for Scala.
+-   [reach](https://github.com/schmidtchristoph/reach) (not on CRAN) and [matlabr](http://cran.rstudio.com/web/packages/matlabr/index.html) provide rough interfaces to Matlab.
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
 -   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata.
@@ -235,6 +236,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [log4r](http://cran.rstudio.com/web/packages/log4r/index.html)
 -   [logging](http://cran.rstudio.com/web/packages/logging/index.html)
 -   [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html)
+-   [matlabr](http://cran.rstudio.com/web/packages/matlabr/index.html)
 -   [microbenchmark](http://cran.rstudio.com/web/packages/microbenchmark/index.html)
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html)
 -   [optigrab](http://cran.rstudio.com/web/packages/optigrab/index.html)

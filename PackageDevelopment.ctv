@@ -67,6 +67,7 @@
     <li><pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.</li>
     <li><pkg>rGroovy</pkg> integrates with the <a href="http://groovy.codehaus.org/">Groovy scripting language</a>.</li>
     <li><pkg>rJava</pkg> package provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++. <a href="http://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.</li>
+    <li><a href="https://github.com/schmidtchristoph/reach">reach</a> (not on CRAN) and <pkg>matlabr</pkg> provide rough interfaces to Matlab.</li>
     <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, and <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN) provide interfaces to python.</li>
     <li><a href="https://github.com/armgong/RJulia">RJulia</a> (not on CRAN) provides an interface with Julia.</li>
     <li><pkg>RStata</pkg> is an interface with Stata.</li>
@@ -217,6 +218,7 @@
     <pkg>log4r</pkg>
     <pkg>logging</pkg>
     <pkg>magrittr</pkg>
+    <pkg>matlabr</pkg>
     <pkg>microbenchmark</pkg>
     <pkg>mvbutils</pkg>
     <pkg>optigrab</pkg>
