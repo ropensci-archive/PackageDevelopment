@@ -1,21 +1,23 @@
-all: buildxml ctv2html readme
+all: README.md
 
-buildxml:
+PackageDevelopment.ctv: pkgs.md buildxml.R
 	pandoc -w html -o PackageDevelopment.ctv pkgs.md
 	Rscript --vanilla -e 'source("buildxml.R")'
 
-checkctv:
-	Rscript --vanilla -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com/"))); if(!require("ctv")) install.packages("ctv"); print(ctv::check_ctv_packages("PackageDevelopment.ctv"))'
+PackageDevelopment.html: PackageDevelopment.ctv
+	Rscript --vanilla -e 'if(!require("ctv")) install.packages("ctv", repos = "http://cran.rstudio.com/"); ctv::ctv2html("PackageDevelopment.ctv")'
 
-ctv2html:
-	Rscript --vanilla -e 'options(repos=structure(c(CRAN="http://cran.rstudio.com/"))); if(!require("ctv")) install.packages("ctv");  ctv::ctv2html("PackageDevelopment.ctv", file = "PackageDevelopment.html")'
-
-readme:
+README.md: PackageDevelopment.html
 	pandoc -w markdown_github -o README.md PackageDevelopment.html
-	sed -i -e 's|( \[|(\[|g' README.md
-	sed -i -e 's| : |: |g' README.md
-	sed -i 's|../packages/|http://cran.rstudio.com/web/packages/|g' README.md
-	sed -i 's/^[|]-/*Do not edit this README by hand. See \[CONTRIBUTING.md\]\(CONTRIBUTING.md\).*\n\n|||\n|-/g' README.md
+	sed -i.tmp -e 's|( \[|(\[|g' README.md
+	sed -i.tmp -e 's| : |: |g' README.md
+	sed -i.tmp -e 's|../packages/|http://cran.rstudio.com/web/packages/|g' README.md
+	sed -i.tmp -e '4i| | |' README.md
+	sed -i.tmp -e '4i*Do not edit this README by hand. See \[CONTRIBUTING.md\]\(CONTRIBUTING.md\).*\n' README.md
+	rm *.tmp
 
-md2html:
+check:
+	Rscript --vanilla -e 'if(!require("ctv")) install.packages("ctv", repos = "http://cran.rstudio.com/"); print(ctv::check_ctv_packages("PackageDevelopment.ctv", repos = "http://cran.rstudio.com/"))'
+
+README.html: README.md
 	pandoc -o README.html README.md

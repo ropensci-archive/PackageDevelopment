@@ -3,18 +3,19 @@ CRAN Task View: Package Development
 
 *Do not edit this README by hand. See [CONTRIBUTING.md](CONTRIBUTING.md).*
 
-|||
+| | |
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
-| **Version:**    | 2015-10-02               |
+| **Version:**    | 2016-02-05               |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
 
 The main reference for packages development is the ["Writing R Extension"](http://cran.r-project.org/doc/manuals/R-exts.html) manual. For further documentation and tutorials, see the "Related links" section below.
 
 If you think that some packages or tools are missing from the list, feel free to
-e-mail (thosjleeper at gmail dot com) me or contribute directly to the Task View by submitting a pull request on [GitHub](http://github.com/leeper/PackageDevelopment/blob/master/CONTRIBUTING.md).
+e-mail (thosjleeper at gmail dot com)
+me or contribute directly to the Task View by submitting a pull request on [GitHub](http://github.com/leeper/PackageDevelopment/blob/master/CONTRIBUTING.md).
 Many thanks to Christopher Gandrud, Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.
 
 ### First steps
@@ -77,6 +78,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html) package provides a low-level interface to Java similar to the `.Call` interface for C and C++. [jvmr](http://dahl.byu.edu/software/jvmr/) (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while [rscala](http://cran.rstudio.com/web/packages/rscala/index.html) is designed specifically for Scala.
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
+-   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata.
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html) offers an embedded Javascript engine, useful for building packages around Javascript libraries. [js](http://cran.rstudio.com/web/packages/js/index.html) provides additional tools for working with Javascript code.
 
 Writing packages that involve compiled code requires a developer toolchain. If developing on Windows, this requires [Rtools](http://cran.r-project.org/bin/windows/Rtools/), which is updated with each R minor release.
@@ -258,6 +260,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [roxygen2](http://cran.rstudio.com/web/packages/roxygen2/index.html) (core)
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html)
 -   [rscala](http://cran.rstudio.com/web/packages/rscala/index.html)
+-   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html)
 -   [rstudioapi](http://cran.rstudio.com/web/packages/rstudioapi/index.html)
 -   [rtype](http://cran.rstudio.com/web/packages/rtype/index.html)
 -   [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html)

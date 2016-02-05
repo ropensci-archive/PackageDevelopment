@@ -67,6 +67,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   <pkg>rJava</pkg> package provides a low-level interface to Java similar to the `.Call` interface for C and C++. <a href="http://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.
 -   <pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
+-   <pkg>RStata</pkg> is an interface with Stata.
 -   <pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.
 
 Writing packages that involve compiled code requires a developer toolchain. If developing on Windows, this requires [Rtools](http://cran.r-project.org/bin/windows/Rtools/), which is updated with each R minor release.
