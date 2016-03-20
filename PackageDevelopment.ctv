@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2016-02-15</version>
+  <version>2016-03-20</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -21,7 +21,7 @@
     <li><a href="http://rseek.org/">RSeek</a> allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.</li>
     <li><a href="http://rdocumentation.org/">Rdocumentation</a> allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.</li>
     <li><a href="http://crantastic.org/">Crantastic!</a> maintains an up-to-date and tagged directory of packages on CRAN. The <a href="http://mran.revolutionanalytics.com/">Managed R Archive Network</a> from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.</li>
-    <li><a href="http://cran.github.io/w/r/rdevel/">http://cran.github.io</a> is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.</li>
+    <li><a href="http://www.r-pkg.org/" class="uri">http://www.r-pkg.org/</a> is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.</li>
     <li><a href="http://dirk.eddelbuettel.com/cranberries/">CRANberries</a> provides a feed of new, updated, and removed packages for CRAN.</li>
     <li>If you're looking to create a package, but want ideas for what sorts of packages are in demand, the <a href="https://ropensci.org/">rOpenSci</a> maintains <a href="https://github.com/ropensci/wishlist">a wishlist for science-related packages</a> and <a href="https://github.com/ropensci/webservices/wiki/ToDo">a TODO list of web services and data APIs in need of packaging</a>.</li>
     </ul>
@@ -32,7 +32,7 @@
     <li><code>create()</code> from <pkg>devtools</pkg> is similar to <code>package.skeleton</code> except it allows to specify <code>DESCRIPTION</code> entries and doesn't create source code and data files from global environment objects or sourced files.</li>
     <li><a href="https://github.com/metacran/mason">mason</a> provides a fun, interactive tool for creating a package based on a variety of inputs.</li>
     <li><code>Rcpp.package.skeleton()</code> from <pkg>Rcpp</pkg> adds to <code>package.skeleton</code> the C++ via <code>Rcpp</code> handling, by modifying eg. <code>DESCRIPTION</code> and <code>NAMESPACE</code> accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in <code>src</code> directory . Finally the user can decide main <code>DESCRIPTION</code> entries.</li>
-    <li><pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph.</li>
+    <li><pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph. <a href="https://github.com/andrie/pagerank">pagerank</a> (not on CRAN) can calculate a package's PageRank from its dependency graph.</li>
     </ul>
     <p><strong>Programming Paradigms</strong></p>
     <p>R is foremost a functional programming language with dynamic typing, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.</p>

@@ -16,7 +16,7 @@ Before starting a new package it's worth searching for already available package
 -   [RSeek](http://rseek.org/) allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.
 -   [Rdocumentation](http://rdocumentation.org/) allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.
 -   [Crantastic!](http://crantastic.org/) maintains an up-to-date and tagged directory of packages on CRAN. The [Managed R Archive Network](http://mran.revolutionanalytics.com/) from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.
--   [http://cran.github.io](http://cran.github.io/w/r/rdevel/) is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.
+-   [http://www.r-pkg.org/](http://www.r-pkg.org/) is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.
 -   [CRANberries](http://dirk.eddelbuettel.com/cranberries/) provides a feed of new, updated, and removed packages for CRAN.
 -   If you're looking to create a package, but want ideas for what sorts of packages are in demand, the [rOpenSci](https://ropensci.org/) maintains [a wishlist for science-related packages](https://github.com/ropensci/wishlist) and [a TODO list of web services and data APIs in need of packaging](https://github.com/ropensci/webservices/wiki/ToDo).
 
@@ -27,7 +27,7 @@ Before starting a new package it's worth searching for already available package
 -   `create()` from <pkg>devtools</pkg> is similar to `package.skeleton` except it allows to specify `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files.
 -   <a href="https://github.com/metacran/mason">mason</a> provides a fun, interactive tool for creating a package based on a variety of inputs.
 -   `Rcpp.package.skeleton()` from <pkg>Rcpp</pkg> adds to `package.skeleton` the C++ via `Rcpp` handling, by modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in `src` directory . Finally the user can decide main `DESCRIPTION` entries.
--   <pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph.
+-   <pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph. [pagerank](https://github.com/andrie/pagerank) (not on CRAN) can calculate a package's PageRank from its dependency graph.
 
 **Programming Paradigms**
 
