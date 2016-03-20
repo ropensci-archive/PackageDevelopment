@@ -95,6 +95,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   <pkg>proftools</pkg> and <pkg>aprof</pkg> can also be used to analyse profiling output.
 -   [profvis](https://github.com/rstudio/profvis) (not on CRAN) provides an interactive, graphical interface for examining profile results.
 -   [lineprof](https://github.com/hadley/lineprof) (not on CRAN) provides a visualization tool for examining profiling results.
+-   [Rperform](https://github.com/analyticalmonk/Rperform) (not on CRAN) compares package performance across different git versions and branches.
 
 **Benchmarking**
 
