@@ -145,6 +145,7 @@
     <p><strong>Spell Checking</strong></p>
     <ul>
     <li><code>utils</code> provides multiple functions for spell-checking portions of packages, including .Rd files (<code>utils::aspell_package_Rd_files</code>) and vignettes (<code>utils::aspell_package_vignettes</code>) via the general purpose <code>aspell</code> function, which requires a system spell checking library, such as http://aspell.net, http://hunspell.sourceforge.net/, or http://lasr.cs.ucla.edu/geoff/ispell.html.</li>
+    <li><pkg>hunspell</pkg> provides an interface to hunspell.</li>
     </ul>
     <h3 id="data-in-packages">Data in Packages</h3>
     <ul>
@@ -210,6 +211,7 @@
     <pkg>gitlabr</pkg>
     <pkg>gWidgets2</pkg>
     <pkg>htmlwidgets</pkg>
+    <pkg>hunspell</pkg>
     <pkg>import</pkg>
     <pkg>inline</pkg>
     <pkg>inlinedocs</pkg>

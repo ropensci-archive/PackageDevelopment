@@ -163,6 +163,7 @@ Package vignettes provides additional documentation of package functionality tha
 **Spell Checking**
 
 -   `utils` provides multiple functions for spell-checking portions of packages, including .Rd files ( `utils::aspell_package_Rd_files`) and vignettes ( `utils::aspell_package_vignettes`) via the general purpose `aspell` function, which requires a system spell checking library, such as http://aspell.net, http://hunspell.sourceforge.net/, or http://lasr.cs.ucla.edu/geoff/ispell.html.
+-   [hunspell](http://cran.rstudio.com/web/packages/hunspell/index.html) provides an interface to hunspell.
 
 ### Data in Packages
 
@@ -228,6 +229,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [gitlabr](http://cran.rstudio.com/web/packages/gitlabr/index.html)
 -   [gWidgets2](http://cran.rstudio.com/web/packages/gWidgets2/index.html)
 -   [htmlwidgets](http://cran.rstudio.com/web/packages/htmlwidgets/index.html)
+-   [hunspell](http://cran.rstudio.com/web/packages/hunspell/index.html)
 -   [import](http://cran.rstudio.com/web/packages/import/index.html)
 -   [inline](http://cran.rstudio.com/web/packages/inline/index.html)
 -   [inlinedocs](http://cran.rstudio.com/web/packages/inlinedocs/index.html)

@@ -155,6 +155,7 @@ Package vignettes provides additional documentation of package functionality tha
 **Spell Checking**
 
 -   `utils` provides multiple functions for spell-checking portions of packages, including .Rd files (`utils::aspell_package_Rd_files`) and vignettes (`utils::aspell_package_vignettes`) via the general purpose `aspell` function, which requires a system spell checking library, such as http://aspell.net, http://hunspell.sourceforge.net/, or http://lasr.cs.ucla.edu/geoff/ispell.html.
+-   <pkg>hunspell</pkg> provides an interface to hunspell.
 
 ### Data in Packages
 
