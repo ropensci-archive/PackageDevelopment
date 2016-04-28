@@ -134,7 +134,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Creating Graphical Interfaces**
 
--   For simple interactive interfaces, `readline()` can be used to create a simple prompt, while `utils::menu()`, `utils::select.list()` can provide graphical and console-based selection of items from a list, and `utils::txtProgressBar()` provides a simple text progress bar.
+-   For simple interactive interfaces, `readline()` can be used to create a simple prompt. [getPass](http://cran.rstudio.com/web/packages/getPass/index.html) provides cross-platform mechanisms for securely requesting user input without displaying the intput (e.g., for passwords). `utils::menu()`, `utils::select.list()` can provide graphical and console-based selection of items from a list, and `utils::txtProgressBar()` provides a simple text progress bar.
 -   `tcltk` is an R base package that provides a large set of tools for creating interfaces uses Tcl/tk (most functions are thin wrappers around corresponding Tcl and tk functions), though the documentation is sparse. [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html) provides additional widgets and functionality. [qtbase](http://cran.rstudio.com/web/packages/qtbase/index.html) provides bindings for Qt. [RGtk](http://www.Omegahat.org/RGtk/) (not on CRAN) provides bindings for Gtk and gnome. [gWidgets2](http://cran.rstudio.com/web/packages/gWidgets2/index.html) offers a language-independent API for building graphical user interfaces in Gtk, Qt, or Tcl/tk.
 -   [fgui](http://cran.rstudio.com/web/packages/fgui/index.html) can create a Tcl/tk interface for any arbitrary function.
 -   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html) provides a browser-based infrastructure for creating dashboards and interfaces for R functionality. [htmlwidgets](http://cran.rstudio.com/web/packages/htmlwidgets/index.html) is a shiny enhancement that provides a framework for creating HTML widgets.
@@ -231,6 +231,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [FuncMap](http://cran.rstudio.com/web/packages/FuncMap/index.html)
 -   [functools](http://cran.rstudio.com/web/packages/functools/index.html)
 -   [GetoptLong](http://cran.rstudio.com/web/packages/GetoptLong/index.html)
+-   [getPass](http://cran.rstudio.com/web/packages/getPass/index.html)
 -   [ghit](http://cran.rstudio.com/web/packages/ghit/index.html)
 -   [git2r](http://cran.rstudio.com/web/packages/git2r/index.html)
 -   [gitlabr](http://cran.rstudio.com/web/packages/gitlabr/index.html)

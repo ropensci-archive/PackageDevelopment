@@ -119,7 +119,7 @@
     </ul>
     <p><strong>Creating Graphical Interfaces</strong></p>
     <ul>
-    <li>For simple interactive interfaces, <code>readline()</code> can be used to create a simple prompt, while <code>utils::menu()</code>, <code>utils::select.list()</code> can provide graphical and console-based selection of items from a list, and <code>utils::txtProgressBar()</code> provides a simple text progress bar.</li>
+    <li>For simple interactive interfaces, <code>readline()</code> can be used to create a simple prompt. <pkg>getPass</pkg> provides cross-platform mechanisms for securely requesting user input without displaying the intput (e.g., for passwords). <code>utils::menu()</code>, <code>utils::select.list()</code> can provide graphical and console-based selection of items from a list, and <code>utils::txtProgressBar()</code> provides a simple text progress bar.</li>
     <li><code>tcltk</code> is an R base package that provides a large set of tools for creating interfaces uses Tcl/tk (most functions are thin wrappers around corresponding Tcl and tk functions), though the documentation is sparse. <pkg>tcltk2</pkg> provides additional widgets and functionality. <pkg>qtbase</pkg> provides bindings for Qt. <ohat>RGtk</ohat> (not on CRAN) provides bindings for Gtk and gnome. <pkg>gWidgets2</pkg> offers a language-independent API for building graphical user interfaces in Gtk, Qt, or Tcl/tk.</li>
     <li><pkg>fgui</pkg> can create a Tcl/tk interface for any arbitrary function.</li>
     <li><pkg>shiny</pkg> provides a browser-based infrastructure for creating dashboards and interfaces for R functionality. <pkg>htmlwidgets</pkg> is a shiny enhancement that provides a framework for creating HTML widgets.</li>
@@ -210,6 +210,7 @@
     <pkg>FuncMap</pkg>
     <pkg>functools</pkg>
     <pkg>GetoptLong</pkg>
+    <pkg>getPass</pkg>
     <pkg>ghit</pkg>
     <pkg>git2r</pkg>
     <pkg>gitlabr</pkg>
