@@ -2,14 +2,14 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2016-03-20</version>
+  <version>2016-04-28</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
     <p>If you think that some packages or tools are missing from the list, feel free to <script type="text/javascript">
     <!--
     h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#116;&#104;&#x6f;&#x73;&#106;&#108;&#x65;&#x65;&#112;&#x65;&#114;';e=n+a+h;
-    document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+'e-mail'+'<\/'+'a'+'>');
+    document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+'e-mail'+'<\/'+'a'+'>');
     // -->
     </script><noscript>&#x65;&#x2d;&#x6d;&#x61;&#x69;&#108;&#32;&#40;&#116;&#104;&#x6f;&#x73;&#106;&#108;&#x65;&#x65;&#112;&#x65;&#114;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;&#x29;</noscript> me or contribute directly to the Task View by submitting a pull request on <a href="http://github.com/leeper/PackageDevelopment/blob/master/CONTRIBUTING.md">GitHub</a>.</p>
     <p>Many thanks to Christopher Gandrud, Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.</p>
@@ -17,11 +17,11 @@
     <p><strong>Searching for Existing Packages</strong></p>
     <p>Before starting a new package it's worth searching for already available packages, both from a developer's standpoint (&quot;do not reinvent the wheel&quot;) and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one.</p>
     <ul>
-    <li><code>utils::RSiteSearch()</code> allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <a href="http://search.r-project.org" class="uri">http://search.r-project.org</a>. A convenient wrapper around <code>RSiteSearch</code> that adds hits ranking is <code>findFn()</code> function, from <pkg>sos</pkg>.</li>
+    <li><code>utils::RSiteSearch()</code> allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <a href="http://search.r-project.org">http://search.r-project.org</a>. A convenient wrapper around <code>RSiteSearch</code> that adds hits ranking is <code>findFn()</code> function, from <pkg>sos</pkg>.</li>
     <li><a href="http://rseek.org/">RSeek</a> allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.</li>
     <li><a href="http://rdocumentation.org/">Rdocumentation</a> allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.</li>
     <li><a href="http://crantastic.org/">Crantastic!</a> maintains an up-to-date and tagged directory of packages on CRAN. The <a href="http://mran.revolutionanalytics.com/">Managed R Archive Network</a> from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.</li>
-    <li><a href="http://www.r-pkg.org/" class="uri">http://www.r-pkg.org/</a> is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.</li>
+    <li><a href="http://www.r-pkg.org/">http://www.r-pkg.org/</a> is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.</li>
     <li><a href="http://dirk.eddelbuettel.com/cranberries/">CRANberries</a> provides a feed of new, updated, and removed packages for CRAN.</li>
     <li>If you're looking to create a package, but want ideas for what sorts of packages are in demand, the <a href="https://ropensci.org/">rOpenSci</a> maintains <a href="https://github.com/ropensci/wishlist">a wishlist for science-related packages</a> and <a href="https://github.com/ropensci/webservices/wiki/ToDo">a TODO list of web services and data APIs in need of packaging</a>.</li>
     </ul>
@@ -67,6 +67,7 @@
     <li><pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.</li>
     <li><pkg>rGroovy</pkg> integrates with the <a href="http://groovy.codehaus.org/">Groovy scripting language</a>.</li>
     <li><pkg>rJava</pkg> package provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++. <a href="http://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.</li>
+    <li><a href="https://github.com/rustr/rustr">rustr</a> provides bindings to Rust.</li>
     <li><a href="https://github.com/schmidtchristoph/reach">reach</a> (not on CRAN) and <pkg>matlabr</pkg> provide rough interfaces to Matlab.</li>
     <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, and <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN) provide interfaces to python.</li>
     <li><a href="https://github.com/armgong/RJulia">RJulia</a> (not on CRAN) provides an interface with Julia.</li>
