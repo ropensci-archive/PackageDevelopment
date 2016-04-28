@@ -52,6 +52,7 @@ R is foremost a functional programming language with dynamic typing, but has thr
 -   S4 is a more formalized form of object orientation that is available through `methods`. S4 classes have formal definitions and can dispatch methods based on multiple arguments (not just the first argument, as in S3). S4 is notable for its use of the `@` symbol to extract slots from S4 objects. John Chambers's ["How S4 Methods Work"](http://developer.r-project.org/howMethodsWork.pdf) tutorial may serve as a useful introduction.
 -   Reference classes were introduced in R2.12.0 and are also part of `methods`. They offer a distinct paradigm from S3 and S4 due to the fact that reference class objects are mutable and that methods belong to objects, not generic functions.
 -   [aoos](http://cran.rstudio.com/web/packages/aoos/index.html) and [R.oo](http://cran.rstudio.com/web/packages/R.oo/index.html) are other packages facilitating object-oriented programming. [R6](http://cran.rstudio.com/web/packages/R6/index.html) ([Github](https://github.com/wch/R6)) provides an alternative to reference classes without a dependency on `methods`.
+-   [proto](http://cran.rstudio.com/web/packages/proto/index.html) provides a prototype-based object orientated programming paradigm.
 -   [rtype](http://cran.rstudio.com/web/packages/rtype/index.html) provides a strong type system.
 -   [argufy](https://github.com/gaborcsardi/argufy) (Not on CRAN), provides a syntax for creating functions with strictly typed arguments, among other possible checks.
 -   [lambda.r](http://cran.rstudio.com/web/packages/lambda.r/index.html), [lambdaR](https://github.com/hoxo-m/lambdaR) (not on CRAN), and [purrr](http://cran.rstudio.com/web/packages/purrr/index.html) provide interfaces for creating lambda (anonymous) functions.
@@ -263,6 +264,7 @@ Many [hosting services](http://en.wikipedia.org/wiki/Comparison_of_open-source_s
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html)
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html)
 -   [progress](http://cran.rstudio.com/web/packages/progress/index.html)
+-   [proto](http://cran.rstudio.com/web/packages/proto/index.html)
 -   [purrr](http://cran.rstudio.com/web/packages/purrr/index.html)
 -   [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html)
 -   [qtbase](http://cran.rstudio.com/web/packages/qtbase/index.html)

@@ -37,6 +37,7 @@ R is foremost a functional programming language with dynamic typing, but has thr
 -   S4 is a more formalized form of object orientation that is available through `methods`. S4 classes have formal definitions and can dispatch methods based on multiple arguments (not just the first argument, as in S3). S4 is notable for its use of the `@` symbol to extract slots from S4 objects. John Chambers's ["How S4 Methods Work"](http://developer.r-project.org/howMethodsWork.pdf) tutorial may serve as a useful introduction.
 -   Reference classes were introduced in R2.12.0 and are also part of `methods`. They offer a distinct paradigm from S3 and S4 due to the fact that reference class objects are mutable and that methods belong to objects, not generic functions.
 -   <pkg>aoos</pkg> and <pkg>R.oo</pkg> are other packages facilitating object-oriented programming. <pkg>R6</pkg> ([Github](https://github.com/wch/R6)) provides an alternative to reference classes without a dependency on `methods`.
+-   <pkg>proto</pkg> provides a prototype-based object orientated programming paradigm.
 -   <pkg>rtype</pkg> provides a strong type system. 
 -   [argufy](https://github.com/gaborcsardi/argufy) (Not on CRAN), provides a syntax for creating functions with strictly typed arguments, among other possible checks.
 -   <pkg>lambda.r</pkg>, [lambdaR](https://github.com/hoxo-m/lambdaR) (not on CRAN), and <pkg>purrr</pkg> provide interfaces for creating lambda (anonymous) functions.
