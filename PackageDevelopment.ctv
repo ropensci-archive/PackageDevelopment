@@ -68,7 +68,7 @@
     <li><pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.</li>
     <li><pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.</li>
     <li><pkg>rGroovy</pkg> integrates with the <a href="http://groovy.codehaus.org/">Groovy scripting language</a>.</li>
-    <li><pkg>rJava</pkg> package provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++. <a href="http://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.</li>
+    <li><pkg>rJava</pkg> provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++. <pkg>helloJavaWorld</pkg> provides an example rJava-based package. <a href="http://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.</li>
     <li><a href="https://github.com/rustr/rustr">rustr</a> provides bindings to Rust.</li>
     <li><a href="https://github.com/schmidtchristoph/reach">reach</a> (not on CRAN) and <pkg>matlabr</pkg> provide rough interfaces to Matlab.</li>
     <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, and <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN) provide interfaces to python.</li>
@@ -214,6 +214,7 @@
     <pkg>git2r</pkg>
     <pkg>gitlabr</pkg>
     <pkg>gWidgets2</pkg>
+    <pkg>helloJavaWorld</pkg>
     <pkg>htmlwidgets</pkg>
     <pkg>hunspell</pkg>
     <pkg>import</pkg>
