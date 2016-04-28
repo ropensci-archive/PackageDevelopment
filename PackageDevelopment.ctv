@@ -59,6 +59,7 @@
     <li><pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates.</li>
     <li><pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">Github</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.</li>
     <li>Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> (<a href="https://github.com/smbache/import">Github</a>) can import numerous objects from a namespace and assign arbitrary names. <a href="https://github.com/klmr/modules">modules</a> (not on CRAN) provides functionality for importing alternative non-package code from Python-like &quot;modules&quot;.</li>
+    <li><a href="https://github.com/MangoTheCat/functionMap">functionMap</a> provides a visualization tool useful for understanding function dependencies within and across packages.</li>
     </ul>
     <h3 id="source-code">Source Code</h3>
     <p><strong>Foreign Languages Interfaces</strong></p>
