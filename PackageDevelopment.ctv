@@ -285,6 +285,7 @@
     <a href="http://cran.r-project.org/web/packages/httr/vignettes/api-packages.html">[Tutorial] "Best practices for writing an API package" by Hadley Wickham</a>
     <a href="http://cran.r-project.org/web/packages/policies.html">[Webpage] "CRAN Repository Policy" lists rules for hosting packages on CRAN</a>
     <a href="https://github.com/eddelbuettel/crp">[Webpage] Dirk Eddelbuettel provides a feed of CRAN policy changes</a>
+    <a href="https://github.com/jtleek/rpackages">[Webpage] "Developing R packages" by Jeff Leek</a>
     <a href="http://www.springer.com/mathematics/computational+science+%26+engineering/book/978-0-387-75935-7">[Book] "Software for Data Analysis" by John Chambers</a>
     <a href="http://adv-r.had.co.nz">[Book] "Advanced R" by Hadley Wickham</a>
     <a href="http://r-pkgs.had.co.nz/">[Book] "R packages" by Hadley  Wickham</a>
