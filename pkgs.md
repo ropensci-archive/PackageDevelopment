@@ -93,7 +93,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Profiling**
 
--   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`
+-   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`. <pkg>prof.tree</pkg> ([GitHub](https://github.com/artemklevtsov/prof.tree)) provides an alternative output data structure to `Rprof()`.
 -   <pkg>profr</pkg> can visualize output from the `Rprof` interface for profiling.
 -   <pkg>proftools</pkg> and <pkg>aprof</pkg> can also be used to analyse profiling output.
 -   [profvis](https://github.com/rstudio/profvis) (not on CRAN) provides an interactive, graphical interface for examining profile results.

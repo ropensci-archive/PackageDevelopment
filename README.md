@@ -105,7 +105,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 **Profiling**
 
--   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`
+-   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`. [prof.tree](http://cran.rstudio.com/web/packages/prof.tree/index.html) ([GitHub](https://github.com/artemklevtsov/prof.tree)) provides an alternative output data structure to `Rprof()`.
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html) can visualize output from the `Rprof` interface for profiling.
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html) and [aprof](http://cran.rstudio.com/web/packages/aprof/index.html) can also be used to analyse profiling output.
 -   [profvis](https://github.com/rstudio/profvis) (not on CRAN) provides an interactive, graphical interface for examining profile results.
@@ -261,6 +261,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [pkgconfig](http://cran.rstudio.com/web/packages/pkgconfig/index.html)
 -   [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html)
 -   [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html)
+-   [prof.tree](http://cran.rstudio.com/web/packages/prof.tree/index.html)
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html)
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html)
 -   [progress](http://cran.rstudio.com/web/packages/progress/index.html)

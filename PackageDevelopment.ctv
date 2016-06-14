@@ -92,7 +92,7 @@
     </ul>
     <p><strong>Profiling</strong></p>
     <ul>
-    <li>Profiling data is provided by <code>utils::Rprof()</code> and can be summarized by <code>utils::summaryRprof()</code></li>
+    <li>Profiling data is provided by <code>utils::Rprof()</code> and can be summarized by <code>utils::summaryRprof()</code>. <pkg>prof.tree</pkg> (<a href="https://github.com/artemklevtsov/prof.tree">GitHub</a>) provides an alternative output data structure to <code>Rprof()</code>.</li>
     <li><pkg>profr</pkg> can visualize output from the <code>Rprof</code> interface for profiling.</li>
     <li><pkg>proftools</pkg> and <pkg>aprof</pkg> can also be used to analyse profiling output.</li>
     <li><a href="https://github.com/rstudio/profvis">profvis</a> (not on CRAN) provides an interactive, graphical interface for examining profile results.</li>
@@ -241,6 +241,7 @@
     <pkg>pkgconfig</pkg>
     <pkg>pkgKitten</pkg>
     <pkg>pkgmaker</pkg>
+    <pkg>prof.tree</pkg>
     <pkg>profr</pkg>
     <pkg>proftools</pkg>
     <pkg>progress</pkg>
