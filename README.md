@@ -69,6 +69,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html) ([Github](https://github.com/rstudio/packrat)) provides facilities for creating local package repositories to manage and check dependencies.
 -   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html) relies on the Revolution Analytics MRAN repository to access packages from specified dates.
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html) ([Github](https://github.com/trinker/pacman)) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
+-   [GRANBase](http://cran.rstudio.com/web/packages/GRANBase/index.html) ([GitHub](https://github.com/gmbecker/gRAN)) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.
 -   Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). [import](http://cran.rstudio.com/web/packages/import/index.html) ([Github](https://github.com/smbache/import)) can import numerous objects from a namespace and assign arbitrary names. [modules](https://github.com/klmr/modules) (not on CRAN) provides functionality for importing alternative non-package code from Python-like "modules".
 -   [functionMap](https://github.com/MangoTheCat/functionMap) provides a visualization tool useful for understanding function dependencies within and across packages. [atomize](https://github.com/ropenscilabs/atomize) can quickly extract functions from within a package into their own package.
 
@@ -126,7 +127,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html), [assertr](http://cran.rstudio.com/web/packages/assertr/index.html), [checkmate](http://cran.rstudio.com/web/packages/checkmate/index.html) [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html), and [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html) provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
 -   [covr](http://cran.rstudio.com/web/packages/covr/index.html) and [testCoverage](https://github.com/MangoTheCat/testCoverage) (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/) that provide web interfaces for assessing code coverage.
 -   [withr](http://cran.rstudio.com/web/packages/withr/index.html) ([GitHub](https://github.com/jimhester/withr)) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.
--   The `devtools::use_revdep()` function from [devtools](http://cran.rstudio.com/web/packages/devtools/index.html) can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality.
+-   The `devtools::use_revdep()` and `revdep_check()` functions from [devtools](http://cran.rstudio.com/web/packages/devtools/index.html) can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality.
 
 **Internationalization and Localization**
 
@@ -236,6 +237,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [ghit](http://cran.rstudio.com/web/packages/ghit/index.html)
 -   [git2r](http://cran.rstudio.com/web/packages/git2r/index.html)
 -   [gitlabr](http://cran.rstudio.com/web/packages/gitlabr/index.html)
+-   [GRANBase](http://cran.rstudio.com/web/packages/GRANBase/index.html)
 -   [gWidgets2](http://cran.rstudio.com/web/packages/gWidgets2/index.html)
 -   [helloJavaWorld](http://cran.rstudio.com/web/packages/helloJavaWorld/index.html)
 -   [htmlwidgets](http://cran.rstudio.com/web/packages/htmlwidgets/index.html)

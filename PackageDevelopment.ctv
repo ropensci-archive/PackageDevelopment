@@ -59,6 +59,7 @@
     <li><pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">Github</a>) provides facilities for creating local package repositories to manage and check dependencies.</li>
     <li><pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates.</li>
     <li><pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">Github</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.</li>
+    <li><pkg>GRANBase</pkg> (<a href="https://github.com/gmbecker/gRAN">GitHub</a>) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.</li>
     <li>Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> (<a href="https://github.com/smbache/import">Github</a>) can import numerous objects from a namespace and assign arbitrary names. <a href="https://github.com/klmr/modules">modules</a> (not on CRAN) provides functionality for importing alternative non-package code from Python-like &quot;modules&quot;.</li>
     <li><a href="https://github.com/MangoTheCat/functionMap">functionMap</a> provides a visualization tool useful for understanding function dependencies within and across packages. <a href="https://github.com/ropenscilabs/atomize">atomize</a> can quickly extract functions from within a package into their own package.</li>
     </ul>
@@ -113,7 +114,7 @@
     <li><pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>checkmate</pkg> <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.</li>
     <li><pkg>covr</pkg> and <a href="https://github.com/MangoTheCat/testCoverage">testCoverage</a> (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as <a href="https://codecov.io/">Codecov</a> or <a href="https://coveralls.io/">Coveralls</a> that provide web interfaces for assessing code coverage.</li>
     <li><pkg>withr</pkg> (<a href="https://github.com/jimhester/withr">GitHub</a>) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.</li>
-    <li>The <code>devtools::use_revdep()</code> function from <pkg>devtools</pkg> can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality.</li>
+    <li>The <code>devtools::use_revdep()</code> and <code>revdep_check()</code> functions from <pkg>devtools</pkg> can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality.</li>
     </ul>
     <p><strong>Internationalization and Localization</strong></p>
     <ul>
@@ -217,6 +218,7 @@
     <pkg>ghit</pkg>
     <pkg>git2r</pkg>
     <pkg>gitlabr</pkg>
+    <pkg>GRANBase</pkg>
     <pkg>gWidgets2</pkg>
     <pkg>helloJavaWorld</pkg>
     <pkg>htmlwidgets</pkg>

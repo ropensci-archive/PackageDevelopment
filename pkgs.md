@@ -56,6 +56,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   <pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">Github</a>) provides facilities for creating local package repositories to manage and check dependencies. 
 -   <pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates. 
 -   <pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">Github</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
+-   <pkg>GRANBase</pkg> ([GitHub](https://github.com/gmbecker/gRAN)) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.
 -   Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> (<a href="https://github.com/smbache/import">Github</a>) can import numerous objects from a namespace and assign arbitrary names. <a href="https://github.com/klmr/modules">modules</a> (not on CRAN) provides functionality for importing alternative non-package code from Python-like "modules".
 -   [functionMap](https://github.com/MangoTheCat/functionMap) provides a visualization tool useful for understanding function dependencies within and across packages. [atomize](https://github.com/ropenscilabs/atomize) can quickly extract functions from within a package into their own package.
 
