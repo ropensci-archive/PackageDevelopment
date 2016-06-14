@@ -115,7 +115,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   <pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>checkmate</pkg> <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
 -   <pkg>covr</pkg> and [testCoverage](https://github.com/MangoTheCat/testCoverage) (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/) that provide web interfaces for assessing code coverage.
 -   <pkg>withr</pkg> ([GitHub](https://github.com/jimhester/withr)) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.
--   The `devtools::use_revdep()` and `revdep_check()` functions from <pkg>devtools</pkg> can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality.
+-   The `devtools::use_revdep()` and `revdep_check()` functions from <pkg>devtools</pkg> can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality. [crandalf](https://github.com/yihui/crandalf) (not on CRAN) provides an alternative mechanism for testing reverse dependencies.
 
 **Internationalization and Localization**
 
