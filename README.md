@@ -94,6 +94,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Debugging**
 
 -   [log4r](http://cran.rstudio.com/web/packages/log4r/index.html) ([Github](https://github.com/johnmyleswhite/log4r)) and [logging](http://cran.rstudio.com/web/packages/logging/index.html) provide logging functionality in the style of [log4j](https://en.wikipedia.org/wiki/Log4j).
+-   [rollbar](http://cran.rstudio.com/web/packages/rollbar/index.html) reports messages and errors to [Rollbar](https://rollbar.com), a web service.
 -   The [rchk](https://github.com/kalibera/rchk) tool provides tools for identifying memory-protection bugs in C code, including base R and packages.
 
 **Code Analysis and Formatting**
@@ -280,6 +281,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [rGroovy](http://cran.rstudio.com/web/packages/rGroovy/index.html)
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html)
 -   [rJython](http://cran.rstudio.com/web/packages/rJython/index.html)
+-   [rollbar](http://cran.rstudio.com/web/packages/rollbar/index.html)
 -   [roxygen2](http://cran.rstudio.com/web/packages/roxygen2/index.html) (core)
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html)
 -   [rscala](http://cran.rstudio.com/web/packages/rscala/index.html)
