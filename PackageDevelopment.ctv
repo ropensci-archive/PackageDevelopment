@@ -81,6 +81,7 @@
     <p><strong>Debugging</strong></p>
     <ul>
     <li><pkg>log4r</pkg> (<a href="https://github.com/johnmyleswhite/log4r">Github</a>) and <pkg>logging</pkg> provide logging functionality in the style of <a href="https://en.wikipedia.org/wiki/Log4j">log4j</a>.</li>
+    <li><a href="https://github.com/smbache/loggr">loggr</a> (not on CRAN) aims to provide a simplified logging interface without the need for <code>withCallingHandlers()</code> expressions.</li>
     <li><pkg>rollbar</pkg> reports messages and errors to <a href="https://rollbar.com">Rollbar</a>, a web service.</li>
     <li>The <a href="https://github.com/kalibera/rchk">rchk</a> tool provides tools for identifying memory-protection bugs in C code, including base R and packages.</li>
     </ul>

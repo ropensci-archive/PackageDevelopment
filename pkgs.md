@@ -82,6 +82,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Debugging**
 
 -   <pkg>log4r</pkg> ([Github](https://github.com/johnmyleswhite/log4r)) and <pkg>logging</pkg> provide logging functionality in the style of [log4j](https://en.wikipedia.org/wiki/Log4j).
+-   [loggr](https://github.com/smbache/loggr) (not on CRAN) aims to provide a simplified logging interface without the need for `withCallingHandlers()` expressions.
 -   <pkg>rollbar</pkg> reports messages and errors to [Rollbar](https://rollbar.com), a web service.
 -   The [rchk](https://github.com/kalibera/rchk) tool provides tools for identifying memory-protection bugs in C code, including base R and packages.
 
