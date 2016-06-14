@@ -8,7 +8,7 @@ CRAN Task View: Package Development
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
-| **Version:**    | 2016-04-28               |
+| **Version:**    | 2016-06-14               |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
 
@@ -82,7 +82,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html) provides a low-level interface to Java similar to the `.Call` interface for C and C++. [helloJavaWorld](http://cran.rstudio.com/web/packages/helloJavaWorld/index.html) provides an example rJava-based package. [jvmr](https://dahl.byu.edu/software/jvmr/) (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while [rscala](http://cran.rstudio.com/web/packages/rscala/index.html) is designed specifically for Scala.
 -   [rustr](https://github.com/rustr/rustr) provides bindings to Rust.
 -   [reach](https://github.com/schmidtchristoph/reach) (not on CRAN) and [matlabr](http://cran.rstudio.com/web/packages/matlabr/index.html) provide rough interfaces to Matlab.
--   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), and [rpy2](http://rpy.sourceforge.net/) (not on CRAN) provide interfaces to python.
+-   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
 -   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata.
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html) offers an embedded Javascript engine, useful for building packages around Javascript libraries. [js](http://cran.rstudio.com/web/packages/js/index.html) provides additional tools for working with Javascript code.

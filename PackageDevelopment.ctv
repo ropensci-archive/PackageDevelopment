@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2016-04-28</version>
+  <version>2016-06-14</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -71,7 +71,7 @@
     <li><pkg>rJava</pkg> provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++. <pkg>helloJavaWorld</pkg> provides an example rJava-based package. <a href="https://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.</li>
     <li><a href="https://github.com/rustr/rustr">rustr</a> provides bindings to Rust.</li>
     <li><a href="https://github.com/schmidtchristoph/reach">reach</a> (not on CRAN) and <pkg>matlabr</pkg> provide rough interfaces to Matlab.</li>
-    <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, and <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN) provide interfaces to python.</li>
+    <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN), and <a href="https://github.com/asieira/SnakeCharmR">SnakeCharmR</a> (not on CRAN) provide interfaces to python.</li>
     <li><a href="https://github.com/armgong/RJulia">RJulia</a> (not on CRAN) provides an interface with Julia.</li>
     <li><pkg>RStata</pkg> is an interface with Stata.</li>
     <li><pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.</li>
