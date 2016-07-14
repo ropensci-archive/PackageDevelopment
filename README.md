@@ -8,7 +8,7 @@ CRAN Task View: Package Development
 |-----------------|--------------------------|
 | **Maintainer:** | Thomas J. Leeper         |
 | **Contact:**    | thosjleeper at gmail.com |
-| **Version:**    | 2016-06-14               |
+| **Version:**    | 2016-07-14               |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
 
@@ -41,6 +41,8 @@ Before starting a new package it's worth searching for already available package
 -   [mason](https://github.com/metacran/mason) provides a fun, interactive tool for creating a package based on a variety of inputs.
 -   `Rcpp.package.skeleton()` from [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) adds to `package.skeleton` the C++ via `Rcpp` handling, by modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in `src` directory . Finally the user can decide main `DESCRIPTION` entries.
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html) provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph. [pagerank](https://github.com/andrie/pagerank) (not on CRAN) can calculate a package's PageRank from its dependency graph.
+
+When initializing a package, it is worth considering how it should be licensed. CRAN provides [a list of the most commonly used software licences](https://cran.r-project.org/web/licenses/) for R packages. [osi](http://cran.rstudio.com/web/packages/osi/index.html) ([GitHub](https://github.com/Ironholds/osi/)) provides a more comprehensive list in a standardized format.
 
 **Programming Paradigms**
 
@@ -259,6 +261,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [microbenchmark](http://cran.rstudio.com/web/packages/microbenchmark/index.html)
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html)
 -   [optigrab](http://cran.rstudio.com/web/packages/optigrab/index.html)
+-   [osi](http://cran.rstudio.com/web/packages/osi/index.html)
 -   [packagetrackr](http://cran.rstudio.com/web/packages/packagetrackr/index.html)
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html)
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)
