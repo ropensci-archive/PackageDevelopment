@@ -88,6 +88,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia. [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
 -   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata. [RCall](https://github.com/haghish/Rcall) embeds R in Stata.
+-   `tcltk`, which is a package built in to R, provides an general interface to Tcl, usefully especially for accessing Tcl/tk (for graphical interfaces). [after](http://cran.rstudio.com/web/packages/after/index.html) ([GitHub](https://github.com/gaborcsardi/after)) uses tcltk to run R code in a separate event loop.
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html) offers an embedded Javascript engine, useful for building packages around Javascript libraries. [js](http://cran.rstudio.com/web/packages/js/index.html) provides additional tools for working with Javascript code.
 
 The [knitr](http://cran.rstudio.com/web/packages/knitr/index.html) package, which supplies [various foreign language engines](http://yihui.name/knitr/demo/engines/), can also be used to generate documents that call python, awk, ruby, haskell, bash, perl, dot, tikz, sas, coffeescript, and polyglot.
@@ -213,6 +214,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 
 ### CRAN packages:
 
+-   [after](http://cran.rstudio.com/web/packages/after/index.html)
 -   [aoos](http://cran.rstudio.com/web/packages/aoos/index.html)
 -   [aprof](http://cran.rstudio.com/web/packages/aprof/index.html)
 -   [argparse](http://cran.rstudio.com/web/packages/argparse/index.html)

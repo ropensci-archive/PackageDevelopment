@@ -76,6 +76,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   <pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia. [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
 -   <pkg>RStata</pkg> is an interface with Stata. [RCall](https://github.com/haghish/Rcall) embeds R in Stata.
+-   `tcltk`, which is a package built in to R, provides an general interface to Tcl, usefully especially for accessing Tcl/tk (for graphical interfaces). <pkg>after</pkg> ([GitHub](https://github.com/gaborcsardi/after)) uses tcltk to run R code in a separate event loop.
 -   <pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.
 
 The <pkg>knitr</pkg> package, which supplies [various foreign language engines](http://yihui.name/knitr/demo/engines/), can also be used to generate documents that call python, awk, ruby, haskell, bash, perl, dot, tikz, sas, coffeescript, and polyglot.
