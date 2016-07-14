@@ -93,7 +93,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 -   <pkg>codetools</pkg> provides a number of low-level functions for identifying possible problems with source code.
 -   <pkg>lint</pkg> and <pkg>lintr</pkg> provide tools for checking source code compliance with a style guide.
--   <pkg>formatR</pkg> can be used to neatly format source code.
+-   <pkg>formatR</pkg> and [rfmt](https://github.com/google/rfmt/) (not on CRAN) can be used to neatly format source code.
 -   <pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.
 
 **Profiling**

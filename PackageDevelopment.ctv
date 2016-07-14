@@ -91,7 +91,7 @@
     <ul>
     <li><pkg>codetools</pkg> provides a number of low-level functions for identifying possible problems with source code.</li>
     <li><pkg>lint</pkg> and <pkg>lintr</pkg> provide tools for checking source code compliance with a style guide.</li>
-    <li><pkg>formatR</pkg> can be used to neatly format source code.</li>
+    <li><pkg>formatR</pkg> and <a href="https://github.com/google/rfmt/">rfmt</a> (not on CRAN) can be used to neatly format source code.</li>
     <li><pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.</li>
     </ul>
     <p><strong>Profiling</strong></p>

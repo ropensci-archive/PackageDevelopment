@@ -105,7 +105,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 -   [codetools](http://cran.rstudio.com/web/packages/codetools/index.html) provides a number of low-level functions for identifying possible problems with source code.
 -   [lint](http://cran.rstudio.com/web/packages/lint/index.html) and [lintr](http://cran.rstudio.com/web/packages/lintr/index.html) provide tools for checking source code compliance with a style guide.
--   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html) can be used to neatly format source code.
+-   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html) and [rfmt](https://github.com/google/rfmt/) (not on CRAN) can be used to neatly format source code.
 -   [FuncMap](http://cran.rstudio.com/web/packages/FuncMap/index.html) provides a graphical representation of function calls used in a package.
 
 **Profiling**
