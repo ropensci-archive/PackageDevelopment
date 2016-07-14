@@ -80,14 +80,14 @@ Packages that have dependencies on other packages need to be vigilant of changes
 **Foreign Languages Interfaces**
 
 -   [inline](http://cran.rstudio.com/web/packages/inline/index.html) eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
--   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
+-   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier. [RInside](http://cran.rstudio.com/web/packages/RInside/index.html) provides C++ classes for embedding within C++ applications.
 -   [rGroovy](http://cran.rstudio.com/web/packages/rGroovy/index.html) integrates with the [Groovy scripting language](http://www.groovy-lang.org/).
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html) provides a low-level interface to Java similar to the `.Call` interface for C and C++. [helloJavaWorld](http://cran.rstudio.com/web/packages/helloJavaWorld/index.html) provides an example rJava-based package. [jvmr](https://dahl.byu.edu/software/jvmr/) (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while [rscala](http://cran.rstudio.com/web/packages/rscala/index.html) is designed specifically for Scala.
 -   [rustr](https://github.com/rustr/rustr) provides bindings to Rust.
 -   [reach](https://github.com/schmidtchristoph/reach) (not on CRAN) and [matlabr](http://cran.rstudio.com/web/packages/matlabr/index.html) provide rough interfaces to Matlab.
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python.
--   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
--   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata.
+-   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia. [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
+-   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata. [RCall](https://github.com/haghish/Rcall) embeds R in Stata.
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html) offers an embedded Javascript engine, useful for building packages around Javascript libraries. [js](http://cran.rstudio.com/web/packages/js/index.html) provides additional tools for working with Javascript code.
 
 The [knitr](http://cran.rstudio.com/web/packages/knitr/index.html) package, which supplies [various foreign language engines](http://yihui.name/knitr/demo/engines/), can also be used to generate documents that call python, awk, ruby, haskell, bash, perl, dot, tikz, sas, coffeescript, and polyglot.
@@ -287,6 +287,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [Rd2roxygen](http://cran.rstudio.com/web/packages/Rd2roxygen/index.html)
 -   [Rdpack](http://cran.rstudio.com/web/packages/Rdpack/index.html)
 -   [rGroovy](http://cran.rstudio.com/web/packages/rGroovy/index.html)
+-   [RInside](http://cran.rstudio.com/web/packages/RInside/index.html)
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html)
 -   [rJython](http://cran.rstudio.com/web/packages/rJython/index.html)
 -   [rollbar](http://cran.rstudio.com/web/packages/rollbar/index.html)

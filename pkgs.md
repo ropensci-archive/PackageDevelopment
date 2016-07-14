@@ -68,14 +68,14 @@ Packages that have dependencies on other packages need to be vigilant of changes
 **Foreign Languages Interfaces**
 
 -   <pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
--   <pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier.
+-   <pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier. <pkg>RInside</pkg> provides C++ classes for embedding within C++ applications.
 -   <pkg>rGroovy</pkg> integrates with the [Groovy scripting language](http://www.groovy-lang.org/).
 -   <pkg>rJava</pkg> provides a low-level interface to Java similar to the `.Call` interface for C and C++. <pkg>helloJavaWorld</pkg> provides an example rJava-based package. [jvmr](https://dahl.byu.edu/software/jvmr/) (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.
 -   [rustr](https://github.com/rustr/rustr) provides bindings to Rust.
 -   [reach](https://github.com/schmidtchristoph/reach) (not on CRAN) and <pkg>matlabr</pkg> provide rough interfaces to Matlab.
 -   <pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python.
--   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia.
--   <pkg>RStata</pkg> is an interface with Stata.
+-   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia. [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
+-   <pkg>RStata</pkg> is an interface with Stata. [RCall](https://github.com/haghish/Rcall) embeds R in Stata.
 -   <pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.
 
 The <pkg>knitr</pkg> package, which supplies [various foreign language engines](http://yihui.name/knitr/demo/engines/), can also be used to generate documents that call python, awk, ruby, haskell, bash, perl, dot, tikz, sas, coffeescript, and polyglot.
