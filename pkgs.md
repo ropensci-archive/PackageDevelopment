@@ -28,6 +28,7 @@ Before starting a new package it's worth searching for already available package
 -   <a href="https://github.com/metacran/mason">mason</a> provides a fun, interactive tool for creating a package based on a variety of inputs.
 -   `Rcpp.package.skeleton()` from <pkg>Rcpp</pkg> adds to `package.skeleton` the C++ via `Rcpp` handling, by modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in `src` directory . Finally the user can decide main `DESCRIPTION` entries.
 -   <pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph. [pagerank](https://github.com/andrie/pagerank) (not on CRAN) can calculate a package's PageRank from its dependency graph.
+-   [swagger](https://github.com/hrbrmstr/swagger) (not on CRAN) uses the [Swagger](http://swagger.io/) JSON web service API specification to automatically generate an R client package for a web service API.
 
 When initializing a package, it is worth considering how it should be licensed. CRAN provides [a list of the most commonly used software licences](https://cran.r-project.org/web/licenses/) for R packages. <pkg>osi</pkg> ([GitHub](https://github.com/Ironholds/osi/)) provides a more comprehensive list in a standardized format.
 
