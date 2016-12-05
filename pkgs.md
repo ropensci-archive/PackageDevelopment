@@ -14,7 +14,7 @@ Before starting a new package it's worth searching for already available package
 
 -   `utils::RSiteSearch()` allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <http://search.r-project.org/>. A convenient wrapper around `RSiteSearch` that adds hits ranking is `findFn()` function, from <pkg>sos</pkg>.
 -   [RSeek](http://rseek.org/) allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.
--   [Rdocumentation](http://www.rdocumentation.org/) allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.
+-   [Rdocumentation](http://www.rdocumentation.org/) allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages. <pkg>RDocumentation</pkg> ([GitHub](https://github.com/datacamp/RDocumentation/)) provides an R client for the site. 
 -   [Crantastic!](http://crantastic.org/) maintains an up-to-date and tagged directory of packages on CRAN. The [Managed R Archive Network](https://mran.revolutionanalytics.com/) from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.
 -   [http://www.r-pkg.org/](http://www.r-pkg.org/) is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.
 -   [CRANberries](http://dirk.eddelbuettel.com/cranberries/) provides a feed of new, updated, and removed packages for CRAN.
