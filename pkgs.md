@@ -76,7 +76,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [rustr](https://github.com/rustr/rustr) provides bindings to Rust.
 -   [reach](https://github.com/schmidtchristoph/reach) (not on CRAN) and <pkg>matlabr</pkg> provide rough interfaces to Matlab.
 -   <pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python.
--   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia. [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
+-   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia, as does <pkg>XRJulia</pkg>. [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
 -   <pkg>RStata</pkg> is an interface with Stata. [RCall](https://github.com/haghish/Rcall) embeds R in Stata.
 -   `tcltk`, which is a package built in to R, provides an general interface to Tcl, usefully especially for accessing Tcl/tk (for graphical interfaces). <pkg>after</pkg> ([GitHub](https://github.com/gaborcsardi/after)) uses tcltk to run R code in a separate event loop.
 -   <pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.
