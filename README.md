@@ -5,18 +5,18 @@ CRAN Task View: Package Development
 
 | | |
 |---|---|
-|-----------------|--------------------------|
-| **Maintainer:** | Thomas J. Leeper         |
-| **Contact:**    | thosjleeper at gmail.com |
-| **Version:**    | 2016-07-23               |
+|-----------------|------------------------------------------------------|
+| **Maintainer:** | Thomas J. Leeper                                     |
+| **Contact:**    | thosjleeper at gmail.com                             |
+| **Version:**    | 2016-12-05                                           |
+| **URL:**        | <https://CRAN.R-project.org/view=PackageDevelopment> |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
 
 The main reference for packages development is the ["Writing R Extension"](http://cran.r-project.org/doc/manuals/R-exts.html) manual. For further documentation and tutorials, see the "Related links" section below.
 
-If you think that some packages or tools are missing from the list, feel free to
-e-mail (thosjleeper at gmail dot com)
-me or contribute directly to the Task View by submitting a pull request on [GitHub](http://github.com/ropensci/PackageDevelopment/blob/master/CONTRIBUTING.md).
+If you think that some packages or tools are missing from the list, feel free to [e-mail](mailto:thosjleeper@gmail.com) me or contribute directly to the Task View by submitting a pull request on [GitHub](http://github.com/ropensci/PackageDevelopment/blob/master/CONTRIBUTING.md).
+
 Many thanks to Christopher Gandrud, Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.
 
 ### First steps
@@ -25,11 +25,11 @@ Many thanks to Christopher Gandrud, Cristophe Dutang, Darren Norris, Dirk Eddelb
 
 Before starting a new package it's worth searching for already available packages, both from a developer's standpoint ("do not reinvent the wheel") and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one.
 
--   `utils::RSiteSearch()` allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <http://search.r-project.org/>. A convenient wrapper around `RSiteSearch` that adds hits ranking is `findFn()` function, from [sos](http://cran.rstudio.com/web/packages/sos/index.html).
+-   `utils::RSiteSearch()` allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <a href="http://search.r-project.org/" class="uri" class="uri">http://search.r-project.org/</a>. A convenient wrapper around `RSiteSearch` that adds hits ranking is `findFn()` function, from [sos](http://cran.rstudio.com/web/packages/sos/index.html).
 -   [RSeek](http://rseek.org/) allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.
--   [Rdocumentation](http://www.rdocumentation.org/) allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages.
+-   [Rdocumentation](http://www.rdocumentation.org/) allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages. [RDocumentation](http://cran.rstudio.com/web/packages/RDocumentation/index.html) ([GitHub](https://github.com/datacamp/RDocumentation/)) provides an R client for the site.
 -   [Crantastic!](http://crantastic.org/) maintains an up-to-date and tagged directory of packages on CRAN. The [Managed R Archive Network](https://mran.revolutionanalytics.com/) from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.
--   <http://www.r-pkg.org/> is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.
+-   <a href="http://www.r-pkg.org/" class="uri" class="uri">http://www.r-pkg.org/</a> is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.
 -   [CRANberries](http://dirk.eddelbuettel.com/cranberries/) provides a feed of new, updated, and removed packages for CRAN.
 -   If you're looking to create a package, but want ideas for what sorts of packages are in demand, the [rOpenSci](https://ropensci.org/) maintains [a wishlist for science-related packages](https://github.com/ropensci/wishlist) and [a TODO list of web services and data APIs in need of packaging](https://github.com/ropensci/webservices/wiki/ToDo).
 
@@ -80,6 +80,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 
 **Foreign Languages Interfaces**
 
+-   [processx](https://github.com/MangoTheCat/processx) (not on CRAN) provides a unified, platform-independent API for running system processes.
 -   [inline](http://cran.rstudio.com/web/packages/inline/index.html) eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
 -   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier. [RInside](http://cran.rstudio.com/web/packages/RInside/index.html) provides C++ classes for embedding within C++ applications.
 -   [rGroovy](http://cran.rstudio.com/web/packages/rGroovy/index.html) integrates with the [Groovy scripting language](http://www.groovy-lang.org/).
@@ -87,7 +88,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [rustr](https://github.com/rustr/rustr) provides bindings to Rust.
 -   [reach](https://github.com/schmidtchristoph/reach) (not on CRAN) and [matlabr](http://cran.rstudio.com/web/packages/matlabr/index.html) provide rough interfaces to Matlab.
 -   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python.
--   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia. [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
+-   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia, as does [XRJulia](http://cran.rstudio.com/web/packages/XRJulia/index.html). [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
 -   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata. [RCall](https://github.com/haghish/Rcall) embeds R in Stata.
 -   `tcltk`, which is a package built in to R, provides an general interface to Tcl, usefully especially for accessing Tcl/tk (for graphical interfaces). [after](http://cran.rstudio.com/web/packages/after/index.html) ([GitHub](https://github.com/gaborcsardi/after)) uses tcltk to run R code in a separate event loop.
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html) offers an embedded Javascript engine, useful for building packages around Javascript libraries. [js](http://cran.rstudio.com/web/packages/js/index.html) provides additional tools for working with Javascript code.
@@ -106,13 +107,13 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Code Analysis and Formatting**
 
 -   [codetools](http://cran.rstudio.com/web/packages/codetools/index.html) provides a number of low-level functions for identifying possible problems with source code.
--   [lint](http://cran.rstudio.com/web/packages/lint/index.html) and [lintr](http://cran.rstudio.com/web/packages/lintr/index.html) provide tools for checking source code compliance with a style guide.
+-   [lintr](http://cran.rstudio.com/web/packages/lintr/index.html) provides tools for checking source code compliance with a style guide.
 -   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html) and [rfmt](https://github.com/google/rfmt/) (not on CRAN) can be used to neatly format source code.
 -   [FuncMap](http://cran.rstudio.com/web/packages/FuncMap/index.html) provides a graphical representation of function calls used in a package.
 
 **Profiling**
 
--   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`. [prof.tree](http://cran.rstudio.com/web/packages/prof.tree/index.html) ([GitHub](https://github.com/artemklevtsov/prof.tree)) provides an alternative output data structure to `Rprof()`.
+-   Profiling data is provided by `utils::Rprof()` and can be summarized by `utils::summaryRprof()`. [prof.tree](http://cran.rstudio.com/web/packages/prof.tree/index.html) ([GitHub](https://github.com/artemklevtsov/prof.tree)) provides an alternative output data structure to `Rprof()`. [profmem](http://cran.rstudio.com/web/packages/profmem/index.html) ([GitHub](https://github.com/HenrikBengtsson/profmem)) adds a simple interface on top of this.
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html) can visualize output from the `Rprof` interface for profiling.
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html) and [aprof](http://cran.rstudio.com/web/packages/aprof/index.html) can also be used to analyse profiling output.
 -   [profvis](https://github.com/rstudio/profvis) (not on CRAN) provides an interactive, graphical interface for examining profile results.
@@ -127,7 +128,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Unit Testing**
 
 -   Packages should pass all basic code and documentation checks provided by the `R CMD check` quality assurance tools built in to R. [rcmdcheck](http://cran.rstudio.com/web/packages/rcmdcheck/index.html) provides programmatic access to `R CMD check` from within R and [callr](https://github.com/MangoTheCat/callr) (not on CRAN) provides a generic interface for calling R from within R.
--   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), [testit](https://github.com/yihui/testit) (Not on CRAN), [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html), and [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html). [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html) provides utilities for converting exiting RUnit tests to testthat tests.
+-   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), [testit](http://cran.rstudio.com/web/packages/testit/index.html) ([GitHub](https://github.com/yihui/testit)), [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [testthatsomemore](https://github.com/robertzk/testthatsomemore) (not on CRAN), and [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html). [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html) provides utilities for converting exiting RUnit tests to testthat tests.
 -   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html), [assertr](http://cran.rstudio.com/web/packages/assertr/index.html), [checkmate](http://cran.rstudio.com/web/packages/checkmate/index.html) [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html), and [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html) provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
 -   [covr](http://cran.rstudio.com/web/packages/covr/index.html) and [testCoverage](https://github.com/MangoTheCat/testCoverage) (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/) that provide web interfaces for assessing code coverage.
 -   [withr](http://cran.rstudio.com/web/packages/withr/index.html) ([GitHub](https://github.com/jimhester/withr)) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.
@@ -161,7 +162,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 Package documentation is written in a TeX-like format as .Rd files that are stored in the `man` subdirectory of a package. These files are compiled to plain text, HTML, or PDF by R as needed.
 
 -   One can write .Rd files directly. A popular alternative is to rely on [roxygen2](http://cran.rstudio.com/web/packages/roxygen2/index.html), which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by `roxygen2::roxygenise()` and underlies `devtools::document()`. roxygen2 eliminates the need to learn *some* of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling `R CMD build`).
--   [Rd2roxygen](http://cran.rstudio.com/web/packages/Rd2roxygen/index.html) can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow.
+-   [Rd2roxygen](http://cran.rstudio.com/web/packages/Rd2roxygen/index.html) can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow. [roxygen2md](https://github.com/r-pkgs/roxygen2md) (not on CRAN) provides tools for further converting Rd markup within roxygen comments to markdown format (supported by the latest versions of roxygen2).
 -   [inlinedocs](http://cran.rstudio.com/web/packages/inlinedocs/index.html) and [documair](http://cran.rstudio.com/web/packages/documair/index.html) provide further alternative documentation schemes based on source code commenting.
 -   `tools::parse_Rd()` can be used to manipulate the contents of an .Rd file. `tools::checkRd()` is useful for validating an .Rd file. Duncan Murdoch's ["Parsing Rd files"](https://developer.r-project.org/parseRd.pdf) tutorial is a useful reference for advanced use of R documentation. [Rdpack](http://cran.rstudio.com/web/packages/Rdpack/index.html) provides additional tools for manipulating documentation files.
 
@@ -205,7 +206,8 @@ Package vignettes provides additional documentation of package functionality tha
 Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities) are available. Use of different hosts depends largely on what type of version control software is used to maintain a package. The most common sites are:
 
 -   [R-Forge](http://r-forge.r-project.org/), which relies on [Subversion](http://subversion.apache.org/). [Rforge.net](https://rforge.net/) is another popular Subversion-based system.
--   [GitHub](https://github.com/) [mainly](https://help.github.com/articles/support-for-subversion-clients/) supports Git and Mercurial. Packages hosted on Github can be installed directly using `devtools::install_github()` or `ghit::install_github()` from [ghit](http://cran.rstudio.com/web/packages/ghit/index.html). [gh](https://github.com/gaborcsardi/gh) (not on CRAN) is a lightweight client for the GitHub API. [Bitbucket](https://bitbucket.org/) is an alternative host that provides no-cost private repositories and [GitLab](https://about.gitlab.com/) is an open source alternative. [gitlabr](http://cran.rstudio.com/web/packages/gitlabr/index.html) provides is an API client for managing Gitlab projects.
+-   [r-hub](http://log.r-hub.io/) is a modern package test service funded by the RConsortium . [rhub](https://github.com/r-hub/rhub) (not on CRAN) provides an R client for the site's API.
+-   [GitHub](https://github.com/) [mainly](https://help.github.com/articles/support-for-subversion-clients/) supports Git and Mercurial. Packages hosted on Github can be installed directly using `devtools::install_github()` or `ghit::install_github()` from [ghit](http://cran.rstudio.com/web/packages/ghit/index.html) or `remotes::install_github()` from [remotes](http://cran.rstudio.com/web/packages/remotes/index.html). [gh](https://github.com/gaborcsardi/gh) (not on CRAN) is a lightweight client for the GitHub API. [Bitbucket](https://bitbucket.org/) is an alternative host that provides no-cost private repositories and [GitLab](https://about.gitlab.com/) is an open source alternative. [gitlabr](http://cran.rstudio.com/web/packages/gitlabr/index.html) provides is an API client for managing Gitlab projects.
 -   Github supports [continuous integration](https://en.wikipedia.org/wiki/Continuous_integration) for R packages. [Travis CI](https://travis-ci.org/) is a popular continuous integration tools that supports Linux and OS X build environments. Travis has native R support, and can easily provide code coverage information via [covr](http://cran.rstudio.com/web/packages/covr/index.html) to [Codecov.io](https://codecov.io/) or [Coveralls](https://coveralls.io/). [travisci](https://github.com/cloudyr/travisci) (not on CRAN) provides an API client for Travis. Use of other CI services, such as [Circle CI](https://circleci.com/) may require additional code and examples are available from [r-travis](https://github.com/craigcitro/r-travis) and/or [r-builder](https://github.com/metacran/r-builder). [circleci](https://github.com/cloudyr/circleci) (not on CRAN) provides an API client for Circle CI. [badgecreatr](http://cran.rstudio.com/web/packages/badgecreatr/index.html) ([GitHub](https://github.com/RMHogervorst/badgecreatr)) provides a convenient way of creating standardized badges (or "shields") for package READMEs.
 -   [WinBuilder](http://win-builder.r-project.org/) is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an `R CMD check`) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the `Maintainer` with links to the package zip file and logs for download/inspection. [Appveyor](http://www.appveyor.com/) is a continuous integration service that offers a Windows build environment. [r-appveyor](https://github.com/krlmlr/r-appveyor) (not on CRAN) and [appveyor](https://github.com/cloudyr/appveyor) (not on CRAN) provide API clients for Appveyor.
 -   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/). [harbor](https://github.com/wch/harbor) can be used to control docker containers on remote and local hosts and [dockertest](https://github.com/traitecoevo/dockertest) provides facilities for running tests on docker.
@@ -256,7 +258,6 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [lambda.r](http://cran.rstudio.com/web/packages/lambda.r/index.html)
 -   [lazyData](http://cran.rstudio.com/web/packages/lazyData/index.html)
 -   [lazyeval](http://cran.rstudio.com/web/packages/lazyeval/index.html)
--   [lint](http://cran.rstudio.com/web/packages/lint/index.html)
 -   [lintr](http://cran.rstudio.com/web/packages/lintr/index.html)
 -   [log4r](http://cran.rstudio.com/web/packages/log4r/index.html)
 -   [logging](http://cran.rstudio.com/web/packages/logging/index.html)
@@ -274,6 +275,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html)
 -   [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html)
 -   [prof.tree](http://cran.rstudio.com/web/packages/prof.tree/index.html)
+-   [profmem](http://cran.rstudio.com/web/packages/profmem/index.html)
 -   [profr](http://cran.rstudio.com/web/packages/profr/index.html)
 -   [proftools](http://cran.rstudio.com/web/packages/proftools/index.html)
 -   [progress](http://cran.rstudio.com/web/packages/progress/index.html)
@@ -288,7 +290,9 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [rcmdcheck](http://cran.rstudio.com/web/packages/rcmdcheck/index.html)
 -   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html)
 -   [Rd2roxygen](http://cran.rstudio.com/web/packages/Rd2roxygen/index.html)
+-   [RDocumentation](http://cran.rstudio.com/web/packages/RDocumentation/index.html)
 -   [Rdpack](http://cran.rstudio.com/web/packages/Rdpack/index.html)
+-   [remotes](http://cran.rstudio.com/web/packages/remotes/index.html)
 -   [rGroovy](http://cran.rstudio.com/web/packages/rGroovy/index.html)
 -   [RInside](http://cran.rstudio.com/web/packages/RInside/index.html)
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html)
@@ -306,10 +310,11 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [sos](http://cran.rstudio.com/web/packages/sos/index.html)
 -   [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html)
 -   [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html)
+-   [testit](http://cran.rstudio.com/web/packages/testit/index.html)
 -   [testthat](http://cran.rstudio.com/web/packages/testthat/index.html)
--   [testthatsomemore](http://cran.rstudio.com/web/packages/testthatsomemore/index.html)
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html)
 -   [withr](http://cran.rstudio.com/web/packages/withr/index.html)
+-   [XRJulia](http://cran.rstudio.com/web/packages/XRJulia/index.html)
 
 ### Related links:
 

@@ -95,7 +95,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Code Analysis and Formatting**
 
 -   <pkg>codetools</pkg> provides a number of low-level functions for identifying possible problems with source code.
--   <pkg>lint</pkg> and <pkg>lintr</pkg> provide tools for checking source code compliance with a style guide.
+-   <pkg>lintr</pkg> provides tools for checking source code compliance with a style guide.
 -   <pkg>formatR</pkg> and [rfmt](https://github.com/google/rfmt/) (not on CRAN) can be used to neatly format source code.
 -   <pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.
 
@@ -116,7 +116,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 **Unit Testing**
 
 -   Packages should pass all basic code and documentation checks provided by the `R CMD check` quality assurance tools built in to R. <pkg>rcmdcheck</pkg> provides programmatic access to `R CMD check` from within R and [callr](https://github.com/MangoTheCat/callr) (not on CRAN) provides a generic interface for calling R from within R.
--   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, [testit](https://github.com/yihui/testit) (Not on CRAN), <pkg>testthat</pkg>, <pkg>testthatsomemore</pkg>, and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.
+-   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, <pkg>testit</pkg> ([GitHub](https://github.com/yihui/testit)), <pkg>testthat</pkg>, [testthatsomemore](https://github.com/robertzk/testthatsomemore) (not on CRAN), and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.
 -   <pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>checkmate</pkg> <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
 -   <pkg>covr</pkg> and [testCoverage](https://github.com/MangoTheCat/testCoverage) (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/) that provide web interfaces for assessing code coverage.
 -   <pkg>withr</pkg> ([GitHub](https://github.com/jimhester/withr)) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.
