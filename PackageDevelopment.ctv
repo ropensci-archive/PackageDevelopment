@@ -30,6 +30,7 @@
     <li><pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph. <a href="https://github.com/andrie/pagerank">pagerank</a> (not on CRAN) can calculate a package's PageRank from its dependency graph.</li>
     <li><a href="https://github.com/hrbrmstr/swagger">swagger</a> (not on CRAN) uses the <a href="http://swagger.io/">Swagger</a> JSON web service API specification to automatically generate an R client package for a web service API.</li>
     </ul>
+    <p>R packages require a <code>Version</code> string in the <code>DESCRIPTION</code> file. Traditionally, packages have been versioned using a <code>MAJOR.MINOR-PATCH</code> format, sometimes using the version's date as the <code>PATCH</code> component. More recently, <a href="http://semver.org/">semantic versioning</a> has become common. <pkg>semver</pkg> (<a href="https://github.com/johndharrison/semver">GitHub</a>) provides tools to parse and manipulate semantic version strings.</p>
     <p>When initializing a package, it is worth considering how it should be licensed. CRAN provides <a href="https://cran.r-project.org/web/licenses/">a list of the most commonly used software licences</a> for R packages. <pkg>osi</pkg> (<a href="https://github.com/Ironholds/osi/">GitHub</a>) provides a more comprehensive list in a standardized format.</p>
     <h3 id="programming-paradigms">Programming Paradigms</h3>
     <p>R is foremost a functional programming language with dynamic typing, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.</p>
@@ -284,6 +285,7 @@
     <pkg>rtype</pkg>
     <pkg>RUnit</pkg>
     <pkg>runittotestthat</pkg>
+    <pkg>semver</pkg>
     <pkg>shiny</pkg>
     <pkg>sos</pkg>
     <pkg>svUnit</pkg>

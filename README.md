@@ -44,6 +44,8 @@ Before starting a new package it's worth searching for already available package
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html) provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph. [pagerank](https://github.com/andrie/pagerank) (not on CRAN) can calculate a package's PageRank from its dependency graph.
 -   [swagger](https://github.com/hrbrmstr/swagger) (not on CRAN) uses the [Swagger](http://swagger.io/) JSON web service API specification to automatically generate an R client package for a web service API.
 
+R packages require a `Version` string in the `DESCRIPTION` file. Traditionally, packages have been versioned using a `MAJOR.MINOR-PATCH` format, sometimes using the version's date as the `PATCH` component. More recently, [semantic versioning](http://semver.org/) has become common. [semver](http://cran.rstudio.com/web/packages/semver/index.html) ([GitHub](https://github.com/johndharrison/semver)) provides tools to parse and manipulate semantic version strings.
+
 When initializing a package, it is worth considering how it should be licensed. CRAN provides [a list of the most commonly used software licences](https://cran.r-project.org/web/licenses/) for R packages. [osi](http://cran.rstudio.com/web/packages/osi/index.html) ([GitHub](https://github.com/Ironholds/osi/)) provides a more comprehensive list in a standardized format.
 
 ### Programming Paradigms
@@ -312,6 +314,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [rtype](http://cran.rstudio.com/web/packages/rtype/index.html)
 -   [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html)
 -   [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html)
+-   [semver](http://cran.rstudio.com/web/packages/semver/index.html)
 -   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html)
 -   [sos](http://cran.rstudio.com/web/packages/sos/index.html)
 -   [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html)
