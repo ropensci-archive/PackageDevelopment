@@ -6,7 +6,7 @@
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
-    <p>If you think that some packages or tools are missing from the list, feel free to <a href="mailto:thosjleeper@gmail.com">e-mail</a> me or contribute directly to the Task View by submitting a pull request on <a href="http://github.com/ropensci/PackageDevelopment/blob/master/CONTRIBUTING.md">GitHub</a>.</p>
+    <p>If you think that some packages or tools are missing from the list, feel free to <a href="mailto:thosjleeper@gmail.com">e-mail</a> me or contribute directly to the Task View by submitting a pull request on <a href="https://github.com/ropensci/PackageDevelopment/blob/master/CONTRIBUTING.md">GitHub</a>.</p>
     <p>Many thanks to Christopher Gandrud, Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.</p>
     <h2 id="first-steps">First steps</h2>
     <h3 id="searching-for-existing-packages">Searching for Existing Packages</h3>
@@ -14,7 +14,7 @@
     <ul>
     <li><code>utils::RSiteSearch()</code> allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <a href="http://search.r-project.org/" class="uri">http://search.r-project.org/</a>. A convenient wrapper around <code>RSiteSearch</code> that adds hits ranking is <code>findFn()</code> function, from <pkg>sos</pkg>.</li>
     <li><a href="http://rseek.org/">RSeek</a> allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.</li>
-    <li><a href="http://www.rdocumentation.org/">Rdocumentation</a> allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages. <pkg>RDocumentation</pkg> (<a href="https://github.com/datacamp/RDocumentation/">GitHub</a>) provides an R client for the site.</li>
+    <li><a href="https://www.rdocumentation.org/">Rdocumentation</a> allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages. <pkg>RDocumentation</pkg> (<a href="https://github.com/datacamp/RDocumentation/">GitHub</a>) provides an R client for the site.</li>
     <li><a href="http://crantastic.org/">Crantastic!</a> maintains an up-to-date and tagged directory of packages on CRAN. The <a href="https://mran.revolutionanalytics.com/">Managed R Archive Network</a> from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.</li>
     <li><a href="http://www.r-pkg.org/" class="uri">http://www.r-pkg.org/</a> is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.</li>
     <li><a href="http://dirk.eddelbuettel.com/cranberries/">CRANberries</a> provides a feed of new, updated, and removed packages for CRAN.</li>
@@ -64,7 +64,7 @@
     <h2 id="source-code">Source Code</h2>
     <h3 id="foreign-languages-interfaces">Foreign Languages Interfaces</h3>
     <ul>
-    <li>R's base functions <code>system()</code>, <code>system2()</code>, and - on Windows - <code>shell.exec()</code> - provide interfaces for calling system functions. <pkg>sys</pkg> (<a href="https://github.com/jeroen/sys/">GitHub</a>) and <a href="https://github.com/MangoTheCat/processx">processx</a> (not on CRAN) provide unified, platform-independent APIs for running system processes.</li>
+    <li>R's base functions <code>system()</code>, <code>system2()</code>, and - on Windows - <code>shell.exec()</code> - provide interfaces for calling system functions. <pkg>sys</pkg> (<a href="https://github.com/jeroen/sys/">GitHub</a>) and <a href="https://github.com/r-pkgs/processx">processx</a> (not on CRAN) provide unified, platform-independent APIs for running system processes.</li>
     <li><pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.</li>
     <li><pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier. <pkg>RInside</pkg> provides C++ classes for embedding within C++ applications.</li>
     <li><pkg>rGroovy</pkg> integrates with the <a href="http://www.groovy-lang.org/">Groovy scripting language</a>.</li>
@@ -72,18 +72,18 @@
     <li><a href="https://github.com/rustr/rustr">rustr</a> provides bindings to Rust.</li>
     <li><a href="https://github.com/schmidtchristoph/reach">reach</a> (not on CRAN) and <pkg>matlabr</pkg> provide rough interfaces to Matlab.</li>
     <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN), and <a href="https://github.com/asieira/SnakeCharmR">SnakeCharmR</a> (not on CRAN) provide interfaces to python. <pkg>reticulate</pkg> (<a href="https://github.com/rstudio/reticulate">GitHub</a>) is a relatively recent interface built by RStudio.</li>
-    <li><a href="https://github.com/armgong/RJulia">RJulia</a> (not on CRAN) provides an interface with Julia, as does <pkg>XRJulia</pkg>. <a href="https://github.com/JuliaStats/RCall.jl">RCall</a> embeds R within Julia.</li>
+    <li><a href="https://github.com/armgong/RJulia">RJulia</a> (not on CRAN) provides an interface with Julia, as does <pkg>XRJulia</pkg>. <a href="https://github.com/JuliaInterop/RCall.jl">RCall</a> embeds R within Julia.</li>
     <li><pkg>RStata</pkg> is an interface with Stata. <a href="https://github.com/haghish/Rcall">RCall</a> embeds R in Stata.</li>
-    <li><code>tcltk</code>, which is a package built in to R, provides an general interface to Tcl, usefully especially for accessing Tcl/tk (for graphical interfaces). <pkg>after</pkg> (<a href="https://github.com/gaborcsardi/after">GitHub</a>) uses tcltk to run R code in a separate event loop.</li>
+    <li><code>tcltk</code>, which is a package built in to R, provides an general interface to Tcl, usefully especially for accessing Tcl/tk (for graphical interfaces). <a href="https://github.com/gaborcsardi/after">after</a> (not on CRAN) uses tcltk to run R code in a separate event loop.</li>
     <li><pkg>V8</pkg> offers an embedded Javascript engine, useful for building packages around Javascript libraries. <pkg>js</pkg> provides additional tools for working with Javascript code.</li>
     </ul>
-    <p>The <pkg>knitr</pkg> package, which supplies <a href="http://yihui.name/knitr/demo/engines/">various foreign language engines</a>, can also be used to generate documents that call python, awk, ruby, haskell, bash, perl, dot, tikz, sas, coffeescript, and polyglot.</p>
+    <p>The <pkg>knitr</pkg> package, which supplies <a href="https://yihui.name/knitr/demo/engines/">various foreign language engines</a>, can also be used to generate documents that call python, awk, ruby, haskell, bash, perl, dot, tikz, sas, coffeescript, and polyglot.</p>
     <p>Writing packages that involve compiled code requires a developer toolchain. If developing on Windows, this requires <a href="http://cran.r-project.org/bin/windows/Rtools/">Rtools</a>, which is updated with each R minor release.</p>
     <h3 id="debugging">Debugging</h3>
     <ul>
     <li><pkg>log4r</pkg> (<a href="https://github.com/johnmyleswhite/log4r">Github</a>) and <pkg>logging</pkg> provide logging functionality in the style of <a href="https://en.wikipedia.org/wiki/Log4j">log4j</a>.</li>
     <li><a href="https://github.com/smbache/loggr">loggr</a> (not on CRAN) aims to provide a simplified logging interface without the need for <code>withCallingHandlers()</code> expressions.</li>
-    <li><pkg>rollbar</pkg> reports messages and errors to <a href="https://rollbar.com">Rollbar</a>, a web service.</li>
+    <li><pkg>rollbar</pkg> reports messages and errors to <a href="https://rollbar.com/">Rollbar</a>, a web service.</li>
     <li>The <a href="https://github.com/kalibera/rchk">rchk</a> tool provides tools for identifying memory-protection bugs in C code, including base R and packages.</li>
     </ul>
     <h3 id="code-analysis-and-formatting">Code Analysis and Formatting</h3>
@@ -109,7 +109,7 @@
     </ul>
     <h3 id="unit-testing">Unit Testing</h3>
     <ul>
-    <li>Packages should pass all basic code and documentation checks provided by the <code>R CMD check</code> quality assurance tools built in to R. <pkg>rcmdcheck</pkg> provides programmatic access to <code>R CMD check</code> from within R and <a href="https://github.com/MangoTheCat/callr">callr</a> (not on CRAN) provides a generic interface for calling R from within R.</li>
+    <li>Packages should pass all basic code and documentation checks provided by the <code>R CMD check</code> quality assurance tools built in to R. <pkg>rcmdcheck</pkg> provides programmatic access to <code>R CMD check</code> from within R and <a href="https://github.com/r-pkgs/callr">callr</a> (not on CRAN) provides a generic interface for calling R from within R.</li>
     <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, <pkg>testit</pkg> (<a href="https://github.com/yihui/testit">GitHub</a>), <pkg>testthat</pkg>, <a href="https://github.com/robertzk/testthatsomemore">testthatsomemore</a> (not on CRAN), and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
     <li><pkg>vdiffr</pkg> (<a href="https://github.com/lionel-/vdiffr">GitHub</a>) can be used for graphical unit tests.</li>
     <li><pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>checkmate</pkg> <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.</li>
@@ -155,7 +155,7 @@
     </blockquote>
     <h3 id="spell-checking">Spell Checking</h3>
     <ul>
-    <li><code>utils</code> provides multiple functions for spell-checking portions of packages, including .Rd files (<code>utils::aspell_package_Rd_files</code>) and vignettes (<code>utils::aspell_package_vignettes</code>) via the general purpose <code>aspell</code> function, which requires a system spell checking library, such as http://aspell.net/, http://hunspell.github.io/, or http://lasr.cs.ucla.edu/geoff/ispell.html.</li>
+    <li><code>utils</code> provides multiple functions for spell-checking portions of packages, including .Rd files (<code>utils::aspell_package_Rd_files</code>) and vignettes (<code>utils::aspell_package_vignettes</code>) via the general purpose <code>aspell</code> function, which requires a system spell checking library, such as http://aspell.net/, http://hunspell.github.io/, or https://www.cs.hmc.edu/~geoff/ispell.html.</li>
     <li><pkg>hunspell</pkg> provides an interface to hunspell.</li>
     </ul>
     <h3 id="data-in-packages">Data in Packages</h3>
@@ -165,7 +165,7 @@
     <h2 id="tools-and-services">Tools and Services</h2>
     <h3 id="text-editors-and-ides">Text Editors and IDEs</h3>
     <ul>
-    <li>By far the most popular <a href="https://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment">integrated development environment (IDE)</a> for R is <a href="https://www.rstudio.com/">RStudio</a>, which is an open-source product available with both commercial and AGPL licensing. It can be run both locally and on a remote server. <pkg>rstudioapi</pkg> facilitates interaction from RStudio from within R.</li>
+    <li>By far the most popular <a href="https://en.wikibooks.org/wiki/R_Programming/Settings">integrated development environment (IDE)</a> for R is <a href="https://www.rstudio.com/">RStudio</a>, which is an open-source product available with both commercial and AGPL licensing. It can be run both locally and on a remote server. <pkg>rstudioapi</pkg> facilitates interaction from RStudio from within R.</li>
     <li><a href="http://www.walware.de/goto/statet">StatET</a> is an R plug-in for the Eclipse IDE.</li>
     <li><a href="http://ess.r-project.org/">Emacs Speaks Statistics (ESS)</a> is a feature-rich add-on package for editors like Emacs or XEmacs.</li>
     </ul>
@@ -177,17 +177,17 @@
     <h3 id="version-control">Version Control</h3>
     <ul>
     <li>R itself is maintained under version control using <a href="https://subversion.apache.org/">Subversion</a>.</li>
-    <li>Many packages are maintained using <a href="https://git-scm.com/">git</a>, particularly those hosted on <a href="https://github.com/">GitHub</a>. <pkg>git2r</pkg> (<a href="https://github.com/ropensci/git2r">Github</a>) provides bindings to <a href="http://libgit2.github.com/">libgit2</a> for programmatic use of git within R.</li>
+    <li>Many packages are maintained using <a href="https://git-scm.com/">git</a>, particularly those hosted on <a href="https://github.com/">GitHub</a>. <pkg>git2r</pkg> (<a href="https://github.com/ropensci/git2r">Github</a>) provides bindings to <a href="https://libgit2.github.com/">libgit2</a> for programmatic use of git within R.</li>
     </ul>
     <h3 id="hosting-and-package-building-services">Hosting and Package Building Services</h3>
     <p>Many <a href="https://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">hosting services</a> are available. Use of different hosts depends largely on what type of version control software is used to maintain a package. The most common sites are:</p>
     <ul>
     <li><a href="http://r-forge.r-project.org/">R-Forge</a>, which relies on <a href="http://subversion.apache.org/">Subversion</a>. <a href="https://rforge.net/">Rforge.net</a> is another popular Subversion-based system.</li>
     <li><a href="http://log.r-hub.io/">r-hub</a> is a modern package test service funded by the RConsortium . <a href="https://github.com/r-hub/rhub">rhub</a> (not on CRAN) provides an R client for the site's API.</li>
-    <li><a href="https://github.com/">GitHub</a> <a href="https://help.github.com/articles/support-for-subversion-clients/">mainly</a> supports Git and Mercurial. Packages hosted on Github can be installed directly using <code>devtools::install_github()</code> or <code>ghit::install_github()</code> from <pkg>ghit</pkg> or <code>remotes::install_github()</code> from <pkg>remotes</pkg>. <a href="https://github.com/gaborcsardi/gh">gh</a> (not on CRAN) is a lightweight client for the GitHub API. <a href="https://github.com/jonocarroll/githubtools">githubtools</a> (not on CRAN) provides some resources for including GitHub-related links in package documentation and for analyzing packages installed from GitHub.</li>
+    <li><a href="https://github.com/">GitHub</a> <a href="https://help.github.com/articles/support-for-subversion-clients/">mainly</a> supports Git and Mercurial. Packages hosted on Github can be installed directly using <code>devtools::install_github()</code> or <code>ghit::install_github()</code> from <pkg>ghit</pkg> or <code>remotes::install_github()</code> from <pkg>remotes</pkg>. <a href="https://github.com/r-pkgs/gh">gh</a> (not on CRAN) is a lightweight client for the GitHub API. <a href="https://github.com/jonocarroll/githubtools">githubtools</a> (not on CRAN) provides some resources for including GitHub-related links in package documentation and for analyzing packages installed from GitHub.</li>
     <li><a href="https://bitbucket.org/">Bitbucket</a> is an alternative host that provides no-cost private repositories and <a href="https://about.gitlab.com/">GitLab</a> is an open source alternative. <pkg>gitlabr</pkg> provides is an API client for managing Gitlab projects.</li>
     <li>Github supports <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> for R packages. <a href="https://travis-ci.org/">Travis CI</a> is a popular continuous integration tools that supports Linux and OS X build environments. Travis has native R support, and can easily provide code coverage information via <pkg>covr</pkg> to <a href="https://codecov.io/">Codecov.io</a> or <a href="https://coveralls.io/">Coveralls</a>. <a href="https://github.com/cloudyr/travisci">travisci</a> (not on CRAN) provides an API client for Travis. Use of other CI services, such as <a href="https://circleci.com/">Circle CI</a> may require additional code and examples are available from <a href="https://github.com/craigcitro/r-travis">r-travis</a> and/or <a href="https://github.com/metacran/r-builder">r-builder</a>. <a href="https://github.com/cloudyr/circleci">circleci</a> (not on CRAN) provides an API client for Circle CI. <pkg>badgecreatr</pkg> (<a href="https://github.com/RMHogervorst/badgecreatr">GitHub</a>) provides a convenient way of creating standardized badges (or &quot;shields&quot;) for package READMEs.</li>
-    <li><a href="http://win-builder.r-project.org/">WinBuilder</a> is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an <code>R CMD check</code>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the <code>Maintainer</code> with links to the package zip file and logs for download/inspection. <a href="http://www.appveyor.com/">Appveyor</a> is a continuous integration service that offers a Windows build environment. <a href="https://github.com/krlmlr/r-appveyor">r-appveyor</a> (not on CRAN) and <a href="https://github.com/cloudyr/appveyor">appveyor</a> (not on CRAN) provide API clients for Appveyor.</li>
+    <li><a href="http://win-builder.r-project.org/">WinBuilder</a> is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an <code>R CMD check</code>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the <code>Maintainer</code> with links to the package zip file and logs for download/inspection. <a href="https://www.appveyor.com/">Appveyor</a> is a continuous integration service that offers a Windows build environment. <a href="https://github.com/krlmlr/r-appveyor">r-appveyor</a> (not on CRAN) and <a href="https://github.com/cloudyr/appveyor">appveyor</a> (not on CRAN) provide API clients for Appveyor.</li>
     <li><a href="https://github.com/rocker-org/rocker">Rocker</a> provides containers for use with <a href="https://www.docker.com/">Docker</a>. <a href="https://github.com/wch/harbor">harbor</a> can be used to control docker containers on remote and local hosts and <a href="https://github.com/traitecoevo/dockertest">dockertest</a> provides facilities for running tests on docker.</li>
     <li>Some packages, especially some that are no longer under active development, remain hosted on <a href="https://code.google.com/">Google Code</a>. This service is closed to new projects, however, and will shut down in January 2016.</li>
     <li><pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server.</li>
@@ -198,7 +198,6 @@
     <pkg priority="core">devtools</pkg>
     <pkg priority="core">knitr</pkg>
     <pkg priority="core">roxygen2</pkg>
-    <pkg>after</pkg>
     <pkg>aoos</pkg>
     <pkg>aprof</pkg>
     <pkg>argparse</pkg>
