@@ -37,8 +37,8 @@ Before starting a new package it's worth searching for already available package
 ### Initializing an R package
 
 -   `utils::package.skeleton()` automates some of the setup for a new source package. It creates directories, saves functions, data, and R code files provided to appropriate places, and creates skeleton help files and a `Read-and-delete-me` file describing further steps in packaging
--   `kitten()` from [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html) allows one to specify the main `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes `R CMD check` cleanly.
 -   `create()` from [devtools](http://cran.rstudio.com/web/packages/devtools/index.html) is similar to `package.skeleton` except it allows to specify `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files.
+-   Non-devtools alternatives also exist. `kitten()` from [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html) allows one to specify the main `DESCRIPTION` entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes `R CMD check` cleanly. [skeletor](http://cran.rstudio.com/web/packages/skeletor/index.html) provides another non-devtools skeleton-building function with a wider set of defaults and options.
 -   [mason](https://github.com/metacran/mason) provides a fun, interactive tool for creating a package based on a variety of inputs.
 -   `Rcpp.package.skeleton()` from [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) adds to `package.skeleton` the C++ via `Rcpp` handling, by modifying eg. `DESCRIPTION` and `NAMESPACE` accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in `src` directory . Finally the user can decide main `DESCRIPTION` entries.
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html) provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph. [pagerank](https://github.com/andrie/pagerank) (not on CRAN) can calculate a package's PageRank from its dependency graph.
@@ -316,6 +316,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html)
 -   [semver](http://cran.rstudio.com/web/packages/semver/index.html)
 -   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html)
+-   [skeletor](http://cran.rstudio.com/web/packages/skeletor/index.html)
 -   [sos](http://cran.rstudio.com/web/packages/sos/index.html)
 -   [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html)
 -   [sys](http://cran.rstudio.com/web/packages/sys/index.html)
