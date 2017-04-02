@@ -91,7 +91,7 @@ Source Code
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html) provides a low-level interface to Java similar to the `.Call` interface for C and C++. [helloJavaWorld](http://cran.rstudio.com/web/packages/helloJavaWorld/index.html) provides an example rJava-based package. [jvmr](https://dahl.byu.edu/software/jvmr/) (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while [rscala](http://cran.rstudio.com/web/packages/rscala/index.html) is designed specifically for Scala.
 -   [rustr](https://github.com/rustr/rustr) provides bindings to Rust.
 -   [reach](https://github.com/schmidtchristoph/reach) (not on CRAN) and [matlabr](http://cran.rstudio.com/web/packages/matlabr/index.html) provide rough interfaces to Matlab.
--   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python.
+-   [rPython](http://cran.rstudio.com/web/packages/rPython/index.html), [rJython](http://cran.rstudio.com/web/packages/rJython/index.html), [PythonInR](http://cran.rstudio.com/web/packages/PythonInR/index.html), [rpy2](http://rpy.sourceforge.net/) (not on CRAN), and [SnakeCharmR](https://github.com/asieira/SnakeCharmR) (not on CRAN) provide interfaces to python. [reticulate](http://cran.rstudio.com/web/packages/reticulate/index.html) ([GitHub](https://github.com/rstudio/reticulate)) is a relatively recent interface built by RStudio.
 -   [RJulia](https://github.com/armgong/RJulia) (not on CRAN) provides an interface with Julia, as does [XRJulia](http://cran.rstudio.com/web/packages/XRJulia/index.html). [RCall](https://github.com/JuliaStats/RCall.jl) embeds R within Julia.
 -   [RStata](http://cran.rstudio.com/web/packages/RStata/index.html) is an interface with Stata. [RCall](https://github.com/haghish/Rcall) embeds R in Stata.
 -   `tcltk`, which is a package built in to R, provides an general interface to Tcl, usefully especially for accessing Tcl/tk (for graphical interfaces). [after](http://cran.rstudio.com/web/packages/after/index.html) ([GitHub](https://github.com/gaborcsardi/after)) uses tcltk to run R code in a separate event loop.
@@ -301,6 +301,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [RDocumentation](http://cran.rstudio.com/web/packages/RDocumentation/index.html)
 -   [Rdpack](http://cran.rstudio.com/web/packages/Rdpack/index.html)
 -   [remotes](http://cran.rstudio.com/web/packages/remotes/index.html)
+-   [reticulate](http://cran.rstudio.com/web/packages/reticulate/index.html)
 -   [rGroovy](http://cran.rstudio.com/web/packages/rGroovy/index.html)
 -   [RInside](http://cran.rstudio.com/web/packages/RInside/index.html)
 -   [rJava](http://cran.rstudio.com/web/packages/rJava/index.html)

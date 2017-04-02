@@ -71,7 +71,7 @@
     <li><pkg>rJava</pkg> provides a low-level interface to Java similar to the <code>.Call</code> interface for C and C++. <pkg>helloJavaWorld</pkg> provides an example rJava-based package. <a href="https://dahl.byu.edu/software/jvmr/">jvmr</a> (archived on CRAN) provides a bi-directional interface to Java, Scala, and related languages, while <pkg>rscala</pkg> is designed specifically for Scala.</li>
     <li><a href="https://github.com/rustr/rustr">rustr</a> provides bindings to Rust.</li>
     <li><a href="https://github.com/schmidtchristoph/reach">reach</a> (not on CRAN) and <pkg>matlabr</pkg> provide rough interfaces to Matlab.</li>
-    <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN), and <a href="https://github.com/asieira/SnakeCharmR">SnakeCharmR</a> (not on CRAN) provide interfaces to python.</li>
+    <li><pkg>rPython</pkg>, <pkg>rJython</pkg>, <pkg>PythonInR</pkg>, <a href="http://rpy.sourceforge.net/">rpy2</a> (not on CRAN), and <a href="https://github.com/asieira/SnakeCharmR">SnakeCharmR</a> (not on CRAN) provide interfaces to python. <pkg>reticulate</pkg> (<a href="https://github.com/rstudio/reticulate">GitHub</a>) is a relatively recent interface built by RStudio.</li>
     <li><a href="https://github.com/armgong/RJulia">RJulia</a> (not on CRAN) provides an interface with Julia, as does <pkg>XRJulia</pkg>. <a href="https://github.com/JuliaStats/RCall.jl">RCall</a> embeds R within Julia.</li>
     <li><pkg>RStata</pkg> is an interface with Stata. <a href="https://github.com/haghish/Rcall">RCall</a> embeds R in Stata.</li>
     <li><code>tcltk</code>, which is a package built in to R, provides an general interface to Tcl, usefully especially for accessing Tcl/tk (for graphical interfaces). <pkg>after</pkg> (<a href="https://github.com/gaborcsardi/after">GitHub</a>) uses tcltk to run R code in a separate event loop.</li>
@@ -273,6 +273,7 @@
     <pkg>RDocumentation</pkg>
     <pkg>Rdpack</pkg>
     <pkg>remotes</pkg>
+    <pkg>reticulate</pkg>
     <pkg>rGroovy</pkg>
     <pkg>RInside</pkg>
     <pkg>rJava</pkg>
