@@ -141,10 +141,11 @@
     <p><strong>Writing Package Documentation</strong></p>
     <p>Package documentation is written in a TeX-like format as .Rd files that are stored in the <code>man</code> subdirectory of a package. These files are compiled to plain text, HTML, or PDF by R as needed.</p>
     <ul>
-    <li>One can write .Rd files directly. A popular alternative is to rely on <pkg>roxygen2</pkg>, which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by <code>roxygen2::roxygenise()</code> and underlies <code>devtools::document()</code>. roxygen2 eliminates the need to learn <em>some</em> of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling <code>R CMD build</code>).</li>
+    <li>One can write .Rd files directly. A popular alternative is to rely on <pkg>roxygen2</pkg>, which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by <code>roxygen2::roxygenise()</code> and underlies <code>devtools::document()</code>. roxygen2 eliminates the need to learn <em>some</em> of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling <code>R CMD build</code>). Recent versions of roxygen2 support full markdown-based documentation without the need for any native Rd formatting.</li>
     <li><pkg>Rd2roxygen</pkg> can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow. <a href="https://github.com/r-pkgs/roxygen2md">roxygen2md</a> (not on CRAN) provides tools for further converting Rd markup within roxygen comments to markdown format (supported by the latest versions of roxygen2).</li>
     <li><pkg>inlinedocs</pkg> and <pkg>documair</pkg> provide further alternative documentation schemes based on source code commenting.</li>
     <li><code>tools::parse_Rd()</code> can be used to manipulate the contents of an .Rd file. <code>tools::checkRd()</code> is useful for validating an .Rd file. Duncan Murdoch's <a href="https://developer.r-project.org/parseRd.pdf">&quot;Parsing Rd files&quot;</a> tutorial is a useful reference for advanced use of R documentation. <pkg>Rdpack</pkg> provides additional tools for manipulating documentation files.</li>
+    <li><pkg>packagedocs</pkg> and <a href="https://github.com/hadley/pkgdown">pkgdown</a> (not on CRAN) can be used to generate static websites from R documentation files.</li>
     </ul>
     <p><strong>Writing Vignettes</strong></p>
     <p>Package vignettes provides additional documentation of package functionality that is not tied to a specific function (as in an .Rd file). Historically, vignettes were used to explain the statistical or computational approach taken by a package in an article-like format that would be rendered as a PDF document using <code>Sweave</code>. Since R 3.0.0, non-Sweave vignette engines have also been supported, including <pkg>knitr</pkg>, which can produce Sweave-like PDF vignettes but can also support HTML vignettes that are written in R-flavored markdown. To use a non-Sweave vignette engine, the vignette needs to start with a code block indicating the package and function to be used:</p>
@@ -243,6 +244,7 @@
     <pkg>mvbutils</pkg>
     <pkg>optigrab</pkg>
     <pkg>osi</pkg>
+    <pkg>packagedocs</pkg>
     <pkg>packagetrackr</pkg>
     <pkg>packrat</pkg>
     <pkg>pacman</pkg>

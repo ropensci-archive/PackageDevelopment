@@ -162,10 +162,11 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 Package documentation is written in a TeX-like format as .Rd files that are stored in the `man` subdirectory of a package. These files are compiled to plain text, HTML, or PDF by R as needed.
 
--   One can write .Rd files directly. A popular alternative is to rely on [roxygen2](http://cran.rstudio.com/web/packages/roxygen2/index.html), which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by `roxygen2::roxygenise()` and underlies `devtools::document()`. roxygen2 eliminates the need to learn *some* of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling `R CMD build`).
+-   One can write .Rd files directly. A popular alternative is to rely on [roxygen2](http://cran.rstudio.com/web/packages/roxygen2/index.html), which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by `roxygen2::roxygenise()` and underlies `devtools::document()`. roxygen2 eliminates the need to learn *some* of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling `R CMD build`). Recent versions of roxygen2 support full markdown-based documentation without the need for any native Rd formatting.
 -   [Rd2roxygen](http://cran.rstudio.com/web/packages/Rd2roxygen/index.html) can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow. [roxygen2md](https://github.com/r-pkgs/roxygen2md) (not on CRAN) provides tools for further converting Rd markup within roxygen comments to markdown format (supported by the latest versions of roxygen2).
 -   [inlinedocs](http://cran.rstudio.com/web/packages/inlinedocs/index.html) and [documair](http://cran.rstudio.com/web/packages/documair/index.html) provide further alternative documentation schemes based on source code commenting.
 -   `tools::parse_Rd()` can be used to manipulate the contents of an .Rd file. `tools::checkRd()` is useful for validating an .Rd file. Duncan Murdoch's ["Parsing Rd files"](https://developer.r-project.org/parseRd.pdf) tutorial is a useful reference for advanced use of R documentation. [Rdpack](http://cran.rstudio.com/web/packages/Rdpack/index.html) provides additional tools for manipulating documentation files.
+-   [packagedocs](http://cran.rstudio.com/web/packages/packagedocs/index.html) and [pkgdown](https://github.com/hadley/pkgdown) (not on CRAN) can be used to generate static websites from R documentation files.
 
 **Writing Vignettes**
 
@@ -269,6 +270,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html)
 -   [optigrab](http://cran.rstudio.com/web/packages/optigrab/index.html)
 -   [osi](http://cran.rstudio.com/web/packages/osi/index.html)
+-   [packagedocs](http://cran.rstudio.com/web/packages/packagedocs/index.html)
 -   [packagetrackr](http://cran.rstudio.com/web/packages/packagetrackr/index.html)
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html)
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)
