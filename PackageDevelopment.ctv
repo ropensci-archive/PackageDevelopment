@@ -8,8 +8,8 @@
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
     <p>If you think that some packages or tools are missing from the list, feel free to <a href="mailto:thosjleeper@gmail.com">e-mail</a> me or contribute directly to the Task View by submitting a pull request on <a href="http://github.com/ropensci/PackageDevelopment/blob/master/CONTRIBUTING.md">GitHub</a>.</p>
     <p>Many thanks to Christopher Gandrud, Cristophe Dutang, Darren Norris, Dirk Eddelbuettel, Gabor Grothendieck, Gregory Jefferis, John Maindonald, Luca Braglia, Spencer Graves, Tobias Verbeke, and the R-core team for contributions.</p>
-    <h3 id="first-steps">First steps</h3>
-    <p><strong>Searching for Existing Packages</strong></p>
+    <h2 id="first-steps">First steps</h2>
+    <h3 id="searching-for-existing-packages">Searching for Existing Packages</h3>
     <p>Before starting a new package it's worth searching for already available packages, both from a developer's standpoint (&quot;do not reinvent the wheel&quot;) and from a user's one (many packages implementing same/similar procedures can be confusing). If a package addressing the same functionality already exists, you may consider contributing at it instead of starting a new one.</p>
     <ul>
     <li><code>utils::RSiteSearch()</code> allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <a href="http://search.r-project.org/" class="uri">http://search.r-project.org/</a>. A convenient wrapper around <code>RSiteSearch</code> that adds hits ranking is <code>findFn()</code> function, from <pkg>sos</pkg>.</li>
@@ -20,7 +20,7 @@
     <li><a href="http://dirk.eddelbuettel.com/cranberries/">CRANberries</a> provides a feed of new, updated, and removed packages for CRAN.</li>
     <li>If you're looking to create a package, but want ideas for what sorts of packages are in demand, the <a href="https://ropensci.org/">rOpenSci</a> maintains <a href="https://github.com/ropensci/wishlist">a wishlist for science-related packages</a> and <a href="https://github.com/ropensci/webservices/wiki/ToDo">a TODO list of web services and data APIs in need of packaging</a>.</li>
     </ul>
-    <p><strong>Initializing an R package</strong></p>
+    <h3 id="initializing-an-r-package">Initializing an R package</h3>
     <ul>
     <li><code>utils::package.skeleton()</code> automates some of the setup for a new source package. It creates directories, saves functions, data, and R code files provided to appropriate places, and creates skeleton help files and a <code>Read-and-delete-me</code> file describing further steps in packaging</li>
     <li><code>kitten()</code> from <pkg>pkgKitten</pkg> allows one to specify the main <code>DESCRIPTION</code> entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes <code>R CMD check</code> cleanly.</li>
@@ -31,7 +31,7 @@
     <li><a href="https://github.com/hrbrmstr/swagger">swagger</a> (not on CRAN) uses the <a href="http://swagger.io/">Swagger</a> JSON web service API specification to automatically generate an R client package for a web service API.</li>
     </ul>
     <p>When initializing a package, it is worth considering how it should be licensed. CRAN provides <a href="https://cran.r-project.org/web/licenses/">a list of the most commonly used software licences</a> for R packages. <pkg>osi</pkg> (<a href="https://github.com/Ironholds/osi/">GitHub</a>) provides a more comprehensive list in a standardized format.</p>
-    <p><strong>Programming Paradigms</strong></p>
+    <h3 id="programming-paradigms">Programming Paradigms</h3>
     <p>R is foremost a functional programming language with dynamic typing, but has three built-in forms of object-oriented programming as well as additional object-oriented paradigms available in add-on packages.</p>
     <ul>
     <li>The built-in S3 classes involve wherein a generic function (e.g., <code>summary</code>) employs a distinct method for an object of a given class (i.e., it is possible to implement class-specific methods for a given generic function). If a package implements new object classes, it is common to implement methods for commonly used generics such as <code>print</code>, <code>summary</code>, etc. These methods must be registered in the package's NAMESPACE file. <pkg>R.methodsS3</pkg> aims to simplify the creation of S3 generic functions and S3 methods.</li>
@@ -50,7 +50,7 @@
     <li><pkg>lazyeval</pkg> (<a href="https://github.com/hadley/lazyeval">Github</a>) aims to help developers design packages with parallel function implementations that follow both standard and non-standard evaluation.</li>
     <li>An increasingly popular form of non-standard evaluation involves chained expressions or &quot;pipelines&quot;. <pkg>magrittr</pkg> provides the <code>%&gt;%</code> chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. <pkg>pipeR</pkg> offers a larger set of pipe operators. <pkg>assertr</pkg> and <pkg>ensurer</pkg> provide (fairly similar) testing frameworks for pipelines.</li>
     </ul>
-    <p><strong>Dependency Management</strong></p>
+    <h3 id="dependency-management">Dependency Management</h3>
     <p>Packages that have dependencies on other packages need to be vigilant of changes to the functionality, behaviour, or API of those packages.</p>
     <ul>
     <li><pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">Github</a>) provides facilities for creating local package repositories to manage and check dependencies.</li>
@@ -60,8 +60,8 @@
     <li>Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> (<a href="https://github.com/smbache/import">Github</a>) can import numerous objects from a namespace and assign arbitrary names. <a href="https://github.com/klmr/modules">modules</a> (not on CRAN) provides functionality for importing alternative non-package code from Python-like &quot;modules&quot;.</li>
     <li><a href="https://github.com/MangoTheCat/functionMap">functionMap</a> provides a visualization tool useful for understanding function dependencies within and across packages. <a href="https://github.com/ropenscilabs/atomize">atomize</a> can quickly extract functions from within a package into their own package.</li>
     </ul>
-    <h3 id="source-code">Source Code</h3>
-    <p><strong>Foreign Languages Interfaces</strong></p>
+    <h2 id="source-code">Source Code</h2>
+    <h3 id="foreign-languages-interfaces">Foreign Languages Interfaces</h3>
     <ul>
     <li><a href="https://github.com/MangoTheCat/processx">processx</a> (not on CRAN) provides a unified, platform-independent API for running system processes.</li>
     <li><pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.</li>
@@ -78,21 +78,21 @@
     </ul>
     <p>The <pkg>knitr</pkg> package, which supplies <a href="http://yihui.name/knitr/demo/engines/">various foreign language engines</a>, can also be used to generate documents that call python, awk, ruby, haskell, bash, perl, dot, tikz, sas, coffeescript, and polyglot.</p>
     <p>Writing packages that involve compiled code requires a developer toolchain. If developing on Windows, this requires <a href="http://cran.r-project.org/bin/windows/Rtools/">Rtools</a>, which is updated with each R minor release.</p>
-    <p><strong>Debugging</strong></p>
+    <h3 id="debugging">Debugging</h3>
     <ul>
     <li><pkg>log4r</pkg> (<a href="https://github.com/johnmyleswhite/log4r">Github</a>) and <pkg>logging</pkg> provide logging functionality in the style of <a href="https://en.wikipedia.org/wiki/Log4j">log4j</a>.</li>
     <li><a href="https://github.com/smbache/loggr">loggr</a> (not on CRAN) aims to provide a simplified logging interface without the need for <code>withCallingHandlers()</code> expressions.</li>
     <li><pkg>rollbar</pkg> reports messages and errors to <a href="https://rollbar.com">Rollbar</a>, a web service.</li>
     <li>The <a href="https://github.com/kalibera/rchk">rchk</a> tool provides tools for identifying memory-protection bugs in C code, including base R and packages.</li>
     </ul>
-    <p><strong>Code Analysis and Formatting</strong></p>
+    <h3 id="code-analysis-and-formatting">Code Analysis and Formatting</h3>
     <ul>
     <li><pkg>codetools</pkg> provides a number of low-level functions for identifying possible problems with source code.</li>
     <li><pkg>lintr</pkg> provides tools for checking source code compliance with a style guide.</li>
     <li><pkg>formatR</pkg> and <a href="https://github.com/google/rfmt/">rfmt</a> (not on CRAN) can be used to neatly format source code.</li>
     <li><pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.</li>
     </ul>
-    <p><strong>Profiling</strong></p>
+    <h3 id="profiling">Profiling</h3>
     <ul>
     <li>Profiling data is provided by <code>utils::Rprof()</code> and can be summarized by <code>utils::summaryRprof()</code>. <pkg>prof.tree</pkg> (<a href="https://github.com/artemklevtsov/prof.tree">GitHub</a>) provides an alternative output data structure to <code>Rprof()</code>. <pkg>profmem</pkg> (<a href="https://github.com/HenrikBengtsson/profmem">GitHub</a>) adds a simple interface on top of this.</li>
     <li><pkg>profr</pkg> can visualize output from the <code>Rprof</code> interface for profiling.</li>
@@ -101,12 +101,12 @@
     <li><a href="https://github.com/hadley/lineprof">lineprof</a> (not on CRAN) provides a visualization tool for examining profiling results.</li>
     <li><a href="https://github.com/analyticalmonk/Rperform">Rperform</a> (not on CRAN) compares package performance across different git versions and branches.</li>
     </ul>
-    <p><strong>Benchmarking</strong></p>
+    <h3 id="benchmarking">Benchmarking</h3>
     <ul>
     <li><code>base::system.time()</code> is a basic timing utility that calculates times based on one iteration of an expression.</li>
     <li><pkg>microbenchmark</pkg> and <pkg>rbenchmark</pkg> provide timings based on multiple iterations of an expression and potentially provide more reliable timings than <code>system.time()</code></li>
     </ul>
-    <p><strong>Unit Testing</strong></p>
+    <h3 id="unit-testing">Unit Testing</h3>
     <ul>
     <li>Packages should pass all basic code and documentation checks provided by the <code>R CMD check</code> quality assurance tools built in to R. <pkg>rcmdcheck</pkg> provides programmatic access to <code>R CMD check</code> from within R and <a href="https://github.com/MangoTheCat/callr">callr</a> (not on CRAN) provides a generic interface for calling R from within R.</li>
     <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, <pkg>testit</pkg> (<a href="https://github.com/yihui/testit">GitHub</a>), <pkg>testthat</pkg>, <a href="https://github.com/robertzk/testthatsomemore">testthatsomemore</a> (not on CRAN), and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
@@ -116,12 +116,12 @@
     <li><pkg>withr</pkg> (<a href="https://github.com/jimhester/withr">GitHub</a>) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.</li>
     <li>The <code>devtools::use_revdep()</code> and <code>revdep_check()</code> functions from <pkg>devtools</pkg> can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality. <a href="https://github.com/yihui/crandalf">crandalf</a> (not on CRAN) provides an alternative mechanism for testing reverse dependencies.</li>
     </ul>
-    <p><strong>Internationalization and Localization</strong></p>
+    <h3 id="internationalization-and-localization">Internationalization and Localization</h3>
     <ul>
     <li>There is no standard mechanism for translation of package documentation into languages other than English. To create non-English documentation requires manual creation of supplemental .Rd files or package vignettes. Packages supplying non-English documentation should include a <code>Language</code> field in the DESCRIPTION file.</li>
     <li>R provides useful features for the localization of diagnostic messages, warnings, and errors from functions at both the C and R levels based on GNU <code>gettext</code>. <a href="http://developer.r-project.org/Translations30.html">&quot;Translating R Messages&quot;</a> describes the process of creating and installing message translations.</li>
     </ul>
-    <p><strong>Creating Graphical Interfaces</strong></p>
+    <h3 id="creating-graphical-interfaces">Creating Graphical Interfaces</h3>
     <ul>
     <li>For simple interactive interfaces, <code>readline()</code> can be used to create a simple prompt. <pkg>getPass</pkg> provides cross-platform mechanisms for securely requesting user input without displaying the intput (e.g., for passwords). <code>utils::menu()</code>, <code>utils::select.list()</code> can provide graphical and console-based selection of items from a list, and <code>utils::txtProgressBar()</code> provides a simple text progress bar.</li>
     <li><code>tcltk</code> is an R base package that provides a large set of tools for creating interfaces uses Tcl/tk (most functions are thin wrappers around corresponding Tcl and tk functions), though the documentation is sparse. <pkg>tcltk2</pkg> provides additional widgets and functionality. <pkg>qtbase</pkg> provides bindings for Qt. <ohat>RGtk</ohat> (not on CRAN) provides bindings for Gtk and gnome. <pkg>gWidgets2</pkg> offers a language-independent API for building graphical user interfaces in Gtk, Qt, or Tcl/tk.</li>
@@ -129,16 +129,16 @@
     <li><pkg>shiny</pkg> provides a browser-based infrastructure for creating dashboards and interfaces for R functionality. <pkg>htmlwidgets</pkg> is a shiny enhancement that provides a framework for creating HTML widgets.</li>
     <li><pkg>progress</pkg> (<a href="https://github.com/gaborcsardi/progress">Github</a>) offers progress bars for the terminal, including a C++ API.</li>
     </ul>
-    <p><strong>Command Line Argument Parsing</strong></p>
+    <h3 id="command-line-argument-parsing">Command Line Argument Parsing</h3>
     <ul>
     <li>Several packages provide functionality for parsing command line arguments: <pkg>argparse</pkg>, <pkg>argparser</pkg>, <pkg>commandr</pkg>, <pkg>docopt</pkg>, <pkg>GetoptLong</pkg>, and <pkg>optigrab</pkg>.</li>
     </ul>
-    <p><strong>Using Options in Packages</strong></p>
+    <h3 id="using-options-in-packages">Using Options in Packages</h3>
     <ul>
     <li><pkg>pkgconfig</pkg> (<a href="https://github.com/gaborcsardi/pkgconfig">GitHu</a>) allows developers to set package-specific options, which will not affect options set or used by other packages.</li>
     </ul>
-    <h3 id="documentation">Documentation</h3>
-    <p><strong>Writing Package Documentation</strong></p>
+    <h2 id="documentation">Documentation</h2>
+    <h3 id="writing-package-documentation">Writing Package Documentation</h3>
     <p>Package documentation is written in a TeX-like format as .Rd files that are stored in the <code>man</code> subdirectory of a package. These files are compiled to plain text, HTML, or PDF by R as needed.</p>
     <ul>
     <li>One can write .Rd files directly. A popular alternative is to rely on <pkg>roxygen2</pkg>, which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by <code>roxygen2::roxygenise()</code> and underlies <code>devtools::document()</code>. roxygen2 eliminates the need to learn <em>some</em> of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling <code>R CMD build</code>). Recent versions of roxygen2 support full markdown-based documentation without the need for any native Rd formatting.</li>
@@ -147,11 +147,12 @@
     <li><code>tools::parse_Rd()</code> can be used to manipulate the contents of an .Rd file. <code>tools::checkRd()</code> is useful for validating an .Rd file. Duncan Murdoch's <a href="https://developer.r-project.org/parseRd.pdf">&quot;Parsing Rd files&quot;</a> tutorial is a useful reference for advanced use of R documentation. <pkg>Rdpack</pkg> provides additional tools for manipulating documentation files.</li>
     <li><pkg>packagedocs</pkg> and <a href="https://github.com/hadley/pkgdown">pkgdown</a> (not on CRAN) can be used to generate static websites from R documentation files.</li>
     </ul>
-    <p><strong>Writing Vignettes</strong></p>
+    <h3 id="writing-vignettes">Writing Vignettes</h3>
     <p>Package vignettes provides additional documentation of package functionality that is not tied to a specific function (as in an .Rd file). Historically, vignettes were used to explain the statistical or computational approach taken by a package in an article-like format that would be rendered as a PDF document using <code>Sweave</code>. Since R 3.0.0, non-Sweave vignette engines have also been supported, including <pkg>knitr</pkg>, which can produce Sweave-like PDF vignettes but can also support HTML vignettes that are written in R-flavored markdown. To use a non-Sweave vignette engine, the vignette needs to start with a code block indicating the package and function to be used:</p>
-    <pre><code>%\VignetteEngine{knitr::knitr}
-    %\VignetteIndexEntry{}</code></pre>
-    <p><strong>Spell Checking</strong></p>
+    <blockquote>
+    <p>% %</p>
+    </blockquote>
+    <h3 id="spell-checking">Spell Checking</h3>
     <ul>
     <li><code>utils</code> provides multiple functions for spell-checking portions of packages, including .Rd files (<code>utils::aspell_package_Rd_files</code>) and vignettes (<code>utils::aspell_package_vignettes</code>) via the general purpose <code>aspell</code> function, which requires a system spell checking library, such as http://aspell.net/, http://hunspell.github.io/, or http://lasr.cs.ucla.edu/geoff/ispell.html.</li>
     <li><pkg>hunspell</pkg> provides an interface to hunspell.</li>
@@ -160,24 +161,24 @@
     <ul>
     <li><pkg>lazyData</pkg> offers the ability to use data contained within packages that have not been configured using LazyData.</li>
     </ul>
-    <h3 id="tools-and-services">Tools and Services</h3>
-    <p><strong>Text Editors and IDEs</strong></p>
+    <h2 id="tools-and-services">Tools and Services</h2>
+    <h3 id="text-editors-and-ides">Text Editors and IDEs</h3>
     <ul>
     <li>By far the most popular <a href="https://en.wikibooks.org/wiki/R_Programming/Settings#Integrated_development_environment">integrated development environment (IDE)</a> for R is <a href="https://www.rstudio.com/">RStudio</a>, which is an open-source product available with both commercial and AGPL licensing. It can be run both locally and on a remote server. <pkg>rstudioapi</pkg> facilitates interaction from RStudio from within R.</li>
     <li><a href="http://www.walware.de/goto/statet">StatET</a> is an R plug-in for the Eclipse IDE.</li>
     <li><a href="http://ess.r-project.org/">Emacs Speaks Statistics (ESS)</a> is a feature-rich add-on package for editors like Emacs or XEmacs.</li>
     </ul>
-    <p><strong>Makefiles</strong></p>
+    <h3 id="makefiles">Makefiles</h3>
     <ul>
     <li><a href="http://www.gnu.org/software/make/">GNU Make</a> is a tool that typically builds executable programs and libraries from source code by reading files called <code>Makefile</code>. It can be used to manage R package as well; <a href="https://github.com/ComputationalProteomicsUnit/maker">maker</a> is a <code>Makefile</code> completely devoted to R package development based on <a href="https://github.com/tudo-r/makeR">makeR</a>.</li>
     <li><a href="https://github.com/richfitz/remake">remake</a> (not on CRAN) provides a yaml-based, Makefile-like format that can be used in Make-like workflows from within R.</li>
     </ul>
-    <p><strong>Version Control</strong></p>
+    <h3 id="version-control">Version Control</h3>
     <ul>
     <li>R itself is maintained under version control using <a href="https://subversion.apache.org/">Subversion</a>.</li>
     <li>Many packages are maintained using <a href="https://git-scm.com/">git</a>, particularly those hosted on <a href="https://github.com/">GitHub</a>. <pkg>git2r</pkg> (<a href="https://github.com/ropensci/git2r">Github</a>) provides bindings to <a href="http://libgit2.github.com/">libgit2</a> for programmatic use of git within R.</li>
     </ul>
-    <p><strong>Hosting and Package Building Services</strong></p>
+    <h3 id="hosting-and-package-building-services">Hosting and Package Building Services</h3>
     <p>Many <a href="https://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">hosting services</a> are available. Use of different hosts depends largely on what type of version control software is used to maintain a package. The most common sites are:</p>
     <ul>
     <li><a href="http://r-forge.r-project.org/">R-Forge</a>, which relies on <a href="http://subversion.apache.org/">Subversion</a>. <a href="https://rforge.net/">Rforge.net</a> is another popular Subversion-based system.</li>
