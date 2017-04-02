@@ -70,7 +70,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 
 ### Foreign Languages Interfaces
 
--   [processx](https://github.com/MangoTheCat/processx) (not on CRAN) provides a unified, platform-independent API for running system processes.
+-   R's base functions `system()`, `system2()`, and - on Windows - `shell.exec()` - provide interfaces for calling system functions. <pkg>sys</pkg> ([GitHub](https://github.com/jeroen/sys/)) and [processx](https://github.com/MangoTheCat/processx) (not on CRAN) provide unified, platform-independent APIs for running system processes.
 -   <pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
 -   <pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier. <pkg>RInside</pkg> provides C++ classes for embedding within C++ applications.
 -   <pkg>rGroovy</pkg> integrates with the [Groovy scripting language](http://www.groovy-lang.org/).

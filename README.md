@@ -84,7 +84,7 @@ Source Code
 
 ### Foreign Languages Interfaces
 
--   [processx](https://github.com/MangoTheCat/processx) (not on CRAN) provides a unified, platform-independent API for running system processes.
+-   R's base functions `system()`, `system2()`, and - on Windows - `shell.exec()` - provide interfaces for calling system functions. [sys](http://cran.rstudio.com/web/packages/sys/index.html) ([GitHub](https://github.com/jeroen/sys/)) and [processx](https://github.com/MangoTheCat/processx) (not on CRAN) provide unified, platform-independent APIs for running system processes.
 -   [inline](http://cran.rstudio.com/web/packages/inline/index.html) eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.
 -   [Rcpp](http://cran.rstudio.com/web/packages/Rcpp/index.html) offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier. [RInside](http://cran.rstudio.com/web/packages/RInside/index.html) provides C++ classes for embedding within C++ applications.
 -   [rGroovy](http://cran.rstudio.com/web/packages/rGroovy/index.html) integrates with the [Groovy scripting language](http://www.groovy-lang.org/).
@@ -318,6 +318,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [shiny](http://cran.rstudio.com/web/packages/shiny/index.html)
 -   [sos](http://cran.rstudio.com/web/packages/sos/index.html)
 -   [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html)
+-   [sys](http://cran.rstudio.com/web/packages/sys/index.html)
 -   [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html)
 -   [testit](http://cran.rstudio.com/web/packages/testit/index.html)
 -   [testthat](http://cran.rstudio.com/web/packages/testthat/index.html)

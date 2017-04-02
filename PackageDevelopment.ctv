@@ -64,7 +64,7 @@
     <h2 id="source-code">Source Code</h2>
     <h3 id="foreign-languages-interfaces">Foreign Languages Interfaces</h3>
     <ul>
-    <li><a href="https://github.com/MangoTheCat/processx">processx</a> (not on CRAN) provides a unified, platform-independent API for running system processes.</li>
+    <li>R's base functions <code>system()</code>, <code>system2()</code>, and - on Windows - <code>shell.exec()</code> - provide interfaces for calling system functions. <pkg>sys</pkg> (<a href="https://github.com/jeroen/sys/">GitHub</a>) and <a href="https://github.com/MangoTheCat/processx">processx</a> (not on CRAN) provide unified, platform-independent APIs for running system processes.</li>
     <li><pkg>inline</pkg> eases adding code in C, C++, or Fortran to R. It takes care of the compilation, linking and loading of embedded code segments that are stored as R strings.</li>
     <li><pkg>Rcpp</pkg> offers a number of C++ classes that makes transferring R objects to C++ functions (and back) easier. <pkg>RInside</pkg> provides C++ classes for embedding within C++ applications.</li>
     <li><pkg>rGroovy</pkg> integrates with the <a href="http://www.groovy-lang.org/">Groovy scripting language</a>.</li>
@@ -289,6 +289,7 @@
     <pkg>shiny</pkg>
     <pkg>sos</pkg>
     <pkg>svUnit</pkg>
+    <pkg>sys</pkg>
     <pkg>tcltk2</pkg>
     <pkg>testit</pkg>
     <pkg>testthat</pkg>
