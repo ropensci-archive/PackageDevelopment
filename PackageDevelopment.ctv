@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2017-04-02</version>
+  <version>2017-06-16</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -54,7 +54,8 @@
     <h3 id="dependency-management">Dependency Management</h3>
     <p>Packages that have dependencies on other packages need to be vigilant of changes to the functionality, behaviour, or API of those packages.</p>
     <ul>
-    <li><pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">Github</a>) provides facilities for creating local package repositories to manage and check dependencies.</li>
+    <li><pkg>backports</pkg> (<a href="https://github.com/mllg/backports">GitHub</a>) provides reimplementations of functions added to base R packages since v3.0.0, making them available in older versions of R. This gives package developers the ability to reduce or eliminate a dependency on specific versions of R itself.</li>
+    <li><pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">GitHub</a>) provides facilities for creating local package repositories to manage and check dependencies.</li>
     <li><pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates.</li>
     <li><pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">Github</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.</li>
     <li><pkg>GRANBase</pkg> (<a href="https://github.com/gmbecker/gRAN">GitHub</a>) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.</li>
@@ -111,8 +112,10 @@
     <ul>
     <li>Packages should pass all basic code and documentation checks provided by the <code>R CMD check</code> quality assurance tools built in to R. <pkg>rcmdcheck</pkg> provides programmatic access to <code>R CMD check</code> from within R and <a href="https://github.com/r-pkgs/callr">callr</a> (not on CRAN) provides a generic interface for calling R from within R.</li>
     <li>R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the <code>test</code> directory. Several packages provide testing functionality, including <pkg>RUnit</pkg>, <pkg>svUnit</pkg>, <pkg>testit</pkg> (<a href="https://github.com/yihui/testit">GitHub</a>), <pkg>testthat</pkg>, <a href="https://github.com/robertzk/testthatsomemore">testthatsomemore</a> (not on CRAN), and <pkg>pkgmaker</pkg>. <pkg>runittotestthat</pkg> provides utilities for converting exiting RUnit tests to testthat tests.</li>
+    <li><pkg>unitizer</pkg> (<a href="https://github.com/brodieG/unitizer">GitHub</a>) provides tools for regression testing by comparing test output against previous runs of the same tests. The package has extensive vignette-based documentation.</li>
     <li><pkg>vdiffr</pkg> (<a href="https://github.com/lionel-/vdiffr">GitHub</a>) can be used for graphical unit tests.</li>
     <li><pkg>assertive</pkg>, <pkg>assertr</pkg>, <pkg>checkmate</pkg> <pkg>ensurer</pkg>, and <pkg>assertthat</pkg> provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.</li>
+    <li><pkg>mockr</pkg> (<a href="https://github.com/krlmlr/mockr">GitHub</a>) provides tools to mock a function in a test context. This can be useful for standardizing the test of a function that calls other functions by fixing the output of those function dependencies.</li>
     <li><pkg>covr</pkg> and <a href="https://github.com/MangoTheCat/testCoverage">testCoverage</a> (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as <a href="https://codecov.io/">Codecov</a> or <a href="https://coveralls.io/">Coveralls</a> that provide web interfaces for assessing code coverage.</li>
     <li><pkg>withr</pkg> (<a href="https://github.com/jimhester/withr">GitHub</a>) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.</li>
     <li>The <code>devtools::use_revdep()</code> and <code>revdep_check()</code> functions from <pkg>devtools</pkg> can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality. <a href="https://github.com/yihui/crandalf">crandalf</a> (not on CRAN) provides an alternative mechanism for testing reverse dependencies.</li>
@@ -144,6 +147,7 @@
     <ul>
     <li>One can write .Rd files directly. A popular alternative is to rely on <pkg>roxygen2</pkg>, which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by <code>roxygen2::roxygenise()</code> and underlies <code>devtools::document()</code>. roxygen2 eliminates the need to learn <em>some</em> of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling <code>R CMD build</code>). Recent versions of roxygen2 support full markdown-based documentation without the need for any native Rd formatting.</li>
     <li><pkg>Rd2roxygen</pkg> can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow. <a href="https://github.com/r-pkgs/roxygen2md">roxygen2md</a> (not on CRAN) provides tools for further converting Rd markup within roxygen comments to markdown format (supported by the latest versions of roxygen2).</li>
+    <li><a href="https://github.com/unDocUMeantIt/roxyPackage">roxyPackage</a> (not on CRAN) provides some additional functionality for maintaining package documentation.</li>
     <li><pkg>inlinedocs</pkg> and <pkg>documair</pkg> provide further alternative documentation schemes based on source code commenting.</li>
     <li><code>tools::parse_Rd()</code> can be used to manipulate the contents of an .Rd file. <code>tools::checkRd()</code> is useful for validating an .Rd file. Duncan Murdoch's <a href="https://developer.r-project.org/parseRd.pdf">&quot;Parsing Rd files&quot;</a> tutorial is a useful reference for advanced use of R documentation. <pkg>Rdpack</pkg> provides additional tools for manipulating documentation files.</li>
     <li><pkg>packagedocs</pkg> and <a href="https://github.com/hadley/pkgdown">pkgdown</a> (not on CRAN) can be used to generate static websites from R documentation files.</li>
@@ -205,6 +209,7 @@
     <pkg>assertive</pkg>
     <pkg>assertr</pkg>
     <pkg>assertthat</pkg>
+    <pkg>backports</pkg>
     <pkg>badgecreatr</pkg>
     <pkg>checkmate</pkg>
     <pkg>checkpoint</pkg>
@@ -242,6 +247,7 @@
     <pkg>magrittr</pkg>
     <pkg>matlabr</pkg>
     <pkg>microbenchmark</pkg>
+    <pkg>mockr</pkg>
     <pkg>mvbutils</pkg>
     <pkg>optigrab</pkg>
     <pkg>osi</pkg>
@@ -294,6 +300,7 @@
     <pkg>tcltk2</pkg>
     <pkg>testit</pkg>
     <pkg>testthat</pkg>
+    <pkg>unitizer</pkg>
     <pkg>V8</pkg>
     <pkg>vdiffr</pkg>
     <pkg>withr</pkg>

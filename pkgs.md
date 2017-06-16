@@ -58,7 +58,8 @@ Another feature of R is the ability to rely on both standard and non-standard ev
 
 Packages that have dependencies on other packages need to be vigilant of changes to the functionality, behaviour, or API of those packages. 
 
--   <pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">Github</a>) provides facilities for creating local package repositories to manage and check dependencies. 
+-   <pkg>backports</pkg> ([GitHub](https://github.com/mllg/backports)) provides reimplementations of functions added to base R packages since v3.0.0, making them available in older versions of R. This gives package developers the ability to reduce or eliminate a dependency on specific versions of R itself.
+-   <pkg>packrat</pkg> ([GitHub](https://github.com/rstudio/packrat)) provides facilities for creating local package repositories to manage and check dependencies. 
 -   <pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates. 
 -   <pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">Github</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
 -   <pkg>GRANBase</pkg> ([GitHub](https://github.com/gmbecker/gRAN)) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.

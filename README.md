@@ -8,7 +8,7 @@ CRAN Task View: Package Development
 |-----------------|------------------------------------------------------|
 | **Maintainer:** | Thomas J. Leeper                                     |
 | **Contact:**    | thosjleeper at gmail.com                             |
-| **Version:**    | 2017-04-02                                           |
+| **Version:**    | 2017-06-16                                           |
 | **URL:**        | <https://CRAN.R-project.org/view=PackageDevelopment> |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
@@ -72,7 +72,8 @@ Another feature of R is the ability to rely on both standard and non-standard ev
 
 Packages that have dependencies on other packages need to be vigilant of changes to the functionality, behaviour, or API of those packages.
 
--   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html) ([Github](https://github.com/rstudio/packrat)) provides facilities for creating local package repositories to manage and check dependencies.
+-   [backports](http://cran.rstudio.com/web/packages/backports/index.html) ([GitHub](https://github.com/mllg/backports)) provides reimplementations of functions added to base R packages since v3.0.0, making them available in older versions of R. This gives package developers the ability to reduce or eliminate a dependency on specific versions of R itself.
+-   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html) ([GitHub](https://github.com/rstudio/packrat)) provides facilities for creating local package repositories to manage and check dependencies.
 -   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html) relies on the Revolution Analytics MRAN repository to access packages from specified dates.
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html) ([Github](https://github.com/trinker/pacman)) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
 -   [GRANBase](http://cran.rstudio.com/web/packages/GRANBase/index.html) ([GitHub](https://github.com/gmbecker/gRAN)) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.
@@ -133,8 +134,10 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 -   Packages should pass all basic code and documentation checks provided by the `R CMD check` quality assurance tools built in to R. [rcmdcheck](http://cran.rstudio.com/web/packages/rcmdcheck/index.html) provides programmatic access to `R CMD check` from within R and [callr](https://github.com/r-pkgs/callr) (not on CRAN) provides a generic interface for calling R from within R.
 -   R documentation files can contain demonstrative examples of package functionality. Complete testing of correct package performance is better reserved for the `test` directory. Several packages provide testing functionality, including [RUnit](http://cran.rstudio.com/web/packages/RUnit/index.html), [svUnit](http://cran.rstudio.com/web/packages/svUnit/index.html), [testit](http://cran.rstudio.com/web/packages/testit/index.html) ([GitHub](https://github.com/yihui/testit)), [testthat](http://cran.rstudio.com/web/packages/testthat/index.html), [testthatsomemore](https://github.com/robertzk/testthatsomemore) (not on CRAN), and [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html). [runittotestthat](http://cran.rstudio.com/web/packages/runittotestthat/index.html) provides utilities for converting exiting RUnit tests to testthat tests.
+-   [unitizer](http://cran.rstudio.com/web/packages/unitizer/index.html) ([GitHub](https://github.com/brodieG/unitizer)) provides tools for regression testing by comparing test output against previous runs of the same tests. The package has extensive vignette-based documentation.
 -   [vdiffr](http://cran.rstudio.com/web/packages/vdiffr/index.html) ([GitHub](https://github.com/lionel-/vdiffr)) can be used for graphical unit tests.
 -   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html), [assertr](http://cran.rstudio.com/web/packages/assertr/index.html), [checkmate](http://cran.rstudio.com/web/packages/checkmate/index.html) [ensurer](http://cran.rstudio.com/web/packages/ensurer/index.html), and [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html) provide test-like functions for use at run-time or in examples that will trigger messages, warnings, or errors if an R object differs from what is expected by the user or developer.
+-   [mockr](http://cran.rstudio.com/web/packages/mockr/index.html) ([GitHub](https://github.com/krlmlr/mockr)) provides tools to mock a function in a test context. This can be useful for standardizing the test of a function that calls other functions by fixing the output of those function dependencies.
 -   [covr](http://cran.rstudio.com/web/packages/covr/index.html) and [testCoverage](https://github.com/MangoTheCat/testCoverage) (not on CRAN) offer utilities for monitoring how well tests cover a package's source code. These can be complemented by services such as [Codecov](https://codecov.io/) or [Coveralls](https://coveralls.io/) that provide web interfaces for assessing code coverage.
 -   [withr](http://cran.rstudio.com/web/packages/withr/index.html) ([GitHub](https://github.com/jimhester/withr)) provides functions to evaluate code within a temporarily modified global state, which may be useful for unit testing, debugging, or package development.
 -   The `devtools::use_revdep()` and `revdep_check()` functions from [devtools](http://cran.rstudio.com/web/packages/devtools/index.html) can be used to test reverse package dependencies to ensure code changes have not affected downstream package functionality. [crandalf](https://github.com/yihui/crandalf) (not on CRAN) provides an alternative mechanism for testing reverse dependencies.
@@ -169,6 +172,7 @@ Package documentation is written in a TeX-like format as .Rd files that are stor
 
 -   One can write .Rd files directly. A popular alternative is to rely on [roxygen2](http://cran.rstudio.com/web/packages/roxygen2/index.html), which uses special markup in R source files to generate documentation files before a package is built. This functionality is provided by `roxygen2::roxygenise()` and underlies `devtools::document()`. roxygen2 eliminates the need to learn *some* of the formatting requirements of an .Rd file at the cost of adding a step to the development process (the need to roxygenise before calling `R CMD build`). Recent versions of roxygen2 support full markdown-based documentation without the need for any native Rd formatting.
 -   [Rd2roxygen](http://cran.rstudio.com/web/packages/Rd2roxygen/index.html) can convert existing .Rd files to roxygen source documentation, facilitating the conversion of existing documentation to an roxygen workflow. [roxygen2md](https://github.com/r-pkgs/roxygen2md) (not on CRAN) provides tools for further converting Rd markup within roxygen comments to markdown format (supported by the latest versions of roxygen2).
+-   [roxyPackage](https://github.com/unDocUMeantIt/roxyPackage) (not on CRAN) provides some additional functionality for maintaining package documentation.
 -   [inlinedocs](http://cran.rstudio.com/web/packages/inlinedocs/index.html) and [documair](http://cran.rstudio.com/web/packages/documair/index.html) provide further alternative documentation schemes based on source code commenting.
 -   `tools::parse_Rd()` can be used to manipulate the contents of an .Rd file. `tools::checkRd()` is useful for validating an .Rd file. Duncan Murdoch's ["Parsing Rd files"](https://developer.r-project.org/parseRd.pdf) tutorial is a useful reference for advanced use of R documentation. [Rdpack](http://cran.rstudio.com/web/packages/Rdpack/index.html) provides additional tools for manipulating documentation files.
 -   [packagedocs](http://cran.rstudio.com/web/packages/packagedocs/index.html) and [pkgdown](https://github.com/hadley/pkgdown) (not on CRAN) can be used to generate static websites from R documentation files.
@@ -231,6 +235,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [assertive](http://cran.rstudio.com/web/packages/assertive/index.html)
 -   [assertr](http://cran.rstudio.com/web/packages/assertr/index.html)
 -   [assertthat](http://cran.rstudio.com/web/packages/assertthat/index.html)
+-   [backports](http://cran.rstudio.com/web/packages/backports/index.html)
 -   [badgecreatr](http://cran.rstudio.com/web/packages/badgecreatr/index.html)
 -   [checkmate](http://cran.rstudio.com/web/packages/checkmate/index.html)
 -   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html)
@@ -270,6 +275,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html)
 -   [matlabr](http://cran.rstudio.com/web/packages/matlabr/index.html)
 -   [microbenchmark](http://cran.rstudio.com/web/packages/microbenchmark/index.html)
+-   [mockr](http://cran.rstudio.com/web/packages/mockr/index.html)
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html)
 -   [optigrab](http://cran.rstudio.com/web/packages/optigrab/index.html)
 -   [osi](http://cran.rstudio.com/web/packages/osi/index.html)
@@ -323,6 +329,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [tcltk2](http://cran.rstudio.com/web/packages/tcltk2/index.html)
 -   [testit](http://cran.rstudio.com/web/packages/testit/index.html)
 -   [testthat](http://cran.rstudio.com/web/packages/testthat/index.html)
+-   [unitizer](http://cran.rstudio.com/web/packages/unitizer/index.html)
 -   [V8](http://cran.rstudio.com/web/packages/V8/index.html)
 -   [vdiffr](http://cran.rstudio.com/web/packages/vdiffr/index.html)
 -   [withr](http://cran.rstudio.com/web/packages/withr/index.html)
