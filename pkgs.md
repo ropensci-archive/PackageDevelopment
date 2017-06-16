@@ -61,10 +61,9 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   <pkg>backports</pkg> ([GitHub](https://github.com/mllg/backports)) provides reimplementations of functions added to base R packages since v3.0.0, making them available in older versions of R. This gives package developers the ability to reduce or eliminate a dependency on specific versions of R itself.
 -   <pkg>packrat</pkg> ([GitHub](https://github.com/rstudio/packrat)) provides facilities for creating local package repositories to manage and check dependencies. 
 -   <pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates. 
--   <pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">Github</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
+-   <pkg>pacman</pkg> ([GitHub](https://github.com/trinker/pacman)) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
 -   <pkg>GRANBase</pkg> ([GitHub](https://github.com/gmbecker/gRAN)) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.
--   Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> (<a href="https://github.com/smbache/import">Github</a>) can import numerous objects from a namespace and assign arbitrary names. <a href="https://github.com/klmr/modules">modules</a> (not on CRAN) provides functionality for importing alternative non-package code from Python-like "modules".
--   [functionMap](https://github.com/MangoTheCat/functionMap) provides a visualization tool useful for understanding function dependencies within and across packages. [atomize](https://github.com/ropenscilabs/atomize) can quickly extract functions from within a package into their own package.
+-   Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> ([GitHub](https://github.com/smbache/import)) can import numerous objects from a namespace and assign arbitrary names. [modules](https://github.com/klmr/modules) (not on CRAN) provides functionality for importing alternative non-package code from Python-like "modules".
 
 
 ## Source Code
@@ -101,6 +100,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   <pkg>lintr</pkg> provides tools for checking source code compliance with a style guide.
 -   <pkg>formatR</pkg> and [rfmt](https://github.com/google/rfmt/) (not on CRAN) can be used to neatly format source code.
 -   <pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.
+-   <pkg>pkggraph</pkg> ([GitHub](https://github.com/talegari/pkggraph)) and [functionMap](https://github.com/MangoTheCat/functionMap) provide tools useful for understanding function dependencies within and across packages. [atomize](https://github.com/ropenscilabs/atomize) can quickly extract functions from within a package into their own package.
 
 ### Profiling
 
