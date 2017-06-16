@@ -78,6 +78,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html) ([GitHub](https://github.com/trinker/pacman)) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
 -   [GRANBase](http://cran.rstudio.com/web/packages/GRANBase/index.html) ([GitHub](https://github.com/gmbecker/gRAN)) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.
 -   Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). [import](http://cran.rstudio.com/web/packages/import/index.html) ([GitHub](https://github.com/smbache/import)) can import numerous objects from a namespace and assign arbitrary names. [modules](https://github.com/klmr/modules) (not on CRAN) provides functionality for importing alternative non-package code from Python-like "modules".
+-   [Rocker](https://github.com/rocker-org) is an initiative to create Docker configurations for R and packages. [containerit](https://github.com/o2r-project/containerit/) (not on CRAN) can be used to package an R workspace and all dependencies as a Docker container.
 
 Source Code
 -----------

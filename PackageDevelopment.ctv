@@ -60,6 +60,7 @@
     <li><pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">GitHub</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.</li>
     <li><pkg>GRANBase</pkg> (<a href="https://github.com/gmbecker/gRAN">GitHub</a>) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.</li>
     <li>Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> (<a href="https://github.com/smbache/import">GitHub</a>) can import numerous objects from a namespace and assign arbitrary names. <a href="https://github.com/klmr/modules">modules</a> (not on CRAN) provides functionality for importing alternative non-package code from Python-like &quot;modules&quot;.</li>
+    <li><a href="https://github.com/rocker-org">Rocker</a> is an initiative to create Docker configurations for R and packages. <a href="https://github.com/o2r-project/containerit/">containerit</a> (not on CRAN) can be used to package an R workspace and all dependencies as a Docker container.</li>
     </ul>
     <h2 id="source-code">Source Code</h2>
     <h3 id="foreign-languages-interfaces">Foreign Languages Interfaces</h3>
