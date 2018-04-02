@@ -48,11 +48,12 @@ R is foremost a functional programming language with dynamic typing, but has thr
 -   [argufy](https://github.com/gaborcsardi/argufy) (Not on CRAN), provides a syntax for creating functions with strictly typed arguments, among other possible checks.
 -   <pkg>lambda.r</pkg>, [lambdaR](https://github.com/hoxo-m/lambdaR) (not on CRAN), and <pkg>purrr</pkg> provide interfaces for creating lambda (anonymous) functions.
 -   <pkg>functools</pkg> ([GitHub](https://github.com/paulhendricks/functools)) provides higher-order functions (Map, Reduce, etc.) common in funcitonal programming.
+-   <pkg>later</pkg> ([GitHub](https://github.com/r-lib/later)) provides the ability to postpone execution of R or C code.
 
 Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like `library` and `subset` and can also be used in packages.
 
 -   `substitute()` provides the most straightforward interface to non-standard evaluation of function arguments.
--   <pkg>lazyeval</pkg> ([Github](https://github.com/hadley/lazyeval)) aims to help developers design packages with parallel function implementations that follow both standard and non-standard evaluation.
+-   <pkg>rlang</pkg> ([Github](https://github.com/tidyverse/rlang)) aims to help developers tools for non-standard evaluation.
 -   An increasingly popular form of non-standard evaluation involves chained expressions or "pipelines". <pkg>magrittr</pkg> provides the `%>%` chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. <pkg>pipeR</pkg> offers a larger set of pipe operators. <pkg>assertr</pkg> and <pkg>ensurer</pkg> provide (fairly similar) testing frameworks for pipelines.
 
 ### Dependency Management
@@ -65,6 +66,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 -   <pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates. 
 -   <pkg>pacman</pkg> ([GitHub](https://github.com/trinker/pacman)) can install, uninstall, load, and unload various versions of packages from CRAN and Github.
 -   <pkg>GRANBase</pkg> ([GitHub](https://github.com/gmbecker/gRAN)) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.
+-   <pkg>cranly</pkg> ([GitHub](https://github.com/ikosmidis/cranly)) provides tools for creating and visualizing dependency graphs among packages on CRAN.
 -   Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> ([GitHub](https://github.com/smbache/import)) can import numerous objects from a namespace and assign arbitrary names. [modules](https://github.com/klmr/modules) (not on CRAN) provides functionality for importing alternative non-package code from Python-like "modules".
 -   [Rocker](https://github.com/rocker-org) is an initiative to create Docker configurations for R and packages. [containerit](https://github.com/o2r-project/containerit/) (not on CRAN) can be used to package an R workspace and all dependencies as a Docker container.
 
