@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2017-06-16</version>
+  <version>2018-04-02</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -25,7 +25,8 @@
     <li><code>utils::package.skeleton()</code> automates some of the setup for a new source package. It creates directories, saves functions, data, and R code files provided to appropriate places, and creates skeleton help files and a <code>Read-and-delete-me</code> file describing further steps in packaging</li>
     <li><code>create()</code> from <pkg>devtools</pkg> is similar to <code>package.skeleton</code> except it allows to specify <code>DESCRIPTION</code> entries and doesn't create source code and data files from global environment objects or sourced files.</li>
     <li>Non-devtools alternatives also exist. <code>kitten()</code> from <pkg>pkgKitten</pkg> allows one to specify the main <code>DESCRIPTION</code> entries and doesn't create source code and data files from global environment objects or sourced files. It's used to initialize a simple package that passes <code>R CMD check</code> cleanly. <pkg>skeletor</pkg> provides another non-devtools skeleton-building function with a wider set of defaults and options.</li>
-    <li><a href="https://github.com/metacran/mason">mason</a> provides a fun, interactive tool for creating a package based on a variety of inputs.</li>
+    <li><a href="https://github.com/metacran/mason">mason</a> (not the package on CRAN of the same name) provides a fun, interactive tool for creating a package based on a variety of inputs.</li>
+    <li><pkg>available</pkg> (<a href="https://github.com/ropenscilabs/available">GitHub</a>) checks whether a package name is available and checks for unintended (typically bad) meanings in a potential package name.</li>
     <li><code>Rcpp.package.skeleton()</code> from <pkg>Rcpp</pkg> adds to <code>package.skeleton</code> the C++ via <code>Rcpp</code> handling, by modifying eg. <code>DESCRIPTION</code> and <code>NAMESPACE</code> accordingly, creating examples if needed and allowing the user to specify (with a character vector of paths) which C++ files to include in <code>src</code> directory . Finally the user can decide main <code>DESCRIPTION</code> entries.</li>
     <li><pkg>mvbutils</pkg> provides a variety of useful functions for development which include tools for managing and analyzing the development environment, auto-generating certain function types, and visualizing a function dependency graph. <a href="https://github.com/andrie/pagerank">pagerank</a> (not on CRAN) can calculate a package's PageRank from its dependency graph.</li>
     <li><a href="https://github.com/hrbrmstr/swagger">swagger</a> (not on CRAN) uses the <a href="http://swagger.io/">Swagger</a> JSON web service API specification to automatically generate an R client package for a web service API.</li>
@@ -44,21 +45,24 @@
     <li><a href="https://github.com/gaborcsardi/argufy">argufy</a> (Not on CRAN), provides a syntax for creating functions with strictly typed arguments, among other possible checks.</li>
     <li><pkg>lambda.r</pkg>, <a href="https://github.com/hoxo-m/lambdaR">lambdaR</a> (not on CRAN), and <pkg>purrr</pkg> provide interfaces for creating lambda (anonymous) functions.</li>
     <li><pkg>functools</pkg> (<a href="https://github.com/paulhendricks/functools">GitHub</a>) provides higher-order functions (Map, Reduce, etc.) common in funcitonal programming.</li>
+    <li><pkg>later</pkg> (<a href="https://github.com/r-lib/later">GitHub</a>) provides the ability to postpone execution of R or C code.</li>
     </ul>
     <p>Another feature of R is the ability to rely on both standard and non-standard evaluation of function arguments. Non-standard evaluation is seen in commonly used functions like <code>library</code> and <code>subset</code> and can also be used in packages.</p>
     <ul>
     <li><code>substitute()</code> provides the most straightforward interface to non-standard evaluation of function arguments.</li>
-    <li><pkg>lazyeval</pkg> (<a href="https://github.com/hadley/lazyeval">Github</a>) aims to help developers design packages with parallel function implementations that follow both standard and non-standard evaluation.</li>
+    <li><pkg>rlang</pkg> (<a href="https://github.com/tidyverse/rlang">Github</a>) aims to help developers tools for non-standard evaluation.</li>
     <li>An increasingly popular form of non-standard evaluation involves chained expressions or &quot;pipelines&quot;. <pkg>magrittr</pkg> provides the <code>%&gt;%</code> chaining operator that passes the results of one expression evaluation to the next expression in the chain, as well as other similar piping operators. <pkg>pipeR</pkg> offers a larger set of pipe operators. <pkg>assertr</pkg> and <pkg>ensurer</pkg> provide (fairly similar) testing frameworks for pipelines.</li>
     </ul>
     <h3 id="dependency-management">Dependency Management</h3>
     <p>Packages that have dependencies on other packages need to be vigilant of changes to the functionality, behaviour, or API of those packages.</p>
     <ul>
+    <li><pkg>CodeDepends</pkg> provides tools for examining dependencies between blocks of code.</li>
     <li><pkg>backports</pkg> (<a href="https://github.com/mllg/backports">GitHub</a>) provides reimplementations of functions added to base R packages since v3.0.0, making them available in older versions of R. This gives package developers the ability to reduce or eliminate a dependency on specific versions of R itself.</li>
     <li><pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">GitHub</a>) provides facilities for creating local package repositories to manage and check dependencies.</li>
     <li><pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates.</li>
     <li><pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">GitHub</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.</li>
     <li><pkg>GRANBase</pkg> (<a href="https://github.com/gmbecker/gRAN">GitHub</a>) provides some sophisticated tools for managing dependencies and testing packages conditional on changes.</li>
+    <li><pkg>cranly</pkg> (<a href="https://github.com/ikosmidis/cranly">GitHub</a>) provides tools for creating and visualizing dependency graphs among packages on CRAN.</li>
     <li>Two packages currently provide alternative ways to import objects from packages in non-standard ways (e.g., to assign those objects different names from the names used in their host packages). <pkg>import</pkg> (<a href="https://github.com/smbache/import">GitHub</a>) can import numerous objects from a namespace and assign arbitrary names. <a href="https://github.com/klmr/modules">modules</a> (not on CRAN) provides functionality for importing alternative non-package code from Python-like &quot;modules&quot;.</li>
     <li><a href="https://github.com/rocker-org">Rocker</a> is an initiative to create Docker configurations for R and packages. <a href="https://github.com/o2r-project/containerit/">containerit</a> (not on CRAN) can be used to package an R workspace and all dependencies as a Docker container.</li>
     </ul>
@@ -188,7 +192,7 @@
     <p>Many <a href="https://en.wikipedia.org/wiki/Comparison_of_open-source_software_hosting_facilities">hosting services</a> are available. Use of different hosts depends largely on what type of version control software is used to maintain a package. The most common sites are:</p>
     <ul>
     <li><a href="http://r-forge.r-project.org/">R-Forge</a>, which relies on <a href="http://subversion.apache.org/">Subversion</a>. <a href="https://rforge.net/">Rforge.net</a> is another popular Subversion-based system.</li>
-    <li><a href="http://log.r-hub.io/">r-hub</a> is a modern package test service funded by the RConsortium . <a href="https://github.com/r-hub/rhub">rhub</a> (not on CRAN) provides an R client for the site's API.</li>
+    <li><a href="http://log.r-hub.io/">r-hub</a> is a modern package test service funded by the RConsortium . <pkg>rhub</pkg> (<a href="https://github.com/r-hub/rhub">GitHub</a>) provides an R client for the site's API.</li>
     <li><a href="https://github.com/">GitHub</a> <a href="https://help.github.com/articles/support-for-subversion-clients/">mainly</a> supports Git and Mercurial. Packages hosted on Github can be installed directly using <code>devtools::install_github()</code> or <code>ghit::install_github()</code> from <pkg>ghit</pkg> or <code>remotes::install_github()</code> from <pkg>remotes</pkg>. <a href="https://github.com/r-pkgs/gh">gh</a> (not on CRAN) is a lightweight client for the GitHub API. <a href="https://github.com/jonocarroll/githubtools">githubtools</a> (not on CRAN) provides some resources for including GitHub-related links in package documentation and for analyzing packages installed from GitHub.</li>
     <li><a href="https://bitbucket.org/">Bitbucket</a> is an alternative host that provides no-cost private repositories and <a href="https://about.gitlab.com/">GitLab</a> is an open source alternative. <pkg>gitlabr</pkg> provides is an API client for managing Gitlab projects.</li>
     <li>Github supports <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> for R packages. <a href="https://travis-ci.org/">Travis CI</a> is a popular continuous integration tools that supports Linux and OS X build environments. Travis has native R support, and can easily provide code coverage information via <pkg>covr</pkg> to <a href="https://codecov.io/">Codecov.io</a> or <a href="https://coveralls.io/">Coveralls</a>. <a href="https://github.com/cloudyr/travisci">travisci</a> (not on CRAN) provides an API client for Travis. Use of other CI services, such as <a href="https://circleci.com/">Circle CI</a> may require additional code and examples are available from <a href="https://github.com/craigcitro/r-travis">r-travis</a> and/or <a href="https://github.com/metacran/r-builder">r-builder</a>. <a href="https://github.com/cloudyr/circleci">circleci</a> (not on CRAN) provides an API client for Circle CI. <pkg>badgecreatr</pkg> (<a href="https://github.com/RMHogervorst/badgecreatr">GitHub</a>) provides a convenient way of creating standardized badges (or &quot;shields&quot;) for package READMEs.</li>
@@ -210,13 +214,16 @@
     <pkg>assertive</pkg>
     <pkg>assertr</pkg>
     <pkg>assertthat</pkg>
+    <pkg>available</pkg>
     <pkg>backports</pkg>
     <pkg>badgecreatr</pkg>
     <pkg>checkmate</pkg>
     <pkg>checkpoint</pkg>
+    <pkg>CodeDepends</pkg>
     <pkg>codetools</pkg>
     <pkg>commandr</pkg>
     <pkg>covr</pkg>
+    <pkg>cranly</pkg>
     <pkg>docopt</pkg>
     <pkg>documair</pkg>
     <pkg>drat</pkg>
@@ -240,8 +247,8 @@
     <pkg>inlinedocs</pkg>
     <pkg>js</pkg>
     <pkg>lambda.r</pkg>
+    <pkg>later</pkg>
     <pkg>lazyData</pkg>
-    <pkg>lazyeval</pkg>
     <pkg>lintr</pkg>
     <pkg>log4r</pkg>
     <pkg>logging</pkg>
@@ -282,9 +289,11 @@
     <pkg>remotes</pkg>
     <pkg>reticulate</pkg>
     <pkg>rGroovy</pkg>
+    <pkg>rhub</pkg>
     <pkg>RInside</pkg>
     <pkg>rJava</pkg>
     <pkg>rJython</pkg>
+    <pkg>rlang</pkg>
     <pkg>rollbar</pkg>
     <pkg>rPython</pkg>
     <pkg>rscala</pkg>
