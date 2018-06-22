@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2018-04-02</version>
+  <version>2018-06-22</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -15,7 +15,6 @@
     <li><code>utils::RSiteSearch()</code> allows to search for keywords/phrases in help pages (all the CRAN packages except those for Windows only and some from Bioconductor), vignettes or task views, using the search engine at <a href="http://search.r-project.org/" class="uri">http://search.r-project.org/</a>. A convenient wrapper around <code>RSiteSearch</code> that adds hits ranking is <code>findFn()</code> function, from <pkg>sos</pkg>.</li>
     <li><a href="http://rseek.org/">RSeek</a> allows to search for keywords/phrases in books, task views, support lists, function/packages, blogs etc.</li>
     <li><a href="https://www.rdocumentation.org/">Rdocumentation</a> allows to search for keywords/phrases in help pages for all CRAN and some Bioconductor/GitHub packages. <pkg>RDocumentation</pkg> (<a href="https://github.com/datacamp/RDocumentation/">GitHub</a>) provides an R client for the site.</li>
-    <li><a href="http://crantastic.org/">Crantastic!</a> maintains an up-to-date and tagged directory of packages on CRAN. The <a href="https://mran.revolutionanalytics.com/">Managed R Archive Network</a> from Revolution Analytics is a CRAN mirror that additionally provides visualizations of package dependency trees.</li>
     <li><a href="http://www.r-pkg.org/" class="uri">http://www.r-pkg.org/</a> is an unofficial CRAN mirror that provides a relatively complete archive of package and read-only access to package sources on Github.</li>
     <li><a href="http://dirk.eddelbuettel.com/cranberries/">CRANberries</a> provides a feed of new, updated, and removed packages for CRAN.</li>
     <li>If you're looking to create a package, but want ideas for what sorts of packages are in demand, the <a href="https://ropensci.org/">rOpenSci</a> maintains <a href="https://github.com/ropensci/wishlist">a wishlist for science-related packages</a> and <a href="https://github.com/ropensci/webservices/wiki/ToDo">a TODO list of web services and data APIs in need of packaging</a>.</li>
@@ -98,6 +97,7 @@
     <li><pkg>formatR</pkg> and <a href="https://github.com/google/rfmt/">rfmt</a> (not on CRAN) can be used to neatly format source code.</li>
     <li><pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.</li>
     <li><pkg>pkggraph</pkg> (<a href="https://github.com/talegari/pkggraph">GitHub</a>) and <a href="https://github.com/MangoTheCat/functionMap">functionMap</a> provide tools useful for understanding function dependencies within and across packages. <a href="https://github.com/ropenscilabs/atomize">atomize</a> can quickly extract functions from within a package into their own package.</li>
+    <li><pkg>pkgnet</pkg> (<a href="https://github.com/UptakeOpenSource/pkgnet">GitHub</a>) uses concepts from graph theory to quantify the complexity and vulnerability to failure of a software package based upon dependencies between functions and between package dependencies.</li>
     </ul>
     <h3 id="profiling">Profiling</h3>
     <ul>
@@ -193,9 +193,9 @@
     <ul>
     <li><a href="http://r-forge.r-project.org/">R-Forge</a>, which relies on <a href="http://subversion.apache.org/">Subversion</a>. <a href="https://rforge.net/">Rforge.net</a> is another popular Subversion-based system.</li>
     <li><a href="http://log.r-hub.io/">r-hub</a> is a modern package test service funded by the RConsortium . <pkg>rhub</pkg> (<a href="https://github.com/r-hub/rhub">GitHub</a>) provides an R client for the site's API.</li>
-    <li><a href="https://github.com/">GitHub</a> <a href="https://help.github.com/articles/support-for-subversion-clients/">mainly</a> supports Git and Mercurial. Packages hosted on Github can be installed directly using <code>devtools::install_github()</code> or <code>ghit::install_github()</code> from <pkg>ghit</pkg> or <code>remotes::install_github()</code> from <pkg>remotes</pkg>. <a href="https://github.com/r-pkgs/gh">gh</a> (not on CRAN) is a lightweight client for the GitHub API. <a href="https://github.com/jonocarroll/githubtools">githubtools</a> (not on CRAN) provides some resources for including GitHub-related links in package documentation and for analyzing packages installed from GitHub.</li>
+    <li><a href="https://github.com/">GitHub</a> <a href="https://help.github.com/articles/support-for-subversion-clients/">mainly</a> supports Git and Mercurial. Packages hosted on Github can be installed directly using <code>devtools::install_github()</code> or <code>remotes::install_github()</code> from <pkg>remotes</pkg>. <a href="https://github.com/r-pkgs/gh">gh</a> (not on CRAN) is a lightweight client for the GitHub API. <a href="https://github.com/jonocarroll/githubtools">githubtools</a> (not on CRAN) provides some resources for including GitHub-related links in package documentation and for analyzing packages installed from GitHub.</li>
     <li><a href="https://bitbucket.org/">Bitbucket</a> is an alternative host that provides no-cost private repositories and <a href="https://about.gitlab.com/">GitLab</a> is an open source alternative. <pkg>gitlabr</pkg> provides is an API client for managing Gitlab projects.</li>
-    <li>Github supports <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> for R packages. <a href="https://travis-ci.org/">Travis CI</a> is a popular continuous integration tools that supports Linux and OS X build environments. Travis has native R support, and can easily provide code coverage information via <pkg>covr</pkg> to <a href="https://codecov.io/">Codecov.io</a> or <a href="https://coveralls.io/">Coveralls</a>. <a href="https://github.com/cloudyr/travisci">travisci</a> (not on CRAN) provides an API client for Travis. Use of other CI services, such as <a href="https://circleci.com/">Circle CI</a> may require additional code and examples are available from <a href="https://github.com/craigcitro/r-travis">r-travis</a> and/or <a href="https://github.com/metacran/r-builder">r-builder</a>. <a href="https://github.com/cloudyr/circleci">circleci</a> (not on CRAN) provides an API client for Circle CI. <pkg>badgecreatr</pkg> (<a href="https://github.com/RMHogervorst/badgecreatr">GitHub</a>) provides a convenient way of creating standardized badges (or &quot;shields&quot;) for package READMEs.</li>
+    <li>Github supports <a href="https://en.wikipedia.org/wiki/Continuous_integration">continuous integration</a> for R packages. <a href="https://travis-ci.org/">Travis CI</a> is a popular continuous integration tools that supports Linux and OS X build environments. Travis has native R support, and can easily provide code coverage information via <pkg>covr</pkg> to <a href="https://codecov.io/">Codecov.io</a> or <a href="https://coveralls.io/">Coveralls</a>. <a href="https://github.com/ropenscilabs/travis">travis</a> (not on CRAN) provides an API client for Travis. Use of other CI services, such as <a href="https://circleci.com/">Circle CI</a> may require additional code and examples are available from <a href="https://github.com/craigcitro/r-travis">r-travis</a> and/or <a href="https://github.com/metacran/r-builder">r-builder</a>. <a href="https://github.com/cloudyr/circleci">circleci</a> (not on CRAN) provides an API client for Circle CI. <pkg>badgecreatr</pkg> (<a href="https://github.com/RMHogervorst/badgecreatr">GitHub</a>) provides a convenient way of creating standardized badges (or &quot;shields&quot;) for package READMEs.</li>
     <li><a href="http://win-builder.r-project.org/">WinBuilder</a> is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an <code>R CMD check</code>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the <code>Maintainer</code> with links to the package zip file and logs for download/inspection. <a href="https://www.appveyor.com/">Appveyor</a> is a continuous integration service that offers a Windows build environment. <a href="https://github.com/krlmlr/r-appveyor">r-appveyor</a> (not on CRAN) and <a href="https://github.com/cloudyr/appveyor">appveyor</a> (not on CRAN) provide API clients for Appveyor.</li>
     <li><a href="https://github.com/rocker-org/rocker">Rocker</a> provides containers for use with <a href="https://www.docker.com/">Docker</a>. <a href="https://github.com/wch/harbor">harbor</a> can be used to control docker containers on remote and local hosts and <a href="https://github.com/traitecoevo/dockertest">dockertest</a> provides facilities for running tests on docker.</li>
     <li>Some packages, especially some that are no longer under active development, remain hosted on <a href="https://code.google.com/">Google Code</a>. This service is closed to new projects, however, and will shut down in January 2016.</li>
@@ -234,7 +234,6 @@
     <pkg>functools</pkg>
     <pkg>GetoptLong</pkg>
     <pkg>getPass</pkg>
-    <pkg>ghit</pkg>
     <pkg>git2r</pkg>
     <pkg>gitlabr</pkg>
     <pkg>GRANBase</pkg>
@@ -268,6 +267,7 @@
     <pkg>pkggraph</pkg>
     <pkg>pkgKitten</pkg>
     <pkg>pkgmaker</pkg>
+    <pkg>pkgnet</pkg>
     <pkg>prof.tree</pkg>
     <pkg>profmem</pkg>
     <pkg>profr</pkg>
