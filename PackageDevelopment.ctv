@@ -156,7 +156,7 @@
     <li><a href="https://github.com/unDocUMeantIt/roxyPackage">roxyPackage</a> (not on CRAN) provides some additional functionality for maintaining package documentation.</li>
     <li><pkg>inlinedocs</pkg> and <pkg>documair</pkg> provide further alternative documentation schemes based on source code commenting.</li>
     <li><code>tools::parse_Rd()</code> can be used to manipulate the contents of an .Rd file. <code>tools::checkRd()</code> is useful for validating an .Rd file. Duncan Murdoch's <a href="https://developer.r-project.org/parseRd.pdf">&quot;Parsing Rd files&quot;</a> tutorial is a useful reference for advanced use of R documentation. <pkg>Rdpack</pkg> provides additional tools for manipulating documentation files.</li>
-    <li><pkg>packagedocs</pkg> and <a href="https://github.com/hadley/pkgdown">pkgdown</a> (not on CRAN) can be used to generate static websites from R documentation files.</li>
+    <li><pkg>packagedocs</pkg> and <pkg>pkgdown</pkg> can be used to generate static websites from R documentation files.</li>
     </ul>
     <h3 id="writing-vignettes">Writing Vignettes</h3>
     <p>Package vignettes provides additional documentation of package functionality that is not tied to a specific function (as in an .Rd file). Historically, vignettes were used to explain the statistical or computational approach taken by a package in an article-like format that would be rendered as a PDF document using <code>Sweave</code>. Since R 3.0.0, non-Sweave vignette engines have also been supported, including <pkg>knitr</pkg>, which can produce Sweave-like PDF vignettes but can also support HTML vignettes that are written in R-flavored markdown. To use a non-Sweave vignette engine, the vignette needs to start with a code block indicating the package and function to be used:</p>
@@ -200,7 +200,7 @@
     <li><a href="http://win-builder.r-project.org/">WinBuilder</a> is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an <code>R CMD check</code>) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the <code>Maintainer</code> with links to the package zip file and logs for download/inspection. <a href="https://www.appveyor.com/">Appveyor</a> is a continuous integration service that offers a Windows build environment. <a href="https://github.com/krlmlr/r-appveyor">r-appveyor</a> (not on CRAN) and <a href="https://github.com/cloudyr/appveyor">appveyor</a> (not on CRAN) provide API clients for Appveyor.</li>
     <li><a href="https://github.com/rocker-org/rocker">Rocker</a> provides containers for use with <a href="https://www.docker.com/">Docker</a>. <a href="https://github.com/wch/harbor">harbor</a> can be used to control docker containers on remote and local hosts and <a href="https://github.com/traitecoevo/dockertest">dockertest</a> provides facilities for running tests on docker.</li>
     <li>Some packages, especially some that are no longer under active development, remain hosted on <a href="https://code.google.com/">Google Code</a>. This service is closed to new projects, however, and will shut down in January 2016.</li>
-    <li><pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server. <a href="https://github.com/ColinFay/craneur">craneur</a> (not on CRAN) provides another way of creating the same.</li>
+    <li><pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server. <a href="https://github.com/ColinFay/craneur">craneur</a> (not on CRAN) provides another way of creating the same. <pkg>miniCRAN</pkg> can be used to create a subset of CRAN, for example for self-hosting of packages and their dependencies.</li>
     <li>CRAN does not provide package download statistics, but the RStudio CRAN mirror does. <pkg>packagetrackr</pkg> (<a href="http://gitlab.points-of-interest.cc/points-of-interest/packagetrackr">Source</a>) facilitates downloading and analyzing those logs.</li>
     </ul>
   </info>
@@ -255,6 +255,7 @@
     <pkg>magrittr</pkg>
     <pkg>matlabr</pkg>
     <pkg>microbenchmark</pkg>
+    <pkg>miniCRAN</pkg>
     <pkg>mockr</pkg>
     <pkg>mvbutils</pkg>
     <pkg>optigrab</pkg>
@@ -265,6 +266,7 @@
     <pkg>pacman</pkg>
     <pkg>pipeR</pkg>
     <pkg>pkgconfig</pkg>
+    <pkg>pkgdown</pkg>
     <pkg>pkggraph</pkg>
     <pkg>pkgKitten</pkg>
     <pkg>pkgmaker</pkg>

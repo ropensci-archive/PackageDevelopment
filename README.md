@@ -181,7 +181,7 @@ Package documentation is written in a TeX-like format as .Rd files that are stor
 -   [roxyPackage](https://github.com/unDocUMeantIt/roxyPackage) (not on CRAN) provides some additional functionality for maintaining package documentation.
 -   [inlinedocs](http://cran.rstudio.com/web/packages/inlinedocs/index.html) and [documair](http://cran.rstudio.com/web/packages/documair/index.html) provide further alternative documentation schemes based on source code commenting.
 -   `tools::parse_Rd()` can be used to manipulate the contents of an .Rd file. `tools::checkRd()` is useful for validating an .Rd file. Duncan Murdoch's ["Parsing Rd files"](https://developer.r-project.org/parseRd.pdf) tutorial is a useful reference for advanced use of R documentation. [Rdpack](http://cran.rstudio.com/web/packages/Rdpack/index.html) provides additional tools for manipulating documentation files.
--   [packagedocs](http://cran.rstudio.com/web/packages/packagedocs/index.html) and [pkgdown](https://github.com/hadley/pkgdown) (not on CRAN) can be used to generate static websites from R documentation files.
+-   [packagedocs](http://cran.rstudio.com/web/packages/packagedocs/index.html) and [pkgdown](http://cran.rstudio.com/web/packages/pkgdown/index.html) can be used to generate static websites from R documentation files.
 
 ### Writing Vignettes
 
@@ -229,7 +229,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [WinBuilder](http://win-builder.r-project.org/) is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an `R CMD check`) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the `Maintainer` with links to the package zip file and logs for download/inspection. [Appveyor](https://www.appveyor.com/) is a continuous integration service that offers a Windows build environment. [r-appveyor](https://github.com/krlmlr/r-appveyor) (not on CRAN) and [appveyor](https://github.com/cloudyr/appveyor) (not on CRAN) provide API clients for Appveyor.
 -   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/). [harbor](https://github.com/wch/harbor) can be used to control docker containers on remote and local hosts and [dockertest](https://github.com/traitecoevo/dockertest) provides facilities for running tests on docker.
 -   Some packages, especially some that are no longer under active development, remain hosted on [Google Code](https://code.google.com/). This service is closed to new projects, however, and will shut down in January 2016.
--   [drat](http://cran.rstudio.com/web/packages/drat/index.html) can be used to distribute pre-built packages via Github or another server. [craneur](https://github.com/ColinFay/craneur) (not on CRAN) provides another way of creating the same.
+-   [drat](http://cran.rstudio.com/web/packages/drat/index.html) can be used to distribute pre-built packages via Github or another server. [craneur](https://github.com/ColinFay/craneur) (not on CRAN) provides another way of creating the same. [miniCRAN](http://cran.rstudio.com/web/packages/miniCRAN/index.html) can be used to create a subset of CRAN, for example for self-hosting of packages and their dependencies.
 -   CRAN does not provide package download statistics, but the RStudio CRAN mirror does. [packagetrackr](http://cran.rstudio.com/web/packages/packagetrackr/index.html) ([Source](http://gitlab.points-of-interest.cc/points-of-interest/packagetrackr)) facilitates downloading and analyzing those logs.
 
 ### CRAN packages:
@@ -283,6 +283,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [magrittr](http://cran.rstudio.com/web/packages/magrittr/index.html)
 -   [matlabr](http://cran.rstudio.com/web/packages/matlabr/index.html)
 -   [microbenchmark](http://cran.rstudio.com/web/packages/microbenchmark/index.html)
+-   [miniCRAN](http://cran.rstudio.com/web/packages/miniCRAN/index.html)
 -   [mockr](http://cran.rstudio.com/web/packages/mockr/index.html)
 -   [mvbutils](http://cran.rstudio.com/web/packages/mvbutils/index.html)
 -   [optigrab](http://cran.rstudio.com/web/packages/optigrab/index.html)
@@ -293,6 +294,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html)
 -   [pipeR](http://cran.rstudio.com/web/packages/pipeR/index.html)
 -   [pkgconfig](http://cran.rstudio.com/web/packages/pkgconfig/index.html)
+-   [pkgdown](http://cran.rstudio.com/web/packages/pkgdown/index.html)
 -   [pkggraph](http://cran.rstudio.com/web/packages/pkggraph/index.html)
 -   [pkgKitten](http://cran.rstudio.com/web/packages/pkgKitten/index.html)
 -   [pkgmaker](http://cran.rstudio.com/web/packages/pkgmaker/index.html)

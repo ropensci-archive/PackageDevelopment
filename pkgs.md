@@ -167,7 +167,7 @@ compiled to plain text, HTML, or PDF by R as needed.
 -   [roxyPackage](https://github.com/unDocUMeantIt/roxyPackage) (not on CRAN) provides some additional functionality for maintaining package documentation.
 -   <pkg>inlinedocs</pkg> and <pkg>documair</pkg> provide further alternative documentation schemes based on source code commenting.
 -   `tools::parse_Rd()` can be used to manipulate the contents of an .Rd file. `tools::checkRd()` is useful for validating an .Rd file. Duncan Murdoch's ["Parsing Rd files"](https://developer.r-project.org/parseRd.pdf) tutorial is a useful reference for advanced use of R documentation. <pkg>Rdpack</pkg> provides additional tools for manipulating documentation files.
--   <pkg>packagedocs</pkg> and [pkgdown](https://github.com/hadley/pkgdown) (not on CRAN) can be used to generate static websites from R documentation files.
+-   <pkg>packagedocs</pkg> and <pkg>pkgdown</pkg> can be used to generate static websites from R documentation files.
 
 ### Writing Vignettes
 
@@ -216,5 +216,5 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [WinBuilder](http://win-builder.r-project.org/) is a service intended for useRs who do not have Windows available for checking and building Windows binary packages. The package sources (after an `R CMD check`) can be uploaded via html form or passive ftp in binary mode; after checking/building a mail will be sent to the `Maintainer` with links to the package zip file and logs for download/inspection. [Appveyor](https://www.appveyor.com/) is a continuous integration service that offers a Windows build environment. [r-appveyor](https://github.com/krlmlr/r-appveyor) (not on CRAN) and [appveyor](https://github.com/cloudyr/appveyor) (not on CRAN) provide API clients for Appveyor.
 -   [Rocker](https://github.com/rocker-org/rocker) provides containers for use with [Docker](https://www.docker.com/). [harbor](https://github.com/wch/harbor) can be used to control docker containers on remote and local hosts and [dockertest](https://github.com/traitecoevo/dockertest) provides facilities for running tests on docker.
 -   Some packages, especially some that are no longer under active development, remain hosted on [Google Code](https://code.google.com/). This service is closed to new projects, however, and will shut down in January 2016.
--   <pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server. [craneur](https://github.com/ColinFay/craneur) (not on CRAN) provides another way of creating the same.
+-   <pkg>drat</pkg> can be used to distribute pre-built packages via Github or another server. [craneur](https://github.com/ColinFay/craneur) (not on CRAN) provides another way of creating the same. <pkg>miniCRAN</pkg> can be used to create a subset of CRAN, for example for self-hosting of packages and their dependencies.
 -   CRAN does not provide package download statistics, but the RStudio CRAN mirror does. <pkg>packagetrackr</pkg> ([Source](http://gitlab.points-of-interest.cc/points-of-interest/packagetrackr)) facilitates downloading and analyzing those logs.
