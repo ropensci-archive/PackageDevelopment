@@ -104,7 +104,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 -   <pkg>lintr</pkg> provides tools for checking source code compliance with a style guide.
 -   <pkg>formatR</pkg> and [rfmt](https://github.com/google/rfmt/) (not on CRAN) can be used to neatly format source code.
 -   <pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.
--   <pkg>pkggraph</pkg> ([GitHub](https://github.com/talegari/pkggraph)) and [functionMap](https://github.com/MangoTheCat/functionMap) provide tools useful for understanding function dependencies within and across packages. [atomize](https://github.com/ropenscilabs/atomize) can quickly extract functions from within a package into their own package.
+-   <pkg>pkggraph</pkg> ([GitHub](https://github.com/talegari/pkggraph)) and [functionMap](https://github.com/MangoTheCat/functionMap) provide tools useful for understanding function dependencies within and across packages. [atomize](https://github.com/ropenscilabs/atomize) can quickly extract functions from within a package into their own package. [requirements](https://github.com/hadley/requirements) (not on CRAN) checks R code files for implicit and explicit package dependencies.
 -   <pkg>pkgnet</pkg> ([GitHub](https://github.com/UptakeOpenSource/pkgnet)) uses concepts from graph theory to quantify the complexity and vulnerability to failure of a software package based upon dependencies between functions and between package dependencies.
 
 ### Profiling

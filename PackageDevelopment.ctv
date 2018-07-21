@@ -97,7 +97,7 @@
     <li><pkg>lintr</pkg> provides tools for checking source code compliance with a style guide.</li>
     <li><pkg>formatR</pkg> and <a href="https://github.com/google/rfmt/">rfmt</a> (not on CRAN) can be used to neatly format source code.</li>
     <li><pkg>FuncMap</pkg> provides a graphical representation of function calls used in a package.</li>
-    <li><pkg>pkggraph</pkg> (<a href="https://github.com/talegari/pkggraph">GitHub</a>) and <a href="https://github.com/MangoTheCat/functionMap">functionMap</a> provide tools useful for understanding function dependencies within and across packages. <a href="https://github.com/ropenscilabs/atomize">atomize</a> can quickly extract functions from within a package into their own package.</li>
+    <li><pkg>pkggraph</pkg> (<a href="https://github.com/talegari/pkggraph">GitHub</a>) and <a href="https://github.com/MangoTheCat/functionMap">functionMap</a> provide tools useful for understanding function dependencies within and across packages. <a href="https://github.com/ropenscilabs/atomize">atomize</a> can quickly extract functions from within a package into their own package. <a href="https://github.com/hadley/requirements">requirements</a> (not on CRAN) checks R code files for implicit and explicit package dependencies.</li>
     <li><pkg>pkgnet</pkg> (<a href="https://github.com/UptakeOpenSource/pkgnet">GitHub</a>) uses concepts from graph theory to quantify the complexity and vulnerability to failure of a software package based upon dependencies between functions and between package dependencies.</li>
     </ul>
     <h3 id="profiling">Profiling</h3>
