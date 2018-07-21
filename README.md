@@ -8,7 +8,7 @@ CRAN Task View: Package Development
 |-----------------|------------------------------------------------------|
 | **Maintainer:** | Thomas J. Leeper                                     |
 | **Contact:**    | thosjleeper at gmail.com                             |
-| **Version:**    | 2018-06-22                                           |
+| **Version:**    | 2018-07-21                                           |
 | **URL:**        | <https://CRAN.R-project.org/view=PackageDevelopment> |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
@@ -75,6 +75,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 
 -   [CodeDepends](http://cran.rstudio.com/web/packages/CodeDepends/index.html) provides tools for examining dependencies between blocks of code.
 -   [backports](http://cran.rstudio.com/web/packages/backports/index.html) ([GitHub](https://github.com/mllg/backports)) provides reimplementations of functions added to base R packages since v3.0.0, making them available in older versions of R. This gives package developers the ability to reduce or eliminate a dependency on specific versions of R itself.
+-   [pkgverse](https://github.com/mkearney/pkgverse) (not on CRAN) provides tools for creating an integrated, installable "universe" of R packages, in the style of the ["tidyverse"](https://www.tidyverse.org/).
 -   [packrat](http://cran.rstudio.com/web/packages/packrat/index.html) ([GitHub](https://github.com/rstudio/packrat)) provides facilities for creating local package repositories to manage and check dependencies.
 -   [checkpoint](http://cran.rstudio.com/web/packages/checkpoint/index.html) relies on the Revolution Analytics MRAN repository to access packages from specified dates.
 -   [pacman](http://cran.rstudio.com/web/packages/pacman/index.html) ([GitHub](https://github.com/trinker/pacman)) can install, uninstall, load, and unload various versions of packages from CRAN and Github.

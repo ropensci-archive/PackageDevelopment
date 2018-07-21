@@ -61,6 +61,7 @@ Packages that have dependencies on other packages need to be vigilant of changes
 
 -   <pkg>CodeDepends</pkg> provides tools for examining dependencies between blocks of code.
 -   <pkg>backports</pkg> ([GitHub](https://github.com/mllg/backports)) provides reimplementations of functions added to base R packages since v3.0.0, making them available in older versions of R. This gives package developers the ability to reduce or eliminate a dependency on specific versions of R itself.
+-   [pkgverse](https://github.com/mkearney/pkgverse) (not on CRAN) provides tools for creating an integrated, installable "universe" of R packages, in the style of the ["tidyverse"](https://www.tidyverse.org/).
 -   <pkg>packrat</pkg> ([GitHub](https://github.com/rstudio/packrat)) provides facilities for creating local package repositories to manage and check dependencies. 
 -   <pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates. 
 -   <pkg>pacman</pkg> ([GitHub](https://github.com/trinker/pacman)) can install, uninstall, load, and unload various versions of packages from CRAN and Github.

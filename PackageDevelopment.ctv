@@ -2,7 +2,7 @@
   <name>PackageDevelopment</name>
   <topic>Package Development</topic>
   <maintainer email="thosjleeper@gmail.com">Thomas J. Leeper</maintainer>
-  <version>2018-06-22</version>
+  <version>2018-07-21</version>
   <info>
     <p>Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.</p>
     <p>The main reference for packages development is the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">&quot;Writing R Extension&quot;</a> manual. For further documentation and tutorials, see the &quot;Related links&quot; section below.</p>
@@ -57,6 +57,7 @@
     <ul>
     <li><pkg>CodeDepends</pkg> provides tools for examining dependencies between blocks of code.</li>
     <li><pkg>backports</pkg> (<a href="https://github.com/mllg/backports">GitHub</a>) provides reimplementations of functions added to base R packages since v3.0.0, making them available in older versions of R. This gives package developers the ability to reduce or eliminate a dependency on specific versions of R itself.</li>
+    <li><a href="https://github.com/mkearney/pkgverse">pkgverse</a> (not on CRAN) provides tools for creating an integrated, installable &quot;universe&quot; of R packages, in the style of the <a href="https://www.tidyverse.org/">&quot;tidyverse&quot;</a>.</li>
     <li><pkg>packrat</pkg> (<a href="https://github.com/rstudio/packrat">GitHub</a>) provides facilities for creating local package repositories to manage and check dependencies.</li>
     <li><pkg>checkpoint</pkg> relies on the Revolution Analytics MRAN repository to access packages from specified dates.</li>
     <li><pkg>pacman</pkg> (<a href="https://github.com/trinker/pacman">GitHub</a>) can install, uninstall, load, and unload various versions of packages from CRAN and Github.</li>
