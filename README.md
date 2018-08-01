@@ -8,7 +8,7 @@ CRAN Task View: Package Development
 |-----------------|------------------------------------------------------|
 | **Maintainer:** | Thomas J. Leeper                                     |
 | **Contact:**    | thosjleeper at gmail.com                             |
-| **Version:**    | 2018-07-21                                           |
+| **Version:**    | 2018-07-31                                           |
 | **URL:**        | <https://CRAN.R-project.org/view=PackageDevelopment> |
 
 Packages provide a mechanism for loading optional code, data, and documentation as needed. At the very minimum only a text editor and an R installation are needed for package creation. Nonetheless many useful tools and R packages themselves have been provided to ease or improve package development. This Task View focuses on these tools/R packages, grouped by topics.
@@ -108,7 +108,7 @@ Writing packages that involve compiled code requires a developer toolchain. If d
 
 ### Debugging
 
--   [log4r](http://cran.rstudio.com/web/packages/log4r/index.html) ([Github](https://github.com/johnmyleswhite/log4r)) and [logging](http://cran.rstudio.com/web/packages/logging/index.html) provide logging functionality in the style of [log4j](https://en.wikipedia.org/wiki/Log4j).
+-   [futile.logger](http://cran.rstudio.com/web/packages/futile.logger/index.html), [log4r](http://cran.rstudio.com/web/packages/log4r/index.html), and [logging](http://cran.rstudio.com/web/packages/logging/index.html) provide logging functionality in the style of [log4j](https://en.wikipedia.org/wiki/Log4j).
 -   [loggr](https://github.com/smbache/loggr) (not on CRAN) aims to provide a simplified logging interface without the need for `withCallingHandlers()` expressions.
 -   [rollbar](http://cran.rstudio.com/web/packages/rollbar/index.html) reports messages and errors to [Rollbar](https://rollbar.com/), a web service.
 -   The [rchk](https://github.com/kalibera/rchk) tool provides tools for identifying memory-protection bugs in C code, including base R and packages.
@@ -260,6 +260,7 @@ Many [hosting services](https://en.wikipedia.org/wiki/Comparison_of_open-source_
 -   [formatR](http://cran.rstudio.com/web/packages/formatR/index.html)
 -   [FuncMap](http://cran.rstudio.com/web/packages/FuncMap/index.html)
 -   [functools](http://cran.rstudio.com/web/packages/functools/index.html)
+-   [futile.logger](http://cran.rstudio.com/web/packages/futile.logger/index.html)
 -   [GetoptLong](http://cran.rstudio.com/web/packages/GetoptLong/index.html)
 -   [getPass](http://cran.rstudio.com/web/packages/getPass/index.html)
 -   [git2r](http://cran.rstudio.com/web/packages/git2r/index.html)
